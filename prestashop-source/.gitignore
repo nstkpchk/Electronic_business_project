@@ -21,5 +21,6 @@
 
 # Uploaded files (except product images)
 /upload/*
-/img/tmp/*
 /download/*
+/img/tmp/*
+!/img/tmp/.gitkeep
