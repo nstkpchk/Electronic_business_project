@@ -1,0 +1,25 @@
+.idea/
+/venv/
+.DS_Store
+.vscode/
+
+# PrestaShop cache, temp files and logs
+/cache/*
+!/cache/.htaccess
+!/cache/index.php
+/var/cache/*
+!/var/cache/.htaccess
+
+/var/logs/*
+/var/sessions/*
+/var/tmp/*
+
+/logs/
+/node_modules/
+*.tmp
+*.log
+
+# Uploaded files (except product images)
+/upload/*
+/img/tmp/*
+/download/*
