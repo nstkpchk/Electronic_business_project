@@ -17,14 +17,20 @@ services:
     
   prestashop:
     container_name: prestashop
-    image: prestashop/prestashop:1.7.8
+    build:
+      context: .
+      dockerfile: Dockerfile
+
     restart: unless-stopped
     depends_on:
       - mariadb
     ports:
       - 8001:80
+      - 8002:443
     volumes:
       - ../prestashop-source:/var/www/html
+      - ./ssl:/etc/apache2/ssl
+      - ./ssl/000-default.conf:/etc/apache2/sites-available/000-default.conf
     environment:
       DB_SERVER: mariadb
       DB_NAME: prestashop
