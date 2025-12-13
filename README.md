@@ -17,7 +17,7 @@ Projekt sklepu internetowego opartego na platformie PrestaShop 1.7.8.x, realizow
 2. Sklonuj repozytorium:
    ```bash
    git clone https://github.com/nstkpchk/Electronic_business_project.git
-   cd Electronic_business_project\
+   cd Electronic_business_project/
    ```
 3.Uruchom kontenery Dockera:
    ```bash
