@@ -2,10 +2,10 @@
 -- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
--- Хост: mariadb
--- Время создания: Дек 15 2025 г., 17:58
--- Версия сервера: 12.1.2-MariaDB-ubu2404
--- Версия PHP: 8.3.26
+-- Host: mariadb
+-- Generation Time: Dec 15, 2025 at 07:43 PM
+-- Wersja serwera: 12.1.2-MariaDB-ubu2404
+-- Wersja PHP: 8.3.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `prestashop`
+-- Baza danych: `prestashop`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_access`
+-- Struktura tabeli dla tabeli `ps_access`
 --
 
 CREATE TABLE `ps_access` (
@@ -33,7 +33,7 @@ CREATE TABLE `ps_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_access`
+-- Zrzut danych tabeli `ps_access`
 --
 
 INSERT INTO `ps_access` (`id_profile`, `id_authorization_role`) VALUES
@@ -885,7 +885,7 @@ INSERT INTO `ps_access` (`id_profile`, `id_authorization_role`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_accessory`
+-- Struktura tabeli dla tabeli `ps_accessory`
 --
 
 CREATE TABLE `ps_accessory` (
@@ -896,7 +896,7 @@ CREATE TABLE `ps_accessory` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_address`
+-- Struktura tabeli dla tabeli `ps_address`
 --
 
 CREATE TABLE `ps_address` (
@@ -927,11 +927,10 @@ CREATE TABLE `ps_address` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_address`
+-- Zrzut danych tabeli `ps_address`
 --
 
 INSERT INTO `ps_address` (`id_address`, `id_country`, `id_state`, `id_customer`, `id_manufacturer`, `id_supplier`, `id_warehouse`, `alias`, `company`, `lastname`, `firstname`, `address1`, `address2`, `postcode`, `city`, `other`, `phone`, `phone_mobile`, `vat_number`, `dni`, `date_add`, `date_upd`, `active`, `deleted`) VALUES
-(1, 14, 0, 1, 0, 0, 0, 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', '', '00000', 'Anonymous', '', '0000000000', '0000000000', '0000', '0000', '2025-12-06 12:12:36', '2025-12-06 12:12:36', 1, 0),
 (2, 8, 0, 2, 0, 0, 0, 'Mon adresse', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '75002', 'Paris ', '', '0102030405', '', '', '', '2025-12-06 12:12:48', '2025-12-06 12:12:48', 1, 0),
 (3, 21, 35, 0, 0, 1, 0, 'supplier', 'Fashion', 'supplier', 'supplier', '767 Fifth Ave.', '', '10153', 'New York', '', '(212) 336-1440', '', '', '', '2025-12-06 12:12:48', '2025-12-06 12:12:48', 1, 0),
 (4, 21, 35, 0, 1, 0, 0, 'manufacturer', 'Fashion', 'manufacturer', 'manufacturer', '767 Fifth Ave.', '', '10154', 'New York', '', '(212) 336-1666', '', '', '', '2025-12-06 12:12:48', '2025-12-06 12:12:48', 1, 0),
@@ -941,7 +940,7 @@ INSERT INTO `ps_address` (`id_address`, `id_country`, `id_state`, `id_customer`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_address_format`
+-- Struktura tabeli dla tabeli `ps_address_format`
 --
 
 CREATE TABLE `ps_address_format` (
@@ -950,7 +949,7 @@ CREATE TABLE `ps_address_format` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_address_format`
+-- Zrzut danych tabeli `ps_address_format`
 --
 
 INSERT INTO `ps_address_format` (`id_country`, `format`) VALUES
@@ -1199,7 +1198,7 @@ INSERT INTO `ps_address_format` (`id_country`, `format`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_admin_filter`
+-- Struktura tabeli dla tabeli `ps_admin_filter`
 --
 
 CREATE TABLE `ps_admin_filter` (
@@ -1213,14 +1212,14 @@ CREATE TABLE `ps_admin_filter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_admin_filter`
+-- Zrzut danych tabeli `ps_admin_filter`
 --
 
 INSERT INTO `ps_admin_filter` (`id`, `employee`, `shop`, `controller`, `action`, `filter`, `filter_id`) VALUES
 (1, 1, 1, '', '', '{\"limit\":10,\"orderBy\":\"name\",\"sortOrder\":\"asc\",\"filters\":[]}', 'manufacturer'),
 (2, 1, 1, '', '', '{\"limit\":10,\"orderBy\":\"id_address\",\"sortOrder\":\"desc\",\"filters\":[]}', 'manufacturer_address'),
 (3, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_category_parent\":49}}', 'category'),
-(4, 1, 1, 'ProductController', 'catalogAction', '{\"filter_category\":\"\",\"filter_column_id_product\":\"\",\"filter_column_name\":\"Pi\\u0142ka do koszyk\\u00f3wki Molten BG3850\",\"filter_column_reference\":\"\",\"filter_column_name_category\":\"\",\"filter_column_price\":\"\",\"filter_column_sav_quantity\":\"\",\"filter_column_active\":\"\",\"last_offset\":\"0\",\"last_limit\":\"300\",\"last_orderBy\":\"id_product\",\"last_sortOrder\":\"desc\"}', ''),
+(4, 1, 1, 'ProductController', 'catalogAction', '{\"filter_category\":\"\",\"filter_column_id_product\":\"\",\"filter_column_name\":\"\",\"filter_column_reference\":\"\",\"filter_column_name_category\":\"\",\"filter_column_price\":\"\",\"filter_column_sav_quantity\":\"\",\"filter_column_active\":\"\",\"last_offset\":\"0\",\"last_limit\":\"300\",\"last_orderBy\":\"id_product\",\"last_sortOrder\":\"desc\"}', ''),
 (5, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_webservice_account\",\"sortOrder\":\"asc\",\"filters\":[]}', 'webservice_key'),
 (6, 1, 1, '', '', '{\"limit\":20,\"orderBy\":\"name\",\"sortOrder\":\"asc\",\"filters\":[]}', 'empty_category'),
 (7, 1, 1, '', '', '{\"limit\":20,\"orderBy\":\"name\",\"sortOrder\":\"asc\",\"filters\":[]}', 'no_qty_product_with_combination'),
@@ -1234,12 +1233,14 @@ INSERT INTO `ps_admin_filter` (`id`, `employee`, `shop`, `controller`, `action`,
 (15, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page_category'),
 (16, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page'),
 (17, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_order\",\"sortOrder\":\"DESC\",\"filters\":[]}', 'order'),
-(18, 1, 1, '', '', '{\"limit\":\"10\",\"orderBy\":\"id_log\",\"sortOrder\":\"asc\",\"filters\":[]}', 'logs');
+(18, 1, 1, '', '', '{\"limit\":\"10\",\"orderBy\":\"id_log\",\"sortOrder\":\"asc\",\"filters\":[]}', 'logs'),
+(19, 1, 1, 'email', 'index', '{\"limit\":50,\"orderBy\":\"id_mail\",\"sortOrder\":\"desc\",\"filters\":[]}', ''),
+(20, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"date_add\",\"sortOrder\":\"DESC\",\"filters\":[]}', 'customer');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_alias`
+-- Struktura tabeli dla tabeli `ps_alias`
 --
 
 CREATE TABLE `ps_alias` (
@@ -1250,7 +1251,7 @@ CREATE TABLE `ps_alias` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_alias`
+-- Zrzut danych tabeli `ps_alias`
 --
 
 INSERT INTO `ps_alias` (`id_alias`, `alias`, `search`, `active`) VALUES
@@ -1260,7 +1261,7 @@ INSERT INTO `ps_alias` (`id_alias`, `alias`, `search`, `active`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_attachment`
+-- Struktura tabeli dla tabeli `ps_attachment`
 --
 
 CREATE TABLE `ps_attachment` (
@@ -1274,7 +1275,7 @@ CREATE TABLE `ps_attachment` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_attachment_lang`
+-- Struktura tabeli dla tabeli `ps_attachment_lang`
 --
 
 CREATE TABLE `ps_attachment_lang` (
@@ -1287,7 +1288,7 @@ CREATE TABLE `ps_attachment_lang` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_attribute`
+-- Struktura tabeli dla tabeli `ps_attribute`
 --
 
 CREATE TABLE `ps_attribute` (
@@ -1298,7 +1299,7 @@ CREATE TABLE `ps_attribute` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_attribute`
+-- Zrzut danych tabeli `ps_attribute`
 --
 
 INSERT INTO `ps_attribute` (`id_attribute`, `id_attribute_group`, `color`, `position`) VALUES
@@ -1331,7 +1332,7 @@ INSERT INTO `ps_attribute` (`id_attribute`, `id_attribute_group`, `color`, `posi
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_attribute_group`
+-- Struktura tabeli dla tabeli `ps_attribute_group`
 --
 
 CREATE TABLE `ps_attribute_group` (
@@ -1342,7 +1343,7 @@ CREATE TABLE `ps_attribute_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_attribute_group`
+-- Zrzut danych tabeli `ps_attribute_group`
 --
 
 INSERT INTO `ps_attribute_group` (`id_attribute_group`, `is_color_group`, `group_type`, `position`) VALUES
@@ -1354,7 +1355,7 @@ INSERT INTO `ps_attribute_group` (`id_attribute_group`, `is_color_group`, `group
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_attribute_group_lang`
+-- Struktura tabeli dla tabeli `ps_attribute_group_lang`
 --
 
 CREATE TABLE `ps_attribute_group_lang` (
@@ -1365,7 +1366,7 @@ CREATE TABLE `ps_attribute_group_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_attribute_group_lang`
+-- Zrzut danych tabeli `ps_attribute_group_lang`
 --
 
 INSERT INTO `ps_attribute_group_lang` (`id_attribute_group`, `id_lang`, `name`, `public_name`) VALUES
@@ -1377,7 +1378,7 @@ INSERT INTO `ps_attribute_group_lang` (`id_attribute_group`, `id_lang`, `name`, 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_attribute_group_shop`
+-- Struktura tabeli dla tabeli `ps_attribute_group_shop`
 --
 
 CREATE TABLE `ps_attribute_group_shop` (
@@ -1386,7 +1387,7 @@ CREATE TABLE `ps_attribute_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_attribute_group_shop`
+-- Zrzut danych tabeli `ps_attribute_group_shop`
 --
 
 INSERT INTO `ps_attribute_group_shop` (`id_attribute_group`, `id_shop`) VALUES
@@ -1398,7 +1399,7 @@ INSERT INTO `ps_attribute_group_shop` (`id_attribute_group`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_attribute_impact`
+-- Struktura tabeli dla tabeli `ps_attribute_impact`
 --
 
 CREATE TABLE `ps_attribute_impact` (
@@ -1412,7 +1413,7 @@ CREATE TABLE `ps_attribute_impact` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_attribute_lang`
+-- Struktura tabeli dla tabeli `ps_attribute_lang`
 --
 
 CREATE TABLE `ps_attribute_lang` (
@@ -1422,7 +1423,7 @@ CREATE TABLE `ps_attribute_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_attribute_lang`
+-- Zrzut danych tabeli `ps_attribute_lang`
 --
 
 INSERT INTO `ps_attribute_lang` (`id_attribute`, `id_lang`, `name`) VALUES
@@ -1455,7 +1456,7 @@ INSERT INTO `ps_attribute_lang` (`id_attribute`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_attribute_shop`
+-- Struktura tabeli dla tabeli `ps_attribute_shop`
 --
 
 CREATE TABLE `ps_attribute_shop` (
@@ -1464,7 +1465,7 @@ CREATE TABLE `ps_attribute_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_attribute_shop`
+-- Zrzut danych tabeli `ps_attribute_shop`
 --
 
 INSERT INTO `ps_attribute_shop` (`id_attribute`, `id_shop`) VALUES
@@ -1497,7 +1498,7 @@ INSERT INTO `ps_attribute_shop` (`id_attribute`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_authorization_role`
+-- Struktura tabeli dla tabeli `ps_authorization_role`
 --
 
 CREATE TABLE `ps_authorization_role` (
@@ -1506,7 +1507,7 @@ CREATE TABLE `ps_authorization_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_authorization_role`
+-- Zrzut danych tabeli `ps_authorization_role`
 --
 
 INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
@@ -2370,7 +2371,7 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_blockwishlist_statistics`
+-- Struktura tabeli dla tabeli `ps_blockwishlist_statistics`
 --
 
 CREATE TABLE `ps_blockwishlist_statistics` (
@@ -2385,7 +2386,7 @@ CREATE TABLE `ps_blockwishlist_statistics` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_carrier`
+-- Struktura tabeli dla tabeli `ps_carrier`
 --
 
 CREATE TABLE `ps_carrier` (
@@ -2413,7 +2414,7 @@ CREATE TABLE `ps_carrier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_carrier`
+-- Zrzut danych tabeli `ps_carrier`
 --
 
 INSERT INTO `ps_carrier` (`id_carrier`, `id_reference`, `id_tax_rules_group`, `name`, `url`, `active`, `deleted`, `shipping_handling`, `range_behavior`, `is_module`, `is_free`, `shipping_external`, `need_range`, `external_module_name`, `shipping_method`, `position`, `max_width`, `max_height`, `max_depth`, `max_weight`, `grade`) VALUES
@@ -2425,7 +2426,7 @@ INSERT INTO `ps_carrier` (`id_carrier`, `id_reference`, `id_tax_rules_group`, `n
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_carrier_group`
+-- Struktura tabeli dla tabeli `ps_carrier_group`
 --
 
 CREATE TABLE `ps_carrier_group` (
@@ -2434,7 +2435,7 @@ CREATE TABLE `ps_carrier_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_carrier_group`
+-- Zrzut danych tabeli `ps_carrier_group`
 --
 
 INSERT INTO `ps_carrier_group` (`id_carrier`, `id_group`) VALUES
@@ -2454,7 +2455,7 @@ INSERT INTO `ps_carrier_group` (`id_carrier`, `id_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_carrier_lang`
+-- Struktura tabeli dla tabeli `ps_carrier_lang`
 --
 
 CREATE TABLE `ps_carrier_lang` (
@@ -2465,7 +2466,7 @@ CREATE TABLE `ps_carrier_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_carrier_lang`
+-- Zrzut danych tabeli `ps_carrier_lang`
 --
 
 INSERT INTO `ps_carrier_lang` (`id_carrier`, `id_shop`, `id_lang`, `delay`) VALUES
@@ -2477,7 +2478,7 @@ INSERT INTO `ps_carrier_lang` (`id_carrier`, `id_shop`, `id_lang`, `delay`) VALU
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_carrier_shop`
+-- Struktura tabeli dla tabeli `ps_carrier_shop`
 --
 
 CREATE TABLE `ps_carrier_shop` (
@@ -2486,7 +2487,7 @@ CREATE TABLE `ps_carrier_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_carrier_shop`
+-- Zrzut danych tabeli `ps_carrier_shop`
 --
 
 INSERT INTO `ps_carrier_shop` (`id_carrier`, `id_shop`) VALUES
@@ -2498,7 +2499,7 @@ INSERT INTO `ps_carrier_shop` (`id_carrier`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_carrier_tax_rules_group_shop`
+-- Struktura tabeli dla tabeli `ps_carrier_tax_rules_group_shop`
 --
 
 CREATE TABLE `ps_carrier_tax_rules_group_shop` (
@@ -2508,7 +2509,7 @@ CREATE TABLE `ps_carrier_tax_rules_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_carrier_tax_rules_group_shop`
+-- Zrzut danych tabeli `ps_carrier_tax_rules_group_shop`
 --
 
 INSERT INTO `ps_carrier_tax_rules_group_shop` (`id_carrier`, `id_tax_rules_group`, `id_shop`) VALUES
@@ -2520,7 +2521,7 @@ INSERT INTO `ps_carrier_tax_rules_group_shop` (`id_carrier`, `id_tax_rules_group
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_carrier_zone`
+-- Struktura tabeli dla tabeli `ps_carrier_zone`
 --
 
 CREATE TABLE `ps_carrier_zone` (
@@ -2529,7 +2530,7 @@ CREATE TABLE `ps_carrier_zone` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_carrier_zone`
+-- Zrzut danych tabeli `ps_carrier_zone`
 --
 
 INSERT INTO `ps_carrier_zone` (`id_carrier`, `id_zone`) VALUES
@@ -2544,7 +2545,7 @@ INSERT INTO `ps_carrier_zone` (`id_carrier`, `id_zone`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart`
+-- Struktura tabeli dla tabeli `ps_cart`
 --
 
 CREATE TABLE `ps_cart` (
@@ -2570,22 +2571,10 @@ CREATE TABLE `ps_cart` (
   `checkout_session_data` mediumtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
---
--- Дамп данных таблицы `ps_cart`
---
-
-INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `delivery_option`, `id_lang`, `id_address_delivery`, `id_address_invoice`, `id_currency`, `id_customer`, `id_guest`, `secure_key`, `recyclable`, `gift`, `gift_message`, `mobile_theme`, `allow_seperated_package`, `date_add`, `date_upd`, `checkout_session_data`) VALUES
-(1, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2025-12-06 12:12:48', '2025-12-06 12:12:48', NULL),
-(2, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2025-12-06 12:12:48', '2025-12-06 12:12:48', NULL),
-(3, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2025-12-06 12:12:48', '2025-12-06 12:12:48', NULL),
-(4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2025-12-06 12:12:48', '2025-12-06 12:12:48', NULL),
-(5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2025-12-06 12:12:48', '2025-12-06 12:12:48', NULL),
-(6, 1, 1, 0, '', 1, 0, 0, 1, 3, 0, '1f2696affd12967da12b3c3ae5c29744', 0, 0, '', 0, 0, '2025-12-14 23:54:40', '2025-12-15 18:57:29', NULL);
-
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_cart_rule`
+-- Struktura tabeli dla tabeli `ps_cart_cart_rule`
 --
 
 CREATE TABLE `ps_cart_cart_rule` (
@@ -2596,7 +2585,7 @@ CREATE TABLE `ps_cart_cart_rule` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_product`
+-- Struktura tabeli dla tabeli `ps_cart_product`
 --
 
 CREATE TABLE `ps_cart_product` (
@@ -2610,18 +2599,10 @@ CREATE TABLE `ps_cart_product` (
   `date_add` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
---
--- Дамп данных таблицы `ps_cart_product`
---
-
-INSERT INTO `ps_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `id_shop`, `id_product_attribute`, `id_customization`, `quantity`, `date_add`) VALUES
-(6, 263, 0, 1, 0, 0, 2, '2025-12-15 13:22:46'),
-(6, 633, 0, 1, 0, 0, 1, '2025-12-15 13:21:30');
-
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule`
+-- Struktura tabeli dla tabeli `ps_cart_rule`
 --
 
 CREATE TABLE `ps_cart_rule` (
@@ -2663,7 +2644,7 @@ CREATE TABLE `ps_cart_rule` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule_carrier`
+-- Struktura tabeli dla tabeli `ps_cart_rule_carrier`
 --
 
 CREATE TABLE `ps_cart_rule_carrier` (
@@ -2674,7 +2655,7 @@ CREATE TABLE `ps_cart_rule_carrier` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule_combination`
+-- Struktura tabeli dla tabeli `ps_cart_rule_combination`
 --
 
 CREATE TABLE `ps_cart_rule_combination` (
@@ -2685,7 +2666,7 @@ CREATE TABLE `ps_cart_rule_combination` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule_country`
+-- Struktura tabeli dla tabeli `ps_cart_rule_country`
 --
 
 CREATE TABLE `ps_cart_rule_country` (
@@ -2696,7 +2677,7 @@ CREATE TABLE `ps_cart_rule_country` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule_group`
+-- Struktura tabeli dla tabeli `ps_cart_rule_group`
 --
 
 CREATE TABLE `ps_cart_rule_group` (
@@ -2707,7 +2688,7 @@ CREATE TABLE `ps_cart_rule_group` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule_lang`
+-- Struktura tabeli dla tabeli `ps_cart_rule_lang`
 --
 
 CREATE TABLE `ps_cart_rule_lang` (
@@ -2719,7 +2700,7 @@ CREATE TABLE `ps_cart_rule_lang` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule_product_rule`
+-- Struktura tabeli dla tabeli `ps_cart_rule_product_rule`
 --
 
 CREATE TABLE `ps_cart_rule_product_rule` (
@@ -2731,7 +2712,7 @@ CREATE TABLE `ps_cart_rule_product_rule` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule_product_rule_group`
+-- Struktura tabeli dla tabeli `ps_cart_rule_product_rule_group`
 --
 
 CREATE TABLE `ps_cart_rule_product_rule_group` (
@@ -2743,7 +2724,7 @@ CREATE TABLE `ps_cart_rule_product_rule_group` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule_product_rule_value`
+-- Struktura tabeli dla tabeli `ps_cart_rule_product_rule_value`
 --
 
 CREATE TABLE `ps_cart_rule_product_rule_value` (
@@ -2754,7 +2735,7 @@ CREATE TABLE `ps_cart_rule_product_rule_value` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cart_rule_shop`
+-- Struktura tabeli dla tabeli `ps_cart_rule_shop`
 --
 
 CREATE TABLE `ps_cart_rule_shop` (
@@ -2765,7 +2746,7 @@ CREATE TABLE `ps_cart_rule_shop` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_category`
+-- Struktura tabeli dla tabeli `ps_category`
 --
 
 CREATE TABLE `ps_category` (
@@ -2783,7 +2764,7 @@ CREATE TABLE `ps_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_category`
+-- Zrzut danych tabeli `ps_category`
 --
 
 INSERT INTO `ps_category` (`id_category`, `id_parent`, `id_shop_default`, `level_depth`, `nleft`, `nright`, `active`, `date_add`, `date_upd`, `position`, `is_root_category`) VALUES
@@ -2828,7 +2809,7 @@ INSERT INTO `ps_category` (`id_category`, `id_parent`, `id_shop_default`, `level
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_category_group`
+-- Struktura tabeli dla tabeli `ps_category_group`
 --
 
 CREATE TABLE `ps_category_group` (
@@ -2837,7 +2818,7 @@ CREATE TABLE `ps_category_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_category_group`
+-- Zrzut danych tabeli `ps_category_group`
 --
 
 INSERT INTO `ps_category_group` (`id_category`, `id_group`) VALUES
@@ -2954,7 +2935,7 @@ INSERT INTO `ps_category_group` (`id_category`, `id_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_category_lang`
+-- Struktura tabeli dla tabeli `ps_category_lang`
 --
 
 CREATE TABLE `ps_category_lang` (
@@ -2970,7 +2951,7 @@ CREATE TABLE `ps_category_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_category_lang`
+-- Zrzut danych tabeli `ps_category_lang`
 --
 
 INSERT INTO `ps_category_lang` (`id_category`, `id_shop`, `id_lang`, `name`, `description`, `link_rewrite`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
@@ -3015,7 +2996,7 @@ INSERT INTO `ps_category_lang` (`id_category`, `id_shop`, `id_lang`, `name`, `de
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_category_product`
+-- Struktura tabeli dla tabeli `ps_category_product`
 --
 
 CREATE TABLE `ps_category_product` (
@@ -3025,7 +3006,7 @@ CREATE TABLE `ps_category_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_category_product`
+-- Zrzut danych tabeli `ps_category_product`
 --
 
 INSERT INTO `ps_category_product` (`id_category`, `id_product`, `position`) VALUES
@@ -3852,7 +3833,7 @@ INSERT INTO `ps_category_product` (`id_category`, `id_product`, `position`) VALU
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_category_shop`
+-- Struktura tabeli dla tabeli `ps_category_shop`
 --
 
 CREATE TABLE `ps_category_shop` (
@@ -3862,7 +3843,7 @@ CREATE TABLE `ps_category_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_category_shop`
+-- Zrzut danych tabeli `ps_category_shop`
 --
 
 INSERT INTO `ps_category_shop` (`id_category`, `id_shop`, `position`) VALUES
@@ -3907,7 +3888,7 @@ INSERT INTO `ps_category_shop` (`id_category`, `id_shop`, `position`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cms`
+-- Struktura tabeli dla tabeli `ps_cms`
 --
 
 CREATE TABLE `ps_cms` (
@@ -3919,7 +3900,7 @@ CREATE TABLE `ps_cms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_cms`
+-- Zrzut danych tabeli `ps_cms`
 --
 
 INSERT INTO `ps_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexation`) VALUES
@@ -3932,7 +3913,7 @@ INSERT INTO `ps_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexa
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cms_category`
+-- Struktura tabeli dla tabeli `ps_cms_category`
 --
 
 CREATE TABLE `ps_cms_category` (
@@ -3946,7 +3927,7 @@ CREATE TABLE `ps_cms_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_cms_category`
+-- Zrzut danych tabeli `ps_cms_category`
 --
 
 INSERT INTO `ps_cms_category` (`id_cms_category`, `id_parent`, `level_depth`, `active`, `date_add`, `date_upd`, `position`) VALUES
@@ -3955,7 +3936,7 @@ INSERT INTO `ps_cms_category` (`id_cms_category`, `id_parent`, `level_depth`, `a
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cms_category_lang`
+-- Struktura tabeli dla tabeli `ps_cms_category_lang`
 --
 
 CREATE TABLE `ps_cms_category_lang` (
@@ -3971,7 +3952,7 @@ CREATE TABLE `ps_cms_category_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_cms_category_lang`
+-- Zrzut danych tabeli `ps_cms_category_lang`
 --
 
 INSERT INTO `ps_cms_category_lang` (`id_cms_category`, `id_lang`, `id_shop`, `name`, `description`, `link_rewrite`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
@@ -3980,7 +3961,7 @@ INSERT INTO `ps_cms_category_lang` (`id_cms_category`, `id_lang`, `id_shop`, `na
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cms_category_shop`
+-- Struktura tabeli dla tabeli `ps_cms_category_shop`
 --
 
 CREATE TABLE `ps_cms_category_shop` (
@@ -3989,7 +3970,7 @@ CREATE TABLE `ps_cms_category_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_cms_category_shop`
+-- Zrzut danych tabeli `ps_cms_category_shop`
 --
 
 INSERT INTO `ps_cms_category_shop` (`id_cms_category`, `id_shop`) VALUES
@@ -3998,7 +3979,7 @@ INSERT INTO `ps_cms_category_shop` (`id_cms_category`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cms_lang`
+-- Struktura tabeli dla tabeli `ps_cms_lang`
 --
 
 CREATE TABLE `ps_cms_lang` (
@@ -4014,7 +3995,7 @@ CREATE TABLE `ps_cms_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_cms_lang`
+-- Zrzut danych tabeli `ps_cms_lang`
 --
 
 INSERT INTO `ps_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `head_seo_title`, `meta_description`, `meta_keywords`, `content`, `link_rewrite`) VALUES
@@ -4027,7 +4008,7 @@ INSERT INTO `ps_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `head_s
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cms_role`
+-- Struktura tabeli dla tabeli `ps_cms_role`
 --
 
 CREATE TABLE `ps_cms_role` (
@@ -4037,7 +4018,7 @@ CREATE TABLE `ps_cms_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_cms_role`
+-- Zrzut danych tabeli `ps_cms_role`
 --
 
 INSERT INTO `ps_cms_role` (`id_cms_role`, `name`, `id_cms`) VALUES
@@ -4047,7 +4028,7 @@ INSERT INTO `ps_cms_role` (`id_cms_role`, `name`, `id_cms`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cms_role_lang`
+-- Struktura tabeli dla tabeli `ps_cms_role_lang`
 --
 
 CREATE TABLE `ps_cms_role_lang` (
@@ -4060,7 +4041,7 @@ CREATE TABLE `ps_cms_role_lang` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_cms_shop`
+-- Struktura tabeli dla tabeli `ps_cms_shop`
 --
 
 CREATE TABLE `ps_cms_shop` (
@@ -4069,7 +4050,7 @@ CREATE TABLE `ps_cms_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_cms_shop`
+-- Zrzut danych tabeli `ps_cms_shop`
 --
 
 INSERT INTO `ps_cms_shop` (`id_cms`, `id_shop`) VALUES
@@ -4082,7 +4063,7 @@ INSERT INTO `ps_cms_shop` (`id_cms`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_configuration`
+-- Struktura tabeli dla tabeli `ps_configuration`
 --
 
 CREATE TABLE `ps_configuration` (
@@ -4096,7 +4077,7 @@ CREATE TABLE `ps_configuration` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_configuration`
+-- Zrzut danych tabeli `ps_configuration`
 --
 
 INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, `name`, `value`, `date_add`, `date_upd`) VALUES
@@ -4247,7 +4228,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (145, NULL, NULL, 'PS_VIRTUAL_PROD_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2025-12-06 12:12:48'),
 (146, NULL, NULL, 'PS_CUSTOMIZATION_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (147, NULL, NULL, 'PS_CART_RULE_FEATURE_ACTIVE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(148, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', NULL, '0000-00-00 00:00:00', '2025-12-15 13:22:34'),
+(148, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', NULL, '0000-00-00 00:00:00', '2025-12-15 20:14:45'),
 (149, NULL, NULL, 'PS_ALIAS_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (150, NULL, NULL, 'PS_TAX_ADDRESS_TYPE', 'id_address_delivery', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (151, NULL, NULL, 'PS_SHOP_DEFAULT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -4337,7 +4318,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (235, NULL, NULL, 'PS_SHOP_DOMAIN_SSL', 'localhost:8001', '0000-00-00 00:00:00', '2025-12-06 12:12:11'),
 (236, NULL, NULL, 'PS_SHOP_NAME', 'SklepKoszykarski', '0000-00-00 00:00:00', '2025-12-06 12:12:11'),
 (237, NULL, NULL, 'PS_SHOP_EMAIL', 'demo@prestashop.com', '0000-00-00 00:00:00', '2025-12-06 12:12:11'),
-(238, NULL, NULL, 'PS_MAIL_METHOD', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(238, NULL, NULL, 'PS_MAIL_METHOD', '2', '0000-00-00 00:00:00', '2025-12-15 20:21:44'),
 (239, NULL, NULL, 'PS_SHOP_ACTIVITY', '19', '0000-00-00 00:00:00', '2025-12-06 12:12:11'),
 (240, NULL, NULL, 'PS_LOGO', 'logo-1765568236.jpg', '0000-00-00 00:00:00', '2025-12-12 20:37:16'),
 (241, NULL, NULL, 'PS_FAVICON', 'favicon.ico', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -4345,11 +4326,11 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (243, NULL, NULL, 'PS_ROOT_CATEGORY', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (244, NULL, NULL, 'PS_HOME_CATEGORY', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (245, NULL, NULL, 'PS_CONFIGURATION_AGREMENT', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(246, NULL, NULL, 'PS_MAIL_SERVER', 'smtp.', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(247, NULL, NULL, 'PS_MAIL_USER', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(248, NULL, NULL, 'PS_MAIL_PASSWD', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(249, NULL, NULL, 'PS_MAIL_SMTP_ENCRYPTION', 'off', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(250, NULL, NULL, 'PS_MAIL_SMTP_PORT', '25', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(246, NULL, NULL, 'PS_MAIL_SERVER', 'smtp.gmail.com', '0000-00-00 00:00:00', '2025-12-15 20:21:44'),
+(247, NULL, NULL, 'PS_MAIL_USER', 'kliksk123@gmail.com', '0000-00-00 00:00:00', '2025-12-15 20:21:44'),
+(248, NULL, NULL, 'PS_MAIL_PASSWD', 'cyyj alru jujx ocrn', '0000-00-00 00:00:00', '2025-12-15 20:21:44'),
+(249, NULL, NULL, 'PS_MAIL_SMTP_ENCRYPTION', 'ssl', '0000-00-00 00:00:00', '2025-12-15 20:21:44'),
+(250, NULL, NULL, 'PS_MAIL_SMTP_PORT', '465', '0000-00-00 00:00:00', '2025-12-15 20:21:44'),
 (251, NULL, NULL, 'PS_MAIL_COLOR', '#db3484', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (252, NULL, NULL, 'NW_SALT', 'ZZBmiLjwud7npQiA', '0000-00-00 00:00:00', '2025-12-06 12:12:14'),
 (253, NULL, NULL, 'PS_PAYMENT_LOGO_CMS_ID', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -4370,7 +4351,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (268, NULL, NULL, 'PS_DETECT_LANG', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (269, NULL, NULL, 'PS_DETECT_COUNTRY', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (270, NULL, NULL, 'PS_ROUND_TYPE', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(271, NULL, NULL, 'PS_LOG_EMAILS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(271, NULL, NULL, 'PS_LOG_EMAILS', '1', '0000-00-00 00:00:00', '2025-12-15 20:21:44'),
 (272, NULL, NULL, 'PS_CUSTOMER_OPTIN', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (273, NULL, NULL, 'PS_CUSTOMER_BIRTHDATE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (274, NULL, NULL, 'PS_PACK_STOCK_TYPE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -4535,15 +4516,17 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (442, NULL, NULL, 'PS_PSX_FIREBASE_REFRESH_TOKEN', NULL, '2025-12-12 20:28:24', '2025-12-12 20:28:24'),
 (443, NULL, NULL, 'PS_PSX_FIREBASE_REFRESH_DATE', '2025-12-12 20:28:24', '2025-12-12 20:28:24', '2025-12-12 20:28:24'),
 (444, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_ID_TOKEN', NULL, '2025-12-12 20:28:24', '2025-12-12 20:28:24'),
-(445, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2025-12-12 20:28:24', '2025-12-15 05:12:12'),
+(445, NULL, NULL, 'PS_ACCOUNTS_FIREBASE_REFRESH_TOKEN', NULL, '2025-12-12 20:28:24', '2025-12-15 20:43:08'),
 (446, NULL, NULL, 'PS_SHOWCASECARD_CATEGORIES_CLOSED', '1', '2025-12-12 20:40:02', '2025-12-12 20:40:02'),
 (447, NULL, NULL, 'PS_LABEL_DELIVERY_TIME_AVAILABLE', NULL, '2025-12-15 03:55:46', '2025-12-15 03:55:46'),
-(448, NULL, NULL, 'PS_LABEL_DELIVERY_TIME_OOSBOA', NULL, '2025-12-15 03:55:46', '2025-12-15 03:55:46');
+(448, NULL, NULL, 'PS_LABEL_DELIVERY_TIME_OOSBOA', NULL, '2025-12-15 03:55:46', '2025-12-15 03:55:46'),
+(449, NULL, NULL, 'PS_MAIL_EMAIL_MESSAGE', '2', '2025-12-15 20:21:44', '2025-12-15 20:21:44'),
+(450, NULL, NULL, 'PS_MAIL_DOMAIN', 'gmail.com', '2025-12-15 20:21:44', '2025-12-15 20:21:44');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_configuration_kpi`
+-- Struktura tabeli dla tabeli `ps_configuration_kpi`
 --
 
 CREATE TABLE `ps_configuration_kpi` (
@@ -4557,7 +4540,7 @@ CREATE TABLE `ps_configuration_kpi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_configuration_kpi`
+-- Zrzut danych tabeli `ps_configuration_kpi`
 --
 
 INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id_shop`, `name`, `value`, `date_add`, `date_upd`) VALUES
@@ -4618,12 +4601,20 @@ INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 (55, NULL, NULL, 'ABANDONED_CARTS', '0', '2025-12-15 03:41:05', '2025-12-15 03:41:05'),
 (56, NULL, NULL, 'ABANDONED_CARTS_EXPIRE', '1765770065', '2025-12-15 03:41:05', '2025-12-15 03:41:05'),
 (57, NULL, NULL, 'NETPROFIT_VISIT', '0,00 zł', '2025-12-15 03:41:05', '2025-12-15 03:41:05'),
-(58, NULL, NULL, 'NETPROFIT_VISIT_EXPIRE', '1765839600', '2025-12-15 03:41:05', '2025-12-15 03:41:05');
+(58, NULL, NULL, 'NETPROFIT_VISIT_EXPIRE', '1765839600', '2025-12-15 03:41:05', '2025-12-15 03:41:05'),
+(59, NULL, NULL, 'CUSTOMER_MAIN_GENDER', NULL, '2025-12-15 20:29:06', '2025-12-15 20:29:06'),
+(60, NULL, NULL, 'CUSTOMER_MAIN_GENDER_EXPIRE', NULL, '2025-12-15 20:29:06', '2025-12-15 20:29:06'),
+(61, NULL, NULL, 'AVG_CUSTOMER_AGE', NULL, '2025-12-15 20:29:06', '2025-12-15 20:29:06'),
+(62, NULL, NULL, 'AVG_CUSTOMER_AGE_EXPIRE', NULL, '2025-12-15 20:29:06', '2025-12-15 20:29:06'),
+(63, NULL, NULL, 'ORDERS_PER_CUSTOMER', '0', '2025-12-15 20:29:06', '2025-12-15 20:29:06'),
+(64, NULL, NULL, 'ORDERS_PER_CUSTOMER_EXPIRE', '1765913346', '2025-12-15 20:29:06', '2025-12-15 20:29:06'),
+(65, NULL, NULL, 'NEWSLETTER_REGISTRATIONS', '1', '2025-12-15 20:29:06', '2025-12-15 20:29:06'),
+(66, NULL, NULL, 'NEWSLETTER_REGISTRATIONS_EXPIRE', '1765848546', '2025-12-15 20:29:06', '2025-12-15 20:29:06');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_configuration_kpi_lang`
+-- Struktura tabeli dla tabeli `ps_configuration_kpi_lang`
 --
 
 CREATE TABLE `ps_configuration_kpi_lang` (
@@ -4634,19 +4625,23 @@ CREATE TABLE `ps_configuration_kpi_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_configuration_kpi_lang`
+-- Zrzut danych tabeli `ps_configuration_kpi_lang`
 --
 
 INSERT INTO `ps_configuration_kpi_lang` (`id_configuration_kpi`, `id_lang`, `value`, `date_upd`) VALUES
 (43, 1, 'Art', '2025-12-08 18:25:59'),
 (44, 1, '1765301159', '2025-12-08 18:25:59'),
 (49, 1, 'Brak zamówień', '2025-12-13 20:09:36'),
-(50, 1, '1765739376', '2025-12-13 20:09:36');
+(50, 1, '1765739376', '2025-12-13 20:09:36'),
+(59, 1, '100% Klientów Mężczyzn', '2025-12-15 20:29:06'),
+(60, 1, '1765913346', '2025-12-15 20:29:06'),
+(61, 1, '41 lat', '2025-12-15 20:29:06'),
+(62, 1, '1765913346', '2025-12-15 20:29:06');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_configuration_lang`
+-- Struktura tabeli dla tabeli `ps_configuration_lang`
 --
 
 CREATE TABLE `ps_configuration_lang` (
@@ -4657,7 +4652,7 @@ CREATE TABLE `ps_configuration_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_configuration_lang`
+-- Zrzut danych tabeli `ps_configuration_lang`
 --
 
 INSERT INTO `ps_configuration_lang` (`id_configuration`, `id_lang`, `value`, `date_upd`) VALUES
@@ -4686,7 +4681,7 @@ INSERT INTO `ps_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_connections`
+-- Struktura tabeli dla tabeli `ps_connections`
 --
 
 CREATE TABLE `ps_connections` (
@@ -4701,7 +4696,7 @@ CREATE TABLE `ps_connections` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_connections`
+-- Zrzut danych tabeli `ps_connections`
 --
 
 INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_guest`, `id_page`, `ip_address`, `date_add`, `http_referer`) VALUES
@@ -4713,12 +4708,15 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (6, 1, 1, 4, 3, 2886860801, '2025-12-11 22:19:30', ''),
 (7, 1, 1, 5, 3, 2886860801, '2025-12-11 22:28:02', ''),
 (8, 1, 1, 3, 2, 2886860801, '2025-12-11 22:28:02', ''),
-(9, 1, 1, 6, 1, 2886860801, '2025-12-13 18:06:54', '');
+(9, 1, 1, 6, 1, 2886860801, '2025-12-13 18:06:54', ''),
+(10, 1, 1, 7, 4, 2886860801, '2025-12-15 20:32:36', 'https://localhost:8002/49-pilki-do-koszykowki'),
+(11, 1, 1, 8, 5, 2886860801, '2025-12-15 20:36:04', 'https://localhost:8002/moje-konto'),
+(12, 1, 1, 9, 1, 2886860801, '2025-12-15 20:37:49', 'https://localhost:8002/dane-osobiste');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_connections_page`
+-- Struktura tabeli dla tabeli `ps_connections_page`
 --
 
 CREATE TABLE `ps_connections_page` (
@@ -4731,7 +4729,7 @@ CREATE TABLE `ps_connections_page` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_connections_source`
+-- Struktura tabeli dla tabeli `ps_connections_source`
 --
 
 CREATE TABLE `ps_connections_source` (
@@ -4744,7 +4742,7 @@ CREATE TABLE `ps_connections_source` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_connections_source`
+-- Zrzut danych tabeli `ps_connections_source`
 --
 
 INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
@@ -5073,12 +5071,71 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (323, 5, 'https://localhost:8002/nowe-produkty', 'localhost:8002/945-home_default/wozek-na-pilki-mikasa-ac-bc200w.jpg', '', '2025-12-11 22:28:25'),
 (324, 5, 'https://localhost:8002/nowe-produkty', 'localhost:8002/944-home_default/tablica-taktyczna-do-siatkowki-molten.jpg', '', '2025-12-11 22:28:25'),
 (325, 5, 'https://localhost:8002/nowe-produkty', 'localhost:8002/942-home_default/sciskacz-do-rak-sklz.jpg', '', '2025-12-11 22:28:25'),
-(326, 5, 'https://localhost:8002/nowe-produkty', 'localhost:8002/940-home_default/stoper-smj-sport-js-606-50-czasow.jpg', '', '2025-12-11 22:28:26');
+(326, 5, 'https://localhost:8002/nowe-produkty', 'localhost:8002/940-home_default/stoper-smj-sport-js-606-50-czasow.jpg', '', '2025-12-11 22:28:26'),
+(327, 10, 'https://localhost:8002/49-pilki-do-koszykowki', 'localhost:8002/', '', '2025-12-15 20:07:57'),
+(328, 10, 'https://localhost:8002/', 'localhost:8002/pilki-do-koszykowki/263-pilka-do-koszykowki-molten-bg3850.html', '', '2025-12-15 20:09:39'),
+(329, 10, 'https://localhost:8002/', 'localhost:8002/pilki-do-koszykowki/263-pilka-do-koszykowki-molten-bg3850.html', '', '2025-12-15 20:12:28'),
+(330, 10, 'https://localhost:8002/pilki-do-koszykowki/263-pilka-do-koszykowki-molten-bg3850.html', 'localhost:8002/49-pilki-do-koszykowki', '', '2025-12-15 20:12:29');
+INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
+(331, 10, 'https://localhost:8002/49-pilki-do-koszykowki', 'localhost:8002/pilki-do-koszykowki/169-pilka-do-koszykowki-spalding-tf-50-layup.html', '', '2025-12-15 20:12:31'),
+(332, 10, 'https://localhost:8002/pilki-do-koszykowki/169-pilka-do-koszykowki-spalding-tf-50-layup.html', 'localhost:8002/50-kosze-do-koszykowki', '', '2025-12-15 20:12:39'),
+(333, 10, 'https://localhost:8002/50-kosze-do-koszykowki', 'localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', '', '2025-12-15 20:12:40'),
+(334, 10, 'https://localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', 'localhost:8002/koszyk?action=show', '', '2025-12-15 20:13:04'),
+(335, 10, 'https://localhost:8002/koszyk?action=show', 'localhost:8002/50-kosze-do-koszykowki', '', '2025-12-15 20:13:09'),
+(336, 10, 'https://localhost:8002/50-kosze-do-koszykowki', 'localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', '', '2025-12-15 20:13:11'),
+(337, 10, 'https://localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', 'localhost:8002/koszyk?action=show', '', '2025-12-15 20:13:20'),
+(338, 10, 'https://localhost:8002/koszyk?action=show', 'localhost:8002/zam%C3%B3wienie', '', '2025-12-15 20:13:27'),
+(339, 10, 'https://localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', 'localhost:8002/koszyk?action=show', '', '2025-12-15 20:13:30'),
+(340, 10, 'https://localhost:8002/50-kosze-do-koszykowki', 'localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', '', '2025-12-15 20:13:31'),
+(341, 10, 'https://localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', 'localhost:8002/49-pilki-do-koszykowki', '', '2025-12-15 20:14:32'),
+(342, 10, 'https://localhost:8002/49-pilki-do-koszykowki', 'localhost:8002/', '', '2025-12-15 20:14:33'),
+(343, 10, 'https://localhost:8002/', 'localhost:8002/akcesoria-do-pilki-recznej/632-tasma-do-getr-select.html', '', '2025-12-15 20:14:36'),
+(344, 10, 'https://localhost:8002/', 'localhost:8002/akcesoria-do-pilki-recznej/632-tasma-do-getr-select.html', '', '2025-12-15 20:14:47'),
+(345, 10, 'https://localhost:8002/akcesoria-do-pilki-recznej/632-tasma-do-getr-select.html', 'localhost:8002/50-kosze-do-koszykowki', '', '2025-12-15 20:17:40'),
+(346, 10, 'https://localhost:8002/50-kosze-do-koszykowki', 'localhost:8002/kosze-do-koszykowki/308-zestaw-do-koszykowki-sure-shot-663-euro-court.html', '', '2025-12-15 20:17:42'),
+(347, 10, 'https://localhost:8002/akcesoria-do-pilki-recznej/632-tasma-do-getr-select.html', 'localhost:8002/50-kosze-do-koszykowki', '', '2025-12-15 20:17:43'),
+(348, 10, 'https://localhost:8002/50-kosze-do-koszykowki', 'localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', '', '2025-12-15 20:17:45'),
+(349, 10, 'https://localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', 'localhost:8002/koszyk?action=show', '', '2025-12-15 20:17:47'),
+(350, 10, 'https://localhost:8002/50-kosze-do-koszykowki', 'localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', '', '2025-12-15 20:17:50'),
+(351, 10, 'https://localhost:8002/kosze-do-koszykowki/300-zestaw-do-koszykowki-spalding-gold-in-ground.html', 'localhost:8002/koszyk?action=show', '', '2025-12-15 20:17:58'),
+(352, 10, 'https://localhost:8002/koszyk?action=show', 'localhost:8002/49-pilki-do-koszykowki', '', '2025-12-15 20:18:06'),
+(353, 10, 'https://localhost:8002/49-pilki-do-koszykowki', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:22:52'),
+(354, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:23:47'),
+(355, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:24:04'),
+(356, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:24:26'),
+(357, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:24:41'),
+(358, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie', '', '2025-12-15 20:24:42'),
+(359, 10, 'https://localhost:8002/logowanie', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:24:55'),
+(360, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:25:55'),
+(361, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:26:04'),
+(362, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:26:16'),
+(363, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie', '', '2025-12-15 20:26:31'),
+(364, 10, 'https://localhost:8002/logowanie', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:26:34'),
+(365, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:26:47'),
+(366, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:28:12'),
+(367, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:28:13'),
+(368, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:28:47'),
+(369, 10, 'https://localhost:8002/49-pilki-do-koszykowki', 'localhost:8002/pilki-do-koszykowki/169-pilka-do-koszykowki-spalding-tf-50-layup.html', '', '2025-12-15 20:32:36'),
+(370, 10, 'https://localhost:8002/pilki-do-koszykowki/169-pilka-do-koszykowki-spalding-tf-50-layup.html', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:33:46'),
+(371, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:34:22'),
+(372, 10, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/', '', '2025-12-15 20:35:01'),
+(373, 10, 'https://localhost:8002/', 'localhost:8002/moje-konto', '', '2025-12-15 20:35:04'),
+(374, 10, 'https://localhost:8002/moje-konto', 'localhost:8002/moje-konto', '', '2025-12-15 20:35:10'),
+(375, 11, 'https://localhost:8002/moje-konto', 'localhost:8002/logowanie?back=my-account', '', '2025-12-15 20:36:04'),
+(376, 11, 'https://localhost:8002/logowanie?back=my-account', 'localhost:8002/logowanie?create_account=1', '', '2025-12-15 20:36:05'),
+(377, 11, 'https://localhost:8002/logowanie?create_account=1', 'localhost:8002/', '', '2025-12-15 20:36:36'),
+(378, 11, 'https://localhost:8002/', 'localhost:8002/moje-konto', '', '2025-12-15 20:36:39'),
+(379, 11, 'https://localhost:8002/moje-konto', 'localhost:8002/dane-osobiste', '', '2025-12-15 20:36:42'),
+(380, 12, 'https://localhost:8002/dane-osobiste', 'localhost:8002/', '', '2025-12-15 20:37:49'),
+(381, 12, 'https://localhost:8002/dane-osobiste', 'localhost:8002/', '', '2025-12-15 20:42:56'),
+(382, 12, 'https://localhost:8002/dane-osobiste', 'localhost:8002/', '', '2025-12-15 20:42:58'),
+(383, 12, 'https://localhost:8002/dane-osobiste', 'localhost:8002/', '', '2025-12-15 20:42:59'),
+(384, 12, 'https://localhost:8002/dane-osobiste', 'localhost:8002/', '', '2025-12-15 20:43:00');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_contact`
+-- Struktura tabeli dla tabeli `ps_contact`
 --
 
 CREATE TABLE `ps_contact` (
@@ -5089,7 +5146,7 @@ CREATE TABLE `ps_contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_contact`
+-- Zrzut danych tabeli `ps_contact`
 --
 
 INSERT INTO `ps_contact` (`id_contact`, `email`, `customer_service`, `position`) VALUES
@@ -5099,7 +5156,7 @@ INSERT INTO `ps_contact` (`id_contact`, `email`, `customer_service`, `position`)
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_contact_lang`
+-- Struktura tabeli dla tabeli `ps_contact_lang`
 --
 
 CREATE TABLE `ps_contact_lang` (
@@ -5110,7 +5167,7 @@ CREATE TABLE `ps_contact_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_contact_lang`
+-- Zrzut danych tabeli `ps_contact_lang`
 --
 
 INSERT INTO `ps_contact_lang` (`id_contact`, `id_lang`, `name`, `description`) VALUES
@@ -5120,7 +5177,7 @@ INSERT INTO `ps_contact_lang` (`id_contact`, `id_lang`, `name`, `description`) V
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_contact_shop`
+-- Struktura tabeli dla tabeli `ps_contact_shop`
 --
 
 CREATE TABLE `ps_contact_shop` (
@@ -5129,7 +5186,7 @@ CREATE TABLE `ps_contact_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_contact_shop`
+-- Zrzut danych tabeli `ps_contact_shop`
 --
 
 INSERT INTO `ps_contact_shop` (`id_contact`, `id_shop`) VALUES
@@ -5139,7 +5196,7 @@ INSERT INTO `ps_contact_shop` (`id_contact`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_country`
+-- Struktura tabeli dla tabeli `ps_country`
 --
 
 CREATE TABLE `ps_country` (
@@ -5157,7 +5214,7 @@ CREATE TABLE `ps_country` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_country`
+-- Zrzut danych tabeli `ps_country`
 --
 
 INSERT INTO `ps_country` (`id_country`, `id_zone`, `id_currency`, `iso_code`, `call_prefix`, `active`, `contains_states`, `need_identification_number`, `need_zip_code`, `zip_code_format`, `display_tax_label`) VALUES
@@ -5406,7 +5463,7 @@ INSERT INTO `ps_country` (`id_country`, `id_zone`, `id_currency`, `iso_code`, `c
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_country_lang`
+-- Struktura tabeli dla tabeli `ps_country_lang`
 --
 
 CREATE TABLE `ps_country_lang` (
@@ -5416,7 +5473,7 @@ CREATE TABLE `ps_country_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_country_lang`
+-- Zrzut danych tabeli `ps_country_lang`
 --
 
 INSERT INTO `ps_country_lang` (`id_country`, `id_lang`, `name`) VALUES
@@ -5665,7 +5722,7 @@ INSERT INTO `ps_country_lang` (`id_country`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_country_shop`
+-- Struktura tabeli dla tabeli `ps_country_shop`
 --
 
 CREATE TABLE `ps_country_shop` (
@@ -5674,7 +5731,7 @@ CREATE TABLE `ps_country_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_country_shop`
+-- Zrzut danych tabeli `ps_country_shop`
 --
 
 INSERT INTO `ps_country_shop` (`id_country`, `id_shop`) VALUES
@@ -5923,7 +5980,7 @@ INSERT INTO `ps_country_shop` (`id_country`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_currency`
+-- Struktura tabeli dla tabeli `ps_currency`
 --
 
 CREATE TABLE `ps_currency` (
@@ -5940,7 +5997,7 @@ CREATE TABLE `ps_currency` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_currency`
+-- Zrzut danych tabeli `ps_currency`
 --
 
 INSERT INTO `ps_currency` (`id_currency`, `name`, `iso_code`, `numeric_iso_code`, `precision`, `conversion_rate`, `deleted`, `active`, `unofficial`, `modified`) VALUES
@@ -5949,7 +6006,7 @@ INSERT INTO `ps_currency` (`id_currency`, `name`, `iso_code`, `numeric_iso_code`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_currency_lang`
+-- Struktura tabeli dla tabeli `ps_currency_lang`
 --
 
 CREATE TABLE `ps_currency_lang` (
@@ -5961,7 +6018,7 @@ CREATE TABLE `ps_currency_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_currency_lang`
+-- Zrzut danych tabeli `ps_currency_lang`
 --
 
 INSERT INTO `ps_currency_lang` (`id_currency`, `id_lang`, `name`, `symbol`, `pattern`) VALUES
@@ -5970,7 +6027,7 @@ INSERT INTO `ps_currency_lang` (`id_currency`, `id_lang`, `name`, `symbol`, `pat
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_currency_shop`
+-- Struktura tabeli dla tabeli `ps_currency_shop`
 --
 
 CREATE TABLE `ps_currency_shop` (
@@ -5980,7 +6037,7 @@ CREATE TABLE `ps_currency_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_currency_shop`
+-- Zrzut danych tabeli `ps_currency_shop`
 --
 
 INSERT INTO `ps_currency_shop` (`id_currency`, `id_shop`, `conversion_rate`) VALUES
@@ -5989,7 +6046,7 @@ INSERT INTO `ps_currency_shop` (`id_currency`, `id_shop`, `conversion_rate`) VAL
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customer`
+-- Struktura tabeli dla tabeli `ps_customer`
 --
 
 CREATE TABLE `ps_customer` (
@@ -6028,19 +6085,10 @@ CREATE TABLE `ps_customer` (
   `reset_password_validity` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
---
--- Дамп данных таблицы `ps_customer`
---
-
-INSERT INTO `ps_customer` (`id_customer`, `id_shop_group`, `id_shop`, `id_gender`, `id_default_group`, `id_lang`, `id_risk`, `company`, `siret`, `ape`, `firstname`, `lastname`, `email`, `passwd`, `last_passwd_gen`, `birthday`, `newsletter`, `ip_registration_newsletter`, `newsletter_date_add`, `optin`, `website`, `outstanding_allow_amount`, `show_public_prices`, `max_payment_days`, `secure_key`, `note`, `active`, `is_guest`, `deleted`, `date_add`, `date_upd`, `reset_password_token`, `reset_password_validity`) VALUES
-(1, 1, 1, 1, 3, 1, 0, '', '', '', 'Anonymous', 'Anonymous', 'anonymous@psgdpr.com', '$2y$10$y/1YCVTq/86qN32fizSbj.BvN7hhrI4FBkZZB.d02OREuDriSrN/q', '2025-12-06 06:12:36', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '1593285f2d517fa3f7653fa75d74e789', '', 0, 0, 0, '2025-12-06 12:12:36', '2025-12-06 12:12:36', '', '0000-00-00 00:00:00'),
-(2, 1, 1, 1, 3, 1, 0, '', '', '', 'John', 'DOE', 'pub@prestashop.com', 'b498e1001bab06551e14ab2b2d106696', '2025-12-06 06:12:48', '1970-01-15', 1, '', '2013-12-13 08:19:15', 1, '', 0.000000, 0, 0, 'd6933c4a1d7cc7d6f8890520b7a7967c', '', 1, 0, 0, '2025-12-06 12:12:48', '2025-12-06 12:12:48', '', '0000-00-00 00:00:00'),
-(3, 1, 1, 1, 3, 1, 0, '', '', '', 'h', 's', 'zzz335241@gmail.com', '$2y$10$7a/HGD7Qfh89Ta0rNFmgWexxIvr7VnE.3bypwzmSM1pr5gXygTGYq', '2025-12-14 23:32:59', '2000-01-01', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '1f2696affd12967da12b3c3ae5c29744', '', 1, 0, 0, '2025-12-15 05:32:59', '2025-12-15 05:32:59', '', '0000-00-00 00:00:00');
-
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customer_group`
+-- Struktura tabeli dla tabeli `ps_customer_group`
 --
 
 CREATE TABLE `ps_customer_group` (
@@ -6048,19 +6096,10 @@ CREATE TABLE `ps_customer_group` (
   `id_group` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
---
--- Дамп данных таблицы `ps_customer_group`
---
-
-INSERT INTO `ps_customer_group` (`id_customer`, `id_group`) VALUES
-(1, 3),
-(2, 3),
-(3, 3);
-
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customer_message`
+-- Struktura tabeli dla tabeli `ps_customer_message`
 --
 
 CREATE TABLE `ps_customer_message` (
@@ -6080,7 +6119,7 @@ CREATE TABLE `ps_customer_message` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customer_message_sync_imap`
+-- Struktura tabeli dla tabeli `ps_customer_message_sync_imap`
 --
 
 CREATE TABLE `ps_customer_message_sync_imap` (
@@ -6090,7 +6129,7 @@ CREATE TABLE `ps_customer_message_sync_imap` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customer_session`
+-- Struktura tabeli dla tabeli `ps_customer_session`
 --
 
 CREATE TABLE `ps_customer_session` (
@@ -6099,17 +6138,10 @@ CREATE TABLE `ps_customer_session` (
   `token` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
---
--- Дамп данных таблицы `ps_customer_session`
---
-
-INSERT INTO `ps_customer_session` (`id_customer_session`, `id_customer`, `token`) VALUES
-(1, 3, '1a8ddb932790fe6f96750e006158d5a6bd4f3d48');
-
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customer_thread`
+-- Struktura tabeli dla tabeli `ps_customer_thread`
 --
 
 CREATE TABLE `ps_customer_thread` (
@@ -6130,7 +6162,7 @@ CREATE TABLE `ps_customer_thread` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customization`
+-- Struktura tabeli dla tabeli `ps_customization`
 --
 
 CREATE TABLE `ps_customization` (
@@ -6148,7 +6180,7 @@ CREATE TABLE `ps_customization` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customization_field`
+-- Struktura tabeli dla tabeli `ps_customization_field`
 --
 
 CREATE TABLE `ps_customization_field` (
@@ -6163,7 +6195,7 @@ CREATE TABLE `ps_customization_field` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customization_field_lang`
+-- Struktura tabeli dla tabeli `ps_customization_field_lang`
 --
 
 CREATE TABLE `ps_customization_field_lang` (
@@ -6176,7 +6208,7 @@ CREATE TABLE `ps_customization_field_lang` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_customized_data`
+-- Struktura tabeli dla tabeli `ps_customized_data`
 --
 
 CREATE TABLE `ps_customized_data` (
@@ -6192,7 +6224,7 @@ CREATE TABLE `ps_customized_data` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_date_range`
+-- Struktura tabeli dla tabeli `ps_date_range`
 --
 
 CREATE TABLE `ps_date_range` (
@@ -6204,7 +6236,7 @@ CREATE TABLE `ps_date_range` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_delivery`
+-- Struktura tabeli dla tabeli `ps_delivery`
 --
 
 CREATE TABLE `ps_delivery` (
@@ -6219,7 +6251,7 @@ CREATE TABLE `ps_delivery` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_delivery`
+-- Zrzut danych tabeli `ps_delivery`
 --
 
 INSERT INTO `ps_delivery` (`id_delivery`, `id_shop`, `id_shop_group`, `id_carrier`, `id_range_price`, `id_range_weight`, `id_zone`, `price`) VALUES
@@ -6243,7 +6275,7 @@ INSERT INTO `ps_delivery` (`id_delivery`, `id_shop`, `id_shop_group`, `id_carrie
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_emailsubscription`
+-- Struktura tabeli dla tabeli `ps_emailsubscription`
 --
 
 CREATE TABLE `ps_emailsubscription` (
@@ -6261,7 +6293,7 @@ CREATE TABLE `ps_emailsubscription` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_employee`
+-- Struktura tabeli dla tabeli `ps_employee`
 --
 
 CREATE TABLE `ps_employee` (
@@ -6297,7 +6329,7 @@ CREATE TABLE `ps_employee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_employee`
+-- Zrzut danych tabeli `ps_employee`
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
@@ -6306,7 +6338,7 @@ INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_employee_account`
+-- Struktura tabeli dla tabeli `ps_employee_account`
 --
 
 CREATE TABLE `ps_employee_account` (
@@ -6321,7 +6353,7 @@ CREATE TABLE `ps_employee_account` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_employee_session`
+-- Struktura tabeli dla tabeli `ps_employee_session`
 --
 
 CREATE TABLE `ps_employee_session` (
@@ -6331,19 +6363,20 @@ CREATE TABLE `ps_employee_session` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_employee_session`
+-- Zrzut danych tabeli `ps_employee_session`
 --
 
 INSERT INTO `ps_employee_session` (`id_employee_session`, `id_employee`, `token`) VALUES
 (1, 1, 'c4595c4ab8ae5d9034f8fdb0992cac07b91d5be3'),
 (3, 1, '291027d9150590e7e94e3b3cd4a33e016dc24d81'),
 (4, 1, '5f164c16ea19e9449109a18b2f2a18060e058143'),
-(15, 1, '5e99887a7a53acbe0a3ae8e43ce0263c8935fc39');
+(15, 1, '5e99887a7a53acbe0a3ae8e43ce0263c8935fc39'),
+(16, 1, '5d2f22280b1087a5a7641ebdc13d9ef0276c47e1');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_employee_shop`
+-- Struktura tabeli dla tabeli `ps_employee_shop`
 --
 
 CREATE TABLE `ps_employee_shop` (
@@ -6352,7 +6385,7 @@ CREATE TABLE `ps_employee_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_employee_shop`
+-- Zrzut danych tabeli `ps_employee_shop`
 --
 
 INSERT INTO `ps_employee_shop` (`id_employee`, `id_shop`) VALUES
@@ -6361,7 +6394,7 @@ INSERT INTO `ps_employee_shop` (`id_employee`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_fb_category_match`
+-- Struktura tabeli dla tabeli `ps_fb_category_match`
 --
 
 CREATE TABLE `ps_fb_category_match` (
@@ -6377,7 +6410,7 @@ CREATE TABLE `ps_fb_category_match` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_feature`
+-- Struktura tabeli dla tabeli `ps_feature`
 --
 
 CREATE TABLE `ps_feature` (
@@ -6386,7 +6419,7 @@ CREATE TABLE `ps_feature` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_feature`
+-- Zrzut danych tabeli `ps_feature`
 --
 
 INSERT INTO `ps_feature` (`id_feature`, `position`) VALUES
@@ -6396,7 +6429,7 @@ INSERT INTO `ps_feature` (`id_feature`, `position`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_feature_flag`
+-- Struktura tabeli dla tabeli `ps_feature_flag`
 --
 
 CREATE TABLE `ps_feature_flag` (
@@ -6410,7 +6443,7 @@ CREATE TABLE `ps_feature_flag` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_feature_flag`
+-- Zrzut danych tabeli `ps_feature_flag`
 --
 
 INSERT INTO `ps_feature_flag` (`id_feature_flag`, `name`, `state`, `label_wording`, `label_domain`, `description_wording`, `description_domain`) VALUES
@@ -6419,7 +6452,7 @@ INSERT INTO `ps_feature_flag` (`id_feature_flag`, `name`, `state`, `label_wordin
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_feature_lang`
+-- Struktura tabeli dla tabeli `ps_feature_lang`
 --
 
 CREATE TABLE `ps_feature_lang` (
@@ -6429,7 +6462,7 @@ CREATE TABLE `ps_feature_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_feature_lang`
+-- Zrzut danych tabeli `ps_feature_lang`
 --
 
 INSERT INTO `ps_feature_lang` (`id_feature`, `id_lang`, `name`) VALUES
@@ -6439,7 +6472,7 @@ INSERT INTO `ps_feature_lang` (`id_feature`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_feature_product`
+-- Struktura tabeli dla tabeli `ps_feature_product`
 --
 
 CREATE TABLE `ps_feature_product` (
@@ -6451,7 +6484,7 @@ CREATE TABLE `ps_feature_product` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_feature_shop`
+-- Struktura tabeli dla tabeli `ps_feature_shop`
 --
 
 CREATE TABLE `ps_feature_shop` (
@@ -6460,7 +6493,7 @@ CREATE TABLE `ps_feature_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_feature_shop`
+-- Zrzut danych tabeli `ps_feature_shop`
 --
 
 INSERT INTO `ps_feature_shop` (`id_feature`, `id_shop`) VALUES
@@ -6470,7 +6503,7 @@ INSERT INTO `ps_feature_shop` (`id_feature`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_feature_value`
+-- Struktura tabeli dla tabeli `ps_feature_value`
 --
 
 CREATE TABLE `ps_feature_value` (
@@ -6480,7 +6513,7 @@ CREATE TABLE `ps_feature_value` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_feature_value`
+-- Zrzut danych tabeli `ps_feature_value`
 --
 
 INSERT INTO `ps_feature_value` (`id_feature_value`, `id_feature`, `custom`) VALUES
@@ -6498,7 +6531,7 @@ INSERT INTO `ps_feature_value` (`id_feature_value`, `id_feature`, `custom`) VALU
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_feature_value_lang`
+-- Struktura tabeli dla tabeli `ps_feature_value_lang`
 --
 
 CREATE TABLE `ps_feature_value_lang` (
@@ -6508,7 +6541,7 @@ CREATE TABLE `ps_feature_value_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_feature_value_lang`
+-- Zrzut danych tabeli `ps_feature_value_lang`
 --
 
 INSERT INTO `ps_feature_value_lang` (`id_feature_value`, `id_lang`, `value`) VALUES
@@ -6526,7 +6559,7 @@ INSERT INTO `ps_feature_value_lang` (`id_feature_value`, `id_lang`, `value`) VAL
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_gender`
+-- Struktura tabeli dla tabeli `ps_gender`
 --
 
 CREATE TABLE `ps_gender` (
@@ -6535,7 +6568,7 @@ CREATE TABLE `ps_gender` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_gender`
+-- Zrzut danych tabeli `ps_gender`
 --
 
 INSERT INTO `ps_gender` (`id_gender`, `type`) VALUES
@@ -6545,7 +6578,7 @@ INSERT INTO `ps_gender` (`id_gender`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_gender_lang`
+-- Struktura tabeli dla tabeli `ps_gender_lang`
 --
 
 CREATE TABLE `ps_gender_lang` (
@@ -6555,7 +6588,7 @@ CREATE TABLE `ps_gender_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_gender_lang`
+-- Zrzut danych tabeli `ps_gender_lang`
 --
 
 INSERT INTO `ps_gender_lang` (`id_gender`, `id_lang`, `name`) VALUES
@@ -6565,7 +6598,7 @@ INSERT INTO `ps_gender_lang` (`id_gender`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_group`
+-- Struktura tabeli dla tabeli `ps_group`
 --
 
 CREATE TABLE `ps_group` (
@@ -6578,7 +6611,7 @@ CREATE TABLE `ps_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_group`
+-- Zrzut danych tabeli `ps_group`
 --
 
 INSERT INTO `ps_group` (`id_group`, `reduction`, `price_display_method`, `show_prices`, `date_add`, `date_upd`) VALUES
@@ -6589,7 +6622,7 @@ INSERT INTO `ps_group` (`id_group`, `reduction`, `price_display_method`, `show_p
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_group_lang`
+-- Struktura tabeli dla tabeli `ps_group_lang`
 --
 
 CREATE TABLE `ps_group_lang` (
@@ -6599,7 +6632,7 @@ CREATE TABLE `ps_group_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_group_lang`
+-- Zrzut danych tabeli `ps_group_lang`
 --
 
 INSERT INTO `ps_group_lang` (`id_group`, `id_lang`, `name`) VALUES
@@ -6610,7 +6643,7 @@ INSERT INTO `ps_group_lang` (`id_group`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_group_reduction`
+-- Struktura tabeli dla tabeli `ps_group_reduction`
 --
 
 CREATE TABLE `ps_group_reduction` (
@@ -6623,7 +6656,7 @@ CREATE TABLE `ps_group_reduction` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_group_shop`
+-- Struktura tabeli dla tabeli `ps_group_shop`
 --
 
 CREATE TABLE `ps_group_shop` (
@@ -6632,7 +6665,7 @@ CREATE TABLE `ps_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_group_shop`
+-- Zrzut danych tabeli `ps_group_shop`
 --
 
 INSERT INTO `ps_group_shop` (`id_group`, `id_shop`) VALUES
@@ -6643,7 +6676,7 @@ INSERT INTO `ps_group_shop` (`id_group`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_gsitemap_sitemap`
+-- Struktura tabeli dla tabeli `ps_gsitemap_sitemap`
 --
 
 CREATE TABLE `ps_gsitemap_sitemap` (
@@ -6654,7 +6687,7 @@ CREATE TABLE `ps_gsitemap_sitemap` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_guest`
+-- Struktura tabeli dla tabeli `ps_guest`
 --
 
 CREATE TABLE `ps_guest` (
@@ -6677,7 +6710,7 @@ CREATE TABLE `ps_guest` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_guest`
+-- Zrzut danych tabeli `ps_guest`
 --
 
 INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id_customer`, `javascript`, `screen_resolution_x`, `screen_resolution_y`, `screen_color`, `sun_java`, `adobe_flash`, `adobe_director`, `apple_quicktime`, `real_player`, `windows_media`, `accept_language`, `mobile_theme`) VALUES
@@ -6686,12 +6719,15 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (3, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0),
 (4, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0),
 (5, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0),
-(6, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'ru', 0);
+(6, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'ru', 0),
+(7, 6, 3, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0),
+(8, 6, 3, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0),
+(9, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'en', 0);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_homeslider`
+-- Struktura tabeli dla tabeli `ps_homeslider`
 --
 
 CREATE TABLE `ps_homeslider` (
@@ -6700,7 +6736,7 @@ CREATE TABLE `ps_homeslider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_homeslider`
+-- Zrzut danych tabeli `ps_homeslider`
 --
 
 INSERT INTO `ps_homeslider` (`id_homeslider_slides`, `id_shop`) VALUES
@@ -6711,7 +6747,7 @@ INSERT INTO `ps_homeslider` (`id_homeslider_slides`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_homeslider_slides`
+-- Struktura tabeli dla tabeli `ps_homeslider_slides`
 --
 
 CREATE TABLE `ps_homeslider_slides` (
@@ -6721,7 +6757,7 @@ CREATE TABLE `ps_homeslider_slides` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_homeslider_slides`
+-- Zrzut danych tabeli `ps_homeslider_slides`
 --
 
 INSERT INTO `ps_homeslider_slides` (`id_homeslider_slides`, `position`, `active`) VALUES
@@ -6732,7 +6768,7 @@ INSERT INTO `ps_homeslider_slides` (`id_homeslider_slides`, `position`, `active`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_homeslider_slides_lang`
+-- Struktura tabeli dla tabeli `ps_homeslider_slides_lang`
 --
 
 CREATE TABLE `ps_homeslider_slides_lang` (
@@ -6746,7 +6782,7 @@ CREATE TABLE `ps_homeslider_slides_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_homeslider_slides_lang`
+-- Zrzut danych tabeli `ps_homeslider_slides_lang`
 --
 
 INSERT INTO `ps_homeslider_slides_lang` (`id_homeslider_slides`, `id_lang`, `title`, `description`, `legend`, `url`, `image`) VALUES
@@ -6757,7 +6793,7 @@ INSERT INTO `ps_homeslider_slides_lang` (`id_homeslider_slides`, `id_lang`, `tit
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_hook`
+-- Struktura tabeli dla tabeli `ps_hook`
 --
 
 CREATE TABLE `ps_hook` (
@@ -6770,7 +6806,7 @@ CREATE TABLE `ps_hook` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_hook`
+-- Zrzut danych tabeli `ps_hook`
 --
 
 INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `position`) VALUES
@@ -7536,7 +7572,7 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `active`, `pos
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_hook_alias`
+-- Struktura tabeli dla tabeli `ps_hook_alias`
 --
 
 CREATE TABLE `ps_hook_alias` (
@@ -7546,7 +7582,7 @@ CREATE TABLE `ps_hook_alias` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_hook_alias`
+-- Zrzut danych tabeli `ps_hook_alias`
 --
 
 INSERT INTO `ps_hook_alias` (`id_hook_alias`, `alias`, `name`) VALUES
@@ -7642,7 +7678,7 @@ INSERT INTO `ps_hook_alias` (`id_hook_alias`, `alias`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_hook_module`
+-- Struktura tabeli dla tabeli `ps_hook_module`
 --
 
 CREATE TABLE `ps_hook_module` (
@@ -7653,7 +7689,7 @@ CREATE TABLE `ps_hook_module` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_hook_module`
+-- Zrzut danych tabeli `ps_hook_module`
 --
 
 INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VALUES
@@ -7868,7 +7904,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_hook_module_exceptions`
+-- Struktura tabeli dla tabeli `ps_hook_module_exceptions`
 --
 
 CREATE TABLE `ps_hook_module_exceptions` (
@@ -7882,7 +7918,7 @@ CREATE TABLE `ps_hook_module_exceptions` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_image`
+-- Struktura tabeli dla tabeli `ps_image`
 --
 
 CREATE TABLE `ps_image` (
@@ -7893,7 +7929,7 @@ CREATE TABLE `ps_image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_image`
+-- Zrzut danych tabeli `ps_image`
 --
 
 INSERT INTO `ps_image` (`id_image`, `id_product`, `position`, `cover`) VALUES
@@ -8617,7 +8653,7 @@ INSERT INTO `ps_image` (`id_image`, `id_product`, `position`, `cover`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_image_lang`
+-- Struktura tabeli dla tabeli `ps_image_lang`
 --
 
 CREATE TABLE `ps_image_lang` (
@@ -8627,7 +8663,7 @@ CREATE TABLE `ps_image_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_image_lang`
+-- Zrzut danych tabeli `ps_image_lang`
 --
 
 INSERT INTO `ps_image_lang` (`id_image`, `id_lang`, `legend`) VALUES
@@ -9351,7 +9387,7 @@ INSERT INTO `ps_image_lang` (`id_image`, `id_lang`, `legend`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_image_shop`
+-- Struktura tabeli dla tabeli `ps_image_shop`
 --
 
 CREATE TABLE `ps_image_shop` (
@@ -9362,7 +9398,7 @@ CREATE TABLE `ps_image_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_image_shop`
+-- Zrzut danych tabeli `ps_image_shop`
 --
 
 INSERT INTO `ps_image_shop` (`id_product`, `id_image`, `id_shop`, `cover`) VALUES
@@ -10086,7 +10122,7 @@ INSERT INTO `ps_image_shop` (`id_product`, `id_image`, `id_shop`, `cover`) VALUE
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_image_type`
+-- Struktura tabeli dla tabeli `ps_image_type`
 --
 
 CREATE TABLE `ps_image_type` (
@@ -10102,7 +10138,7 @@ CREATE TABLE `ps_image_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_image_type`
+-- Zrzut danych tabeli `ps_image_type`
 --
 
 INSERT INTO `ps_image_type` (`id_image_type`, `name`, `width`, `height`, `products`, `categories`, `manufacturers`, `suppliers`, `stores`) VALUES
@@ -10117,7 +10153,7 @@ INSERT INTO `ps_image_type` (`id_image_type`, `name`, `width`, `height`, `produc
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_import_match`
+-- Struktura tabeli dla tabeli `ps_import_match`
 --
 
 CREATE TABLE `ps_import_match` (
@@ -10130,7 +10166,7 @@ CREATE TABLE `ps_import_match` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_info`
+-- Struktura tabeli dla tabeli `ps_info`
 --
 
 CREATE TABLE `ps_info` (
@@ -10138,7 +10174,7 @@ CREATE TABLE `ps_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_info`
+-- Zrzut danych tabeli `ps_info`
 --
 
 INSERT INTO `ps_info` (`id_info`) VALUES
@@ -10147,7 +10183,7 @@ INSERT INTO `ps_info` (`id_info`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_info_lang`
+-- Struktura tabeli dla tabeli `ps_info_lang`
 --
 
 CREATE TABLE `ps_info_lang` (
@@ -10158,7 +10194,7 @@ CREATE TABLE `ps_info_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_info_lang`
+-- Zrzut danych tabeli `ps_info_lang`
 --
 
 INSERT INTO `ps_info_lang` (`id_info`, `id_shop`, `id_lang`, `text`) VALUES
@@ -10167,7 +10203,7 @@ INSERT INTO `ps_info_lang` (`id_info`, `id_shop`, `id_lang`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_info_shop`
+-- Struktura tabeli dla tabeli `ps_info_shop`
 --
 
 CREATE TABLE `ps_info_shop` (
@@ -10176,7 +10212,7 @@ CREATE TABLE `ps_info_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_info_shop`
+-- Zrzut danych tabeli `ps_info_shop`
 --
 
 INSERT INTO `ps_info_shop` (`id_info`, `id_shop`) VALUES
@@ -10185,7 +10221,7 @@ INSERT INTO `ps_info_shop` (`id_info`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_lang`
+-- Struktura tabeli dla tabeli `ps_lang`
 --
 
 CREATE TABLE `ps_lang` (
@@ -10201,7 +10237,7 @@ CREATE TABLE `ps_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_lang`
+-- Zrzut danych tabeli `ps_lang`
 --
 
 INSERT INTO `ps_lang` (`id_lang`, `name`, `active`, `iso_code`, `language_code`, `locale`, `date_format_lite`, `date_format_full`, `is_rtl`) VALUES
@@ -10210,7 +10246,7 @@ INSERT INTO `ps_lang` (`id_lang`, `name`, `active`, `iso_code`, `language_code`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_lang_shop`
+-- Struktura tabeli dla tabeli `ps_lang_shop`
 --
 
 CREATE TABLE `ps_lang_shop` (
@@ -10219,7 +10255,7 @@ CREATE TABLE `ps_lang_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_lang_shop`
+-- Zrzut danych tabeli `ps_lang_shop`
 --
 
 INSERT INTO `ps_lang_shop` (`id_lang`, `id_shop`) VALUES
@@ -10228,7 +10264,7 @@ INSERT INTO `ps_lang_shop` (`id_lang`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_category`
+-- Struktura tabeli dla tabeli `ps_layered_category`
 --
 
 CREATE TABLE `ps_layered_category` (
@@ -10244,7 +10280,7 @@ CREATE TABLE `ps_layered_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_layered_category`
+-- Zrzut danych tabeli `ps_layered_category`
 --
 
 INSERT INTO `ps_layered_category` (`id_layered_category`, `id_shop`, `controller`, `id_category`, `id_value`, `type`, `position`, `filter_type`, `filter_show_limit`) VALUES
@@ -10382,7 +10418,7 @@ INSERT INTO `ps_layered_category` (`id_layered_category`, `id_shop`, `controller
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_filter`
+-- Struktura tabeli dla tabeli `ps_layered_filter`
 --
 
 CREATE TABLE `ps_layered_filter` (
@@ -10394,7 +10430,7 @@ CREATE TABLE `ps_layered_filter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_layered_filter`
+-- Zrzut danych tabeli `ps_layered_filter`
 --
 
 INSERT INTO `ps_layered_filter` (`id_layered_filter`, `name`, `filters`, `n_categories`, `date_add`) VALUES
@@ -10403,7 +10439,7 @@ INSERT INTO `ps_layered_filter` (`id_layered_filter`, `name`, `filters`, `n_cate
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_filter_block`
+-- Struktura tabeli dla tabeli `ps_layered_filter_block`
 --
 
 CREATE TABLE `ps_layered_filter_block` (
@@ -10411,10 +10447,18 @@ CREATE TABLE `ps_layered_filter_block` (
   `data` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
+--
+-- Zrzut danych tabeli `ps_layered_filter_block`
+--
+
+INSERT INTO `ps_layered_filter_block` (`hash`, `data`) VALUES
+('2cdf8688f8b0c5b19f175fd90e5b6d2b', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('ec693875414cc6adea27343a2f27206a', 'a:1:{s:7:\"filters\";a:0:{}}');
+
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_filter_shop`
+-- Struktura tabeli dla tabeli `ps_layered_filter_shop`
 --
 
 CREATE TABLE `ps_layered_filter_shop` (
@@ -10423,7 +10467,7 @@ CREATE TABLE `ps_layered_filter_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_layered_filter_shop`
+-- Zrzut danych tabeli `ps_layered_filter_shop`
 --
 
 INSERT INTO `ps_layered_filter_shop` (`id_layered_filter`, `id_shop`) VALUES
@@ -10432,7 +10476,7 @@ INSERT INTO `ps_layered_filter_shop` (`id_layered_filter`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_indexable_attribute_group`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_attribute_group`
 --
 
 CREATE TABLE `ps_layered_indexable_attribute_group` (
@@ -10441,7 +10485,7 @@ CREATE TABLE `ps_layered_indexable_attribute_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_layered_indexable_attribute_group`
+-- Zrzut danych tabeli `ps_layered_indexable_attribute_group`
 --
 
 INSERT INTO `ps_layered_indexable_attribute_group` (`id_attribute_group`, `indexable`) VALUES
@@ -10453,7 +10497,7 @@ INSERT INTO `ps_layered_indexable_attribute_group` (`id_attribute_group`, `index
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_indexable_attribute_group_lang_value`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_attribute_group_lang_value`
 --
 
 CREATE TABLE `ps_layered_indexable_attribute_group_lang_value` (
@@ -10466,7 +10510,7 @@ CREATE TABLE `ps_layered_indexable_attribute_group_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_indexable_attribute_lang_value`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_attribute_lang_value`
 --
 
 CREATE TABLE `ps_layered_indexable_attribute_lang_value` (
@@ -10479,7 +10523,7 @@ CREATE TABLE `ps_layered_indexable_attribute_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_indexable_feature`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_feature`
 --
 
 CREATE TABLE `ps_layered_indexable_feature` (
@@ -10488,7 +10532,7 @@ CREATE TABLE `ps_layered_indexable_feature` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_layered_indexable_feature`
+-- Zrzut danych tabeli `ps_layered_indexable_feature`
 --
 
 INSERT INTO `ps_layered_indexable_feature` (`id_feature`, `indexable`) VALUES
@@ -10498,7 +10542,7 @@ INSERT INTO `ps_layered_indexable_feature` (`id_feature`, `indexable`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_indexable_feature_lang_value`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_feature_lang_value`
 --
 
 CREATE TABLE `ps_layered_indexable_feature_lang_value` (
@@ -10511,7 +10555,7 @@ CREATE TABLE `ps_layered_indexable_feature_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_indexable_feature_value_lang_value`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_feature_value_lang_value`
 --
 
 CREATE TABLE `ps_layered_indexable_feature_value_lang_value` (
@@ -10524,7 +10568,7 @@ CREATE TABLE `ps_layered_indexable_feature_value_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_price_index`
+-- Struktura tabeli dla tabeli `ps_layered_price_index`
 --
 
 CREATE TABLE `ps_layered_price_index` (
@@ -10537,7 +10581,7 @@ CREATE TABLE `ps_layered_price_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_layered_price_index`
+-- Zrzut danych tabeli `ps_layered_price_index`
 --
 
 INSERT INTO `ps_layered_price_index` (`id_product`, `id_currency`, `id_shop`, `price_min`, `price_max`, `id_country`) VALUES
@@ -11179,7 +11223,7 @@ INSERT INTO `ps_layered_price_index` (`id_product`, `id_currency`, `id_shop`, `p
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_layered_product_attribute`
+-- Struktura tabeli dla tabeli `ps_layered_product_attribute`
 --
 
 CREATE TABLE `ps_layered_product_attribute` (
@@ -11192,7 +11236,7 @@ CREATE TABLE `ps_layered_product_attribute` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_linksmenutop`
+-- Struktura tabeli dla tabeli `ps_linksmenutop`
 --
 
 CREATE TABLE `ps_linksmenutop` (
@@ -11204,7 +11248,7 @@ CREATE TABLE `ps_linksmenutop` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_linksmenutop_lang`
+-- Struktura tabeli dla tabeli `ps_linksmenutop_lang`
 --
 
 CREATE TABLE `ps_linksmenutop_lang` (
@@ -11218,7 +11262,7 @@ CREATE TABLE `ps_linksmenutop_lang` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_link_block`
+-- Struktura tabeli dla tabeli `ps_link_block`
 --
 
 CREATE TABLE `ps_link_block` (
@@ -11229,7 +11273,7 @@ CREATE TABLE `ps_link_block` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_link_block`
+-- Zrzut danych tabeli `ps_link_block`
 --
 
 INSERT INTO `ps_link_block` (`id_link_block`, `id_hook`, `position`, `content`) VALUES
@@ -11239,7 +11283,7 @@ INSERT INTO `ps_link_block` (`id_link_block`, `id_hook`, `position`, `content`) 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_link_block_lang`
+-- Struktura tabeli dla tabeli `ps_link_block_lang`
 --
 
 CREATE TABLE `ps_link_block_lang` (
@@ -11250,7 +11294,7 @@ CREATE TABLE `ps_link_block_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_link_block_lang`
+-- Zrzut danych tabeli `ps_link_block_lang`
 --
 
 INSERT INTO `ps_link_block_lang` (`id_link_block`, `id_lang`, `name`, `custom_content`) VALUES
@@ -11260,7 +11304,7 @@ INSERT INTO `ps_link_block_lang` (`id_link_block`, `id_lang`, `name`, `custom_co
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_link_block_shop`
+-- Struktura tabeli dla tabeli `ps_link_block_shop`
 --
 
 CREATE TABLE `ps_link_block_shop` (
@@ -11270,7 +11314,7 @@ CREATE TABLE `ps_link_block_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_link_block_shop`
+-- Zrzut danych tabeli `ps_link_block_shop`
 --
 
 INSERT INTO `ps_link_block_shop` (`id_link_block`, `id_shop`, `position`) VALUES
@@ -11280,7 +11324,7 @@ INSERT INTO `ps_link_block_shop` (`id_link_block`, `id_shop`, `position`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_log`
+-- Struktura tabeli dla tabeli `ps_log`
 --
 
 CREATE TABLE `ps_log` (
@@ -11300,7 +11344,7 @@ CREATE TABLE `ps_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_log`
+-- Zrzut danych tabeli `ps_log`
 --
 
 INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_type`, `object_id`, `id_shop`, `id_shop_group`, `id_lang`, `in_all_shops`, `id_employee`, `date_add`, `date_upd`) VALUES
@@ -11787,12 +11831,14 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (480, 3, 0, 'Swift Error: Expected response code 220 but got an empty response', '', 0, 1, NULL, 1, 0, 0, '2025-12-15 05:33:00', '2025-12-15 05:33:00'),
 (481, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2025-12-15 13:20:54', '2025-12-15 13:20:54'),
 (482, 1, 0, 'Product modification', 'Product', 633, 1, NULL, 1, 0, 1, '2025-12-15 13:21:12', '2025-12-15 13:21:12'),
-(483, 1, 0, 'Product modification', 'Product', 263, 1, NULL, 1, 0, 1, '2025-12-15 13:22:34', '2025-12-15 13:22:34');
+(483, 1, 0, 'Product modification', 'Product', 263, 1, NULL, 1, 0, 1, '2025-12-15 13:22:34', '2025-12-15 13:22:34'),
+(484, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2025-12-15 20:10:11', '2025-12-15 20:10:11'),
+(485, 1, 0, 'Product modification', 'Product', 632, 1, NULL, 1, 0, 1, '2025-12-15 20:14:45', '2025-12-15 20:14:45');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_mail`
+-- Struktura tabeli dla tabeli `ps_mail`
 --
 
 CREATE TABLE `ps_mail` (
@@ -11804,10 +11850,19 @@ CREATE TABLE `ps_mail` (
   `date_add` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
+--
+-- Zrzut danych tabeli `ps_mail`
+--
+
+INSERT INTO `ps_mail` (`id_mail`, `recipient`, `template`, `subject`, `id_lang`, `date_add`) VALUES
+(1, 'klim.kolesnev@gmail.com', 'account', '[SklepKoszykarski] Witaj !', 1, '2025-12-15 20:29:37'),
+(2, 'klim.kolesnev@gmail.com', 'account', '[SklepKoszykarski] Witaj !', 1, '2025-12-15 20:35:00'),
+(3, 'kupchik321@gmail.com', 'account', '[SklepKoszykarski] Witaj !', 1, '2025-12-15 20:36:35');
+
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_manufacturer`
+-- Struktura tabeli dla tabeli `ps_manufacturer`
 --
 
 CREATE TABLE `ps_manufacturer` (
@@ -11819,7 +11874,7 @@ CREATE TABLE `ps_manufacturer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_manufacturer`
+-- Zrzut danych tabeli `ps_manufacturer`
 --
 
 INSERT INTO `ps_manufacturer` (`id_manufacturer`, `name`, `date_add`, `date_upd`, `active`) VALUES
@@ -11844,7 +11899,7 @@ INSERT INTO `ps_manufacturer` (`id_manufacturer`, `name`, `date_add`, `date_upd`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_manufacturer_lang`
+-- Struktura tabeli dla tabeli `ps_manufacturer_lang`
 --
 
 CREATE TABLE `ps_manufacturer_lang` (
@@ -11858,7 +11913,7 @@ CREATE TABLE `ps_manufacturer_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_manufacturer_lang`
+-- Zrzut danych tabeli `ps_manufacturer_lang`
 --
 
 INSERT INTO `ps_manufacturer_lang` (`id_manufacturer`, `id_lang`, `description`, `short_description`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
@@ -11883,7 +11938,7 @@ INSERT INTO `ps_manufacturer_lang` (`id_manufacturer`, `id_lang`, `description`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_manufacturer_shop`
+-- Struktura tabeli dla tabeli `ps_manufacturer_shop`
 --
 
 CREATE TABLE `ps_manufacturer_shop` (
@@ -11892,7 +11947,7 @@ CREATE TABLE `ps_manufacturer_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_manufacturer_shop`
+-- Zrzut danych tabeli `ps_manufacturer_shop`
 --
 
 INSERT INTO `ps_manufacturer_shop` (`id_manufacturer`, `id_shop`) VALUES
@@ -11917,7 +11972,7 @@ INSERT INTO `ps_manufacturer_shop` (`id_manufacturer`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_memcached_servers`
+-- Struktura tabeli dla tabeli `ps_memcached_servers`
 --
 
 CREATE TABLE `ps_memcached_servers` (
@@ -11930,7 +11985,7 @@ CREATE TABLE `ps_memcached_servers` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_message`
+-- Struktura tabeli dla tabeli `ps_message`
 --
 
 CREATE TABLE `ps_message` (
@@ -11947,7 +12002,7 @@ CREATE TABLE `ps_message` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_message_readed`
+-- Struktura tabeli dla tabeli `ps_message_readed`
 --
 
 CREATE TABLE `ps_message_readed` (
@@ -11959,7 +12014,7 @@ CREATE TABLE `ps_message_readed` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_meta`
+-- Struktura tabeli dla tabeli `ps_meta`
 --
 
 CREATE TABLE `ps_meta` (
@@ -11969,7 +12024,7 @@ CREATE TABLE `ps_meta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_meta`
+-- Zrzut danych tabeli `ps_meta`
 --
 
 INSERT INTO `ps_meta` (`id_meta`, `page`, `configurable`) VALUES
@@ -12017,7 +12072,7 @@ INSERT INTO `ps_meta` (`id_meta`, `page`, `configurable`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_meta_lang`
+-- Struktura tabeli dla tabeli `ps_meta_lang`
 --
 
 CREATE TABLE `ps_meta_lang` (
@@ -12031,7 +12086,7 @@ CREATE TABLE `ps_meta_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_meta_lang`
+-- Zrzut danych tabeli `ps_meta_lang`
 --
 
 INSERT INTO `ps_meta_lang` (`id_meta`, `id_shop`, `id_lang`, `title`, `description`, `keywords`, `url_rewrite`) VALUES
@@ -12071,7 +12126,7 @@ INSERT INTO `ps_meta_lang` (`id_meta`, `id_shop`, `id_lang`, `title`, `descripti
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_module`
+-- Struktura tabeli dla tabeli `ps_module`
 --
 
 CREATE TABLE `ps_module` (
@@ -12082,7 +12137,7 @@ CREATE TABLE `ps_module` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_module`
+-- Zrzut danych tabeli `ps_module`
 --
 
 INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
@@ -12151,7 +12206,7 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_module_access`
+-- Struktura tabeli dla tabeli `ps_module_access`
 --
 
 CREATE TABLE `ps_module_access` (
@@ -12160,7 +12215,7 @@ CREATE TABLE `ps_module_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_module_access`
+-- Zrzut danych tabeli `ps_module_access`
 --
 
 INSERT INTO `ps_module_access` (`id_profile`, `id_authorization_role`) VALUES
@@ -12412,7 +12467,7 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_authorization_role`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_module_carrier`
+-- Struktura tabeli dla tabeli `ps_module_carrier`
 --
 
 CREATE TABLE `ps_module_carrier` (
@@ -12422,7 +12477,7 @@ CREATE TABLE `ps_module_carrier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_module_carrier`
+-- Zrzut danych tabeli `ps_module_carrier`
 --
 
 INSERT INTO `ps_module_carrier` (`id_module`, `id_shop`, `id_reference`) VALUES
@@ -12442,7 +12497,7 @@ INSERT INTO `ps_module_carrier` (`id_module`, `id_shop`, `id_reference`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_module_country`
+-- Struktura tabeli dla tabeli `ps_module_country`
 --
 
 CREATE TABLE `ps_module_country` (
@@ -12452,7 +12507,7 @@ CREATE TABLE `ps_module_country` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_module_country`
+-- Zrzut danych tabeli `ps_module_country`
 --
 
 INSERT INTO `ps_module_country` (`id_module`, `id_shop`, `id_country`) VALUES
@@ -12662,7 +12717,7 @@ INSERT INTO `ps_module_country` (`id_module`, `id_shop`, `id_country`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_module_currency`
+-- Struktura tabeli dla tabeli `ps_module_currency`
 --
 
 CREATE TABLE `ps_module_currency` (
@@ -12672,7 +12727,7 @@ CREATE TABLE `ps_module_currency` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_module_currency`
+-- Zrzut danych tabeli `ps_module_currency`
 --
 
 INSERT INTO `ps_module_currency` (`id_module`, `id_shop`, `id_currency`) VALUES
@@ -12683,7 +12738,7 @@ INSERT INTO `ps_module_currency` (`id_module`, `id_shop`, `id_currency`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_module_group`
+-- Struktura tabeli dla tabeli `ps_module_group`
 --
 
 CREATE TABLE `ps_module_group` (
@@ -12693,7 +12748,7 @@ CREATE TABLE `ps_module_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_module_group`
+-- Zrzut danych tabeli `ps_module_group`
 --
 
 INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
@@ -12884,7 +12939,7 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_module_history`
+-- Struktura tabeli dla tabeli `ps_module_history`
 --
 
 CREATE TABLE `ps_module_history` (
@@ -12896,7 +12951,7 @@ CREATE TABLE `ps_module_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_module_history`
+-- Zrzut danych tabeli `ps_module_history`
 --
 
 INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `date_upd`) VALUES
@@ -12909,7 +12964,7 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_module_preference`
+-- Struktura tabeli dla tabeli `ps_module_preference`
 --
 
 CREATE TABLE `ps_module_preference` (
@@ -12923,7 +12978,7 @@ CREATE TABLE `ps_module_preference` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_module_shop`
+-- Struktura tabeli dla tabeli `ps_module_shop`
 --
 
 CREATE TABLE `ps_module_shop` (
@@ -12933,7 +12988,7 @@ CREATE TABLE `ps_module_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_module_shop`
+-- Zrzut danych tabeli `ps_module_shop`
 --
 
 INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
@@ -13002,7 +13057,7 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_operating_system`
+-- Struktura tabeli dla tabeli `ps_operating_system`
 --
 
 CREATE TABLE `ps_operating_system` (
@@ -13011,7 +13066,7 @@ CREATE TABLE `ps_operating_system` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_operating_system`
+-- Zrzut danych tabeli `ps_operating_system`
 --
 
 INSERT INTO `ps_operating_system` (`id_operating_system`, `name`) VALUES
@@ -13028,7 +13083,7 @@ INSERT INTO `ps_operating_system` (`id_operating_system`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_orders`
+-- Struktura tabeli dla tabeli `ps_orders`
 --
 
 CREATE TABLE `ps_orders` (
@@ -13082,7 +13137,7 @@ CREATE TABLE `ps_orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_orders`
+-- Zrzut danych tabeli `ps_orders`
 --
 
 INSERT INTO `ps_orders` (`id_order`, `reference`, `id_shop_group`, `id_shop`, `id_carrier`, `id_lang`, `id_customer`, `id_cart`, `id_currency`, `id_address_delivery`, `id_address_invoice`, `current_state`, `secure_key`, `payment`, `conversion_rate`, `module`, `recyclable`, `gift`, `gift_message`, `mobile_theme`, `shipping_number`, `total_discounts`, `total_discounts_tax_incl`, `total_discounts_tax_excl`, `total_paid`, `total_paid_tax_incl`, `total_paid_tax_excl`, `total_paid_real`, `total_products`, `total_products_wt`, `total_shipping`, `total_shipping_tax_incl`, `total_shipping_tax_excl`, `carrier_tax_rate`, `total_wrapping`, `total_wrapping_tax_incl`, `total_wrapping_tax_excl`, `round_mode`, `round_type`, `invoice_number`, `delivery_number`, `invoice_date`, `delivery_date`, `valid`, `date_add`, `date_upd`, `note`) VALUES
@@ -13095,7 +13150,7 @@ INSERT INTO `ps_orders` (`id_order`, `reference`, `id_shop_group`, `id_shop`, `i
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_carrier`
+-- Struktura tabeli dla tabeli `ps_order_carrier`
 --
 
 CREATE TABLE `ps_order_carrier` (
@@ -13111,7 +13166,7 @@ CREATE TABLE `ps_order_carrier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_order_carrier`
+-- Zrzut danych tabeli `ps_order_carrier`
 --
 
 INSERT INTO `ps_order_carrier` (`id_order_carrier`, `id_order`, `id_carrier`, `id_order_invoice`, `weight`, `shipping_cost_tax_excl`, `shipping_cost_tax_incl`, `tracking_number`, `date_add`) VALUES
@@ -13124,7 +13179,7 @@ INSERT INTO `ps_order_carrier` (`id_order_carrier`, `id_order`, `id_carrier`, `i
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_cart_rule`
+-- Struktura tabeli dla tabeli `ps_order_cart_rule`
 --
 
 CREATE TABLE `ps_order_cart_rule` (
@@ -13142,7 +13197,7 @@ CREATE TABLE `ps_order_cart_rule` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_detail`
+-- Struktura tabeli dla tabeli `ps_order_detail`
 --
 
 CREATE TABLE `ps_order_detail` (
@@ -13198,7 +13253,7 @@ CREATE TABLE `ps_order_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_order_detail`
+-- Zrzut danych tabeli `ps_order_detail`
 --
 
 INSERT INTO `ps_order_detail` (`id_order_detail`, `id_order`, `id_order_invoice`, `id_warehouse`, `id_shop`, `product_id`, `product_attribute_id`, `id_customization`, `product_name`, `product_quantity`, `product_quantity_in_stock`, `product_quantity_refunded`, `product_quantity_return`, `product_quantity_reinjected`, `product_price`, `reduction_percent`, `reduction_amount`, `reduction_amount_tax_incl`, `reduction_amount_tax_excl`, `group_reduction`, `product_quantity_discount`, `product_ean13`, `product_isbn`, `product_upc`, `product_mpn`, `product_reference`, `product_supplier_reference`, `product_weight`, `id_tax_rules_group`, `tax_computation_method`, `tax_name`, `tax_rate`, `ecotax`, `ecotax_tax_rate`, `discount_quantity_applied`, `download_hash`, `download_nb`, `download_deadline`, `total_price_tax_incl`, `total_price_tax_excl`, `unit_price_tax_incl`, `unit_price_tax_excl`, `total_shipping_price_tax_incl`, `total_shipping_price_tax_excl`, `purchase_supplier_price`, `original_product_price`, `original_wholesale_price`, `total_refunded_tax_excl`, `total_refunded_tax_incl`) VALUES
@@ -13213,7 +13268,7 @@ INSERT INTO `ps_order_detail` (`id_order_detail`, `id_order`, `id_order_invoice`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_detail_tax`
+-- Struktura tabeli dla tabeli `ps_order_detail_tax`
 --
 
 CREATE TABLE `ps_order_detail_tax` (
@@ -13226,7 +13281,7 @@ CREATE TABLE `ps_order_detail_tax` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_history`
+-- Struktura tabeli dla tabeli `ps_order_history`
 --
 
 CREATE TABLE `ps_order_history` (
@@ -13238,7 +13293,7 @@ CREATE TABLE `ps_order_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_order_history`
+-- Zrzut danych tabeli `ps_order_history`
 --
 
 INSERT INTO `ps_order_history` (`id_order_history`, `id_employee`, `id_order`, `id_order_state`, `date_add`) VALUES
@@ -13253,7 +13308,7 @@ INSERT INTO `ps_order_history` (`id_order_history`, `id_employee`, `id_order`, `
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_invoice`
+-- Struktura tabeli dla tabeli `ps_order_invoice`
 --
 
 CREATE TABLE `ps_order_invoice` (
@@ -13281,7 +13336,7 @@ CREATE TABLE `ps_order_invoice` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_invoice_payment`
+-- Struktura tabeli dla tabeli `ps_order_invoice_payment`
 --
 
 CREATE TABLE `ps_order_invoice_payment` (
@@ -13293,7 +13348,7 @@ CREATE TABLE `ps_order_invoice_payment` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_invoice_tax`
+-- Struktura tabeli dla tabeli `ps_order_invoice_tax`
 --
 
 CREATE TABLE `ps_order_invoice_tax` (
@@ -13306,7 +13361,7 @@ CREATE TABLE `ps_order_invoice_tax` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_message`
+-- Struktura tabeli dla tabeli `ps_order_message`
 --
 
 CREATE TABLE `ps_order_message` (
@@ -13315,7 +13370,7 @@ CREATE TABLE `ps_order_message` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_order_message`
+-- Zrzut danych tabeli `ps_order_message`
 --
 
 INSERT INTO `ps_order_message` (`id_order_message`, `date_add`) VALUES
@@ -13324,7 +13379,7 @@ INSERT INTO `ps_order_message` (`id_order_message`, `date_add`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_message_lang`
+-- Struktura tabeli dla tabeli `ps_order_message_lang`
 --
 
 CREATE TABLE `ps_order_message_lang` (
@@ -13335,7 +13390,7 @@ CREATE TABLE `ps_order_message_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_order_message_lang`
+-- Zrzut danych tabeli `ps_order_message_lang`
 --
 
 INSERT INTO `ps_order_message_lang` (`id_order_message`, `id_lang`, `name`, `message`) VALUES
@@ -13344,7 +13399,7 @@ INSERT INTO `ps_order_message_lang` (`id_order_message`, `id_lang`, `name`, `mes
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_payment`
+-- Struktura tabeli dla tabeli `ps_order_payment`
 --
 
 CREATE TABLE `ps_order_payment` (
@@ -13365,7 +13420,7 @@ CREATE TABLE `ps_order_payment` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_return`
+-- Struktura tabeli dla tabeli `ps_order_return`
 --
 
 CREATE TABLE `ps_order_return` (
@@ -13381,7 +13436,7 @@ CREATE TABLE `ps_order_return` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_return_detail`
+-- Struktura tabeli dla tabeli `ps_order_return_detail`
 --
 
 CREATE TABLE `ps_order_return_detail` (
@@ -13394,7 +13449,7 @@ CREATE TABLE `ps_order_return_detail` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_return_state`
+-- Struktura tabeli dla tabeli `ps_order_return_state`
 --
 
 CREATE TABLE `ps_order_return_state` (
@@ -13403,7 +13458,7 @@ CREATE TABLE `ps_order_return_state` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_order_return_state`
+-- Zrzut danych tabeli `ps_order_return_state`
 --
 
 INSERT INTO `ps_order_return_state` (`id_order_return_state`, `color`) VALUES
@@ -13416,7 +13471,7 @@ INSERT INTO `ps_order_return_state` (`id_order_return_state`, `color`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_return_state_lang`
+-- Struktura tabeli dla tabeli `ps_order_return_state_lang`
 --
 
 CREATE TABLE `ps_order_return_state_lang` (
@@ -13426,7 +13481,7 @@ CREATE TABLE `ps_order_return_state_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_order_return_state_lang`
+-- Zrzut danych tabeli `ps_order_return_state_lang`
 --
 
 INSERT INTO `ps_order_return_state_lang` (`id_order_return_state`, `id_lang`, `name`) VALUES
@@ -13439,7 +13494,7 @@ INSERT INTO `ps_order_return_state_lang` (`id_order_return_state`, `id_lang`, `n
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_slip`
+-- Struktura tabeli dla tabeli `ps_order_slip`
 --
 
 CREATE TABLE `ps_order_slip` (
@@ -13463,7 +13518,7 @@ CREATE TABLE `ps_order_slip` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_slip_detail`
+-- Struktura tabeli dla tabeli `ps_order_slip_detail`
 --
 
 CREATE TABLE `ps_order_slip_detail` (
@@ -13481,7 +13536,7 @@ CREATE TABLE `ps_order_slip_detail` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_state`
+-- Struktura tabeli dla tabeli `ps_order_state`
 --
 
 CREATE TABLE `ps_order_state` (
@@ -13502,7 +13557,7 @@ CREATE TABLE `ps_order_state` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_order_state`
+-- Zrzut danych tabeli `ps_order_state`
 --
 
 INSERT INTO `ps_order_state` (`id_order_state`, `invoice`, `send_email`, `module_name`, `color`, `unremovable`, `hidden`, `logable`, `delivery`, `shipped`, `paid`, `pdf_invoice`, `pdf_delivery`, `deleted`) VALUES
@@ -13527,7 +13582,7 @@ INSERT INTO `ps_order_state` (`id_order_state`, `invoice`, `send_email`, `module
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_order_state_lang`
+-- Struktura tabeli dla tabeli `ps_order_state_lang`
 --
 
 CREATE TABLE `ps_order_state_lang` (
@@ -13538,7 +13593,7 @@ CREATE TABLE `ps_order_state_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_order_state_lang`
+-- Zrzut danych tabeli `ps_order_state_lang`
 --
 
 INSERT INTO `ps_order_state_lang` (`id_order_state`, `id_lang`, `name`, `template`) VALUES
@@ -13563,7 +13618,7 @@ INSERT INTO `ps_order_state_lang` (`id_order_state`, `id_lang`, `name`, `templat
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pack`
+-- Struktura tabeli dla tabeli `ps_pack`
 --
 
 CREATE TABLE `ps_pack` (
@@ -13576,7 +13631,7 @@ CREATE TABLE `ps_pack` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_page`
+-- Struktura tabeli dla tabeli `ps_page`
 --
 
 CREATE TABLE `ps_page` (
@@ -13586,18 +13641,20 @@ CREATE TABLE `ps_page` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_page`
+-- Zrzut danych tabeli `ps_page`
 --
 
 INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
 (1, 1, NULL),
 (2, 2, NULL),
-(3, 3, 632);
+(3, 3, 632),
+(4, 3, 169),
+(5, 4, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pagenotfound`
+-- Struktura tabeli dla tabeli `ps_pagenotfound`
 --
 
 CREATE TABLE `ps_pagenotfound` (
@@ -13612,7 +13669,7 @@ CREATE TABLE `ps_pagenotfound` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_page_type`
+-- Struktura tabeli dla tabeli `ps_page_type`
 --
 
 CREATE TABLE `ps_page_type` (
@@ -13621,10 +13678,11 @@ CREATE TABLE `ps_page_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_page_type`
+-- Zrzut danych tabeli `ps_page_type`
 --
 
 INSERT INTO `ps_page_type` (`id_page_type`, `name`) VALUES
+(4, 'authentication'),
 (1, 'index'),
 (2, 'pagenotfound'),
 (3, 'product');
@@ -13632,7 +13690,7 @@ INSERT INTO `ps_page_type` (`id_page_type`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_page_viewed`
+-- Struktura tabeli dla tabeli `ps_page_viewed`
 --
 
 CREATE TABLE `ps_page_viewed` (
@@ -13646,7 +13704,7 @@ CREATE TABLE `ps_page_viewed` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product`
+-- Struktura tabeli dla tabeli `ps_product`
 --
 
 CREATE TABLE `ps_product` (
@@ -13708,495 +13766,495 @@ CREATE TABLE `ps_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_product`
+-- Zrzut danych tabeli `ps_product`
 --
 
 INSERT INTO `ps_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_category_default`, `id_shop_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ean13`, `isbn`, `upc`, `mpn`, `ecotax`, `quantity`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `reference`, `supplier_reference`, `location`, `width`, `height`, `depth`, `weight`, `out_of_stock`, `additional_delivery_times`, `quantity_discount`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_is_pack`, `cache_has_attachments`, `is_virtual`, `cache_default_attribute`, `date_add`, `date_upd`, `advanced_stock_management`, `pack_stock_type`, `state`, `product_type`) VALUES
-(158, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 226.829268, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:04', '2025-12-08 19:50:04', 0, 0, 1, ''),
-(159, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 119.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:05', '2025-12-08 19:50:05', 0, 0, 1, ''),
-(160, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:06', '2025-12-08 19:50:06', 0, 0, 1, ''),
-(161, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:08', '2025-12-08 19:50:08', 0, 0, 1, ''),
-(162, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 134.146341, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:09', '2025-12-08 19:50:09', 0, 0, 1, ''),
-(163, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:10', '2025-12-08 19:50:10', 0, 0, 1, ''),
-(164, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:12', '2025-12-15 03:14:00', 0, 0, 1, ''),
-(165, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:17', '2025-12-08 19:50:17', 0, 0, 1, ''),
-(166, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:22', '2025-12-08 19:50:22', 0, 0, 1, ''),
-(167, 0, 17, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:27', '2025-12-08 19:50:27', 0, 0, 1, ''),
-(168, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:28', '2025-12-08 19:50:28', 0, 0, 1, ''),
-(169, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 43.902439, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:29', '2025-12-08 19:50:29', 0, 0, 1, ''),
-(170, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 50.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:30', '2025-12-08 19:50:30', 0, 0, 1, ''),
-(171, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:31', '2025-12-08 19:50:31', 0, 0, 1, ''),
-(172, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:32', '2025-12-08 19:50:32', 0, 0, 1, ''),
-(173, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:34', '2025-12-08 19:50:34', 0, 0, 1, ''),
-(174, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:36', '2025-12-08 19:50:36', 0, 0, 1, ''),
-(175, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:37', '2025-12-08 19:50:37', 0, 0, 1, ''),
-(176, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:38', '2025-12-08 19:50:38', 0, 0, 1, ''),
-(177, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:39', '2025-12-08 19:50:39', 0, 0, 1, ''),
-(178, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 50.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:40', '2025-12-08 19:50:40', 0, 0, 1, ''),
-(179, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:42', '2025-12-08 19:50:42', 0, 0, 1, ''),
-(180, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:47', '2025-12-08 19:50:47', 0, 0, 1, ''),
-(181, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:48', '2025-12-08 19:50:48', 0, 0, 1, ''),
-(182, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 145.528455, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:49', '2025-12-08 19:50:49', 0, 0, 1, ''),
-(183, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:50', '2025-12-08 19:50:50', 0, 0, 1, ''),
-(184, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 113.008130, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:51', '2025-12-08 19:50:51', 0, 0, 1, ''),
-(185, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:52', '2025-12-08 19:50:52', 0, 0, 1, ''),
-(186, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:53', '2025-12-08 19:50:53', 0, 0, 1, ''),
-(187, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:54', '2025-12-08 19:50:54', 0, 0, 1, ''),
-(188, 0, 17, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:57', '2025-12-08 19:50:57', 0, 0, 1, ''),
-(189, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:59', '2025-12-08 19:50:59', 0, 0, 1, ''),
-(190, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:00', '2025-12-08 19:51:00', 0, 0, 1, ''),
-(191, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:02', '2025-12-08 19:51:02', 0, 0, 1, ''),
-(192, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 119.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:04', '2025-12-08 19:51:04', 0, 0, 1, ''),
-(193, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:05', '2025-12-08 19:51:05', 0, 0, 1, ''),
-(194, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:11', '2025-12-08 19:51:11', 0, 0, 1, ''),
-(195, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:13', '2025-12-08 19:51:13', 0, 0, 1, ''),
-(196, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:15', '2025-12-08 19:51:15', 0, 0, 1, ''),
-(197, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:17', '2025-12-08 19:51:17', 0, 0, 1, ''),
-(198, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:19', '2025-12-08 19:51:19', 0, 0, 1, ''),
-(199, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:21', '2025-12-08 19:51:21', 0, 0, 1, ''),
-(200, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:23', '2025-12-08 19:51:23', 0, 0, 1, ''),
-(201, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:26', '2025-12-14 03:54:21', 0, 0, 1, ''),
-(202, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:28', '2025-12-08 19:51:28', 0, 0, 1, ''),
-(203, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:29', '2025-12-08 19:51:29', 0, 0, 1, ''),
-(204, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:31', '2025-12-08 19:51:31', 0, 0, 1, ''),
-(205, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:33', '2025-12-08 19:51:33', 0, 0, 1, ''),
-(206, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:35', '2025-12-08 19:51:35', 0, 0, 1, ''),
-(207, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:37', '2025-12-08 19:51:37', 0, 0, 1, ''),
-(208, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:39', '2025-12-08 19:51:39', 0, 0, 1, ''),
-(209, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:40', '2025-12-08 19:51:40', 0, 0, 1, ''),
-(210, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:42', '2025-12-08 19:51:42', 0, 0, 1, ''),
-(211, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 690.243902, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:43', '2025-12-08 19:51:43', 0, 0, 1, ''),
-(212, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:46', '2025-12-08 19:51:46', 0, 0, 1, ''),
-(213, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:48', '2025-12-08 19:51:48', 0, 0, 1, ''),
-(214, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:49', '2025-12-08 19:51:49', 0, 0, 1, ''),
-(215, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 126.016260, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:51', '2025-12-14 03:53:56', 0, 0, 1, ''),
-(216, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:53', '2025-12-08 19:51:53', 0, 0, 1, ''),
-(217, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:55', '2025-12-08 19:51:55', 0, 0, 1, ''),
-(218, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:57', '2025-12-08 19:51:57', 0, 0, 1, ''),
-(219, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:00', '2025-12-08 19:52:00', 0, 0, 1, ''),
-(220, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:02', '2025-12-08 19:52:02', 0, 0, 1, ''),
-(221, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:05', '2025-12-08 19:52:05', 0, 0, 1, ''),
-(222, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:08', '2025-12-08 19:52:08', 0, 0, 1, ''),
-(223, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:11', '2025-12-08 19:52:11', 0, 0, 1, ''),
-(224, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:14', '2025-12-08 19:52:14', 0, 0, 1, ''),
-(225, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:17', '2025-12-08 19:52:17', 0, 0, 1, ''),
-(226, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:20', '2025-12-14 16:38:45', 0, 0, 1, ''),
-(227, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:22', '2025-12-08 19:52:22', 0, 0, 1, ''),
-(228, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:24', '2025-12-08 19:52:24', 0, 0, 1, ''),
-(229, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:26', '2025-12-08 19:52:26', 0, 0, 1, ''),
-(230, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:27', '2025-12-08 19:52:27', 0, 0, 1, ''),
-(231, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 44.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:28', '2025-12-08 19:52:28', 0, 0, 1, ''),
-(232, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:30', '2025-12-08 19:52:30', 0, 0, 1, ''),
-(233, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:32', '2025-12-08 19:52:32', 0, 0, 1, ''),
-(234, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:33', '2025-12-08 19:52:33', 0, 0, 1, ''),
-(235, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:35', '2025-12-08 19:52:35', 0, 0, 1, ''),
-(236, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 274.796748, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:36', '2025-12-08 19:52:36', 0, 0, 1, ''),
-(237, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 108.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:38', '2025-12-08 19:52:38', 0, 0, 1, ''),
-(238, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 275.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:40', '2025-12-08 19:52:40', 0, 0, 1, ''),
-(239, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:42', '2025-12-08 19:52:42', 0, 0, 1, ''),
-(240, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:44', '2025-12-08 19:52:44', 0, 0, 1, ''),
-(241, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 44.634146, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:48', '2025-12-08 19:52:48', 0, 0, 1, ''),
-(242, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:51', '2025-12-08 19:52:51', 0, 0, 1, ''),
-(243, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:55', '2025-12-08 19:52:55', 0, 0, 1, ''),
-(244, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:57', '2025-12-08 19:52:57', 0, 0, 1, ''),
-(245, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:58', '2025-12-08 19:52:58', 0, 0, 1, ''),
-(246, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:01', '2025-12-08 19:53:01', 0, 0, 1, ''),
-(247, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 113.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:04', '2025-12-08 19:53:04', 0, 0, 1, ''),
-(248, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 79.674797, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:06', '2025-12-08 19:53:06', 0, 0, 1, ''),
-(249, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 68.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:08', '2025-12-08 19:53:08', 0, 0, 1, ''),
-(250, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:10', '2025-12-08 19:53:10', 0, 0, 1, ''),
-(251, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:12', '2025-12-08 19:53:12', 0, 0, 1, ''),
-(252, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:14', '2025-12-08 19:53:14', 0, 0, 1, ''),
-(253, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:16', '2025-12-08 19:53:16', 0, 0, 1, ''),
-(254, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:18', '2025-12-08 19:53:18', 0, 0, 1, ''),
-(255, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 150.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:23', '2025-12-08 19:53:23', 0, 0, 1, ''),
-(256, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:25', '2025-12-08 19:53:25', 0, 0, 1, ''),
-(257, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:27', '2025-12-08 19:53:27', 0, 0, 1, ''),
-(258, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 66.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:33', '2025-12-08 19:53:33', 0, 0, 1, ''),
-(259, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:35', '2025-12-14 03:47:12', 0, 0, 1, ''),
-(260, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 145.528455, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:37', '2025-12-08 19:53:37', 0, 0, 1, ''),
-(261, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:39', '2025-12-08 19:53:39', 0, 0, 1, ''),
-(262, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 188.536585, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:41', '2025-12-08 19:53:41', 0, 0, 1, ''),
+(158, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 226.829268, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:04', '2025-12-08 19:50:04', 0, 0, 1, ''),
+(159, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 119.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:05', '2025-12-08 19:50:05', 0, 0, 1, ''),
+(160, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:06', '2025-12-08 19:50:06', 0, 0, 1, ''),
+(161, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:08', '2025-12-08 19:50:08', 0, 0, 1, ''),
+(162, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 134.146341, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:09', '2025-12-08 19:50:09', 0, 0, 1, ''),
+(163, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:10', '2025-12-08 19:50:10', 0, 0, 1, ''),
+(164, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:12', '2025-12-15 03:14:00', 0, 0, 1, ''),
+(165, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:17', '2025-12-08 19:50:17', 0, 0, 1, ''),
+(166, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:22', '2025-12-08 19:50:22', 0, 0, 1, ''),
+(167, 0, 17, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:27', '2025-12-08 19:50:27', 0, 0, 1, ''),
+(168, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:28', '2025-12-08 19:50:28', 0, 0, 1, ''),
+(169, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 43.902439, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:29', '2025-12-08 19:50:29', 0, 0, 1, ''),
+(170, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 50.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:30', '2025-12-08 19:50:30', 0, 0, 1, ''),
+(171, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:31', '2025-12-08 19:50:31', 0, 0, 1, ''),
+(172, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:32', '2025-12-08 19:50:32', 0, 0, 1, ''),
+(173, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:34', '2025-12-08 19:50:34', 0, 0, 1, ''),
+(174, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:36', '2025-12-08 19:50:36', 0, 0, 1, ''),
+(175, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:37', '2025-12-08 19:50:37', 0, 0, 1, ''),
+(176, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:38', '2025-12-08 19:50:38', 0, 0, 1, ''),
+(177, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:39', '2025-12-08 19:50:39', 0, 0, 1, ''),
+(178, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 50.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:40', '2025-12-08 19:50:40', 0, 0, 1, ''),
+(179, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:42', '2025-12-08 19:50:42', 0, 0, 1, ''),
+(180, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:47', '2025-12-08 19:50:47', 0, 0, 1, ''),
+(181, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:48', '2025-12-08 19:50:48', 0, 0, 1, ''),
+(182, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 145.528455, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:49', '2025-12-08 19:50:49', 0, 0, 1, ''),
+(183, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:50', '2025-12-08 19:50:50', 0, 0, 1, ''),
+(184, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 113.008130, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:51', '2025-12-08 19:50:51', 0, 0, 1, ''),
+(185, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:52', '2025-12-08 19:50:52', 0, 0, 1, ''),
+(186, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:53', '2025-12-08 19:50:53', 0, 0, 1, ''),
+(187, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:54', '2025-12-08 19:50:54', 0, 0, 1, ''),
+(188, 0, 17, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:57', '2025-12-08 19:50:57', 0, 0, 1, ''),
+(189, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:50:59', '2025-12-08 19:50:59', 0, 0, 1, ''),
+(190, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:00', '2025-12-08 19:51:00', 0, 0, 1, ''),
+(191, 0, 17, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:02', '2025-12-08 19:51:02', 0, 0, 1, ''),
+(192, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 119.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:04', '2025-12-08 19:51:04', 0, 0, 1, ''),
+(193, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:05', '2025-12-08 19:51:05', 0, 0, 1, ''),
+(194, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:11', '2025-12-08 19:51:11', 0, 0, 1, ''),
+(195, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:13', '2025-12-08 19:51:13', 0, 0, 1, ''),
+(196, 0, 17, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:15', '2025-12-08 19:51:15', 0, 0, 1, ''),
+(197, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:17', '2025-12-08 19:51:17', 0, 0, 1, ''),
+(198, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:19', '2025-12-08 19:51:19', 0, 0, 1, ''),
+(199, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:21', '2025-12-08 19:51:21', 0, 0, 1, ''),
+(200, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:23', '2025-12-08 19:51:23', 0, 0, 1, ''),
+(201, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:26', '2025-12-14 03:54:21', 0, 0, 1, ''),
+(202, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:28', '2025-12-08 19:51:28', 0, 0, 1, ''),
+(203, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:29', '2025-12-08 19:51:29', 0, 0, 1, ''),
+(204, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:31', '2025-12-08 19:51:31', 0, 0, 1, ''),
+(205, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:33', '2025-12-08 19:51:33', 0, 0, 1, ''),
+(206, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:35', '2025-12-08 19:51:35', 0, 0, 1, ''),
+(207, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:37', '2025-12-08 19:51:37', 0, 0, 1, ''),
+(208, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:39', '2025-12-08 19:51:39', 0, 0, 1, ''),
+(209, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:40', '2025-12-08 19:51:40', 0, 0, 1, ''),
+(210, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:42', '2025-12-08 19:51:42', 0, 0, 1, ''),
+(211, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 690.243902, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:43', '2025-12-08 19:51:43', 0, 0, 1, ''),
+(212, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:46', '2025-12-08 19:51:46', 0, 0, 1, ''),
+(213, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:48', '2025-12-08 19:51:48', 0, 0, 1, ''),
+(214, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:49', '2025-12-08 19:51:49', 0, 0, 1, ''),
+(215, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 126.016260, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:51', '2025-12-14 03:53:56', 0, 0, 1, ''),
+(216, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:53', '2025-12-08 19:51:53', 0, 0, 1, ''),
+(217, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:55', '2025-12-08 19:51:55', 0, 0, 1, ''),
+(218, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:51:57', '2025-12-08 19:51:57', 0, 0, 1, ''),
+(219, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:00', '2025-12-08 19:52:00', 0, 0, 1, ''),
+(220, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:02', '2025-12-08 19:52:02', 0, 0, 1, ''),
+(221, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:05', '2025-12-08 19:52:05', 0, 0, 1, ''),
+(222, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:08', '2025-12-08 19:52:08', 0, 0, 1, ''),
+(223, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:11', '2025-12-08 19:52:11', 0, 0, 1, ''),
+(224, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:14', '2025-12-08 19:52:14', 0, 0, 1, ''),
+(225, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:17', '2025-12-08 19:52:17', 0, 0, 1, ''),
+(226, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:20', '2025-12-14 16:38:45', 0, 0, 1, ''),
+(227, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:22', '2025-12-08 19:52:22', 0, 0, 1, ''),
+(228, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:24', '2025-12-08 19:52:24', 0, 0, 1, ''),
+(229, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:26', '2025-12-08 19:52:26', 0, 0, 1, ''),
+(230, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:27', '2025-12-08 19:52:27', 0, 0, 1, ''),
+(231, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 44.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:28', '2025-12-08 19:52:28', 0, 0, 1, ''),
+(232, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:30', '2025-12-08 19:52:30', 0, 0, 1, ''),
+(233, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:32', '2025-12-08 19:52:32', 0, 0, 1, ''),
+(234, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:33', '2025-12-08 19:52:33', 0, 0, 1, ''),
+(235, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:35', '2025-12-08 19:52:35', 0, 0, 1, ''),
+(236, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 274.796748, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:36', '2025-12-08 19:52:36', 0, 0, 1, ''),
+(237, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 108.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:38', '2025-12-08 19:52:38', 0, 0, 1, ''),
+(238, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 275.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:40', '2025-12-08 19:52:40', 0, 0, 1, ''),
+(239, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:42', '2025-12-08 19:52:42', 0, 0, 1, ''),
+(240, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:44', '2025-12-08 19:52:44', 0, 0, 1, ''),
+(241, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 44.634146, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:48', '2025-12-08 19:52:48', 0, 0, 1, ''),
+(242, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:51', '2025-12-08 19:52:51', 0, 0, 1, ''),
+(243, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:55', '2025-12-08 19:52:55', 0, 0, 1, ''),
+(244, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:57', '2025-12-08 19:52:57', 0, 0, 1, ''),
+(245, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:52:58', '2025-12-08 19:52:58', 0, 0, 1, ''),
+(246, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:01', '2025-12-08 19:53:01', 0, 0, 1, ''),
+(247, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 113.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:04', '2025-12-08 19:53:04', 0, 0, 1, ''),
+(248, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 79.674797, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:06', '2025-12-08 19:53:06', 0, 0, 1, ''),
+(249, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 68.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:08', '2025-12-08 19:53:08', 0, 0, 1, ''),
+(250, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:10', '2025-12-08 19:53:10', 0, 0, 1, ''),
+(251, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:12', '2025-12-08 19:53:12', 0, 0, 1, ''),
+(252, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:14', '2025-12-08 19:53:14', 0, 0, 1, ''),
+(253, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:16', '2025-12-08 19:53:16', 0, 0, 1, ''),
+(254, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:18', '2025-12-08 19:53:18', 0, 0, 1, ''),
+(255, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 150.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:23', '2025-12-08 19:53:23', 0, 0, 1, ''),
+(256, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:25', '2025-12-08 19:53:25', 0, 0, 1, ''),
+(257, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:27', '2025-12-08 19:53:27', 0, 0, 1, ''),
+(258, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 66.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:33', '2025-12-08 19:53:33', 0, 0, 1, ''),
+(259, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:35', '2025-12-14 03:47:12', 0, 0, 1, ''),
+(260, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 145.528455, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:37', '2025-12-08 19:53:37', 0, 0, 1, ''),
+(261, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:39', '2025-12-08 19:53:39', 0, 0, 1, ''),
+(262, 0, 18, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 188.536585, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:41', '2025-12-08 19:53:41', 0, 0, 1, ''),
 (263, 0, 19, 49, 1, 1, 0, 1, '', '', '', '', 0.000000, 0, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:43', '2025-12-15 13:22:34', 0, 0, 1, 'combinations'),
-(264, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 243.089431, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:45', '2025-12-08 19:53:45', 0, 0, 1, ''),
-(265, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:47', '2025-12-14 03:52:21', 0, 0, 1, ''),
-(266, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 373.170732, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:48', '2025-12-08 19:53:48', 0, 0, 1, ''),
-(267, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:49', '2025-12-08 19:53:49', 0, 0, 1, ''),
-(268, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:50', '2025-12-08 19:53:50', 0, 0, 1, ''),
-(269, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:51', '2025-12-08 19:53:51', 0, 0, 1, ''),
-(270, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:52', '2025-12-08 19:53:52', 0, 0, 1, ''),
-(271, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:54', '2025-12-08 19:53:54', 0, 0, 1, ''),
-(272, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:55', '2025-12-08 19:53:55', 0, 0, 1, ''),
-(273, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:57', '2025-12-08 19:53:57', 0, 0, 1, ''),
-(274, 0, 19, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 43.902439, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:59', '2025-12-08 19:53:59', 0, 0, 1, ''),
-(275, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:00', '2025-12-08 19:54:00', 0, 0, 1, ''),
-(276, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.910569, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:01', '2025-12-08 19:54:01', 0, 0, 1, ''),
-(277, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:03', '2025-12-08 19:54:03', 0, 0, 1, ''),
-(278, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 131.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:04', '2025-12-08 19:54:04', 0, 0, 1, ''),
-(279, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 131.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:05', '2025-12-08 19:54:05', 0, 0, 1, ''),
-(280, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:06', '2025-12-08 19:54:06', 0, 0, 1, ''),
-(281, 0, 20, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:07', '2025-12-08 19:54:07', 0, 0, 1, ''),
-(282, 0, 20, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 105.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:11', '2025-12-08 19:54:11', 0, 0, 1, ''),
-(283, 0, 20, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:12', '2025-12-08 19:54:12', 0, 0, 1, ''),
-(284, 0, 20, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:15', '2025-12-08 19:54:15', 0, 0, 1, ''),
-(285, 0, 20, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:16', '2025-12-08 19:54:16', 0, 0, 1, ''),
-(286, 0, 20, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:19', '2025-12-08 19:54:19', 0, 0, 1, ''),
-(287, 0, 21, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:21', '2025-12-08 19:54:21', 0, 0, 1, ''),
-(288, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.829268, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:22', '2025-12-08 19:54:22', 0, 0, 1, ''),
-(289, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:24', '2025-12-08 19:54:24', 0, 0, 1, ''),
-(290, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 195.934959, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:25', '2025-12-08 19:54:25', 0, 0, 1, ''),
-(291, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:27', '2025-12-08 19:54:27', 0, 0, 1, ''),
-(292, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:28', '2025-12-08 19:54:28', 0, 0, 1, ''),
-(293, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:29', '2025-12-08 19:54:29', 0, 0, 1, ''),
-(294, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 105.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:30', '2025-12-08 19:54:30', 0, 0, 1, ''),
-(295, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:32', '2025-12-08 19:54:32', 0, 0, 1, ''),
-(296, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:34', '2025-12-08 19:54:34', 0, 0, 1, ''),
-(297, 0, 23, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:37', '2025-12-08 19:54:37', 0, 0, 1, ''),
-(298, 0, 23, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 74.796748, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:41', '2025-12-08 19:54:41', 0, 0, 1, ''),
-(299, 0, 23, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:44', '2025-12-08 19:54:44', 0, 0, 1, ''),
-(300, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 3243.902439, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:49', '2025-12-08 19:54:49', 0, 0, 1, ''),
-(301, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 3406.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:51', '2025-12-08 19:54:51', 0, 0, 1, ''),
-(302, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 3650.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:53', '2025-12-08 19:54:53', 0, 0, 1, ''),
-(303, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:55', '2025-12-08 19:54:55', 0, 0, 1, ''),
-(304, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:56', '2025-12-08 19:54:56', 0, 0, 1, ''),
-(305, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 211.300813, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:56', '2025-12-08 19:54:56', 0, 0, 1, ''),
-(306, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 1218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:57', '2025-12-08 19:54:57', 0, 0, 1, ''),
-(307, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 2275.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:58', '2025-12-08 19:54:58', 0, 0, 1, ''),
-(308, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 2438.211382, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:59', '2025-12-08 19:54:59', 0, 0, 1, ''),
-(309, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 3006.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:00', '2025-12-08 19:55:00', 0, 0, 1, ''),
-(310, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 6096.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:01', '2025-12-08 19:55:01', 0, 0, 1, ''),
-(311, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 7153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:02', '2025-12-08 19:55:02', 0, 0, 1, ''),
-(312, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 1503.252033, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:03', '2025-12-08 19:55:03', 0, 0, 1, ''),
-(313, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 974.796748, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:03', '2025-12-08 19:55:03', 0, 0, 1, ''),
-(314, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 3470.731707, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:04', '2025-12-08 19:55:04', 0, 0, 1, ''),
-(315, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 3657.723577, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:05', '2025-12-08 19:55:05', 0, 0, 1, '');
+(264, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 243.089431, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:45', '2025-12-08 19:53:45', 0, 0, 1, ''),
+(265, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:47', '2025-12-14 03:52:21', 0, 0, 1, ''),
+(266, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 373.170732, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:48', '2025-12-08 19:53:48', 0, 0, 1, ''),
+(267, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:49', '2025-12-08 19:53:49', 0, 0, 1, ''),
+(268, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:50', '2025-12-08 19:53:50', 0, 0, 1, ''),
+(269, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:51', '2025-12-08 19:53:51', 0, 0, 1, ''),
+(270, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:52', '2025-12-08 19:53:52', 0, 0, 1, ''),
+(271, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:54', '2025-12-08 19:53:54', 0, 0, 1, ''),
+(272, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:55', '2025-12-08 19:53:55', 0, 0, 1, ''),
+(273, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:57', '2025-12-08 19:53:57', 0, 0, 1, ''),
+(274, 0, 19, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 43.902439, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:53:59', '2025-12-08 19:53:59', 0, 0, 1, ''),
+(275, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:00', '2025-12-08 19:54:00', 0, 0, 1, ''),
+(276, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.910569, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:01', '2025-12-08 19:54:01', 0, 0, 1, ''),
+(277, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:03', '2025-12-08 19:54:03', 0, 0, 1, ''),
+(278, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 131.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:04', '2025-12-08 19:54:04', 0, 0, 1, ''),
+(279, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 131.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:05', '2025-12-08 19:54:05', 0, 0, 1, ''),
+(280, 0, 19, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:06', '2025-12-08 19:54:06', 0, 0, 1, ''),
+(281, 0, 20, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:07', '2025-12-08 19:54:07', 0, 0, 1, ''),
+(282, 0, 20, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 105.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:11', '2025-12-08 19:54:11', 0, 0, 1, ''),
+(283, 0, 20, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:12', '2025-12-08 19:54:12', 0, 0, 1, ''),
+(284, 0, 20, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:15', '2025-12-08 19:54:15', 0, 0, 1, ''),
+(285, 0, 20, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:16', '2025-12-08 19:54:16', 0, 0, 1, ''),
+(286, 0, 20, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:19', '2025-12-08 19:54:19', 0, 0, 1, ''),
+(287, 0, 21, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:21', '2025-12-08 19:54:21', 0, 0, 1, ''),
+(288, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.829268, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:22', '2025-12-08 19:54:22', 0, 0, 1, ''),
+(289, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:24', '2025-12-08 19:54:24', 0, 0, 1, ''),
+(290, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 195.934959, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:25', '2025-12-08 19:54:25', 0, 0, 1, ''),
+(291, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:27', '2025-12-08 19:54:27', 0, 0, 1, ''),
+(292, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:28', '2025-12-08 19:54:28', 0, 0, 1, ''),
+(293, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:29', '2025-12-08 19:54:29', 0, 0, 1, ''),
+(294, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 105.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:30', '2025-12-08 19:54:30', 0, 0, 1, ''),
+(295, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:32', '2025-12-08 19:54:32', 0, 0, 1, ''),
+(296, 0, 22, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:34', '2025-12-08 19:54:34', 0, 0, 1, ''),
+(297, 0, 23, 49, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:37', '2025-12-08 19:54:37', 0, 0, 1, ''),
+(298, 0, 23, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 74.796748, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:41', '2025-12-08 19:54:41', 0, 0, 1, ''),
+(299, 0, 23, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:44', '2025-12-08 19:54:44', 0, 0, 1, ''),
+(300, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 3243.902439, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:49', '2025-12-08 19:54:49', 0, 0, 1, ''),
+(301, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 3406.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:51', '2025-12-08 19:54:51', 0, 0, 1, ''),
+(302, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 3650.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:53', '2025-12-08 19:54:53', 0, 0, 1, ''),
+(303, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:55', '2025-12-08 19:54:55', 0, 0, 1, ''),
+(304, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:56', '2025-12-08 19:54:56', 0, 0, 1, ''),
+(305, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 211.300813, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:56', '2025-12-08 19:54:56', 0, 0, 1, ''),
+(306, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 1218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:57', '2025-12-08 19:54:57', 0, 0, 1, ''),
+(307, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 2275.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:58', '2025-12-08 19:54:58', 0, 0, 1, ''),
+(308, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 2438.211382, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:54:59', '2025-12-08 19:54:59', 0, 0, 1, ''),
+(309, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 3006.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:00', '2025-12-08 19:55:00', 0, 0, 1, ''),
+(310, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 6096.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:01', '2025-12-08 19:55:01', 0, 0, 1, ''),
+(311, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 7153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:02', '2025-12-08 19:55:02', 0, 0, 1, ''),
+(312, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 1503.252033, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:03', '2025-12-08 19:55:03', 0, 0, 1, ''),
+(313, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 974.796748, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:03', '2025-12-08 19:55:03', 0, 0, 1, ''),
+(314, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 3470.731707, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:04', '2025-12-08 19:55:04', 0, 0, 1, ''),
+(315, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 3657.723577, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:05', '2025-12-08 19:55:05', 0, 0, 1, '');
 INSERT INTO `ps_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_category_default`, `id_shop_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ean13`, `isbn`, `upc`, `mpn`, `ecotax`, `quantity`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `reference`, `supplier_reference`, `location`, `width`, `height`, `depth`, `weight`, `out_of_stock`, `additional_delivery_times`, `quantity_discount`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_is_pack`, `cache_has_attachments`, `is_virtual`, `cache_default_attribute`, `date_add`, `date_upd`, `advanced_stock_management`, `pack_stock_type`, `state`, `product_type`) VALUES
-(316, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 478.861789, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:06', '2025-12-08 19:55:06', 0, 0, 1, ''),
-(317, 0, 25, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 568.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:07', '2025-12-08 19:55:07', 0, 0, 1, ''),
-(318, 0, 25, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 1300.000000, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:09', '2025-12-08 19:55:09', 0, 0, 1, ''),
-(319, 0, 25, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:11', '2025-12-08 19:55:11', 0, 0, 1, ''),
-(320, 0, 25, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 1340.650407, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:13', '2025-12-08 19:55:13', 0, 0, 1, ''),
-(321, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 3650.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:16', '2025-12-08 19:55:16', 0, 0, 1, ''),
-(322, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 731.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:17', '2025-12-08 19:55:17', 0, 0, 1, ''),
-(323, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 893.495935, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:20', '2025-12-08 19:55:20', 0, 0, 1, ''),
-(324, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 812.195122, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:20', '2025-12-08 19:55:20', 0, 0, 1, ''),
-(325, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 1056.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:21', '2025-12-08 19:55:21', 0, 0, 1, ''),
-(326, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 1462.601626, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:22', '2025-12-08 19:55:22', 0, 0, 1, ''),
-(327, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:23', '2025-12-08 19:55:23', 0, 0, 1, ''),
-(328, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:24', '2025-12-08 19:55:24', 0, 0, 1, ''),
-(329, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:25', '2025-12-08 19:55:25', 0, 0, 1, ''),
-(330, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:25', '2025-12-08 19:55:25', 0, 0, 1, ''),
-(331, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:26', '2025-12-08 19:55:26', 0, 0, 1, ''),
-(332, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:27', '2025-12-08 19:55:27', 0, 0, 1, ''),
-(333, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 2438.211382, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:28', '2025-12-08 19:55:28', 0, 0, 1, ''),
-(334, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:29', '2025-12-08 19:55:29', 0, 0, 1, ''),
-(335, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 812.195122, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:30', '2025-12-08 19:55:30', 0, 0, 1, ''),
-(336, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:31', '2025-12-08 19:55:31', 0, 0, 1, ''),
-(337, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 348.780488, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:32', '2025-12-08 19:55:32', 0, 0, 1, ''),
-(338, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 240.650407, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:33', '2025-12-08 19:55:33', 0, 0, 1, ''),
-(339, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 275.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:34', '2025-12-08 19:55:34', 0, 0, 1, ''),
-(340, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 447.154472, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:35', '2025-12-08 19:55:35', 0, 0, 1, ''),
-(341, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 1048.780488, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:36', '2025-12-08 19:55:36', 0, 0, 1, ''),
-(342, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:36', '2025-12-08 19:55:36', 0, 0, 1, ''),
-(343, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 381.300813, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:37', '2025-12-08 19:55:37', 0, 0, 1, ''),
-(344, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 317.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:38', '2025-12-08 19:55:38', 0, 0, 1, ''),
-(345, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:39', '2025-12-08 19:55:39', 0, 0, 1, ''),
-(346, 0, 27, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:40', '2025-12-08 19:55:40', 0, 0, 1, ''),
-(347, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:41', '2025-12-08 19:55:41', 0, 0, 1, ''),
-(348, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:42', '2025-12-08 19:55:42', 0, 0, 1, ''),
-(349, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:43', '2025-12-08 19:55:43', 0, 0, 1, ''),
-(350, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:44', '2025-12-08 19:55:44', 0, 0, 1, ''),
-(351, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:46', '2025-12-08 19:55:46', 0, 0, 1, ''),
-(352, 0, 23, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 16.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:49', '2025-12-08 19:55:49', 0, 0, 1, ''),
-(353, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 185.365854, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:51', '2025-12-08 19:55:51', 0, 0, 1, ''),
-(354, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 239.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:54', '2025-12-08 19:55:54', 0, 0, 1, ''),
-(355, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 162.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:55', '2025-12-08 19:55:55', 0, 0, 1, ''),
-(356, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 202.439024, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:57', '2025-12-08 19:55:57', 0, 0, 1, ''),
-(357, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:58', '2025-12-08 19:55:58', 0, 0, 1, ''),
-(358, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:00', '2025-12-08 19:56:00', 0, 0, 1, ''),
-(359, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:02', '2025-12-08 19:56:02', 0, 0, 1, ''),
-(360, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:03', '2025-12-08 19:56:03', 0, 0, 1, ''),
-(361, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:05', '2025-12-08 19:56:05', 0, 0, 1, ''),
-(362, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:07', '2025-12-08 19:56:07', 0, 0, 1, ''),
-(363, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:09', '2025-12-08 19:56:09', 0, 0, 1, ''),
-(364, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:11', '2025-12-08 19:56:11', 0, 0, 1, ''),
-(365, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:13', '2025-12-08 19:56:13', 0, 0, 1, ''),
-(366, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:15', '2025-12-08 19:56:15', 0, 0, 1, ''),
-(367, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:17', '2025-12-08 19:56:17', 0, 0, 1, ''),
-(368, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:19', '2025-12-08 19:56:19', 0, 0, 1, ''),
-(369, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:20', '2025-12-08 19:56:20', 0, 0, 1, ''),
-(370, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:21', '2025-12-08 19:56:21', 0, 0, 1, ''),
-(371, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:23', '2025-12-08 19:56:23', 0, 0, 1, ''),
-(372, 0, 26, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:25', '2025-12-08 19:56:25', 0, 0, 1, ''),
-(373, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:26', '2025-12-08 19:56:26', 0, 0, 1, ''),
-(374, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:28', '2025-12-08 19:56:28', 0, 0, 1, ''),
-(375, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:29', '2025-12-08 19:56:29', 0, 0, 1, ''),
-(376, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 195.113821, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:30', '2025-12-08 19:56:30', 0, 0, 1, ''),
-(377, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:32', '2025-12-08 19:56:32', 0, 0, 1, ''),
-(378, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:33', '2025-12-08 19:56:33', 0, 0, 1, ''),
-(379, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:34', '2025-12-08 19:56:34', 0, 0, 1, ''),
-(380, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:36', '2025-12-08 19:56:36', 0, 0, 1, ''),
-(381, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:38', '2025-12-08 19:56:38', 0, 0, 1, ''),
-(382, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 1015.447154, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:39', '2025-12-08 19:56:39', 0, 0, 1, ''),
-(383, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:40', '2025-12-08 19:56:40', 0, 0, 1, ''),
-(384, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:41', '2025-12-08 19:56:41', 0, 0, 1, ''),
-(385, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 283.739837, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:44', '2025-12-08 19:56:44', 0, 0, 1, ''),
-(386, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:47', '2025-12-08 19:56:47', 0, 0, 1, ''),
-(387, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:51', '2025-12-08 19:56:51', 0, 0, 1, ''),
-(388, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.739837, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:56', '2025-12-08 19:56:56', 0, 0, 1, ''),
-(389, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:02', '2025-12-08 19:57:02', 0, 0, 1, ''),
-(390, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:04', '2025-12-08 19:57:04', 0, 0, 1, ''),
-(391, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:05', '2025-12-08 19:57:05', 0, 0, 1, ''),
-(392, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:07', '2025-12-08 19:57:07', 0, 0, 1, ''),
-(393, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 134.951220, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:09', '2025-12-08 19:57:09', 0, 0, 1, ''),
-(394, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 40.642276, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:10', '2025-12-08 19:57:10', 0, 0, 1, ''),
-(395, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:12', '2025-12-08 19:57:12', 0, 0, 1, ''),
-(396, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 32.439024, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:13', '2025-12-08 19:57:13', 0, 0, 1, ''),
-(397, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 101.626016, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:14', '2025-12-08 19:57:14', 0, 0, 1, ''),
-(398, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 85.365854, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:15', '2025-12-08 19:57:15', 0, 0, 1, ''),
-(399, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 204.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:16', '2025-12-08 19:57:16', 0, 0, 1, ''),
-(400, 0, 28, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:18', '2025-12-08 19:57:18', 0, 0, 1, ''),
-(401, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:22', '2025-12-08 19:57:22', 0, 0, 1, ''),
-(402, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:24', '2025-12-08 19:57:24', 0, 0, 1, ''),
-(403, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:26', '2025-12-08 19:57:26', 0, 0, 1, ''),
-(404, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:28', '2025-12-08 19:57:28', 0, 0, 1, ''),
-(405, 0, 18, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 205.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:30', '2025-12-08 19:57:30', 0, 0, 1, ''),
-(406, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:32', '2025-12-08 19:57:32', 0, 0, 1, ''),
-(407, 0, 29, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 22.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:34', '2025-12-08 19:57:34', 0, 0, 1, ''),
-(408, 0, 19, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:38', '2025-12-08 19:57:38', 0, 0, 1, ''),
-(409, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:42', '2025-12-08 19:57:42', 0, 0, 1, ''),
-(410, 0, 19, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 111.382114, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:45', '2025-12-08 19:57:45', 0, 0, 1, ''),
-(411, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:46', '2025-12-08 19:57:46', 0, 0, 1, ''),
-(412, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:47', '2025-12-08 19:57:47', 0, 0, 1, ''),
-(413, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:48', '2025-12-08 19:57:48', 0, 0, 1, ''),
-(414, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:50', '2025-12-08 19:57:50', 0, 0, 1, ''),
-(415, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:52', '2025-12-08 19:57:52', 0, 0, 1, ''),
-(416, 0, 28, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:53', '2025-12-08 19:57:53', 0, 0, 1, ''),
-(417, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 205.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:55', '2025-12-08 19:57:55', 0, 0, 1, ''),
-(418, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:57', '2025-12-08 19:57:57', 0, 0, 1, ''),
-(419, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 162.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:58', '2025-12-08 19:57:58', 0, 0, 1, ''),
-(420, 0, 22, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 120.243902, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:00', '2025-12-08 19:58:00', 0, 0, 1, ''),
-(421, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:02', '2025-12-08 19:58:02', 0, 0, 1, ''),
-(422, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 44.715447, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:03', '2025-12-08 19:58:03', 0, 0, 1, ''),
-(423, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:04', '2025-12-08 19:58:04', 0, 0, 1, ''),
-(424, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:06', '2025-12-08 19:58:06', 0, 0, 1, ''),
-(425, 0, 21, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:07', '2025-12-08 19:58:07', 0, 0, 1, ''),
-(426, 0, 19, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:08', '2025-12-08 19:58:08', 0, 0, 1, ''),
-(427, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:10', '2025-12-08 19:58:10', 0, 0, 1, ''),
-(428, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 73.162602, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:12', '2025-12-08 19:58:12', 0, 0, 1, ''),
-(429, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:16', '2025-12-08 19:58:16', 0, 0, 1, ''),
-(430, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 28.447154, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:17', '2025-12-08 19:58:17', 0, 0, 1, ''),
-(431, 0, 27, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:18', '2025-12-08 19:58:18', 0, 0, 1, ''),
-(432, 0, 23, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 19.918699, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:20', '2025-12-08 19:58:20', 0, 0, 1, ''),
-(433, 0, 23, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:20', '2025-12-08 19:58:20', 0, 0, 1, ''),
-(434, 0, 23, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:21', '2025-12-08 19:58:21', 0, 0, 1, ''),
-(435, 0, 23, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:23', '2025-12-08 19:58:23', 0, 0, 1, ''),
-(436, 0, 26, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 48.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:25', '2025-12-08 19:58:25', 0, 0, 1, ''),
-(437, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:27', '2025-12-08 19:58:27', 0, 0, 1, ''),
-(438, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:28', '2025-12-08 19:58:28', 0, 0, 1, ''),
-(439, 0, 17, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:30', '2025-12-08 19:58:30', 0, 0, 1, ''),
-(440, 0, 26, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 70.731707, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:32', '2025-12-08 19:58:32', 0, 0, 1, ''),
-(441, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:33', '2025-12-08 19:58:33', 0, 0, 1, ''),
-(442, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:34', '2025-12-08 19:58:34', 0, 0, 1, ''),
-(443, 0, 27, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:36', '2025-12-08 19:58:36', 0, 0, 1, ''),
-(444, 0, 18, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:38', '2025-12-08 19:58:38', 0, 0, 1, ''),
-(445, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 60.162602, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:40', '2025-12-08 19:58:40', 0, 0, 1, ''),
-(446, 0, 23, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:42', '2025-12-08 19:58:42', 0, 0, 1, ''),
-(447, 0, 23, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:45', '2025-12-08 19:58:45', 0, 0, 1, ''),
-(448, 0, 28, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 101.544715, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:49', '2025-12-08 19:58:49', 0, 0, 1, ''),
-(449, 0, 28, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 84.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:53', '2025-12-08 19:58:53', 0, 0, 1, ''),
-(450, 0, 26, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:56', '2025-12-08 19:58:56', 0, 0, 1, ''),
-(451, 0, 19, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:58', '2025-12-08 19:58:58', 0, 0, 1, ''),
-(452, 0, 17, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:59', '2025-12-08 19:58:59', 0, 0, 1, ''),
-(453, 0, 21, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:01', '2025-12-08 19:59:01', 0, 0, 1, ''),
-(454, 0, 30, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 23.577236, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:03', '2025-12-08 19:59:03', 0, 0, 1, ''),
-(455, 0, 20, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:04', '2025-12-08 19:59:04', 0, 0, 1, ''),
-(456, 0, 20, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:05', '2025-12-08 19:59:05', 0, 0, 1, ''),
-(457, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:08', '2025-12-08 19:59:08', 0, 0, 1, ''),
-(458, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 32.439024, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:09', '2025-12-08 19:59:09', 0, 0, 1, ''),
-(459, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:10', '2025-12-08 19:59:10', 0, 0, 1, ''),
-(460, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 28.455285, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:11', '2025-12-08 19:59:11', 0, 0, 1, ''),
-(461, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:12', '2025-12-08 19:59:12', 0, 0, 1, ''),
-(462, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:13', '2025-12-08 19:59:13', 0, 0, 1, ''),
-(463, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:14', '2025-12-08 19:59:14', 0, 0, 1, ''),
-(464, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:15', '2025-12-08 19:59:15', 0, 0, 1, ''),
-(465, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:16', '2025-12-08 19:59:16', 0, 0, 1, ''),
-(466, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:17', '2025-12-08 19:59:17', 0, 0, 1, ''),
-(467, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:18', '2025-12-08 19:59:18', 0, 0, 1, ''),
-(468, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:19', '2025-12-08 19:59:19', 0, 0, 1, ''),
-(469, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:20', '2025-12-08 19:59:20', 0, 0, 1, ''),
-(470, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:22', '2025-12-08 19:59:22', 0, 0, 1, ''),
-(471, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:23', '2025-12-08 19:59:23', 0, 0, 1, ''),
-(472, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:24', '2025-12-08 19:59:24', 0, 0, 1, ''),
-(473, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:25', '2025-12-08 19:59:25', 0, 0, 1, '');
+(316, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 478.861789, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:06', '2025-12-08 19:55:06', 0, 0, 1, ''),
+(317, 0, 25, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 568.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:07', '2025-12-08 19:55:07', 0, 0, 1, ''),
+(318, 0, 25, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 1300.000000, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:09', '2025-12-08 19:55:09', 0, 0, 1, ''),
+(319, 0, 25, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:11', '2025-12-08 19:55:11', 0, 0, 1, ''),
+(320, 0, 25, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 1340.650407, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:13', '2025-12-08 19:55:13', 0, 0, 1, ''),
+(321, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 3650.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:16', '2025-12-08 19:55:16', 0, 0, 1, ''),
+(322, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 731.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:17', '2025-12-08 19:55:17', 0, 0, 1, ''),
+(323, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 893.495935, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:20', '2025-12-08 19:55:20', 0, 0, 1, ''),
+(324, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 812.195122, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:20', '2025-12-08 19:55:20', 0, 0, 1, ''),
+(325, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 1056.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:21', '2025-12-08 19:55:21', 0, 0, 1, ''),
+(326, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 1462.601626, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:22', '2025-12-08 19:55:22', 0, 0, 1, ''),
+(327, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:23', '2025-12-08 19:55:23', 0, 0, 1, ''),
+(328, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:24', '2025-12-08 19:55:24', 0, 0, 1, ''),
+(329, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:25', '2025-12-08 19:55:25', 0, 0, 1, ''),
+(330, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:25', '2025-12-08 19:55:25', 0, 0, 1, ''),
+(331, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:26', '2025-12-08 19:55:26', 0, 0, 1, ''),
+(332, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:27', '2025-12-08 19:55:27', 0, 0, 1, ''),
+(333, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 2438.211382, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:28', '2025-12-08 19:55:28', 0, 0, 1, ''),
+(334, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:29', '2025-12-08 19:55:29', 0, 0, 1, ''),
+(335, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 812.195122, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:30', '2025-12-08 19:55:30', 0, 0, 1, ''),
+(336, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:31', '2025-12-08 19:55:31', 0, 0, 1, ''),
+(337, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 348.780488, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:32', '2025-12-08 19:55:32', 0, 0, 1, ''),
+(338, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 240.650407, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:33', '2025-12-08 19:55:33', 0, 0, 1, ''),
+(339, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 275.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:34', '2025-12-08 19:55:34', 0, 0, 1, ''),
+(340, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 447.154472, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:35', '2025-12-08 19:55:35', 0, 0, 1, ''),
+(341, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 1048.780488, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:36', '2025-12-08 19:55:36', 0, 0, 1, ''),
+(342, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:36', '2025-12-08 19:55:36', 0, 0, 1, ''),
+(343, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 381.300813, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:37', '2025-12-08 19:55:37', 0, 0, 1, ''),
+(344, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 317.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:38', '2025-12-08 19:55:38', 0, 0, 1, ''),
+(345, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:39', '2025-12-08 19:55:39', 0, 0, 1, ''),
+(346, 0, 27, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:40', '2025-12-08 19:55:40', 0, 0, 1, ''),
+(347, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:41', '2025-12-08 19:55:41', 0, 0, 1, ''),
+(348, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:42', '2025-12-08 19:55:42', 0, 0, 1, ''),
+(349, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:43', '2025-12-08 19:55:43', 0, 0, 1, ''),
+(350, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:44', '2025-12-08 19:55:44', 0, 0, 1, ''),
+(351, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:46', '2025-12-08 19:55:46', 0, 0, 1, ''),
+(352, 0, 23, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 16.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:49', '2025-12-08 19:55:49', 0, 0, 1, ''),
+(353, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 185.365854, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:51', '2025-12-08 19:55:51', 0, 0, 1, ''),
+(354, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 239.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:54', '2025-12-08 19:55:54', 0, 0, 1, ''),
+(355, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 162.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:55', '2025-12-08 19:55:55', 0, 0, 1, ''),
+(356, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 202.439024, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:57', '2025-12-08 19:55:57', 0, 0, 1, ''),
+(357, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:55:58', '2025-12-08 19:55:58', 0, 0, 1, ''),
+(358, 0, 18, 60, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:00', '2025-12-08 19:56:00', 0, 0, 1, ''),
+(359, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:02', '2025-12-08 19:56:02', 0, 0, 1, ''),
+(360, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:03', '2025-12-08 19:56:03', 0, 0, 1, ''),
+(361, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:05', '2025-12-08 19:56:05', 0, 0, 1, ''),
+(362, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:07', '2025-12-08 19:56:07', 0, 0, 1, ''),
+(363, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:09', '2025-12-08 19:56:09', 0, 0, 1, ''),
+(364, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:11', '2025-12-08 19:56:11', 0, 0, 1, ''),
+(365, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:13', '2025-12-08 19:56:13', 0, 0, 1, ''),
+(366, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:15', '2025-12-08 19:56:15', 0, 0, 1, ''),
+(367, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:17', '2025-12-08 19:56:17', 0, 0, 1, ''),
+(368, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:19', '2025-12-08 19:56:19', 0, 0, 1, ''),
+(369, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:20', '2025-12-08 19:56:20', 0, 0, 1, ''),
+(370, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:21', '2025-12-08 19:56:21', 0, 0, 1, ''),
+(371, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:23', '2025-12-08 19:56:23', 0, 0, 1, ''),
+(372, 0, 26, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:25', '2025-12-08 19:56:25', 0, 0, 1, ''),
+(373, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:26', '2025-12-08 19:56:26', 0, 0, 1, ''),
+(374, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:28', '2025-12-08 19:56:28', 0, 0, 1, ''),
+(375, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:29', '2025-12-08 19:56:29', 0, 0, 1, ''),
+(376, 0, 26, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 195.113821, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:30', '2025-12-08 19:56:30', 0, 0, 1, ''),
+(377, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:32', '2025-12-08 19:56:32', 0, 0, 1, ''),
+(378, 0, 17, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:33', '2025-12-08 19:56:33', 0, 0, 1, ''),
+(379, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:34', '2025-12-08 19:56:34', 0, 0, 1, ''),
+(380, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:36', '2025-12-08 19:56:36', 0, 0, 1, ''),
+(381, 0, 18, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:38', '2025-12-08 19:56:38', 0, 0, 1, ''),
+(382, 0, 24, 50, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 1015.447154, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:39', '2025-12-08 19:56:39', 0, 0, 1, ''),
+(383, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:40', '2025-12-08 19:56:40', 0, 0, 1, ''),
+(384, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:41', '2025-12-08 19:56:41', 0, 0, 1, ''),
+(385, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 283.739837, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:44', '2025-12-08 19:56:44', 0, 0, 1, ''),
+(386, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:47', '2025-12-08 19:56:47', 0, 0, 1, ''),
+(387, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:51', '2025-12-08 19:56:51', 0, 0, 1, ''),
+(388, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.739837, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:56:56', '2025-12-08 19:56:56', 0, 0, 1, ''),
+(389, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:02', '2025-12-08 19:57:02', 0, 0, 1, ''),
+(390, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:04', '2025-12-08 19:57:04', 0, 0, 1, ''),
+(391, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:05', '2025-12-08 19:57:05', 0, 0, 1, ''),
+(392, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:07', '2025-12-08 19:57:07', 0, 0, 1, ''),
+(393, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 134.951220, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:09', '2025-12-08 19:57:09', 0, 0, 1, ''),
+(394, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 40.642276, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:10', '2025-12-08 19:57:10', 0, 0, 1, ''),
+(395, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:12', '2025-12-08 19:57:12', 0, 0, 1, ''),
+(396, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 32.439024, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:13', '2025-12-08 19:57:13', 0, 0, 1, ''),
+(397, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 101.626016, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:14', '2025-12-08 19:57:14', 0, 0, 1, ''),
+(398, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 85.365854, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:15', '2025-12-08 19:57:15', 0, 0, 1, ''),
+(399, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 204.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:16', '2025-12-08 19:57:16', 0, 0, 1, ''),
+(400, 0, 28, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:18', '2025-12-08 19:57:18', 0, 0, 1, ''),
+(401, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:22', '2025-12-08 19:57:22', 0, 0, 1, ''),
+(402, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:24', '2025-12-08 19:57:24', 0, 0, 1, ''),
+(403, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:26', '2025-12-08 19:57:26', 0, 0, 1, ''),
+(404, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:28', '2025-12-08 19:57:28', 0, 0, 1, ''),
+(405, 0, 18, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 205.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:30', '2025-12-08 19:57:30', 0, 0, 1, ''),
+(406, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:32', '2025-12-08 19:57:32', 0, 0, 1, ''),
+(407, 0, 29, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 22.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:34', '2025-12-08 19:57:34', 0, 0, 1, ''),
+(408, 0, 19, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:38', '2025-12-08 19:57:38', 0, 0, 1, ''),
+(409, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:42', '2025-12-08 19:57:42', 0, 0, 1, ''),
+(410, 0, 19, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 111.382114, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:45', '2025-12-08 19:57:45', 0, 0, 1, ''),
+(411, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:46', '2025-12-08 19:57:46', 0, 0, 1, ''),
+(412, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:47', '2025-12-08 19:57:47', 0, 0, 1, ''),
+(413, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:48', '2025-12-08 19:57:48', 0, 0, 1, ''),
+(414, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:50', '2025-12-08 19:57:50', 0, 0, 1, ''),
+(415, 0, 17, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:52', '2025-12-08 19:57:52', 0, 0, 1, ''),
+(416, 0, 28, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:53', '2025-12-08 19:57:53', 0, 0, 1, ''),
+(417, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 205.609756, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:55', '2025-12-08 19:57:55', 0, 0, 1, ''),
+(418, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:57', '2025-12-08 19:57:57', 0, 0, 1, ''),
+(419, 0, 18, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 162.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:57:58', '2025-12-08 19:57:58', 0, 0, 1, ''),
+(420, 0, 22, 51, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 120.243902, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:00', '2025-12-08 19:58:00', 0, 0, 1, ''),
+(421, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:02', '2025-12-08 19:58:02', 0, 0, 1, ''),
+(422, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 44.715447, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:03', '2025-12-08 19:58:03', 0, 0, 1, ''),
+(423, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:04', '2025-12-08 19:58:04', 0, 0, 1, ''),
+(424, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:06', '2025-12-08 19:58:06', 0, 0, 1, ''),
+(425, 0, 21, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:07', '2025-12-08 19:58:07', 0, 0, 1, ''),
+(426, 0, 19, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:08', '2025-12-08 19:58:08', 0, 0, 1, ''),
+(427, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:10', '2025-12-08 19:58:10', 0, 0, 1, ''),
+(428, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 73.162602, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:12', '2025-12-08 19:58:12', 0, 0, 1, ''),
+(429, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:16', '2025-12-08 19:58:16', 0, 0, 1, ''),
+(430, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 28.447154, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:17', '2025-12-08 19:58:17', 0, 0, 1, ''),
+(431, 0, 27, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:18', '2025-12-08 19:58:18', 0, 0, 1, ''),
+(432, 0, 23, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 19.918699, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:20', '2025-12-08 19:58:20', 0, 0, 1, ''),
+(433, 0, 23, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:20', '2025-12-08 19:58:20', 0, 0, 1, ''),
+(434, 0, 23, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:21', '2025-12-08 19:58:21', 0, 0, 1, ''),
+(435, 0, 23, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:23', '2025-12-08 19:58:23', 0, 0, 1, ''),
+(436, 0, 26, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 48.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:25', '2025-12-08 19:58:25', 0, 0, 1, ''),
+(437, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:27', '2025-12-08 19:58:27', 0, 0, 1, ''),
+(438, 0, 19, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:28', '2025-12-08 19:58:28', 0, 0, 1, ''),
+(439, 0, 17, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:30', '2025-12-08 19:58:30', 0, 0, 1, ''),
+(440, 0, 26, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 70.731707, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:32', '2025-12-08 19:58:32', 0, 0, 1, ''),
+(441, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:33', '2025-12-08 19:58:33', 0, 0, 1, ''),
+(442, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:34', '2025-12-08 19:58:34', 0, 0, 1, ''),
+(443, 0, 27, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:36', '2025-12-08 19:58:36', 0, 0, 1, ''),
+(444, 0, 18, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:38', '2025-12-08 19:58:38', 0, 0, 1, ''),
+(445, 0, 18, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 60.162602, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:40', '2025-12-08 19:58:40', 0, 0, 1, ''),
+(446, 0, 23, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:42', '2025-12-08 19:58:42', 0, 0, 1, ''),
+(447, 0, 23, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:45', '2025-12-08 19:58:45', 0, 0, 1, ''),
+(448, 0, 28, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 101.544715, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:49', '2025-12-08 19:58:49', 0, 0, 1, ''),
+(449, 0, 28, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 84.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:53', '2025-12-08 19:58:53', 0, 0, 1, ''),
+(450, 0, 26, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:56', '2025-12-08 19:58:56', 0, 0, 1, ''),
+(451, 0, 19, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:58', '2025-12-08 19:58:58', 0, 0, 1, ''),
+(452, 0, 17, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:58:59', '2025-12-08 19:58:59', 0, 0, 1, ''),
+(453, 0, 21, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:01', '2025-12-08 19:59:01', 0, 0, 1, ''),
+(454, 0, 30, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 23.577236, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:03', '2025-12-08 19:59:03', 0, 0, 1, ''),
+(455, 0, 20, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:04', '2025-12-08 19:59:04', 0, 0, 1, ''),
+(456, 0, 20, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:05', '2025-12-08 19:59:05', 0, 0, 1, ''),
+(457, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:08', '2025-12-08 19:59:08', 0, 0, 1, ''),
+(458, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 32.439024, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:09', '2025-12-08 19:59:09', 0, 0, 1, ''),
+(459, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:10', '2025-12-08 19:59:10', 0, 0, 1, ''),
+(460, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 28.455285, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:11', '2025-12-08 19:59:11', 0, 0, 1, ''),
+(461, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:12', '2025-12-08 19:59:12', 0, 0, 1, ''),
+(462, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:13', '2025-12-08 19:59:13', 0, 0, 1, ''),
+(463, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:14', '2025-12-08 19:59:14', 0, 0, 1, ''),
+(464, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:15', '2025-12-08 19:59:15', 0, 0, 1, ''),
+(465, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:16', '2025-12-08 19:59:16', 0, 0, 1, ''),
+(466, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:17', '2025-12-08 19:59:17', 0, 0, 1, ''),
+(467, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:18', '2025-12-08 19:59:18', 0, 0, 1, ''),
+(468, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:19', '2025-12-08 19:59:19', 0, 0, 1, ''),
+(469, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:20', '2025-12-08 19:59:20', 0, 0, 1, ''),
+(470, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:22', '2025-12-08 19:59:22', 0, 0, 1, ''),
+(471, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:23', '2025-12-08 19:59:23', 0, 0, 1, ''),
+(472, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:24', '2025-12-08 19:59:24', 0, 0, 1, ''),
+(473, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:25', '2025-12-08 19:59:25', 0, 0, 1, '');
 INSERT INTO `ps_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_category_default`, `id_shop_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ean13`, `isbn`, `upc`, `mpn`, `ecotax`, `quantity`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `reference`, `supplier_reference`, `location`, `width`, `height`, `depth`, `weight`, `out_of_stock`, `additional_delivery_times`, `quantity_discount`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_is_pack`, `cache_has_attachments`, `is_virtual`, `cache_default_attribute`, `date_add`, `date_upd`, `advanced_stock_management`, `pack_stock_type`, `state`, `product_type`) VALUES
-(474, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:26', '2025-12-08 19:59:26', 0, 0, 1, ''),
-(475, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:27', '2025-12-08 19:59:27', 0, 0, 1, ''),
-(476, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 60.894309, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:28', '2025-12-08 19:59:28', 0, 0, 1, ''),
-(477, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 209.756098, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:30', '2025-12-14 03:51:51', 0, 0, 1, ''),
-(478, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:32', '2025-12-08 19:59:32', 0, 0, 1, ''),
-(479, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 150.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:33', '2025-12-08 19:59:33', 0, 0, 1, ''),
-(480, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:34', '2025-12-14 03:53:00', 0, 0, 1, ''),
-(481, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:35', '2025-12-08 19:59:35', 0, 0, 1, ''),
-(482, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 69.105691, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:36', '2025-12-08 19:59:36', 0, 0, 1, ''),
-(483, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:37', '2025-12-08 19:59:37', 0, 0, 1, ''),
-(484, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:37', '2025-12-08 19:59:37', 0, 0, 1, ''),
-(485, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:38', '2025-12-08 19:59:38', 0, 0, 1, ''),
-(486, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 63.414634, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:41', '2025-12-08 19:59:41', 0, 0, 1, ''),
-(487, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 60.081301, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:41', '2025-12-08 19:59:41', 0, 0, 1, ''),
-(488, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:42', '2025-12-08 19:59:42', 0, 0, 1, ''),
-(489, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:43', '2025-12-08 19:59:43', 0, 0, 1, ''),
-(490, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:44', '2025-12-08 19:59:44', 0, 0, 1, ''),
-(491, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:46', '2025-12-08 19:59:46', 0, 0, 1, ''),
-(492, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 52.845528, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:48', '2025-12-08 19:59:48', 0, 0, 1, ''),
-(493, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:50', '2025-12-08 19:59:50', 0, 0, 1, ''),
-(494, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 156.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:51', '2025-12-08 19:59:51', 0, 0, 1, ''),
-(495, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:52', '2025-12-08 19:59:52', 0, 0, 1, ''),
-(496, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:53', '2025-12-08 19:59:53', 0, 0, 1, ''),
-(497, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:55', '2025-12-08 19:59:55', 0, 0, 1, ''),
-(498, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:58', '2025-12-08 19:59:58', 0, 0, 1, ''),
-(499, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 283.739837, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:59', '2025-12-08 19:59:59', 0, 0, 1, ''),
-(500, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:01', '2025-12-08 20:00:01', 0, 0, 1, ''),
-(501, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 85.284553, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:03', '2025-12-08 20:00:03', 0, 0, 1, ''),
-(502, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 126.016260, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:05', '2025-12-08 20:00:05', 0, 0, 1, ''),
-(503, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 235.764228, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:06', '2025-12-08 20:00:06', 0, 0, 1, ''),
-(504, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:07', '2025-12-08 20:00:07', 0, 0, 1, ''),
-(505, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 145.447154, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:09', '2025-12-08 20:00:09', 0, 0, 1, ''),
-(506, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 265.853659, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:12', '2025-12-08 20:00:12', 0, 0, 1, ''),
-(507, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 259.349593, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:13', '2025-12-08 20:00:13', 0, 0, 1, ''),
-(508, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 178.853659, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:15', '2025-12-08 20:00:15', 0, 0, 1, ''),
-(509, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 73.089431, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:17', '2025-12-08 20:00:17', 0, 0, 1, ''),
-(510, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:19', '2025-12-08 20:00:19', 0, 0, 1, ''),
-(511, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:21', '2025-12-08 20:00:21', 0, 0, 1, ''),
-(512, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:23', '2025-12-08 20:00:23', 0, 0, 1, ''),
-(513, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 138.203252, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:24', '2025-12-08 20:00:24', 0, 0, 1, ''),
-(514, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:26', '2025-12-08 20:00:26', 0, 0, 1, ''),
-(515, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:28', '2025-12-08 20:00:28', 0, 0, 1, ''),
-(516, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 84.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:30', '2025-12-08 20:00:30', 0, 0, 1, ''),
-(517, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 68.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:33', '2025-12-08 20:00:33', 0, 0, 1, ''),
-(518, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 83.731707, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:34', '2025-12-08 20:00:34', 0, 0, 1, ''),
-(519, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 134.146341, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:36', '2025-12-08 20:00:36', 0, 0, 1, ''),
-(520, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:38', '2025-12-08 20:00:38', 0, 0, 1, ''),
-(521, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 73.162602, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:41', '2025-12-08 20:00:41', 0, 0, 1, ''),
-(522, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.715447, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:43', '2025-12-08 20:00:43', 0, 0, 1, ''),
-(523, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.829268, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:44', '2025-12-08 20:00:44', 0, 0, 1, ''),
-(524, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 85.365854, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:46', '2025-12-08 20:00:46', 0, 0, 1, ''),
-(525, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:48', '2025-12-08 20:00:48', 0, 0, 1, ''),
-(526, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:50', '2025-12-08 20:00:50', 0, 0, 1, ''),
-(527, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:52', '2025-12-08 20:00:52', 0, 0, 1, ''),
-(528, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:53', '2025-12-08 20:00:53', 0, 0, 1, ''),
-(529, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 60.162602, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:55', '2025-12-08 20:00:55', 0, 0, 1, ''),
-(530, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:57', '2025-12-08 20:00:57', 0, 0, 1, ''),
-(531, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:58', '2025-12-08 20:00:58', 0, 0, 1, ''),
-(532, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:03', '2025-12-08 20:01:03', 0, 0, 1, ''),
-(533, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:07', '2025-12-08 20:01:07', 0, 0, 1, ''),
-(534, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:09', '2025-12-08 20:01:09', 0, 0, 1, ''),
-(535, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:13', '2025-12-08 20:01:13', 0, 0, 1, ''),
-(536, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:16', '2025-12-08 20:01:16', 0, 0, 1, ''),
-(537, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:17', '2025-12-08 20:01:17', 0, 0, 1, ''),
-(538, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 218.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:19', '2025-12-08 20:01:19', 0, 0, 1, ''),
-(539, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:20', '2025-12-08 20:01:20', 0, 0, 1, ''),
-(540, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:24', '2025-12-08 20:01:24', 0, 0, 1, ''),
-(541, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 123.577236, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:25', '2025-12-08 20:01:25', 0, 0, 1, ''),
-(542, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:26', '2025-12-08 20:01:26', 0, 0, 1, ''),
-(543, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:28', '2025-12-08 20:01:28', 0, 0, 1, ''),
-(544, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:30', '2025-12-08 20:01:30', 0, 0, 1, ''),
-(545, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 230.894309, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:31', '2025-12-08 20:01:31', 0, 0, 1, ''),
-(546, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 251.951220, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:33', '2025-12-08 20:01:33', 0, 0, 1, ''),
-(547, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 284.471545, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:35', '2025-12-08 20:01:35', 0, 0, 1, ''),
-(548, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:36', '2025-12-08 20:01:36', 0, 0, 1, ''),
-(549, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:37', '2025-12-08 20:01:37', 0, 0, 1, ''),
-(550, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:39', '2025-12-08 20:01:39', 0, 0, 1, ''),
-(551, 0, 19, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 90.243902, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:41', '2025-12-08 20:01:41', 0, 0, 1, ''),
-(552, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 55.284553, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:43', '2025-12-08 20:01:43', 0, 0, 1, ''),
-(553, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:45', '2025-12-08 20:01:45', 0, 0, 1, ''),
-(554, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:46', '2025-12-08 20:01:46', 0, 0, 1, ''),
-(555, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:47', '2025-12-08 20:01:47', 0, 0, 1, ''),
-(556, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:49', '2025-12-08 20:01:49', 0, 0, 1, ''),
-(557, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:51', '2025-12-08 20:01:51', 0, 0, 1, ''),
-(558, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:54', '2025-12-08 20:01:54', 0, 0, 1, ''),
-(559, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:56', '2025-12-08 20:01:56', 0, 0, 1, ''),
-(560, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:58', '2025-12-08 20:01:58', 0, 0, 1, ''),
-(561, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:00', '2025-12-08 20:02:00', 0, 0, 1, ''),
-(562, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 160.081301, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:01', '2025-12-08 20:02:01', 0, 0, 1, ''),
-(563, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:02', '2025-12-08 20:02:02', 0, 0, 1, ''),
-(564, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 170.650407, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:04', '2025-12-08 20:02:04', 0, 0, 1, ''),
-(565, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:06', '2025-12-08 20:02:06', 0, 0, 1, ''),
-(566, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 236.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:09', '2025-12-08 20:02:09', 0, 0, 1, ''),
-(567, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:11', '2025-12-08 20:02:11', 0, 0, 1, ''),
-(568, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:13', '2025-12-08 20:02:13', 0, 0, 1, ''),
-(569, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 239.829268, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:14', '2025-12-08 20:02:14', 0, 0, 1, ''),
-(570, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:16', '2025-12-08 20:02:16', 0, 0, 1, ''),
-(571, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:17', '2025-12-08 20:02:17', 0, 0, 1, ''),
-(572, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:19', '2025-12-08 20:02:19', 0, 0, 1, ''),
-(573, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 85.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:21', '2025-12-08 20:02:21', 0, 0, 1, ''),
-(574, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 85.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:26', '2025-12-08 20:02:26', 0, 0, 1, ''),
-(575, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:30', '2025-12-08 20:02:30', 0, 0, 1, ''),
-(576, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 142.276423, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:33', '2025-12-08 20:02:33', 0, 0, 1, ''),
-(577, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 142.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:34', '2025-12-08 20:02:34', 0, 0, 1, ''),
-(578, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:37', '2025-12-08 20:02:37', 0, 0, 1, ''),
-(579, 0, 26, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:39', '2025-12-08 20:02:39', 0, 0, 1, ''),
-(580, 0, 26, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:41', '2025-12-08 20:02:41', 0, 0, 1, ''),
-(581, 0, 26, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:43', '2025-12-08 20:02:43', 0, 0, 1, ''),
-(582, 0, 26, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:45', '2025-12-08 20:02:45', 0, 0, 1, ''),
-(583, 0, 33, 56, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 17.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:48', '2025-12-08 20:02:48', 0, 0, 1, ''),
-(584, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 37.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:50', '2025-12-08 20:02:50', 0, 0, 1, ''),
-(585, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 37.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:51', '2025-12-08 20:02:51', 0, 0, 1, ''),
-(586, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:53', '2025-12-08 20:02:53', 0, 0, 1, ''),
-(587, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 260.154472, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:55', '2025-12-08 20:02:55', 0, 0, 1, ''),
-(588, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 28.455285, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:57', '2025-12-08 20:02:57', 0, 0, 1, ''),
-(589, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:58', '2025-12-08 20:02:58', 0, 0, 1, ''),
-(590, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:59', '2025-12-08 20:02:59', 0, 0, 1, ''),
-(591, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:01', '2025-12-08 20:03:01', 0, 0, 1, ''),
-(592, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:02', '2025-12-08 20:03:02', 0, 0, 1, ''),
-(593, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:05', '2025-12-08 20:03:05', 0, 0, 1, ''),
-(594, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 73.089431, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:07', '2025-12-08 20:03:07', 0, 0, 1, ''),
-(595, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:08', '2025-12-08 20:03:08', 0, 0, 1, ''),
-(596, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:13', '2025-12-08 20:03:13', 0, 0, 1, ''),
-(597, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 100.000000, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:15', '2025-12-08 20:03:15', 0, 0, 1, ''),
-(598, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 100.000000, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:16', '2025-12-08 20:03:16', 0, 0, 1, ''),
-(599, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:18', '2025-12-08 20:03:18', 0, 0, 1, ''),
-(600, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:20', '2025-12-08 20:03:20', 0, 0, 1, ''),
-(601, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:21', '2025-12-08 20:03:21', 0, 0, 1, ''),
-(602, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:23', '2025-12-08 20:03:23', 0, 0, 1, ''),
-(603, 0, 28, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 38.211382, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:25', '2025-12-08 20:03:25', 0, 0, 1, ''),
-(604, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:26', '2025-12-08 20:03:26', 0, 0, 1, ''),
-(605, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:29', '2025-12-08 20:03:29', 0, 0, 1, ''),
-(606, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 78.861789, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:31', '2025-12-08 20:03:31', 0, 0, 1, ''),
-(607, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:32', '2025-12-08 20:03:32', 0, 0, 1, ''),
-(608, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:33', '2025-12-08 20:03:33', 0, 0, 1, ''),
-(609, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 34.959350, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:34', '2025-12-08 20:03:34', 0, 0, 1, ''),
-(610, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 95.934959, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:36', '2025-12-08 20:03:36', 0, 0, 1, ''),
-(611, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 33.333333, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:37', '2025-12-08 20:03:37', 0, 0, 1, ''),
-(612, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 79.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:38', '2025-12-08 20:03:38', 0, 0, 1, ''),
-(613, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 188.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:40', '2025-12-08 20:03:40', 0, 0, 1, ''),
-(614, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:43', '2025-12-08 20:03:43', 0, 0, 1, ''),
-(615, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 79.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:45', '2025-12-08 20:03:45', 0, 0, 1, ''),
-(616, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:46', '2025-12-08 20:03:46', 0, 0, 1, ''),
-(617, 0, 23, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 65.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:48', '2025-12-08 20:03:48', 0, 0, 1, ''),
-(618, 0, 18, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 204.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:51', '2025-12-08 20:03:51', 0, 0, 1, ''),
-(619, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:53', '2025-12-08 20:03:53', 0, 0, 1, ''),
-(620, 0, 23, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 93.495935, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:55', '2025-12-08 20:03:55', 0, 0, 1, ''),
-(621, 0, 28, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 82.926829, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:57', '2025-12-08 20:03:57', 0, 0, 1, ''),
-(622, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 56.902439, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:01', '2025-12-08 20:04:01', 0, 0, 1, ''),
-(623, 0, 19, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 147.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:03', '2025-12-08 20:04:03', 0, 0, 1, ''),
-(624, 0, 18, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:04', '2025-12-08 20:04:04', 0, 0, 1, ''),
-(625, 0, 22, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 771.544715, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:05', '2025-12-08 20:04:05', 0, 0, 1, ''),
-(626, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:07', '2025-12-08 20:04:07', 0, 0, 1, ''),
-(627, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:07', '2025-12-08 20:04:07', 0, 0, 1, ''),
-(628, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 65.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:08', '2025-12-08 20:04:08', 0, 0, 1, ''),
-(629, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:09', '2025-12-08 20:04:09', 0, 0, 1, ''),
-(630, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:10', '2025-12-08 20:04:10', 0, 0, 1, ''),
-(631, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 24.382114, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:11', '2025-12-08 20:04:11', 0, 0, 1, '');
+(474, 0, 31, 52, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:26', '2025-12-08 19:59:26', 0, 0, 1, ''),
+(475, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:27', '2025-12-08 19:59:27', 0, 0, 1, ''),
+(476, 0, 18, 53, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 60.894309, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:28', '2025-12-08 19:59:28', 0, 0, 1, ''),
+(477, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 209.756098, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:30', '2025-12-14 03:51:51', 0, 0, 1, ''),
+(478, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:32', '2025-12-08 19:59:32', 0, 0, 1, ''),
+(479, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 150.406504, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:33', '2025-12-08 19:59:33', 0, 0, 1, ''),
+(480, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:34', '2025-12-14 03:53:00', 0, 0, 1, ''),
+(481, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:35', '2025-12-08 19:59:35', 0, 0, 1, ''),
+(482, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 69.105691, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:36', '2025-12-08 19:59:36', 0, 0, 1, ''),
+(483, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:37', '2025-12-08 19:59:37', 0, 0, 1, ''),
+(484, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:37', '2025-12-08 19:59:37', 0, 0, 1, ''),
+(485, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:38', '2025-12-08 19:59:38', 0, 0, 1, ''),
+(486, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 63.414634, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:41', '2025-12-08 19:59:41', 0, 0, 1, ''),
+(487, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 60.081301, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:41', '2025-12-08 19:59:41', 0, 0, 1, ''),
+(488, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:42', '2025-12-08 19:59:42', 0, 0, 1, ''),
+(489, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:43', '2025-12-08 19:59:43', 0, 0, 1, ''),
+(490, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:44', '2025-12-08 19:59:44', 0, 0, 1, ''),
+(491, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:46', '2025-12-08 19:59:46', 0, 0, 1, ''),
+(492, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 52.845528, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:48', '2025-12-08 19:59:48', 0, 0, 1, ''),
+(493, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:50', '2025-12-08 19:59:50', 0, 0, 1, ''),
+(494, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 156.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:51', '2025-12-08 19:59:51', 0, 0, 1, ''),
+(495, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:52', '2025-12-08 19:59:52', 0, 0, 1, ''),
+(496, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:53', '2025-12-08 19:59:53', 0, 0, 1, ''),
+(497, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:55', '2025-12-08 19:59:55', 0, 0, 1, ''),
+(498, 0, 19, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:58', '2025-12-08 19:59:58', 0, 0, 1, ''),
+(499, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 283.739837, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 19:59:59', '2025-12-08 19:59:59', 0, 0, 1, ''),
+(500, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:01', '2025-12-08 20:00:01', 0, 0, 1, ''),
+(501, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 85.284553, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:03', '2025-12-08 20:00:03', 0, 0, 1, ''),
+(502, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 126.016260, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:05', '2025-12-08 20:00:05', 0, 0, 1, ''),
+(503, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 235.764228, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:06', '2025-12-08 20:00:06', 0, 0, 1, ''),
+(504, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:07', '2025-12-08 20:00:07', 0, 0, 1, ''),
+(505, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 145.447154, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:09', '2025-12-08 20:00:09', 0, 0, 1, ''),
+(506, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 265.853659, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:12', '2025-12-08 20:00:12', 0, 0, 1, ''),
+(507, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 259.349593, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:13', '2025-12-08 20:00:13', 0, 0, 1, ''),
+(508, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 178.853659, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:15', '2025-12-08 20:00:15', 0, 0, 1, ''),
+(509, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 73.089431, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:17', '2025-12-08 20:00:17', 0, 0, 1, ''),
+(510, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:19', '2025-12-08 20:00:19', 0, 0, 1, ''),
+(511, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:21', '2025-12-08 20:00:21', 0, 0, 1, ''),
+(512, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:23', '2025-12-08 20:00:23', 0, 0, 1, ''),
+(513, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 138.203252, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:24', '2025-12-08 20:00:24', 0, 0, 1, ''),
+(514, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:26', '2025-12-08 20:00:26', 0, 0, 1, ''),
+(515, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:28', '2025-12-08 20:00:28', 0, 0, 1, ''),
+(516, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 84.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:30', '2025-12-08 20:00:30', 0, 0, 1, ''),
+(517, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 68.292683, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:33', '2025-12-08 20:00:33', 0, 0, 1, ''),
+(518, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 83.731707, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:34', '2025-12-08 20:00:34', 0, 0, 1, ''),
+(519, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 134.146341, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:36', '2025-12-08 20:00:36', 0, 0, 1, ''),
+(520, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:38', '2025-12-08 20:00:38', 0, 0, 1, ''),
+(521, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 73.162602, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:41', '2025-12-08 20:00:41', 0, 0, 1, ''),
+(522, 0, 22, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.715447, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:43', '2025-12-08 20:00:43', 0, 0, 1, ''),
+(523, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.829268, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:44', '2025-12-08 20:00:44', 0, 0, 1, ''),
+(524, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 85.365854, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:46', '2025-12-08 20:00:46', 0, 0, 1, ''),
+(525, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:48', '2025-12-08 20:00:48', 0, 0, 1, ''),
+(526, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:50', '2025-12-08 20:00:50', 0, 0, 1, ''),
+(527, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:52', '2025-12-08 20:00:52', 0, 0, 1, ''),
+(528, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:53', '2025-12-08 20:00:53', 0, 0, 1, ''),
+(529, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 60.162602, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:55', '2025-12-08 20:00:55', 0, 0, 1, ''),
+(530, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:57', '2025-12-08 20:00:57', 0, 0, 1, ''),
+(531, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:00:58', '2025-12-08 20:00:58', 0, 0, 1, ''),
+(532, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:03', '2025-12-08 20:01:03', 0, 0, 1, ''),
+(533, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:07', '2025-12-08 20:01:07', 0, 0, 1, ''),
+(534, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:09', '2025-12-08 20:01:09', 0, 0, 1, ''),
+(535, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:13', '2025-12-08 20:01:13', 0, 0, 1, ''),
+(536, 0, 18, 54, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:16', '2025-12-08 20:01:16', 0, 0, 1, ''),
+(537, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:17', '2025-12-08 20:01:17', 0, 0, 1, ''),
+(538, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 218.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:19', '2025-12-08 20:01:19', 0, 0, 1, ''),
+(539, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:20', '2025-12-08 20:01:20', 0, 0, 1, ''),
+(540, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:24', '2025-12-08 20:01:24', 0, 0, 1, ''),
+(541, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 123.577236, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:25', '2025-12-08 20:01:25', 0, 0, 1, ''),
+(542, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:26', '2025-12-08 20:01:26', 0, 0, 1, ''),
+(543, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:28', '2025-12-08 20:01:28', 0, 0, 1, ''),
+(544, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:30', '2025-12-08 20:01:30', 0, 0, 1, ''),
+(545, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 230.894309, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:31', '2025-12-08 20:01:31', 0, 0, 1, ''),
+(546, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 251.951220, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:33', '2025-12-08 20:01:33', 0, 0, 1, ''),
+(547, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 284.471545, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:35', '2025-12-08 20:01:35', 0, 0, 1, ''),
+(548, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:36', '2025-12-08 20:01:36', 0, 0, 1, ''),
+(549, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:37', '2025-12-08 20:01:37', 0, 0, 1, ''),
+(550, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:39', '2025-12-08 20:01:39', 0, 0, 1, ''),
+(551, 0, 19, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 90.243902, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:41', '2025-12-08 20:01:41', 0, 0, 1, ''),
+(552, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 55.284553, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:43', '2025-12-08 20:01:43', 0, 0, 1, ''),
+(553, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:45', '2025-12-08 20:01:45', 0, 0, 1, ''),
+(554, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:46', '2025-12-08 20:01:46', 0, 0, 1, ''),
+(555, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:47', '2025-12-08 20:01:47', 0, 0, 1, ''),
+(556, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:49', '2025-12-08 20:01:49', 0, 0, 1, ''),
+(557, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:51', '2025-12-08 20:01:51', 0, 0, 1, ''),
+(558, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:54', '2025-12-08 20:01:54', 0, 0, 1, ''),
+(559, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:56', '2025-12-08 20:01:56', 0, 0, 1, ''),
+(560, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:01:58', '2025-12-08 20:01:58', 0, 0, 1, ''),
+(561, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:00', '2025-12-08 20:02:00', 0, 0, 1, ''),
+(562, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 160.081301, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:01', '2025-12-08 20:02:01', 0, 0, 1, ''),
+(563, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:02', '2025-12-08 20:02:02', 0, 0, 1, ''),
+(564, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 170.650407, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:04', '2025-12-08 20:02:04', 0, 0, 1, ''),
+(565, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:06', '2025-12-08 20:02:06', 0, 0, 1, ''),
+(566, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 236.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:09', '2025-12-08 20:02:09', 0, 0, 1, ''),
+(567, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:11', '2025-12-08 20:02:11', 0, 0, 1, ''),
+(568, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:13', '2025-12-08 20:02:13', 0, 0, 1, ''),
+(569, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 239.829268, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:14', '2025-12-08 20:02:14', 0, 0, 1, ''),
+(570, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:16', '2025-12-08 20:02:16', 0, 0, 1, ''),
+(571, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:17', '2025-12-08 20:02:17', 0, 0, 1, ''),
+(572, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:19', '2025-12-08 20:02:19', 0, 0, 1, ''),
+(573, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 85.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:21', '2025-12-08 20:02:21', 0, 0, 1, ''),
+(574, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 85.357724, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:26', '2025-12-08 20:02:26', 0, 0, 1, ''),
+(575, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:30', '2025-12-08 20:02:30', 0, 0, 1, ''),
+(576, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 142.276423, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:33', '2025-12-08 20:02:33', 0, 0, 1, ''),
+(577, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 142.268293, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:34', '2025-12-08 20:02:34', 0, 0, 1, ''),
+(578, 0, 32, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:37', '2025-12-08 20:02:37', 0, 0, 1, ''),
+(579, 0, 26, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:39', '2025-12-08 20:02:39', 0, 0, 1, ''),
+(580, 0, 26, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:41', '2025-12-08 20:02:41', 0, 0, 1, ''),
+(581, 0, 26, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:43', '2025-12-08 20:02:43', 0, 0, 1, ''),
+(582, 0, 26, 55, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:45', '2025-12-08 20:02:45', 0, 0, 1, ''),
+(583, 0, 33, 56, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 17.073171, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:48', '2025-12-08 20:02:48', 0, 0, 1, ''),
+(584, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 37.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:50', '2025-12-08 20:02:50', 0, 0, 1, ''),
+(585, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 37.390244, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:51', '2025-12-08 20:02:51', 0, 0, 1, ''),
+(586, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:53', '2025-12-08 20:02:53', 0, 0, 1, ''),
+(587, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 260.154472, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:55', '2025-12-08 20:02:55', 0, 0, 1, ''),
+(588, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 28.455285, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:57', '2025-12-08 20:02:57', 0, 0, 1, ''),
+(589, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:58', '2025-12-08 20:02:58', 0, 0, 1, ''),
+(590, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:02:59', '2025-12-08 20:02:59', 0, 0, 1, ''),
+(591, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:01', '2025-12-08 20:03:01', 0, 0, 1, ''),
+(592, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:02', '2025-12-08 20:03:02', 0, 0, 1, ''),
+(593, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:05', '2025-12-08 20:03:05', 0, 0, 1, ''),
+(594, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 73.089431, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:07', '2025-12-08 20:03:07', 0, 0, 1, ''),
+(595, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:08', '2025-12-08 20:03:08', 0, 0, 1, ''),
+(596, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:13', '2025-12-08 20:03:13', 0, 0, 1, ''),
+(597, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 100.000000, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:15', '2025-12-08 20:03:15', 0, 0, 1, ''),
+(598, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 100.000000, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:16', '2025-12-08 20:03:16', 0, 0, 1, ''),
+(599, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:18', '2025-12-08 20:03:18', 0, 0, 1, ''),
+(600, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:20', '2025-12-08 20:03:20', 0, 0, 1, ''),
+(601, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:21', '2025-12-08 20:03:21', 0, 0, 1, ''),
+(602, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:23', '2025-12-08 20:03:23', 0, 0, 1, ''),
+(603, 0, 28, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 38.211382, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:25', '2025-12-08 20:03:25', 0, 0, 1, ''),
+(604, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:26', '2025-12-08 20:03:26', 0, 0, 1, ''),
+(605, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:29', '2025-12-08 20:03:29', 0, 0, 1, ''),
+(606, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 78.861789, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:31', '2025-12-08 20:03:31', 0, 0, 1, ''),
+(607, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:32', '2025-12-08 20:03:32', 0, 0, 1, ''),
+(608, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:33', '2025-12-08 20:03:33', 0, 0, 1, ''),
+(609, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 34.959350, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:34', '2025-12-08 20:03:34', 0, 0, 1, ''),
+(610, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 95.934959, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:36', '2025-12-08 20:03:36', 0, 0, 1, ''),
+(611, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 33.333333, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:37', '2025-12-08 20:03:37', 0, 0, 1, ''),
+(612, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 79.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:38', '2025-12-08 20:03:38', 0, 0, 1, ''),
+(613, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 188.617886, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:40', '2025-12-08 20:03:40', 0, 0, 1, ''),
+(614, 0, 19, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:43', '2025-12-08 20:03:43', 0, 0, 1, ''),
+(615, 0, 32, 57, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 79.593496, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:45', '2025-12-08 20:03:45', 0, 0, 1, ''),
+(616, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:46', '2025-12-08 20:03:46', 0, 0, 1, ''),
+(617, 0, 23, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 65.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:48', '2025-12-08 20:03:48', 0, 0, 1, ''),
+(618, 0, 18, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 204.878049, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:51', '2025-12-08 20:03:51', 0, 0, 1, ''),
+(619, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:53', '2025-12-08 20:03:53', 0, 0, 1, ''),
+(620, 0, 23, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 93.495935, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:55', '2025-12-08 20:03:55', 0, 0, 1, ''),
+(621, 0, 28, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 82.926829, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:03:57', '2025-12-08 20:03:57', 0, 0, 1, ''),
+(622, 0, 26, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 56.902439, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:01', '2025-12-08 20:04:01', 0, 0, 1, ''),
+(623, 0, 19, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 147.967480, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:03', '2025-12-08 20:04:03', 0, 0, 1, ''),
+(624, 0, 18, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:04', '2025-12-08 20:04:04', 0, 0, 1, ''),
+(625, 0, 22, 58, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 771.544715, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:05', '2025-12-08 20:04:05', 0, 0, 1, ''),
+(626, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:07', '2025-12-08 20:04:07', 0, 0, 1, ''),
+(627, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:07', '2025-12-08 20:04:07', 0, 0, 1, ''),
+(628, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 65.032520, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:08', '2025-12-08 20:04:08', 0, 0, 1, ''),
+(629, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:09', '2025-12-08 20:04:09', 0, 0, 1, ''),
+(630, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:10', '2025-12-08 20:04:10', 0, 0, 1, ''),
+(631, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 24.382114, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:11', '2025-12-08 20:04:11', 0, 0, 1, '');
 INSERT INTO `ps_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_category_default`, `id_shop_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ean13`, `isbn`, `upc`, `mpn`, `ecotax`, `quantity`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `reference`, `supplier_reference`, `location`, `width`, `height`, `depth`, `weight`, `out_of_stock`, `additional_delivery_times`, `quantity_discount`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_is_pack`, `cache_has_attachments`, `is_virtual`, `cache_default_attribute`, `date_add`, `date_upd`, `advanced_stock_management`, `pack_stock_type`, `state`, `product_type`) VALUES
-(632, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 0, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:12', '2025-12-08 20:04:12', 0, 0, 1, ''),
+(632, 0, 32, 59, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, '', '', '', 30.000000, 30.000000, 30.000000, 1.000000, 2, 0, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-08 20:04:12', '2025-12-15 20:14:44', 0, 0, 1, ''),
 (633, 0, 0, 2, 1, 1, 0, 1, '', '', '', '', 0.000000, 0, 1, NULL, 0, 10.000000, 0.000000, '', 0.000000, 0.000000, '', '', '', 0.000000, 0.000000, 0.000000, 0.000000, 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2025-12-15 05:06:23', '2025-12-15 13:21:12', 0, 3, 1, ''),
 (634, 0, 0, 2, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 0.000000, 0.000000, '', 0.000000, 0.000000, '', '', '', 0.000000, 0.000000, 0.000000, 0.000000, 2, 1, 0, 0, 0, 0, 0, '404', 0, 1, '0000-00-00', 0, 'new', 1, 0, 'both', 0, 0, 0, 0, '2025-12-15 05:16:15', '2025-12-15 05:16:15', 0, 3, 0, '');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_attachment`
+-- Struktura tabeli dla tabeli `ps_product_attachment`
 --
 
 CREATE TABLE `ps_product_attachment` (
@@ -14207,7 +14265,7 @@ CREATE TABLE `ps_product_attachment` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_attribute`
+-- Struktura tabeli dla tabeli `ps_product_attribute`
 --
 
 CREATE TABLE `ps_product_attribute` (
@@ -14236,7 +14294,7 @@ CREATE TABLE `ps_product_attribute` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_attribute_combination`
+-- Struktura tabeli dla tabeli `ps_product_attribute_combination`
 --
 
 CREATE TABLE `ps_product_attribute_combination` (
@@ -14247,7 +14305,7 @@ CREATE TABLE `ps_product_attribute_combination` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_attribute_image`
+-- Struktura tabeli dla tabeli `ps_product_attribute_image`
 --
 
 CREATE TABLE `ps_product_attribute_image` (
@@ -14258,7 +14316,7 @@ CREATE TABLE `ps_product_attribute_image` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_attribute_shop`
+-- Struktura tabeli dla tabeli `ps_product_attribute_shop`
 --
 
 CREATE TABLE `ps_product_attribute_shop` (
@@ -14280,7 +14338,7 @@ CREATE TABLE `ps_product_attribute_shop` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_carrier`
+-- Struktura tabeli dla tabeli `ps_product_carrier`
 --
 
 CREATE TABLE `ps_product_carrier` (
@@ -14292,7 +14350,7 @@ CREATE TABLE `ps_product_carrier` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_comment`
+-- Struktura tabeli dla tabeli `ps_product_comment`
 --
 
 CREATE TABLE `ps_product_comment` (
@@ -14312,7 +14370,7 @@ CREATE TABLE `ps_product_comment` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_comment_criterion`
+-- Struktura tabeli dla tabeli `ps_product_comment_criterion`
 --
 
 CREATE TABLE `ps_product_comment_criterion` (
@@ -14322,7 +14380,7 @@ CREATE TABLE `ps_product_comment_criterion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_product_comment_criterion`
+-- Zrzut danych tabeli `ps_product_comment_criterion`
 --
 
 INSERT INTO `ps_product_comment_criterion` (`id_product_comment_criterion`, `id_product_comment_criterion_type`, `active`) VALUES
@@ -14331,7 +14389,7 @@ INSERT INTO `ps_product_comment_criterion` (`id_product_comment_criterion`, `id_
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_comment_criterion_category`
+-- Struktura tabeli dla tabeli `ps_product_comment_criterion_category`
 --
 
 CREATE TABLE `ps_product_comment_criterion_category` (
@@ -14342,7 +14400,7 @@ CREATE TABLE `ps_product_comment_criterion_category` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_comment_criterion_lang`
+-- Struktura tabeli dla tabeli `ps_product_comment_criterion_lang`
 --
 
 CREATE TABLE `ps_product_comment_criterion_lang` (
@@ -14352,7 +14410,7 @@ CREATE TABLE `ps_product_comment_criterion_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_product_comment_criterion_lang`
+-- Zrzut danych tabeli `ps_product_comment_criterion_lang`
 --
 
 INSERT INTO `ps_product_comment_criterion_lang` (`id_product_comment_criterion`, `id_lang`, `name`) VALUES
@@ -14361,7 +14419,7 @@ INSERT INTO `ps_product_comment_criterion_lang` (`id_product_comment_criterion`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_comment_criterion_product`
+-- Struktura tabeli dla tabeli `ps_product_comment_criterion_product`
 --
 
 CREATE TABLE `ps_product_comment_criterion_product` (
@@ -14372,7 +14430,7 @@ CREATE TABLE `ps_product_comment_criterion_product` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_comment_grade`
+-- Struktura tabeli dla tabeli `ps_product_comment_grade`
 --
 
 CREATE TABLE `ps_product_comment_grade` (
@@ -14384,7 +14442,7 @@ CREATE TABLE `ps_product_comment_grade` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_comment_report`
+-- Struktura tabeli dla tabeli `ps_product_comment_report`
 --
 
 CREATE TABLE `ps_product_comment_report` (
@@ -14395,7 +14453,7 @@ CREATE TABLE `ps_product_comment_report` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_comment_usefulness`
+-- Struktura tabeli dla tabeli `ps_product_comment_usefulness`
 --
 
 CREATE TABLE `ps_product_comment_usefulness` (
@@ -14407,7 +14465,7 @@ CREATE TABLE `ps_product_comment_usefulness` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_country_tax`
+-- Struktura tabeli dla tabeli `ps_product_country_tax`
 --
 
 CREATE TABLE `ps_product_country_tax` (
@@ -14419,7 +14477,7 @@ CREATE TABLE `ps_product_country_tax` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_download`
+-- Struktura tabeli dla tabeli `ps_product_download`
 --
 
 CREATE TABLE `ps_product_download` (
@@ -14438,7 +14496,7 @@ CREATE TABLE `ps_product_download` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_group_reduction_cache`
+-- Struktura tabeli dla tabeli `ps_product_group_reduction_cache`
 --
 
 CREATE TABLE `ps_product_group_reduction_cache` (
@@ -14450,7 +14508,7 @@ CREATE TABLE `ps_product_group_reduction_cache` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_lang`
+-- Struktura tabeli dla tabeli `ps_product_lang`
 --
 
 CREATE TABLE `ps_product_lang` (
@@ -14471,7 +14529,7 @@ CREATE TABLE `ps_product_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_product_lang`
+-- Zrzut danych tabeli `ps_product_lang`
 --
 
 INSERT INTO `ps_product_lang` (`id_product`, `id_shop`, `id_lang`, `description`, `description_short`, `link_rewrite`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `available_now`, `available_later`, `delivery_in_stock`, `delivery_out_stock`) VALUES
@@ -14973,7 +15031,7 @@ INSERT INTO `ps_product_lang` (`id_product`, `id_shop`, `id_lang`, `description`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_sale`
+-- Struktura tabeli dla tabeli `ps_product_sale`
 --
 
 CREATE TABLE `ps_product_sale` (
@@ -14986,7 +15044,7 @@ CREATE TABLE `ps_product_sale` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_shop`
+-- Struktura tabeli dla tabeli `ps_product_shop`
 --
 
 CREATE TABLE `ps_product_shop` (
@@ -15026,493 +15084,493 @@ CREATE TABLE `ps_product_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_product_shop`
+-- Zrzut danych tabeli `ps_product_shop`
 --
 
 INSERT INTO `ps_product_shop` (`id_product`, `id_shop`, `id_category_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ecotax`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_default_attribute`, `advanced_stock_management`, `date_add`, `date_upd`, `pack_stock_type`) VALUES
-(158, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 226.829268, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:04', '2025-12-08 19:50:04', 0),
-(159, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 119.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:05', '2025-12-08 19:50:05', 0),
-(160, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:06', '2025-12-08 19:50:06', 0),
-(161, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:08', '2025-12-08 19:50:08', 0),
-(162, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 134.146341, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:09', '2025-12-08 19:50:09', 0),
-(163, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:10', '2025-12-08 19:50:10', 0),
-(164, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:12', '2025-12-15 03:14:00', 0),
-(165, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:17', '2025-12-08 19:50:17', 0),
-(166, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:22', '2025-12-08 19:50:22', 0),
-(167, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:27', '2025-12-08 19:50:27', 0),
-(168, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:28', '2025-12-08 19:50:28', 0),
-(169, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 43.902439, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:29', '2025-12-08 19:50:29', 0),
-(170, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 50.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:30', '2025-12-08 19:50:30', 0),
-(171, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:31', '2025-12-08 19:50:31', 0),
-(172, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:32', '2025-12-08 19:50:32', 0),
-(173, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:34', '2025-12-08 19:50:34', 0),
-(174, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:36', '2025-12-08 19:50:36', 0),
-(175, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:37', '2025-12-08 19:50:37', 0),
-(176, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:38', '2025-12-08 19:50:38', 0),
-(177, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:39', '2025-12-08 19:50:39', 0),
-(178, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 50.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:40', '2025-12-08 19:50:40', 0),
-(179, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:42', '2025-12-08 19:50:42', 0),
-(180, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:47', '2025-12-08 19:50:47', 0),
-(181, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:48', '2025-12-08 19:50:48', 0),
-(182, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 145.528455, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:49', '2025-12-08 19:50:49', 0),
-(183, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:50', '2025-12-08 19:50:50', 0),
-(184, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 113.008130, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:51', '2025-12-08 19:50:51', 0),
-(185, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:52', '2025-12-08 19:50:52', 0),
-(186, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:53', '2025-12-08 19:50:53', 0),
-(187, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:54', '2025-12-08 19:50:54', 0),
-(188, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:57', '2025-12-08 19:50:57', 0),
-(189, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:59', '2025-12-08 19:50:59', 0),
-(190, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:00', '2025-12-08 19:51:00', 0),
-(191, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:02', '2025-12-08 19:51:02', 0),
-(192, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 119.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:04', '2025-12-08 19:51:04', 0),
-(193, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:05', '2025-12-08 19:51:05', 0),
-(194, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:11', '2025-12-08 19:51:11', 0),
-(195, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:13', '2025-12-08 19:51:13', 0),
-(196, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:15', '2025-12-08 19:51:15', 0),
-(197, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:17', '2025-12-08 19:51:17', 0),
-(198, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:19', '2025-12-08 19:51:19', 0),
-(199, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:21', '2025-12-08 19:51:21', 0),
-(200, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:23', '2025-12-08 19:51:23', 0),
-(201, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:26', '2025-12-14 03:54:21', 0),
-(202, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:28', '2025-12-08 19:51:28', 0),
-(203, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:29', '2025-12-08 19:51:29', 0),
-(204, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:31', '2025-12-08 19:51:31', 0),
-(205, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:33', '2025-12-08 19:51:33', 0),
-(206, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:35', '2025-12-08 19:51:35', 0),
-(207, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:37', '2025-12-08 19:51:37', 0),
-(208, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:39', '2025-12-08 19:51:39', 0),
-(209, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:40', '2025-12-08 19:51:40', 0),
-(210, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:42', '2025-12-08 19:51:42', 0),
-(211, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 690.243902, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:43', '2025-12-08 19:51:43', 0),
-(212, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:46', '2025-12-08 19:51:46', 0),
-(213, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:48', '2025-12-08 19:51:48', 0),
-(214, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:49', '2025-12-08 19:51:49', 0),
-(215, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 126.016260, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:51', '2025-12-14 03:53:56', 0),
-(216, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:53', '2025-12-08 19:51:53', 0),
-(217, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:55', '2025-12-08 19:51:55', 0),
-(218, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:57', '2025-12-08 19:51:57', 0),
-(219, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:00', '2025-12-08 19:52:00', 0),
-(220, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:02', '2025-12-08 19:52:02', 0),
-(221, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:05', '2025-12-08 19:52:05', 0),
-(222, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:08', '2025-12-08 19:52:08', 0),
-(223, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:11', '2025-12-08 19:52:11', 0),
-(224, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:14', '2025-12-08 19:52:14', 0),
-(225, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:17', '2025-12-08 19:52:17', 0),
-(226, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:20', '2025-12-14 16:38:45', 0),
-(227, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:22', '2025-12-08 19:52:22', 0),
-(228, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:24', '2025-12-08 19:52:24', 0),
-(229, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:26', '2025-12-08 19:52:26', 0),
-(230, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:27', '2025-12-08 19:52:27', 0),
-(231, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 44.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:28', '2025-12-08 19:52:28', 0),
-(232, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:30', '2025-12-08 19:52:30', 0),
-(233, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:32', '2025-12-08 19:52:32', 0),
-(234, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:33', '2025-12-08 19:52:33', 0),
-(235, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:35', '2025-12-08 19:52:35', 0),
-(236, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 274.796748, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:36', '2025-12-08 19:52:36', 0),
-(237, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 108.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:38', '2025-12-08 19:52:38', 0),
-(238, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 275.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:40', '2025-12-08 19:52:40', 0),
-(239, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:42', '2025-12-08 19:52:42', 0),
-(240, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:44', '2025-12-08 19:52:44', 0),
-(241, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 44.634146, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:48', '2025-12-08 19:52:48', 0),
-(242, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:51', '2025-12-08 19:52:51', 0),
-(243, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:55', '2025-12-08 19:52:55', 0),
-(244, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:57', '2025-12-08 19:52:57', 0),
-(245, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:58', '2025-12-08 19:52:58', 0),
-(246, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:01', '2025-12-08 19:53:01', 0),
-(247, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 113.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:04', '2025-12-08 19:53:04', 0),
-(248, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 79.674797, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:06', '2025-12-08 19:53:06', 0),
-(249, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 68.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:08', '2025-12-08 19:53:08', 0),
-(250, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:10', '2025-12-08 19:53:10', 0),
-(251, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:12', '2025-12-08 19:53:12', 0),
-(252, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:14', '2025-12-08 19:53:14', 0),
-(253, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:16', '2025-12-08 19:53:16', 0),
-(254, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:18', '2025-12-08 19:53:18', 0),
-(255, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 150.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:23', '2025-12-08 19:53:23', 0),
-(256, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:25', '2025-12-08 19:53:25', 0),
-(257, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:27', '2025-12-08 19:53:27', 0),
-(258, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 66.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:33', '2025-12-08 19:53:33', 0),
-(259, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:35', '2025-12-14 03:47:12', 0),
-(260, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 145.528455, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:37', '2025-12-08 19:53:37', 0),
-(261, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:39', '2025-12-08 19:53:39', 0),
-(262, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 188.536585, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:41', '2025-12-08 19:53:41', 0),
+(158, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 226.829268, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:04', '2025-12-08 19:50:04', 0),
+(159, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 119.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:05', '2025-12-08 19:50:05', 0),
+(160, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:06', '2025-12-08 19:50:06', 0),
+(161, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:08', '2025-12-08 19:50:08', 0),
+(162, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 134.146341, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:09', '2025-12-08 19:50:09', 0),
+(163, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:10', '2025-12-08 19:50:10', 0),
+(164, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:12', '2025-12-15 03:14:00', 0),
+(165, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:17', '2025-12-08 19:50:17', 0),
+(166, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:22', '2025-12-08 19:50:22', 0),
+(167, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:27', '2025-12-08 19:50:27', 0),
+(168, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:28', '2025-12-08 19:50:28', 0),
+(169, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 43.902439, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:29', '2025-12-08 19:50:29', 0),
+(170, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 50.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:30', '2025-12-08 19:50:30', 0),
+(171, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:31', '2025-12-08 19:50:31', 0),
+(172, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:32', '2025-12-08 19:50:32', 0),
+(173, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:34', '2025-12-08 19:50:34', 0),
+(174, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:36', '2025-12-08 19:50:36', 0),
+(175, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:37', '2025-12-08 19:50:37', 0),
+(176, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:38', '2025-12-08 19:50:38', 0),
+(177, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:39', '2025-12-08 19:50:39', 0),
+(178, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 50.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:40', '2025-12-08 19:50:40', 0),
+(179, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:42', '2025-12-08 19:50:42', 0),
+(180, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:47', '2025-12-08 19:50:47', 0),
+(181, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:48', '2025-12-08 19:50:48', 0),
+(182, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 145.528455, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:49', '2025-12-08 19:50:49', 0),
+(183, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:50', '2025-12-08 19:50:50', 0),
+(184, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 113.008130, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:51', '2025-12-08 19:50:51', 0),
+(185, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:52', '2025-12-08 19:50:52', 0),
+(186, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:53', '2025-12-08 19:50:53', 0),
+(187, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:54', '2025-12-08 19:50:54', 0),
+(188, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:57', '2025-12-08 19:50:57', 0),
+(189, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:50:59', '2025-12-08 19:50:59', 0),
+(190, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:00', '2025-12-08 19:51:00', 0),
+(191, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 69.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:02', '2025-12-08 19:51:02', 0),
+(192, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 119.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:04', '2025-12-08 19:51:04', 0),
+(193, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:05', '2025-12-08 19:51:05', 0),
+(194, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:11', '2025-12-08 19:51:11', 0),
+(195, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:13', '2025-12-08 19:51:13', 0),
+(196, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:15', '2025-12-08 19:51:15', 0),
+(197, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:17', '2025-12-08 19:51:17', 0),
+(198, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:19', '2025-12-08 19:51:19', 0),
+(199, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:21', '2025-12-08 19:51:21', 0),
+(200, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:23', '2025-12-08 19:51:23', 0),
+(201, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:26', '2025-12-14 03:54:21', 0),
+(202, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:28', '2025-12-08 19:51:28', 0),
+(203, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:29', '2025-12-08 19:51:29', 0),
+(204, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:31', '2025-12-08 19:51:31', 0),
+(205, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:33', '2025-12-08 19:51:33', 0),
+(206, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:35', '2025-12-08 19:51:35', 0),
+(207, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:37', '2025-12-08 19:51:37', 0),
+(208, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:39', '2025-12-08 19:51:39', 0),
+(209, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:40', '2025-12-08 19:51:40', 0),
+(210, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:42', '2025-12-08 19:51:42', 0),
+(211, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 690.243902, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:43', '2025-12-08 19:51:43', 0),
+(212, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:46', '2025-12-08 19:51:46', 0),
+(213, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:48', '2025-12-08 19:51:48', 0),
+(214, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:49', '2025-12-08 19:51:49', 0),
+(215, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 126.016260, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:51', '2025-12-14 03:53:56', 0),
+(216, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:53', '2025-12-08 19:51:53', 0),
+(217, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:55', '2025-12-08 19:51:55', 0),
+(218, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:51:57', '2025-12-08 19:51:57', 0),
+(219, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:00', '2025-12-08 19:52:00', 0),
+(220, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:02', '2025-12-08 19:52:02', 0),
+(221, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:05', '2025-12-08 19:52:05', 0),
+(222, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:08', '2025-12-08 19:52:08', 0),
+(223, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:11', '2025-12-08 19:52:11', 0),
+(224, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:14', '2025-12-08 19:52:14', 0),
+(225, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:17', '2025-12-08 19:52:17', 0),
+(226, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:20', '2025-12-14 16:38:45', 0),
+(227, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:22', '2025-12-08 19:52:22', 0),
+(228, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:24', '2025-12-08 19:52:24', 0),
+(229, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:26', '2025-12-08 19:52:26', 0),
+(230, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:27', '2025-12-08 19:52:27', 0),
+(231, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 44.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:28', '2025-12-08 19:52:28', 0),
+(232, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:30', '2025-12-08 19:52:30', 0),
+(233, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:32', '2025-12-08 19:52:32', 0),
+(234, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:33', '2025-12-08 19:52:33', 0),
+(235, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:35', '2025-12-08 19:52:35', 0),
+(236, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 274.796748, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:36', '2025-12-08 19:52:36', 0),
+(237, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 108.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:38', '2025-12-08 19:52:38', 0),
+(238, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 275.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:40', '2025-12-08 19:52:40', 0),
+(239, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:42', '2025-12-08 19:52:42', 0),
+(240, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:44', '2025-12-08 19:52:44', 0),
+(241, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 44.634146, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:48', '2025-12-08 19:52:48', 0),
+(242, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:51', '2025-12-08 19:52:51', 0),
+(243, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:55', '2025-12-08 19:52:55', 0),
+(244, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:57', '2025-12-08 19:52:57', 0),
+(245, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:52:58', '2025-12-08 19:52:58', 0),
+(246, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:01', '2025-12-08 19:53:01', 0),
+(247, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 113.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:04', '2025-12-08 19:53:04', 0),
+(248, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 79.674797, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:06', '2025-12-08 19:53:06', 0),
+(249, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 68.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:08', '2025-12-08 19:53:08', 0),
+(250, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:10', '2025-12-08 19:53:10', 0),
+(251, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:12', '2025-12-08 19:53:12', 0),
+(252, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:14', '2025-12-08 19:53:14', 0),
+(253, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:16', '2025-12-08 19:53:16', 0),
+(254, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:18', '2025-12-08 19:53:18', 0),
+(255, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 150.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:23', '2025-12-08 19:53:23', 0),
+(256, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:25', '2025-12-08 19:53:25', 0),
+(257, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:27', '2025-12-08 19:53:27', 0),
+(258, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 66.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:33', '2025-12-08 19:53:33', 0),
+(259, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:35', '2025-12-14 03:47:12', 0),
+(260, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 145.528455, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:37', '2025-12-08 19:53:37', 0),
+(261, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:39', '2025-12-08 19:53:39', 0),
+(262, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 188.536585, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:41', '2025-12-08 19:53:41', 0),
 (263, 1, 49, 1, 0, 1, 0.000000, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:43', '2025-12-15 13:22:34', 0),
-(264, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 243.089431, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:45', '2025-12-08 19:53:45', 0),
-(265, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:47', '2025-12-14 03:52:21', 0),
-(266, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 373.170732, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:48', '2025-12-08 19:53:48', 0),
-(267, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:49', '2025-12-08 19:53:49', 0),
-(268, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:50', '2025-12-08 19:53:50', 0),
-(269, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:51', '2025-12-08 19:53:51', 0),
-(270, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:52', '2025-12-08 19:53:52', 0),
-(271, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:54', '2025-12-08 19:53:54', 0),
-(272, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:55', '2025-12-08 19:53:55', 0),
-(273, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:57', '2025-12-08 19:53:57', 0),
-(274, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 43.902439, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:59', '2025-12-08 19:53:59', 0),
-(275, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:00', '2025-12-08 19:54:00', 0),
-(276, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 56.910569, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:01', '2025-12-08 19:54:01', 0),
-(277, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:03', '2025-12-08 19:54:03', 0),
-(278, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 131.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:04', '2025-12-08 19:54:04', 0),
-(279, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 131.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:05', '2025-12-08 19:54:05', 0),
-(280, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:06', '2025-12-08 19:54:06', 0),
-(281, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:07', '2025-12-08 19:54:07', 0),
-(282, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 105.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:11', '2025-12-08 19:54:11', 0),
-(283, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:12', '2025-12-08 19:54:12', 0),
-(284, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:15', '2025-12-08 19:54:15', 0),
-(285, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:16', '2025-12-08 19:54:16', 0),
-(286, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:19', '2025-12-08 19:54:19', 0),
-(287, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:21', '2025-12-08 19:54:21', 0),
-(288, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 56.829268, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:22', '2025-12-08 19:54:22', 0),
-(289, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:24', '2025-12-08 19:54:24', 0),
-(290, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 195.934959, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:25', '2025-12-08 19:54:25', 0),
-(291, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:27', '2025-12-08 19:54:27', 0),
-(292, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:28', '2025-12-08 19:54:28', 0),
-(293, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:29', '2025-12-08 19:54:29', 0),
-(294, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 105.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:30', '2025-12-08 19:54:30', 0),
-(295, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:32', '2025-12-08 19:54:32', 0),
-(296, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:34', '2025-12-08 19:54:34', 0),
-(297, 1, 49, 1, 0, 0, 0.000000, 0, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:37', '2025-12-08 19:54:37', 0),
-(298, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 74.796748, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:41', '2025-12-08 19:54:41', 0),
-(299, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:44', '2025-12-08 19:54:44', 0),
-(300, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 3243.902439, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:49', '2025-12-08 19:54:49', 0),
-(301, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 3406.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:51', '2025-12-08 19:54:51', 0),
-(302, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 3650.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:53', '2025-12-08 19:54:53', 0),
-(303, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:55', '2025-12-08 19:54:55', 0),
-(304, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:56', '2025-12-08 19:54:56', 0),
-(305, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 211.300813, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:56', '2025-12-08 19:54:56', 0),
-(306, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 1218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:57', '2025-12-08 19:54:57', 0),
-(307, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 2275.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:58', '2025-12-08 19:54:58', 0),
-(308, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 2438.211382, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:59', '2025-12-08 19:54:59', 0),
-(309, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 3006.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:00', '2025-12-08 19:55:00', 0),
-(310, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 6096.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:01', '2025-12-08 19:55:01', 0),
-(311, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 7153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:02', '2025-12-08 19:55:02', 0),
-(312, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 1503.252033, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:03', '2025-12-08 19:55:03', 0),
-(313, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 974.796748, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:03', '2025-12-08 19:55:03', 0),
-(314, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 3470.731707, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:04', '2025-12-08 19:55:04', 0),
-(315, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 3657.723577, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:05', '2025-12-08 19:55:05', 0),
-(316, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 478.861789, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:06', '2025-12-08 19:55:06', 0),
-(317, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 568.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:07', '2025-12-08 19:55:07', 0),
-(318, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 1300.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:09', '2025-12-08 19:55:09', 0),
-(319, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:11', '2025-12-08 19:55:11', 0),
-(320, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 1340.650407, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:13', '2025-12-08 19:55:13', 0),
-(321, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 3650.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:16', '2025-12-08 19:55:16', 0),
-(322, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 731.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:17', '2025-12-08 19:55:17', 0),
-(323, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 893.495935, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:20', '2025-12-08 19:55:20', 0),
-(324, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 812.195122, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:20', '2025-12-08 19:55:20', 0),
-(325, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 1056.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:21', '2025-12-08 19:55:21', 0),
-(326, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 1462.601626, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:22', '2025-12-08 19:55:22', 0),
-(327, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:23', '2025-12-08 19:55:23', 0),
-(328, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:24', '2025-12-08 19:55:24', 0),
-(329, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:25', '2025-12-08 19:55:25', 0),
-(330, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:25', '2025-12-08 19:55:25', 0),
-(331, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:26', '2025-12-08 19:55:26', 0),
-(332, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:27', '2025-12-08 19:55:27', 0),
-(333, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 2438.211382, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:28', '2025-12-08 19:55:28', 0),
-(334, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:29', '2025-12-08 19:55:29', 0),
-(335, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 812.195122, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:30', '2025-12-08 19:55:30', 0),
-(336, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:31', '2025-12-08 19:55:31', 0),
-(337, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 348.780488, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:32', '2025-12-08 19:55:32', 0),
-(338, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 240.650407, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:33', '2025-12-08 19:55:33', 0),
-(339, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 275.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:34', '2025-12-08 19:55:34', 0),
-(340, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 447.154472, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:35', '2025-12-08 19:55:35', 0),
-(341, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 1048.780488, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:36', '2025-12-08 19:55:36', 0),
-(342, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:36', '2025-12-08 19:55:36', 0),
-(343, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 381.300813, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:37', '2025-12-08 19:55:37', 0),
-(344, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 317.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:38', '2025-12-08 19:55:38', 0),
-(345, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:39', '2025-12-08 19:55:39', 0),
-(346, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:40', '2025-12-08 19:55:40', 0),
-(347, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:41', '2025-12-08 19:55:41', 0),
-(348, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:42', '2025-12-08 19:55:42', 0),
-(349, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:43', '2025-12-08 19:55:43', 0),
-(350, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:44', '2025-12-08 19:55:44', 0),
-(351, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:46', '2025-12-08 19:55:46', 0),
-(352, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 16.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:49', '2025-12-08 19:55:49', 0),
-(353, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 185.365854, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:51', '2025-12-08 19:55:51', 0),
-(354, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 239.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:54', '2025-12-08 19:55:54', 0),
-(355, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 162.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:55', '2025-12-08 19:55:55', 0),
-(356, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 202.439024, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:57', '2025-12-08 19:55:57', 0),
-(357, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:58', '2025-12-08 19:55:58', 0),
-(358, 1, 60, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:00', '2025-12-08 19:56:00', 0),
-(359, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:02', '2025-12-08 19:56:02', 0),
-(360, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:03', '2025-12-08 19:56:03', 0),
-(361, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:05', '2025-12-08 19:56:05', 0),
-(362, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:07', '2025-12-08 19:56:07', 0),
-(363, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:09', '2025-12-08 19:56:09', 0),
-(364, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:11', '2025-12-08 19:56:11', 0),
-(365, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:13', '2025-12-08 19:56:13', 0),
-(366, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:15', '2025-12-08 19:56:15', 0),
-(367, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:17', '2025-12-08 19:56:17', 0),
-(368, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:19', '2025-12-08 19:56:19', 0),
-(369, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:20', '2025-12-08 19:56:20', 0),
-(370, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:21', '2025-12-08 19:56:21', 0),
-(371, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:23', '2025-12-08 19:56:23', 0),
-(372, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:25', '2025-12-08 19:56:25', 0),
-(373, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:26', '2025-12-08 19:56:26', 0),
-(374, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:28', '2025-12-08 19:56:28', 0),
-(375, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:29', '2025-12-08 19:56:29', 0),
-(376, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 195.113821, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:30', '2025-12-08 19:56:30', 0),
-(377, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:32', '2025-12-08 19:56:32', 0),
-(378, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:33', '2025-12-08 19:56:33', 0),
-(379, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:34', '2025-12-08 19:56:34', 0),
-(380, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:36', '2025-12-08 19:56:36', 0),
-(381, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:38', '2025-12-08 19:56:38', 0),
-(382, 1, 50, 1, 0, 0, 0.000000, 0, NULL, 0, 1015.447154, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:39', '2025-12-08 19:56:39', 0),
-(383, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:40', '2025-12-08 19:56:40', 0),
-(384, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:41', '2025-12-08 19:56:41', 0),
-(385, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 283.739837, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:44', '2025-12-08 19:56:44', 0),
-(386, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:47', '2025-12-08 19:56:47', 0),
-(387, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:51', '2025-12-08 19:56:51', 0),
-(388, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 96.739837, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:56', '2025-12-08 19:56:56', 0),
-(389, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:02', '2025-12-08 19:57:02', 0),
-(390, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:04', '2025-12-08 19:57:04', 0),
-(391, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:05', '2025-12-08 19:57:05', 0),
-(392, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:07', '2025-12-08 19:57:07', 0),
-(393, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 134.951220, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:09', '2025-12-08 19:57:09', 0),
-(394, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 40.642276, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:10', '2025-12-08 19:57:10', 0),
-(395, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:12', '2025-12-08 19:57:12', 0),
-(396, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 32.439024, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:13', '2025-12-08 19:57:13', 0),
-(397, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 101.626016, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:14', '2025-12-08 19:57:14', 0),
-(398, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 85.365854, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:15', '2025-12-08 19:57:15', 0),
-(399, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 204.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:16', '2025-12-08 19:57:16', 0);
+(264, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 243.089431, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:45', '2025-12-08 19:53:45', 0),
+(265, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:47', '2025-12-14 03:52:21', 0),
+(266, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 373.170732, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:48', '2025-12-08 19:53:48', 0),
+(267, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:49', '2025-12-08 19:53:49', 0),
+(268, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:50', '2025-12-08 19:53:50', 0),
+(269, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:51', '2025-12-08 19:53:51', 0),
+(270, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:52', '2025-12-08 19:53:52', 0),
+(271, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:54', '2025-12-08 19:53:54', 0),
+(272, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:55', '2025-12-08 19:53:55', 0),
+(273, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:57', '2025-12-08 19:53:57', 0),
+(274, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 43.902439, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:53:59', '2025-12-08 19:53:59', 0),
+(275, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:00', '2025-12-08 19:54:00', 0),
+(276, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 56.910569, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:01', '2025-12-08 19:54:01', 0),
+(277, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:03', '2025-12-08 19:54:03', 0),
+(278, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 131.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:04', '2025-12-08 19:54:04', 0),
+(279, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 131.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:05', '2025-12-08 19:54:05', 0),
+(280, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:06', '2025-12-08 19:54:06', 0),
+(281, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:07', '2025-12-08 19:54:07', 0),
+(282, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 105.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:11', '2025-12-08 19:54:11', 0),
+(283, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:12', '2025-12-08 19:54:12', 0),
+(284, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:15', '2025-12-08 19:54:15', 0),
+(285, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:16', '2025-12-08 19:54:16', 0),
+(286, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:19', '2025-12-08 19:54:19', 0),
+(287, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:21', '2025-12-08 19:54:21', 0),
+(288, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 56.829268, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:22', '2025-12-08 19:54:22', 0),
+(289, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:24', '2025-12-08 19:54:24', 0),
+(290, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 195.934959, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:25', '2025-12-08 19:54:25', 0),
+(291, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:27', '2025-12-08 19:54:27', 0),
+(292, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:28', '2025-12-08 19:54:28', 0),
+(293, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:29', '2025-12-08 19:54:29', 0),
+(294, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 105.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:30', '2025-12-08 19:54:30', 0),
+(295, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:32', '2025-12-08 19:54:32', 0),
+(296, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:34', '2025-12-08 19:54:34', 0),
+(297, 1, 49, 1, 0, 0, 0.000000, 1, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:37', '2025-12-08 19:54:37', 0),
+(298, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 74.796748, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:41', '2025-12-08 19:54:41', 0),
+(299, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:44', '2025-12-08 19:54:44', 0),
+(300, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 3243.902439, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:49', '2025-12-08 19:54:49', 0),
+(301, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 3406.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:51', '2025-12-08 19:54:51', 0),
+(302, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 3650.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:53', '2025-12-08 19:54:53', 0),
+(303, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:55', '2025-12-08 19:54:55', 0),
+(304, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:56', '2025-12-08 19:54:56', 0),
+(305, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 211.300813, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:56', '2025-12-08 19:54:56', 0),
+(306, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 1218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:57', '2025-12-08 19:54:57', 0),
+(307, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 2275.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:58', '2025-12-08 19:54:58', 0),
+(308, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 2438.211382, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:54:59', '2025-12-08 19:54:59', 0),
+(309, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 3006.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:00', '2025-12-08 19:55:00', 0),
+(310, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 6096.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:01', '2025-12-08 19:55:01', 0),
+(311, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 7153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:02', '2025-12-08 19:55:02', 0),
+(312, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 1503.252033, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:03', '2025-12-08 19:55:03', 0),
+(313, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 974.796748, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:03', '2025-12-08 19:55:03', 0),
+(314, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 3470.731707, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:04', '2025-12-08 19:55:04', 0),
+(315, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 3657.723577, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:05', '2025-12-08 19:55:05', 0),
+(316, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 478.861789, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:06', '2025-12-08 19:55:06', 0),
+(317, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 568.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:07', '2025-12-08 19:55:07', 0),
+(318, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 1300.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:09', '2025-12-08 19:55:09', 0),
+(319, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:11', '2025-12-08 19:55:11', 0),
+(320, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 1340.650407, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:13', '2025-12-08 19:55:13', 0),
+(321, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 3650.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:16', '2025-12-08 19:55:16', 0),
+(322, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 731.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:17', '2025-12-08 19:55:17', 0),
+(323, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 893.495935, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:20', '2025-12-08 19:55:20', 0),
+(324, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 812.195122, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:20', '2025-12-08 19:55:20', 0),
+(325, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 1056.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:21', '2025-12-08 19:55:21', 0),
+(326, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 1462.601626, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:22', '2025-12-08 19:55:22', 0),
+(327, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:23', '2025-12-08 19:55:23', 0),
+(328, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 527.642276, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:24', '2025-12-08 19:55:24', 0),
+(329, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:25', '2025-12-08 19:55:25', 0),
+(330, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:25', '2025-12-08 19:55:25', 0),
+(331, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:26', '2025-12-08 19:55:26', 0),
+(332, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:27', '2025-12-08 19:55:27', 0),
+(333, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 2438.211382, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:28', '2025-12-08 19:55:28', 0),
+(334, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:29', '2025-12-08 19:55:29', 0),
+(335, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 812.195122, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:30', '2025-12-08 19:55:30', 0),
+(336, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:31', '2025-12-08 19:55:31', 0),
+(337, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 348.780488, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:32', '2025-12-08 19:55:32', 0),
+(338, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 240.650407, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:33', '2025-12-08 19:55:33', 0),
+(339, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 275.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:34', '2025-12-08 19:55:34', 0),
+(340, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 447.154472, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:35', '2025-12-08 19:55:35', 0),
+(341, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 1048.780488, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:36', '2025-12-08 19:55:36', 0),
+(342, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 486.991870, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:36', '2025-12-08 19:55:36', 0),
+(343, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 381.300813, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:37', '2025-12-08 19:55:37', 0),
+(344, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 317.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:38', '2025-12-08 19:55:38', 0),
+(345, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:39', '2025-12-08 19:55:39', 0),
+(346, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:40', '2025-12-08 19:55:40', 0),
+(347, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:41', '2025-12-08 19:55:41', 0),
+(348, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 24.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:42', '2025-12-08 19:55:42', 0),
+(349, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:43', '2025-12-08 19:55:43', 0),
+(350, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:44', '2025-12-08 19:55:44', 0),
+(351, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:46', '2025-12-08 19:55:46', 0),
+(352, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 16.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:49', '2025-12-08 19:55:49', 0),
+(353, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 185.365854, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:51', '2025-12-08 19:55:51', 0),
+(354, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 239.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:54', '2025-12-08 19:55:54', 0),
+(355, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 162.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:55', '2025-12-08 19:55:55', 0),
+(356, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 202.439024, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:57', '2025-12-08 19:55:57', 0),
+(357, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:55:58', '2025-12-08 19:55:58', 0),
+(358, 1, 60, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:00', '2025-12-08 19:56:00', 0),
+(359, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:02', '2025-12-08 19:56:02', 0),
+(360, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:03', '2025-12-08 19:56:03', 0),
+(361, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:05', '2025-12-08 19:56:05', 0),
+(362, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:07', '2025-12-08 19:56:07', 0),
+(363, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:09', '2025-12-08 19:56:09', 0),
+(364, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:11', '2025-12-08 19:56:11', 0),
+(365, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:13', '2025-12-08 19:56:13', 0),
+(366, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:15', '2025-12-08 19:56:15', 0),
+(367, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:17', '2025-12-08 19:56:17', 0),
+(368, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:19', '2025-12-08 19:56:19', 0),
+(369, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:20', '2025-12-08 19:56:20', 0),
+(370, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:21', '2025-12-08 19:56:21', 0),
+(371, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:23', '2025-12-08 19:56:23', 0),
+(372, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:25', '2025-12-08 19:56:25', 0),
+(373, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:26', '2025-12-08 19:56:26', 0),
+(374, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:28', '2025-12-08 19:56:28', 0),
+(375, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:29', '2025-12-08 19:56:29', 0),
+(376, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 195.113821, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:30', '2025-12-08 19:56:30', 0),
+(377, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:32', '2025-12-08 19:56:32', 0),
+(378, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:33', '2025-12-08 19:56:33', 0),
+(379, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:34', '2025-12-08 19:56:34', 0),
+(380, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:36', '2025-12-08 19:56:36', 0),
+(381, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:38', '2025-12-08 19:56:38', 0),
+(382, 1, 50, 1, 0, 0, 0.000000, 1, NULL, 0, 1015.447154, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:39', '2025-12-08 19:56:39', 0),
+(383, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 161.788618, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:40', '2025-12-08 19:56:40', 0),
+(384, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:41', '2025-12-08 19:56:41', 0),
+(385, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 283.739837, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:44', '2025-12-08 19:56:44', 0),
+(386, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:47', '2025-12-08 19:56:47', 0),
+(387, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 267.479675, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:51', '2025-12-08 19:56:51', 0),
+(388, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 96.739837, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:56:56', '2025-12-08 19:56:56', 0),
+(389, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:02', '2025-12-08 19:57:02', 0),
+(390, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:04', '2025-12-08 19:57:04', 0),
+(391, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:05', '2025-12-08 19:57:05', 0),
+(392, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:07', '2025-12-08 19:57:07', 0),
+(393, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 134.951220, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:09', '2025-12-08 19:57:09', 0),
+(394, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 40.642276, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:10', '2025-12-08 19:57:10', 0),
+(395, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:12', '2025-12-08 19:57:12', 0),
+(396, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 32.439024, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:13', '2025-12-08 19:57:13', 0),
+(397, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 101.626016, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:14', '2025-12-08 19:57:14', 0),
+(398, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 85.365854, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:15', '2025-12-08 19:57:15', 0),
+(399, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 204.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:16', '2025-12-08 19:57:16', 0);
 INSERT INTO `ps_product_shop` (`id_product`, `id_shop`, `id_category_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ecotax`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_default_attribute`, `advanced_stock_management`, `date_add`, `date_upd`, `pack_stock_type`) VALUES
-(400, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:18', '2025-12-08 19:57:18', 0),
-(401, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:22', '2025-12-08 19:57:22', 0),
-(402, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:24', '2025-12-08 19:57:24', 0),
-(403, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:26', '2025-12-08 19:57:26', 0),
-(404, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:28', '2025-12-08 19:57:28', 0),
-(405, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 205.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:30', '2025-12-08 19:57:30', 0),
-(406, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:32', '2025-12-08 19:57:32', 0),
-(407, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 22.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:34', '2025-12-08 19:57:34', 0),
-(408, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:38', '2025-12-08 19:57:38', 0),
-(409, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:42', '2025-12-08 19:57:42', 0),
-(410, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 111.382114, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:45', '2025-12-08 19:57:45', 0),
-(411, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:46', '2025-12-08 19:57:46', 0),
-(412, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:47', '2025-12-08 19:57:47', 0),
-(413, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:48', '2025-12-08 19:57:48', 0),
-(414, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:50', '2025-12-08 19:57:50', 0),
-(415, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:52', '2025-12-08 19:57:52', 0),
-(416, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:53', '2025-12-08 19:57:53', 0),
-(417, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 205.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:55', '2025-12-08 19:57:55', 0),
-(418, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:57', '2025-12-08 19:57:57', 0),
-(419, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 162.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:58', '2025-12-08 19:57:58', 0),
-(420, 1, 51, 1, 0, 0, 0.000000, 0, NULL, 0, 120.243902, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:00', '2025-12-08 19:58:00', 0),
-(421, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:02', '2025-12-08 19:58:02', 0),
-(422, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 44.715447, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:03', '2025-12-08 19:58:03', 0),
-(423, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:04', '2025-12-08 19:58:04', 0),
-(424, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:06', '2025-12-08 19:58:06', 0),
-(425, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:07', '2025-12-08 19:58:07', 0),
-(426, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:08', '2025-12-08 19:58:08', 0),
-(427, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:10', '2025-12-08 19:58:10', 0),
-(428, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 73.162602, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:12', '2025-12-08 19:58:12', 0),
-(429, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:16', '2025-12-08 19:58:16', 0),
-(430, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 28.447154, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:17', '2025-12-08 19:58:17', 0),
-(431, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:18', '2025-12-08 19:58:18', 0),
-(432, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 19.918699, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:20', '2025-12-08 19:58:20', 0),
-(433, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:20', '2025-12-08 19:58:20', 0),
-(434, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:21', '2025-12-08 19:58:21', 0),
-(435, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:23', '2025-12-08 19:58:23', 0),
-(436, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 48.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:25', '2025-12-08 19:58:25', 0),
-(437, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:27', '2025-12-08 19:58:27', 0),
-(438, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:28', '2025-12-08 19:58:28', 0),
-(439, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:30', '2025-12-08 19:58:30', 0),
-(440, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 70.731707, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:32', '2025-12-08 19:58:32', 0),
-(441, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:33', '2025-12-08 19:58:33', 0),
-(442, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:34', '2025-12-08 19:58:34', 0),
-(443, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:36', '2025-12-08 19:58:36', 0),
-(444, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:38', '2025-12-08 19:58:38', 0),
-(445, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 60.162602, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:40', '2025-12-08 19:58:40', 0),
-(446, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:42', '2025-12-08 19:58:42', 0),
-(447, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:45', '2025-12-08 19:58:45', 0),
-(448, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 101.544715, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:49', '2025-12-08 19:58:49', 0),
-(449, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 84.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:53', '2025-12-08 19:58:53', 0),
-(450, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:56', '2025-12-08 19:58:56', 0),
-(451, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:58', '2025-12-08 19:58:58', 0),
-(452, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:59', '2025-12-08 19:58:59', 0),
-(453, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:01', '2025-12-08 19:59:01', 0),
-(454, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 23.577236, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:03', '2025-12-08 19:59:03', 0),
-(455, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:04', '2025-12-08 19:59:04', 0),
-(456, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:05', '2025-12-08 19:59:05', 0),
-(457, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:08', '2025-12-08 19:59:08', 0),
-(458, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 32.439024, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:09', '2025-12-08 19:59:09', 0),
-(459, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:10', '2025-12-08 19:59:10', 0),
-(460, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 28.455285, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:11', '2025-12-08 19:59:11', 0),
-(461, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:12', '2025-12-08 19:59:12', 0),
-(462, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:13', '2025-12-08 19:59:13', 0),
-(463, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:14', '2025-12-08 19:59:14', 0),
-(464, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:15', '2025-12-08 19:59:15', 0),
-(465, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:16', '2025-12-08 19:59:16', 0),
-(466, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:17', '2025-12-08 19:59:17', 0),
-(467, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:18', '2025-12-08 19:59:18', 0),
-(468, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:19', '2025-12-08 19:59:19', 0),
-(469, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:20', '2025-12-08 19:59:20', 0),
-(470, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:22', '2025-12-08 19:59:22', 0),
-(471, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:23', '2025-12-08 19:59:23', 0),
-(472, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:24', '2025-12-08 19:59:24', 0),
-(473, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:25', '2025-12-08 19:59:25', 0),
-(474, 1, 52, 1, 0, 0, 0.000000, 0, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:26', '2025-12-08 19:59:26', 0),
-(475, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:27', '2025-12-08 19:59:27', 0),
-(476, 1, 53, 1, 0, 0, 0.000000, 0, NULL, 0, 60.894309, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:28', '2025-12-08 19:59:28', 0),
-(477, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 209.756098, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:30', '2025-12-14 03:51:51', 0),
-(478, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:32', '2025-12-08 19:59:32', 0),
-(479, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 150.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:33', '2025-12-08 19:59:33', 0),
-(480, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:34', '2025-12-14 03:53:00', 0),
-(481, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:35', '2025-12-08 19:59:35', 0),
-(482, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 69.105691, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:36', '2025-12-08 19:59:36', 0),
-(483, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:37', '2025-12-08 19:59:37', 0),
-(484, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:37', '2025-12-08 19:59:37', 0),
-(485, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:38', '2025-12-08 19:59:38', 0),
-(486, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 63.414634, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:41', '2025-12-08 19:59:41', 0),
-(487, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 60.081301, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:41', '2025-12-08 19:59:41', 0),
-(488, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:42', '2025-12-08 19:59:42', 0),
-(489, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:43', '2025-12-08 19:59:43', 0),
-(490, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:44', '2025-12-08 19:59:44', 0),
-(491, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:46', '2025-12-08 19:59:46', 0),
-(492, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 52.845528, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:48', '2025-12-08 19:59:48', 0),
-(493, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:50', '2025-12-08 19:59:50', 0),
-(494, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 156.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:51', '2025-12-08 19:59:51', 0),
-(495, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:52', '2025-12-08 19:59:52', 0),
-(496, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:53', '2025-12-08 19:59:53', 0),
-(497, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:55', '2025-12-08 19:59:55', 0),
-(498, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:58', '2025-12-08 19:59:58', 0),
-(499, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 283.739837, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:59', '2025-12-08 19:59:59', 0),
-(500, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:01', '2025-12-08 20:00:01', 0),
-(501, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 85.284553, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:03', '2025-12-08 20:00:03', 0),
-(502, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 126.016260, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:05', '2025-12-08 20:00:05', 0),
-(503, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 235.764228, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:06', '2025-12-08 20:00:06', 0),
-(504, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:07', '2025-12-08 20:00:07', 0),
-(505, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 145.447154, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:09', '2025-12-08 20:00:09', 0),
-(506, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 265.853659, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:12', '2025-12-08 20:00:12', 0),
-(507, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 259.349593, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:13', '2025-12-08 20:00:13', 0),
-(508, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 178.853659, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:15', '2025-12-08 20:00:15', 0),
-(509, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 73.089431, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:17', '2025-12-08 20:00:17', 0),
-(510, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:19', '2025-12-08 20:00:19', 0),
-(511, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:21', '2025-12-08 20:00:21', 0),
-(512, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:23', '2025-12-08 20:00:23', 0),
-(513, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 138.203252, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:24', '2025-12-08 20:00:24', 0),
-(514, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:26', '2025-12-08 20:00:26', 0),
-(515, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:28', '2025-12-08 20:00:28', 0),
-(516, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 84.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:30', '2025-12-08 20:00:30', 0),
-(517, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 68.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:33', '2025-12-08 20:00:33', 0),
-(518, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 83.731707, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:34', '2025-12-08 20:00:34', 0),
-(519, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 134.146341, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:36', '2025-12-08 20:00:36', 0),
-(520, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:38', '2025-12-08 20:00:38', 0),
-(521, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 73.162602, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:41', '2025-12-08 20:00:41', 0),
-(522, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 64.715447, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:43', '2025-12-08 20:00:43', 0),
-(523, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 56.829268, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:44', '2025-12-08 20:00:44', 0),
-(524, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 85.365854, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:46', '2025-12-08 20:00:46', 0),
-(525, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:48', '2025-12-08 20:00:48', 0),
-(526, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:50', '2025-12-08 20:00:50', 0),
-(527, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:52', '2025-12-08 20:00:52', 0),
-(528, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:53', '2025-12-08 20:00:53', 0),
-(529, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 60.162602, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:55', '2025-12-08 20:00:55', 0),
-(530, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:57', '2025-12-08 20:00:57', 0),
-(531, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:58', '2025-12-08 20:00:58', 0),
-(532, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:03', '2025-12-08 20:01:03', 0),
-(533, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:07', '2025-12-08 20:01:07', 0),
-(534, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:09', '2025-12-08 20:01:09', 0),
-(535, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:13', '2025-12-08 20:01:13', 0),
-(536, 1, 54, 1, 0, 0, 0.000000, 0, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:16', '2025-12-08 20:01:16', 0),
-(537, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:17', '2025-12-08 20:01:17', 0),
-(538, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 218.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:19', '2025-12-08 20:01:19', 0),
-(539, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:20', '2025-12-08 20:01:20', 0),
-(540, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:24', '2025-12-08 20:01:24', 0),
-(541, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 123.577236, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:25', '2025-12-08 20:01:25', 0),
-(542, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:26', '2025-12-08 20:01:26', 0),
-(543, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:28', '2025-12-08 20:01:28', 0),
-(544, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:30', '2025-12-08 20:01:30', 0),
-(545, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 230.894309, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:31', '2025-12-08 20:01:31', 0),
-(546, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 251.951220, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:33', '2025-12-08 20:01:33', 0),
-(547, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 284.471545, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:35', '2025-12-08 20:01:35', 0),
-(548, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:36', '2025-12-08 20:01:36', 0),
-(549, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:37', '2025-12-08 20:01:37', 0),
-(550, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:39', '2025-12-08 20:01:39', 0),
-(551, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 90.243902, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:41', '2025-12-08 20:01:41', 0),
-(552, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 55.284553, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:43', '2025-12-08 20:01:43', 0),
-(553, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:45', '2025-12-08 20:01:45', 0),
-(554, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:46', '2025-12-08 20:01:46', 0),
-(555, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:47', '2025-12-08 20:01:47', 0),
-(556, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:49', '2025-12-08 20:01:49', 0),
-(557, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:51', '2025-12-08 20:01:51', 0),
-(558, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:54', '2025-12-08 20:01:54', 0),
-(559, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:56', '2025-12-08 20:01:56', 0),
-(560, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:58', '2025-12-08 20:01:58', 0),
-(561, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:00', '2025-12-08 20:02:00', 0),
-(562, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 160.081301, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:01', '2025-12-08 20:02:01', 0),
-(563, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:02', '2025-12-08 20:02:02', 0),
-(564, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 170.650407, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:04', '2025-12-08 20:02:04', 0),
-(565, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:06', '2025-12-08 20:02:06', 0),
-(566, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 236.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:09', '2025-12-08 20:02:09', 0),
-(567, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:11', '2025-12-08 20:02:11', 0),
-(568, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:13', '2025-12-08 20:02:13', 0),
-(569, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 239.829268, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:14', '2025-12-08 20:02:14', 0),
-(570, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:16', '2025-12-08 20:02:16', 0),
-(571, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:17', '2025-12-08 20:02:17', 0),
-(572, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:19', '2025-12-08 20:02:19', 0),
-(573, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 85.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:21', '2025-12-08 20:02:21', 0),
-(574, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 85.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:26', '2025-12-08 20:02:26', 0),
-(575, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:30', '2025-12-08 20:02:30', 0),
-(576, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 142.276423, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:33', '2025-12-08 20:02:33', 0),
-(577, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 142.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:34', '2025-12-08 20:02:34', 0),
-(578, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:37', '2025-12-08 20:02:37', 0),
-(579, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:39', '2025-12-08 20:02:39', 0),
-(580, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:41', '2025-12-08 20:02:41', 0),
-(581, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:43', '2025-12-08 20:02:43', 0),
-(582, 1, 55, 1, 0, 0, 0.000000, 0, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:45', '2025-12-08 20:02:45', 0),
-(583, 1, 56, 1, 0, 0, 0.000000, 0, NULL, 0, 17.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:48', '2025-12-08 20:02:48', 0),
-(584, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 37.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:50', '2025-12-08 20:02:50', 0),
-(585, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 37.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:51', '2025-12-08 20:02:51', 0),
-(586, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:53', '2025-12-08 20:02:53', 0),
-(587, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 260.154472, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:55', '2025-12-08 20:02:55', 0),
-(588, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 28.455285, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:57', '2025-12-08 20:02:57', 0),
-(589, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:58', '2025-12-08 20:02:58', 0),
-(590, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:59', '2025-12-08 20:02:59', 0),
-(591, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:01', '2025-12-08 20:03:01', 0),
-(592, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:02', '2025-12-08 20:03:02', 0),
-(593, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:05', '2025-12-08 20:03:05', 0),
-(594, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 73.089431, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:07', '2025-12-08 20:03:07', 0),
-(595, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:08', '2025-12-08 20:03:08', 0),
-(596, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:13', '2025-12-08 20:03:13', 0),
-(597, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 100.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:15', '2025-12-08 20:03:15', 0),
-(598, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 100.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:16', '2025-12-08 20:03:16', 0),
-(599, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:18', '2025-12-08 20:03:18', 0),
-(600, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:20', '2025-12-08 20:03:20', 0),
-(601, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:21', '2025-12-08 20:03:21', 0),
-(602, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:23', '2025-12-08 20:03:23', 0),
-(603, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 38.211382, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:25', '2025-12-08 20:03:25', 0),
-(604, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:26', '2025-12-08 20:03:26', 0),
-(605, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:29', '2025-12-08 20:03:29', 0),
-(606, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 78.861789, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:31', '2025-12-08 20:03:31', 0),
-(607, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:32', '2025-12-08 20:03:32', 0),
-(608, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:33', '2025-12-08 20:03:33', 0),
-(609, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 34.959350, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:34', '2025-12-08 20:03:34', 0),
-(610, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 95.934959, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:36', '2025-12-08 20:03:36', 0),
-(611, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 33.333333, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:37', '2025-12-08 20:03:37', 0),
-(612, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 79.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:38', '2025-12-08 20:03:38', 0),
-(613, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 188.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:40', '2025-12-08 20:03:40', 0),
-(614, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:43', '2025-12-08 20:03:43', 0),
-(615, 1, 57, 1, 0, 0, 0.000000, 0, NULL, 0, 79.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:45', '2025-12-08 20:03:45', 0),
-(616, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:46', '2025-12-08 20:03:46', 0),
-(617, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 65.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:48', '2025-12-08 20:03:48', 0),
-(618, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 204.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:51', '2025-12-08 20:03:51', 0),
-(619, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:53', '2025-12-08 20:03:53', 0),
-(620, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 93.495935, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:55', '2025-12-08 20:03:55', 0),
-(621, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 82.926829, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:57', '2025-12-08 20:03:57', 0),
-(622, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 56.902439, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:01', '2025-12-08 20:04:01', 0),
-(623, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 147.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:03', '2025-12-08 20:04:03', 0),
-(624, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:04', '2025-12-08 20:04:04', 0),
-(625, 1, 58, 1, 0, 0, 0.000000, 0, NULL, 0, 771.544715, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:05', '2025-12-08 20:04:05', 0),
-(626, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:07', '2025-12-08 20:04:07', 0),
-(627, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:07', '2025-12-08 20:04:07', 0),
-(628, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 65.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:08', '2025-12-08 20:04:08', 0),
-(629, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:09', '2025-12-08 20:04:09', 0),
-(630, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:10', '2025-12-08 20:04:10', 0),
-(631, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 24.382114, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:11', '2025-12-08 20:04:11', 0),
-(632, 1, 59, 1, 0, 0, 0.000000, 0, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 0, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:12', '2025-12-08 20:04:12', 0),
+(400, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:18', '2025-12-08 19:57:18', 0),
+(401, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:22', '2025-12-08 19:57:22', 0),
+(402, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:24', '2025-12-08 19:57:24', 0),
+(403, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:26', '2025-12-08 19:57:26', 0),
+(404, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 96.666667, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:28', '2025-12-08 19:57:28', 0),
+(405, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 205.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:30', '2025-12-08 19:57:30', 0),
+(406, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 210.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:32', '2025-12-08 19:57:32', 0),
+(407, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 22.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:34', '2025-12-08 19:57:34', 0),
+(408, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:38', '2025-12-08 19:57:38', 0),
+(409, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:42', '2025-12-08 19:57:42', 0),
+(410, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 111.382114, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:45', '2025-12-08 19:57:45', 0),
+(411, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:46', '2025-12-08 19:57:46', 0),
+(412, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:47', '2025-12-08 19:57:47', 0),
+(413, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:48', '2025-12-08 19:57:48', 0),
+(414, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:50', '2025-12-08 19:57:50', 0),
+(415, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:52', '2025-12-08 19:57:52', 0),
+(416, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:53', '2025-12-08 19:57:53', 0),
+(417, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 205.609756, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:55', '2025-12-08 19:57:55', 0),
+(418, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:57', '2025-12-08 19:57:57', 0),
+(419, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 162.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:57:58', '2025-12-08 19:57:58', 0),
+(420, 1, 51, 1, 0, 0, 0.000000, 1, NULL, 0, 120.243902, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:00', '2025-12-08 19:58:00', 0),
+(421, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:02', '2025-12-08 19:58:02', 0),
+(422, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 44.715447, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:03', '2025-12-08 19:58:03', 0),
+(423, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:04', '2025-12-08 19:58:04', 0),
+(424, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:06', '2025-12-08 19:58:06', 0),
+(425, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:07', '2025-12-08 19:58:07', 0),
+(426, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:08', '2025-12-08 19:58:08', 0),
+(427, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 32.512195, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:10', '2025-12-08 19:58:10', 0),
+(428, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 73.162602, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:12', '2025-12-08 19:58:12', 0),
+(429, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 649.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:16', '2025-12-08 19:58:16', 0),
+(430, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 28.447154, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:17', '2025-12-08 19:58:17', 0),
+(431, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 324.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:18', '2025-12-08 19:58:18', 0),
+(432, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 19.918699, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:20', '2025-12-08 19:58:20', 0),
+(433, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:20', '2025-12-08 19:58:20', 0),
+(434, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:21', '2025-12-08 19:58:21', 0),
+(435, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:23', '2025-12-08 19:58:23', 0),
+(436, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 48.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:25', '2025-12-08 19:58:25', 0),
+(437, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:27', '2025-12-08 19:58:27', 0),
+(438, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:28', '2025-12-08 19:58:28', 0),
+(439, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:30', '2025-12-08 19:58:30', 0),
+(440, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 70.731707, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:32', '2025-12-08 19:58:32', 0),
+(441, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:33', '2025-12-08 19:58:33', 0),
+(442, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:34', '2025-12-08 19:58:34', 0),
+(443, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:36', '2025-12-08 19:58:36', 0),
+(444, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:38', '2025-12-08 19:58:38', 0),
+(445, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 60.162602, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:40', '2025-12-08 19:58:40', 0),
+(446, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:42', '2025-12-08 19:58:42', 0),
+(447, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:45', '2025-12-08 19:58:45', 0),
+(448, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 101.544715, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:49', '2025-12-08 19:58:49', 0),
+(449, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 84.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:53', '2025-12-08 19:58:53', 0),
+(450, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:56', '2025-12-08 19:58:56', 0),
+(451, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:58', '2025-12-08 19:58:58', 0),
+(452, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:58:59', '2025-12-08 19:58:59', 0),
+(453, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:01', '2025-12-08 19:59:01', 0),
+(454, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 23.577236, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:03', '2025-12-08 19:59:03', 0),
+(455, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:04', '2025-12-08 19:59:04', 0),
+(456, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:05', '2025-12-08 19:59:05', 0),
+(457, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:08', '2025-12-08 19:59:08', 0),
+(458, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 32.439024, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:09', '2025-12-08 19:59:09', 0),
+(459, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:10', '2025-12-08 19:59:10', 0),
+(460, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 28.455285, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:11', '2025-12-08 19:59:11', 0),
+(461, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:12', '2025-12-08 19:59:12', 0),
+(462, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:13', '2025-12-08 19:59:13', 0),
+(463, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:14', '2025-12-08 19:59:14', 0),
+(464, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:15', '2025-12-08 19:59:15', 0),
+(465, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:16', '2025-12-08 19:59:16', 0),
+(466, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:17', '2025-12-08 19:59:17', 0),
+(467, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:18', '2025-12-08 19:59:18', 0),
+(468, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:19', '2025-12-08 19:59:19', 0),
+(469, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:20', '2025-12-08 19:59:20', 0),
+(470, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:22', '2025-12-08 19:59:22', 0),
+(471, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:23', '2025-12-08 19:59:23', 0),
+(472, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:24', '2025-12-08 19:59:24', 0),
+(473, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:25', '2025-12-08 19:59:25', 0),
+(474, 1, 52, 1, 0, 0, 0.000000, 1, NULL, 0, 30.813008, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:26', '2025-12-08 19:59:26', 0),
+(475, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:27', '2025-12-08 19:59:27', 0),
+(476, 1, 53, 1, 0, 0, 0.000000, 1, NULL, 0, 60.894309, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:28', '2025-12-08 19:59:28', 0),
+(477, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 209.756098, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:30', '2025-12-14 03:51:51', 0),
+(478, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 153.658537, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:32', '2025-12-08 19:59:32', 0),
+(479, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 150.406504, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:33', '2025-12-08 19:59:33', 0),
+(480, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:34', '2025-12-14 03:53:00', 0),
+(481, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:35', '2025-12-08 19:59:35', 0),
+(482, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 69.105691, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:36', '2025-12-08 19:59:36', 0),
+(483, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 81.219512, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:37', '2025-12-08 19:59:37', 0),
+(484, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:37', '2025-12-08 19:59:37', 0),
+(485, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:38', '2025-12-08 19:59:38', 0),
+(486, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 63.414634, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:41', '2025-12-08 19:59:41', 0),
+(487, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 60.081301, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:41', '2025-12-08 19:59:41', 0),
+(488, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:42', '2025-12-08 19:59:42', 0),
+(489, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:43', '2025-12-08 19:59:43', 0),
+(490, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 194.308943, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:44', '2025-12-08 19:59:44', 0),
+(491, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:46', '2025-12-08 19:59:46', 0),
+(492, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 52.845528, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:48', '2025-12-08 19:59:48', 0),
+(493, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:50', '2025-12-08 19:59:50', 0),
+(494, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 156.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:51', '2025-12-08 19:59:51', 0),
+(495, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:52', '2025-12-08 19:59:52', 0),
+(496, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:53', '2025-12-08 19:59:53', 0),
+(497, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 47.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:55', '2025-12-08 19:59:55', 0),
+(498, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:58', '2025-12-08 19:59:58', 0),
+(499, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 283.739837, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 19:59:59', '2025-12-08 19:59:59', 0),
+(500, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:01', '2025-12-08 20:00:01', 0),
+(501, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 85.284553, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:03', '2025-12-08 20:00:03', 0),
+(502, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 126.016260, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:05', '2025-12-08 20:00:05', 0),
+(503, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 235.764228, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:06', '2025-12-08 20:00:06', 0),
+(504, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:07', '2025-12-08 20:00:07', 0),
+(505, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 145.447154, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:09', '2025-12-08 20:00:09', 0),
+(506, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 265.853659, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:12', '2025-12-08 20:00:12', 0),
+(507, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 259.349593, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:13', '2025-12-08 20:00:13', 0),
+(508, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 178.853659, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:15', '2025-12-08 20:00:15', 0),
+(509, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 73.089431, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:17', '2025-12-08 20:00:17', 0),
+(510, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 81.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:19', '2025-12-08 20:00:19', 0),
+(511, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:21', '2025-12-08 20:00:21', 0),
+(512, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 218.699187, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:23', '2025-12-08 20:00:23', 0),
+(513, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 138.203252, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:24', '2025-12-08 20:00:24', 0),
+(514, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:26', '2025-12-08 20:00:26', 0),
+(515, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:28', '2025-12-08 20:00:28', 0),
+(516, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 84.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:30', '2025-12-08 20:00:30', 0),
+(517, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 68.292683, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:33', '2025-12-08 20:00:33', 0),
+(518, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 83.731707, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:34', '2025-12-08 20:00:34', 0),
+(519, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 134.146341, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:36', '2025-12-08 20:00:36', 0),
+(520, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:38', '2025-12-08 20:00:38', 0),
+(521, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 73.162602, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:41', '2025-12-08 20:00:41', 0),
+(522, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 64.715447, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:43', '2025-12-08 20:00:43', 0),
+(523, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 56.829268, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:44', '2025-12-08 20:00:44', 0),
+(524, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 85.365854, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:46', '2025-12-08 20:00:46', 0),
+(525, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:48', '2025-12-08 20:00:48', 0),
+(526, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:50', '2025-12-08 20:00:50', 0),
+(527, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:52', '2025-12-08 20:00:52', 0),
+(528, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 60.975610, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:53', '2025-12-08 20:00:53', 0),
+(529, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 60.162602, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:55', '2025-12-08 20:00:55', 0),
+(530, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:57', '2025-12-08 20:00:57', 0),
+(531, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:00:58', '2025-12-08 20:00:58', 0),
+(532, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:03', '2025-12-08 20:01:03', 0),
+(533, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 72.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:07', '2025-12-08 20:01:07', 0),
+(534, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 52.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:09', '2025-12-08 20:01:09', 0),
+(535, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:13', '2025-12-08 20:01:13', 0),
+(536, 1, 54, 1, 0, 0, 0.000000, 1, NULL, 0, 234.959350, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:16', '2025-12-08 20:01:16', 0),
+(537, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:17', '2025-12-08 20:01:17', 0),
+(538, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 218.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:19', '2025-12-08 20:01:19', 0),
+(539, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:20', '2025-12-08 20:01:20', 0),
+(540, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:24', '2025-12-08 20:01:24', 0),
+(541, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 123.577236, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:25', '2025-12-08 20:01:25', 0),
+(542, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:26', '2025-12-08 20:01:26', 0),
+(543, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:28', '2025-12-08 20:01:28', 0),
+(544, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:30', '2025-12-08 20:01:30', 0),
+(545, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 230.894309, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:31', '2025-12-08 20:01:31', 0),
+(546, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 251.951220, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:33', '2025-12-08 20:01:33', 0),
+(547, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 284.471545, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:35', '2025-12-08 20:01:35', 0),
+(548, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 56.097561, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:36', '2025-12-08 20:01:36', 0),
+(549, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 186.178862, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:37', '2025-12-08 20:01:37', 0),
+(550, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:39', '2025-12-08 20:01:39', 0),
+(551, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 90.243902, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:41', '2025-12-08 20:01:41', 0),
+(552, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 55.284553, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:43', '2025-12-08 20:01:43', 0),
+(553, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:45', '2025-12-08 20:01:45', 0),
+(554, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:46', '2025-12-08 20:01:46', 0),
+(555, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:47', '2025-12-08 20:01:47', 0),
+(556, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:49', '2025-12-08 20:01:49', 0),
+(557, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:51', '2025-12-08 20:01:51', 0),
+(558, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:54', '2025-12-08 20:01:54', 0),
+(559, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:56', '2025-12-08 20:01:56', 0),
+(560, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:01:58', '2025-12-08 20:01:58', 0),
+(561, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:00', '2025-12-08 20:02:00', 0),
+(562, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 160.081301, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:01', '2025-12-08 20:02:01', 0),
+(563, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 129.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:02', '2025-12-08 20:02:02', 0),
+(564, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 170.650407, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:04', '2025-12-08 20:02:04', 0),
+(565, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 104.065041, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:06', '2025-12-08 20:02:06', 0),
+(566, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 236.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:09', '2025-12-08 20:02:09', 0),
+(567, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 104.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:11', '2025-12-08 20:02:11', 0),
+(568, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:13', '2025-12-08 20:02:13', 0),
+(569, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 239.829268, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:14', '2025-12-08 20:02:14', 0),
+(570, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:16', '2025-12-08 20:02:16', 0),
+(571, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:17', '2025-12-08 20:02:17', 0),
+(572, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 316.260163, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:19', '2025-12-08 20:02:19', 0),
+(573, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 85.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:21', '2025-12-08 20:02:21', 0),
+(574, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 85.357724, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:26', '2025-12-08 20:02:26', 0),
+(575, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:30', '2025-12-08 20:02:30', 0),
+(576, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 142.276423, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:33', '2025-12-08 20:02:33', 0),
+(577, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 142.268293, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:34', '2025-12-08 20:02:34', 0),
+(578, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:37', '2025-12-08 20:02:37', 0),
+(579, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:39', '2025-12-08 20:02:39', 0),
+(580, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:41', '2025-12-08 20:02:41', 0),
+(581, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 130.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:43', '2025-12-08 20:02:43', 0),
+(582, 1, 55, 1, 0, 0, 0.000000, 1, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:45', '2025-12-08 20:02:45', 0),
+(583, 1, 56, 1, 0, 0, 0.000000, 1, NULL, 0, 17.073171, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:48', '2025-12-08 20:02:48', 0),
+(584, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 37.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:50', '2025-12-08 20:02:50', 0),
+(585, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 37.390244, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:51', '2025-12-08 20:02:51', 0),
+(586, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:53', '2025-12-08 20:02:53', 0),
+(587, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 260.154472, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:55', '2025-12-08 20:02:55', 0),
+(588, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 28.455285, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:57', '2025-12-08 20:02:57', 0),
+(589, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:58', '2025-12-08 20:02:58', 0),
+(590, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:02:59', '2025-12-08 20:02:59', 0),
+(591, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 77.235772, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:01', '2025-12-08 20:03:01', 0),
+(592, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:02', '2025-12-08 20:03:02', 0),
+(593, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 64.227642, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:05', '2025-12-08 20:03:05', 0),
+(594, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 73.089431, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:07', '2025-12-08 20:03:07', 0),
+(595, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 88.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:08', '2025-12-08 20:03:08', 0),
+(596, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 121.943089, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:13', '2025-12-08 20:03:13', 0),
+(597, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 100.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:15', '2025-12-08 20:03:15', 0),
+(598, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 100.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:16', '2025-12-08 20:03:16', 0),
+(599, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:18', '2025-12-08 20:03:18', 0),
+(600, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:20', '2025-12-08 20:03:20', 0),
+(601, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:21', '2025-12-08 20:03:21', 0),
+(602, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 96.747967, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:23', '2025-12-08 20:03:23', 0),
+(603, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 38.211382, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:25', '2025-12-08 20:03:25', 0),
+(604, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 121.138211, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:26', '2025-12-08 20:03:26', 0),
+(605, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 97.560976, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:29', '2025-12-08 20:03:29', 0),
+(606, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 78.861789, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:31', '2025-12-08 20:03:31', 0),
+(607, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 105.682927, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:32', '2025-12-08 20:03:32', 0),
+(608, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 40.569106, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:33', '2025-12-08 20:03:33', 0),
+(609, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 34.959350, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:34', '2025-12-08 20:03:34', 0),
+(610, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 95.934959, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:36', '2025-12-08 20:03:36', 0),
+(611, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 33.333333, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:37', '2025-12-08 20:03:37', 0),
+(612, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 79.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:38', '2025-12-08 20:03:38', 0),
+(613, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 188.617886, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:40', '2025-12-08 20:03:40', 0),
+(614, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 80.487805, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:43', '2025-12-08 20:03:43', 0),
+(615, 1, 57, 1, 0, 0, 0.000000, 1, NULL, 0, 79.593496, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:45', '2025-12-08 20:03:45', 0),
+(616, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:46', '2025-12-08 20:03:46', 0),
+(617, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 65.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:48', '2025-12-08 20:03:48', 0),
+(618, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 204.878049, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:51', '2025-12-08 20:03:51', 0),
+(619, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 97.552846, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:53', '2025-12-08 20:03:53', 0),
+(620, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 93.495935, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:55', '2025-12-08 20:03:55', 0),
+(621, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 82.926829, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:03:57', '2025-12-08 20:03:57', 0),
+(622, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 56.902439, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:01', '2025-12-08 20:04:01', 0),
+(623, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 147.967480, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:03', '2025-12-08 20:04:03', 0),
+(624, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 36.504065, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:04', '2025-12-08 20:04:04', 0),
+(625, 1, 58, 1, 0, 0, 0.000000, 1, NULL, 0, 771.544715, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:05', '2025-12-08 20:04:05', 0),
+(626, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 36.585366, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:07', '2025-12-08 20:04:07', 0),
+(627, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 39.837398, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:07', '2025-12-08 20:04:07', 0),
+(628, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 65.032520, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:08', '2025-12-08 20:04:08', 0),
+(629, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 137.398374, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:09', '2025-12-08 20:04:09', 0),
+(630, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 31.707317, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:10', '2025-12-08 20:04:10', 0),
+(631, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 24.382114, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:11', '2025-12-08 20:04:11', 0),
+(632, 1, 59, 1, 0, 0, 0.000000, 1, NULL, 0, 8.048780, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-08 20:04:12', '2025-12-15 20:14:44', 0),
 (633, 1, 2, 1, 0, 1, 0.000000, 1, NULL, 0, 10.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2025-12-15 05:06:23', '2025-12-15 13:21:12', 3),
 (634, 1, 2, 1, 0, 0, 0.000000, 1, NULL, 0, 0.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 0, '404', 0, 1, '0000-00-00', 0, 'new', 1, 0, 'both', 0, 0, '2025-12-15 05:16:15', '2025-12-15 05:16:15', 3);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_supplier`
+-- Struktura tabeli dla tabeli `ps_product_supplier`
 --
 
 CREATE TABLE `ps_product_supplier` (
@@ -15528,7 +15586,7 @@ CREATE TABLE `ps_product_supplier` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_product_tag`
+-- Struktura tabeli dla tabeli `ps_product_tag`
 --
 
 CREATE TABLE `ps_product_tag` (
@@ -15540,7 +15598,7 @@ CREATE TABLE `ps_product_tag` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_profile`
+-- Struktura tabeli dla tabeli `ps_profile`
 --
 
 CREATE TABLE `ps_profile` (
@@ -15548,7 +15606,7 @@ CREATE TABLE `ps_profile` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_profile`
+-- Zrzut danych tabeli `ps_profile`
 --
 
 INSERT INTO `ps_profile` (`id_profile`) VALUES
@@ -15560,7 +15618,7 @@ INSERT INTO `ps_profile` (`id_profile`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_profile_lang`
+-- Struktura tabeli dla tabeli `ps_profile_lang`
 --
 
 CREATE TABLE `ps_profile_lang` (
@@ -15570,7 +15628,7 @@ CREATE TABLE `ps_profile_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_profile_lang`
+-- Zrzut danych tabeli `ps_profile_lang`
 --
 
 INSERT INTO `ps_profile_lang` (`id_lang`, `id_profile`, `name`) VALUES
@@ -15582,7 +15640,7 @@ INSERT INTO `ps_profile_lang` (`id_lang`, `id_profile`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_authorization`
+-- Struktura tabeli dla tabeli `ps_pscheckout_authorization`
 --
 
 CREATE TABLE `ps_pscheckout_authorization` (
@@ -15596,7 +15654,7 @@ CREATE TABLE `ps_pscheckout_authorization` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_capture`
+-- Struktura tabeli dla tabeli `ps_pscheckout_capture`
 --
 
 CREATE TABLE `ps_pscheckout_capture` (
@@ -15613,7 +15671,7 @@ CREATE TABLE `ps_pscheckout_capture` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_cart`
+-- Struktura tabeli dla tabeli `ps_pscheckout_cart`
 --
 
 CREATE TABLE `ps_pscheckout_cart` (
@@ -15636,7 +15694,7 @@ CREATE TABLE `ps_pscheckout_cart` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_customer`
+-- Struktura tabeli dla tabeli `ps_pscheckout_customer`
 --
 
 CREATE TABLE `ps_pscheckout_customer` (
@@ -15647,7 +15705,7 @@ CREATE TABLE `ps_pscheckout_customer` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_funding_source`
+-- Struktura tabeli dla tabeli `ps_pscheckout_funding_source`
 --
 
 CREATE TABLE `ps_pscheckout_funding_source` (
@@ -15658,7 +15716,7 @@ CREATE TABLE `ps_pscheckout_funding_source` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_pscheckout_funding_source`
+-- Zrzut danych tabeli `ps_pscheckout_funding_source`
 --
 
 INSERT INTO `ps_pscheckout_funding_source` (`name`, `active`, `position`, `id_shop`) VALUES
@@ -15677,7 +15735,7 @@ INSERT INTO `ps_pscheckout_funding_source` (`name`, `active`, `position`, `id_sh
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_order`
+-- Struktura tabeli dla tabeli `ps_pscheckout_order`
 --
 
 CREATE TABLE `ps_pscheckout_order` (
@@ -15698,7 +15756,7 @@ CREATE TABLE `ps_pscheckout_order` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_order_matrice`
+-- Struktura tabeli dla tabeli `ps_pscheckout_order_matrice`
 --
 
 CREATE TABLE `ps_pscheckout_order_matrice` (
@@ -15710,7 +15768,7 @@ CREATE TABLE `ps_pscheckout_order_matrice` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_payment_token`
+-- Struktura tabeli dla tabeli `ps_pscheckout_payment_token`
 --
 
 CREATE TABLE `ps_pscheckout_payment_token` (
@@ -15727,7 +15785,7 @@ CREATE TABLE `ps_pscheckout_payment_token` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_purchase_unit`
+-- Struktura tabeli dla tabeli `ps_pscheckout_purchase_unit`
 --
 
 CREATE TABLE `ps_pscheckout_purchase_unit` (
@@ -15740,7 +15798,7 @@ CREATE TABLE `ps_pscheckout_purchase_unit` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_refund`
+-- Struktura tabeli dla tabeli `ps_pscheckout_refund`
 --
 
 CREATE TABLE `ps_pscheckout_refund` (
@@ -15757,7 +15815,7 @@ CREATE TABLE `ps_pscheckout_refund` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_pscheckout_tracking`
+-- Struktura tabeli dla tabeli `ps_pscheckout_tracking`
 --
 
 CREATE TABLE `ps_pscheckout_tracking` (
@@ -15781,7 +15839,7 @@ CREATE TABLE `ps_pscheckout_tracking` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_psgdpr_consent`
+-- Struktura tabeli dla tabeli `ps_psgdpr_consent`
 --
 
 CREATE TABLE `ps_psgdpr_consent` (
@@ -15797,7 +15855,7 @@ CREATE TABLE `ps_psgdpr_consent` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_psgdpr_consent_lang`
+-- Struktura tabeli dla tabeli `ps_psgdpr_consent_lang`
 --
 
 CREATE TABLE `ps_psgdpr_consent_lang` (
@@ -15810,7 +15868,7 @@ CREATE TABLE `ps_psgdpr_consent_lang` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_psgdpr_log`
+-- Struktura tabeli dla tabeli `ps_psgdpr_log`
 --
 
 CREATE TABLE `ps_psgdpr_log` (
@@ -15825,16 +15883,19 @@ CREATE TABLE `ps_psgdpr_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_psgdpr_log`
+-- Zrzut danych tabeli `ps_psgdpr_log`
 --
 
 INSERT INTO `ps_psgdpr_log` (`id_gdpr_log`, `id_customer`, `id_guest`, `client_name`, `id_module`, `request_type`, `date_add`, `date_upd`) VALUES
-(1, 3, 0, 'h s', 0, 1, '2025-12-15 05:33:00', '2025-12-15 05:33:00');
+(1, 3, 0, 'h s', 0, 1, '2025-12-15 05:33:00', '2025-12-15 05:33:00'),
+(2, 4, 0, 'DSFsd dsfsdf', 0, 1, '2025-12-15 20:29:37', '2025-12-15 20:29:37'),
+(3, 5, 0, 'Klim Kaliasniou', 0, 1, '2025-12-15 20:35:01', '2025-12-15 20:35:01'),
+(4, 6, 0, 'Nasty Kupch', 0, 1, '2025-12-15 20:36:35', '2025-12-15 20:36:35');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_psreassurance`
+-- Struktura tabeli dla tabeli `ps_psreassurance`
 --
 
 CREATE TABLE `ps_psreassurance` (
@@ -15850,7 +15911,7 @@ CREATE TABLE `ps_psreassurance` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_psreassurance`
+-- Zrzut danych tabeli `ps_psreassurance`
 --
 
 INSERT INTO `ps_psreassurance` (`id_psreassurance`, `icon`, `custom_icon`, `status`, `position`, `type_link`, `id_cms`, `date_add`, `date_upd`) VALUES
@@ -15861,7 +15922,7 @@ INSERT INTO `ps_psreassurance` (`id_psreassurance`, `icon`, `custom_icon`, `stat
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_psreassurance_lang`
+-- Struktura tabeli dla tabeli `ps_psreassurance_lang`
 --
 
 CREATE TABLE `ps_psreassurance_lang` (
@@ -15873,7 +15934,7 @@ CREATE TABLE `ps_psreassurance_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_psreassurance_lang`
+-- Zrzut danych tabeli `ps_psreassurance_lang`
 --
 
 INSERT INTO `ps_psreassurance_lang` (`id_psreassurance`, `id_lang`, `title`, `description`, `link`) VALUES
@@ -15884,7 +15945,7 @@ INSERT INTO `ps_psreassurance_lang` (`id_psreassurance`, `id_lang`, `title`, `de
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_quick_access`
+-- Struktura tabeli dla tabeli `ps_quick_access`
 --
 
 CREATE TABLE `ps_quick_access` (
@@ -15894,7 +15955,7 @@ CREATE TABLE `ps_quick_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_quick_access`
+-- Zrzut danych tabeli `ps_quick_access`
 --
 
 INSERT INTO `ps_quick_access` (`id_quick_access`, `new_window`, `link`) VALUES
@@ -15908,7 +15969,7 @@ INSERT INTO `ps_quick_access` (`id_quick_access`, `new_window`, `link`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_quick_access_lang`
+-- Struktura tabeli dla tabeli `ps_quick_access_lang`
 --
 
 CREATE TABLE `ps_quick_access_lang` (
@@ -15918,7 +15979,7 @@ CREATE TABLE `ps_quick_access_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_quick_access_lang`
+-- Zrzut danych tabeli `ps_quick_access_lang`
 --
 
 INSERT INTO `ps_quick_access_lang` (`id_quick_access`, `id_lang`, `name`) VALUES
@@ -15932,7 +15993,7 @@ INSERT INTO `ps_quick_access_lang` (`id_quick_access`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_range_price`
+-- Struktura tabeli dla tabeli `ps_range_price`
 --
 
 CREATE TABLE `ps_range_price` (
@@ -15943,7 +16004,7 @@ CREATE TABLE `ps_range_price` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_range_price`
+-- Zrzut danych tabeli `ps_range_price`
 --
 
 INSERT INTO `ps_range_price` (`id_range_price`, `id_carrier`, `delimiter1`, `delimiter2`) VALUES
@@ -15955,7 +16016,7 @@ INSERT INTO `ps_range_price` (`id_range_price`, `id_carrier`, `delimiter1`, `del
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_range_weight`
+-- Struktura tabeli dla tabeli `ps_range_weight`
 --
 
 CREATE TABLE `ps_range_weight` (
@@ -15966,7 +16027,7 @@ CREATE TABLE `ps_range_weight` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_range_weight`
+-- Zrzut danych tabeli `ps_range_weight`
 --
 
 INSERT INTO `ps_range_weight` (`id_range_weight`, `id_carrier`, `delimiter1`, `delimiter2`) VALUES
@@ -15978,7 +16039,7 @@ INSERT INTO `ps_range_weight` (`id_range_weight`, `id_carrier`, `delimiter1`, `d
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_referrer`
+-- Struktura tabeli dla tabeli `ps_referrer`
 --
 
 CREATE TABLE `ps_referrer` (
@@ -16002,7 +16063,7 @@ CREATE TABLE `ps_referrer` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_referrer_cache`
+-- Struktura tabeli dla tabeli `ps_referrer_cache`
 --
 
 CREATE TABLE `ps_referrer_cache` (
@@ -16013,7 +16074,7 @@ CREATE TABLE `ps_referrer_cache` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_referrer_shop`
+-- Struktura tabeli dla tabeli `ps_referrer_shop`
 --
 
 CREATE TABLE `ps_referrer_shop` (
@@ -16032,7 +16093,7 @@ CREATE TABLE `ps_referrer_shop` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_request_sql`
+-- Struktura tabeli dla tabeli `ps_request_sql`
 --
 
 CREATE TABLE `ps_request_sql` (
@@ -16044,7 +16105,7 @@ CREATE TABLE `ps_request_sql` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_required_field`
+-- Struktura tabeli dla tabeli `ps_required_field`
 --
 
 CREATE TABLE `ps_required_field` (
@@ -16056,7 +16117,7 @@ CREATE TABLE `ps_required_field` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_risk`
+-- Struktura tabeli dla tabeli `ps_risk`
 --
 
 CREATE TABLE `ps_risk` (
@@ -16066,7 +16127,7 @@ CREATE TABLE `ps_risk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_risk`
+-- Zrzut danych tabeli `ps_risk`
 --
 
 INSERT INTO `ps_risk` (`id_risk`, `percent`, `color`) VALUES
@@ -16078,7 +16139,7 @@ INSERT INTO `ps_risk` (`id_risk`, `percent`, `color`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_risk_lang`
+-- Struktura tabeli dla tabeli `ps_risk_lang`
 --
 
 CREATE TABLE `ps_risk_lang` (
@@ -16088,7 +16149,7 @@ CREATE TABLE `ps_risk_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_risk_lang`
+-- Zrzut danych tabeli `ps_risk_lang`
 --
 
 INSERT INTO `ps_risk_lang` (`id_risk`, `id_lang`, `name`) VALUES
@@ -16100,7 +16161,7 @@ INSERT INTO `ps_risk_lang` (`id_risk`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_search_engine`
+-- Struktura tabeli dla tabeli `ps_search_engine`
 --
 
 CREATE TABLE `ps_search_engine` (
@@ -16110,7 +16171,7 @@ CREATE TABLE `ps_search_engine` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_search_engine`
+-- Zrzut danych tabeli `ps_search_engine`
 --
 
 INSERT INTO `ps_search_engine` (`id_search_engine`, `server`, `getvar`) VALUES
@@ -16156,7 +16217,7 @@ INSERT INTO `ps_search_engine` (`id_search_engine`, `server`, `getvar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_search_index`
+-- Struktura tabeli dla tabeli `ps_search_index`
 --
 
 CREATE TABLE `ps_search_index` (
@@ -16166,7 +16227,7 @@ CREATE TABLE `ps_search_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_search_index`
+-- Zrzut danych tabeli `ps_search_index`
 --
 
 INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
@@ -58851,7 +58912,7 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_search_word`
+-- Struktura tabeli dla tabeli `ps_search_word`
 --
 
 CREATE TABLE `ps_search_word` (
@@ -58862,7 +58923,7 @@ CREATE TABLE `ps_search_word` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_search_word`
+-- Zrzut danych tabeli `ps_search_word`
 --
 
 INSERT INTO `ps_search_word` (`id_word`, `id_shop`, `id_lang`, `word`) VALUES
@@ -69980,7 +70041,7 @@ INSERT INTO `ps_search_word` (`id_word`, `id_shop`, `id_lang`, `word`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_shop`
+-- Struktura tabeli dla tabeli `ps_shop`
 --
 
 CREATE TABLE `ps_shop` (
@@ -69995,7 +70056,7 @@ CREATE TABLE `ps_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_shop`
+-- Zrzut danych tabeli `ps_shop`
 --
 
 INSERT INTO `ps_shop` (`id_shop`, `id_shop_group`, `name`, `color`, `id_category`, `theme_name`, `active`, `deleted`) VALUES
@@ -70004,7 +70065,7 @@ INSERT INTO `ps_shop` (`id_shop`, `id_shop_group`, `name`, `color`, `id_category
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_shop_group`
+-- Struktura tabeli dla tabeli `ps_shop_group`
 --
 
 CREATE TABLE `ps_shop_group` (
@@ -70019,7 +70080,7 @@ CREATE TABLE `ps_shop_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_shop_group`
+-- Zrzut danych tabeli `ps_shop_group`
 --
 
 INSERT INTO `ps_shop_group` (`id_shop_group`, `name`, `color`, `share_customer`, `share_order`, `share_stock`, `active`, `deleted`) VALUES
@@ -70028,7 +70089,7 @@ INSERT INTO `ps_shop_group` (`id_shop_group`, `name`, `color`, `share_customer`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_shop_url`
+-- Struktura tabeli dla tabeli `ps_shop_url`
 --
 
 CREATE TABLE `ps_shop_url` (
@@ -70043,7 +70104,7 @@ CREATE TABLE `ps_shop_url` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_shop_url`
+-- Zrzut danych tabeli `ps_shop_url`
 --
 
 INSERT INTO `ps_shop_url` (`id_shop_url`, `id_shop`, `domain`, `domain_ssl`, `physical_uri`, `virtual_uri`, `main`, `active`) VALUES
@@ -70052,7 +70113,7 @@ INSERT INTO `ps_shop_url` (`id_shop_url`, `id_shop`, `domain`, `domain_ssl`, `ph
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_smarty_cache`
+-- Struktura tabeli dla tabeli `ps_smarty_cache`
 --
 
 CREATE TABLE `ps_smarty_cache` (
@@ -70066,7 +70127,7 @@ CREATE TABLE `ps_smarty_cache` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_smarty_last_flush`
+-- Struktura tabeli dla tabeli `ps_smarty_last_flush`
 --
 
 CREATE TABLE `ps_smarty_last_flush` (
@@ -70077,7 +70138,7 @@ CREATE TABLE `ps_smarty_last_flush` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_smarty_lazy_cache`
+-- Struktura tabeli dla tabeli `ps_smarty_lazy_cache`
 --
 
 CREATE TABLE `ps_smarty_lazy_cache` (
@@ -70091,7 +70152,7 @@ CREATE TABLE `ps_smarty_lazy_cache` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_specific_price`
+-- Struktura tabeli dla tabeli `ps_specific_price`
 --
 
 CREATE TABLE `ps_specific_price` (
@@ -70116,7 +70177,7 @@ CREATE TABLE `ps_specific_price` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_specific_price`
+-- Zrzut danych tabeli `ps_specific_price`
 --
 
 INSERT INTO `ps_specific_price` (`id_specific_price`, `id_specific_price_rule`, `id_cart`, `id_product`, `id_shop`, `id_shop_group`, `id_currency`, `id_country`, `id_group`, `id_customer`, `id_product_attribute`, `price`, `from_quantity`, `reduction`, `reduction_tax`, `reduction_type`, `from`, `to`) VALUES
@@ -70125,7 +70186,7 @@ INSERT INTO `ps_specific_price` (`id_specific_price`, `id_specific_price_rule`, 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_specific_price_priority`
+-- Struktura tabeli dla tabeli `ps_specific_price_priority`
 --
 
 CREATE TABLE `ps_specific_price_priority` (
@@ -70135,7 +70196,7 @@ CREATE TABLE `ps_specific_price_priority` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_specific_price_priority`
+-- Zrzut danych tabeli `ps_specific_price_priority`
 --
 
 INSERT INTO `ps_specific_price_priority` (`id_specific_price_priority`, `id_product`, `priority`) VALUES
@@ -70148,12 +70209,13 @@ INSERT INTO `ps_specific_price_priority` (`id_specific_price_priority`, `id_prod
 (10, 201, 'id_shop;id_currency;id_country;id_group'),
 (11, 226, 'id_shop;id_currency;id_country;id_group'),
 (12, 164, 'id_shop;id_currency;id_country;id_group'),
-(38, 633, 'id_shop;id_currency;id_country;id_group');
+(38, 633, 'id_shop;id_currency;id_country;id_group'),
+(48, 632, 'id_shop;id_currency;id_country;id_group');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_specific_price_rule`
+-- Struktura tabeli dla tabeli `ps_specific_price_rule`
 --
 
 CREATE TABLE `ps_specific_price_rule` (
@@ -70175,7 +70237,7 @@ CREATE TABLE `ps_specific_price_rule` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_specific_price_rule_condition`
+-- Struktura tabeli dla tabeli `ps_specific_price_rule_condition`
 --
 
 CREATE TABLE `ps_specific_price_rule_condition` (
@@ -70188,7 +70250,7 @@ CREATE TABLE `ps_specific_price_rule_condition` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_specific_price_rule_condition_group`
+-- Struktura tabeli dla tabeli `ps_specific_price_rule_condition_group`
 --
 
 CREATE TABLE `ps_specific_price_rule_condition_group` (
@@ -70199,7 +70261,7 @@ CREATE TABLE `ps_specific_price_rule_condition_group` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_state`
+-- Struktura tabeli dla tabeli `ps_state`
 --
 
 CREATE TABLE `ps_state` (
@@ -70213,7 +70275,7 @@ CREATE TABLE `ps_state` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_state`
+-- Zrzut danych tabeli `ps_state`
 --
 
 INSERT INTO `ps_state` (`id_state`, `id_country`, `id_zone`, `name`, `iso_code`, `tax_behavior`, `active`) VALUES
@@ -70573,7 +70635,7 @@ INSERT INTO `ps_state` (`id_state`, `id_country`, `id_zone`, `name`, `iso_code`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_statssearch`
+-- Struktura tabeli dla tabeli `ps_statssearch`
 --
 
 CREATE TABLE `ps_statssearch` (
@@ -70586,7 +70648,7 @@ CREATE TABLE `ps_statssearch` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_statssearch`
+-- Zrzut danych tabeli `ps_statssearch`
 --
 
 INSERT INTO `ps_statssearch` (`id_statssearch`, `id_shop`, `id_shop_group`, `keywords`, `results`, `date_add`) VALUES
@@ -70621,12 +70683,13 @@ INSERT INTO `ps_statssearch` (`id_statssearch`, `id_shop`, `id_shop_group`, `key
 (29, 1, 1, 'pb', 0, '2025-12-15 04:16:37'),
 (30, 1, 1, 'pbc', 6, '2025-12-15 04:16:37'),
 (31, 1, 1, '67pbc', 11, '2025-12-15 04:16:40'),
-(32, 1, 1, '67pbc', 11, '2025-12-15 04:16:41');
+(32, 1, 1, '67pbc', 11, '2025-12-15 04:16:41'),
+(33, 1, 1, ' 	Tasma do getr Select', 1, '2025-12-15 19:14:35');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_stock`
+-- Struktura tabeli dla tabeli `ps_stock`
 --
 
 CREATE TABLE `ps_stock` (
@@ -70647,7 +70710,7 @@ CREATE TABLE `ps_stock` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_stock_available`
+-- Struktura tabeli dla tabeli `ps_stock_available`
 --
 
 CREATE TABLE `ps_stock_available` (
@@ -70665,492 +70728,492 @@ CREATE TABLE `ps_stock_available` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_stock_available`
+-- Zrzut danych tabeli `ps_stock_available`
 --
 
 INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_product_attribute`, `id_shop`, `id_shop_group`, `quantity`, `physical_quantity`, `reserved_quantity`, `depends_on_stock`, `out_of_stock`, `location`) VALUES
-(158, 158, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(159, 159, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(160, 160, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(161, 161, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(162, 162, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(163, 163, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(164, 164, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(165, 165, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(166, 166, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(167, 167, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(168, 168, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(169, 169, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(170, 170, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(171, 171, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(172, 172, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(173, 173, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(174, 174, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(175, 175, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(176, 176, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(177, 177, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(178, 178, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(179, 179, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(180, 180, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(181, 181, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(182, 182, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(183, 183, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(184, 184, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(185, 185, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(186, 186, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(187, 187, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(188, 188, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(189, 189, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(190, 190, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(191, 191, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(192, 192, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(193, 193, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(194, 194, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(195, 195, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(196, 196, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(197, 197, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(198, 198, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(199, 199, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(200, 200, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(201, 201, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(202, 202, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(203, 203, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(204, 204, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(205, 205, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(206, 206, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(207, 207, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(208, 208, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(209, 209, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(210, 210, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(211, 211, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(212, 212, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(213, 213, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(214, 214, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(215, 215, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(216, 216, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(217, 217, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(218, 218, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(219, 219, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(220, 220, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(221, 221, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(222, 222, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(223, 223, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(224, 224, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(225, 225, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(226, 226, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(227, 227, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(228, 228, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(229, 229, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(230, 230, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(231, 231, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(232, 232, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(233, 233, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(234, 234, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(235, 235, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(236, 236, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(237, 237, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(238, 238, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(239, 239, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(240, 240, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(241, 241, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(242, 242, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(243, 243, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(244, 244, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(245, 245, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(246, 246, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(247, 247, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(248, 248, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(249, 249, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(250, 250, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(251, 251, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(252, 252, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(253, 253, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(254, 254, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(255, 255, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(256, 256, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(257, 257, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(258, 258, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(259, 259, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(260, 260, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(261, 261, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(262, 262, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(263, 263, 0, 1, 0, 100, 100, 0, 0, 1, ''),
-(264, 264, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(265, 265, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(266, 266, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(267, 267, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(268, 268, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(269, 269, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(270, 270, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(271, 271, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(272, 272, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(273, 273, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(274, 274, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(275, 275, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(276, 276, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(277, 277, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(278, 278, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(279, 279, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(280, 280, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(281, 281, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(282, 282, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(283, 283, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(284, 284, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(285, 285, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(286, 286, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(287, 287, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(288, 288, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(289, 289, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(290, 290, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(291, 291, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(292, 292, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(293, 293, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(294, 294, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(295, 295, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(296, 296, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(297, 297, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(298, 298, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(299, 299, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(300, 300, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(301, 301, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(302, 302, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(303, 303, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(304, 304, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(305, 305, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(306, 306, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(307, 307, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(308, 308, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(309, 309, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(310, 310, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(311, 311, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(312, 312, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(313, 313, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(314, 314, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(315, 315, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(316, 316, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(317, 317, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(318, 318, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(319, 319, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(320, 320, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(321, 321, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(322, 322, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(323, 323, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(324, 324, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(325, 325, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(326, 326, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(327, 327, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(328, 328, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(329, 329, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(330, 330, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(331, 331, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(332, 332, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(333, 333, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(334, 334, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(335, 335, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(336, 336, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(337, 337, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(338, 338, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(339, 339, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(340, 340, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(341, 341, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(342, 342, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(343, 343, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(344, 344, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(345, 345, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(346, 346, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(347, 347, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(348, 348, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(349, 349, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(350, 350, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(351, 351, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(352, 352, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(353, 353, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(354, 354, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(355, 355, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(356, 356, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(357, 357, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(358, 358, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(359, 359, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(360, 360, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(361, 361, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(362, 362, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(363, 363, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(364, 364, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(365, 365, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(366, 366, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(367, 367, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(368, 368, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(369, 369, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(370, 370, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(371, 371, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(372, 372, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(373, 373, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(374, 374, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(375, 375, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(376, 376, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(377, 377, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(378, 378, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(379, 379, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(380, 380, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(381, 381, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(382, 382, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(383, 383, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(384, 384, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(385, 385, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(386, 386, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(387, 387, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(388, 388, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(389, 389, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(390, 390, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(391, 391, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(392, 392, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(393, 393, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(394, 394, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(395, 395, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(396, 396, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(397, 397, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(398, 398, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(399, 399, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(400, 400, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(401, 401, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(402, 402, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(403, 403, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(404, 404, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(405, 405, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(406, 406, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(407, 407, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(408, 408, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(409, 409, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(410, 410, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(411, 411, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(412, 412, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(413, 413, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(414, 414, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(415, 415, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(416, 416, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(417, 417, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(418, 418, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(419, 419, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(420, 420, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(421, 421, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(422, 422, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(423, 423, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(424, 424, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(425, 425, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(426, 426, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(427, 427, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(428, 428, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(429, 429, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(430, 430, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(431, 431, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(432, 432, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(433, 433, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(434, 434, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(435, 435, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(436, 436, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(437, 437, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(438, 438, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(439, 439, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(440, 440, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(441, 441, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(442, 442, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(443, 443, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(444, 444, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(445, 445, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(446, 446, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(447, 447, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(448, 448, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(449, 449, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(450, 450, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(451, 451, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(452, 452, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(453, 453, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(454, 454, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(455, 455, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(456, 456, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(457, 457, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(458, 458, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(459, 459, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(460, 460, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(461, 461, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(462, 462, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(463, 463, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(464, 464, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(465, 465, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(466, 466, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(467, 467, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(468, 468, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(469, 469, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(470, 470, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(471, 471, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(472, 472, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(473, 473, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(474, 474, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(475, 475, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(476, 476, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(477, 477, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(478, 478, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(479, 479, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(480, 480, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(481, 481, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(482, 482, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(483, 483, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(484, 484, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(485, 485, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(486, 486, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(487, 487, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(488, 488, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(489, 489, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(490, 490, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(491, 491, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(492, 492, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(493, 493, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(494, 494, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(495, 495, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(496, 496, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(497, 497, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(498, 498, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(499, 499, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(500, 500, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(501, 501, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(502, 502, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(503, 503, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(504, 504, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(505, 505, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(506, 506, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(507, 507, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(508, 508, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(509, 509, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(510, 510, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(511, 511, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(512, 512, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(513, 513, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(514, 514, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(515, 515, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(516, 516, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(517, 517, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(518, 518, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(519, 519, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(520, 520, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(521, 521, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(522, 522, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(523, 523, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(524, 524, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(525, 525, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(526, 526, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(527, 527, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(528, 528, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(529, 529, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(530, 530, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(531, 531, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(532, 532, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(533, 533, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(534, 534, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(535, 535, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(536, 536, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(537, 537, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(538, 538, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(539, 539, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(540, 540, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(541, 541, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(542, 542, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(543, 543, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(544, 544, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(545, 545, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(546, 546, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(547, 547, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(548, 548, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(549, 549, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(550, 550, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(551, 551, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(552, 552, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(553, 553, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(554, 554, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(555, 555, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(556, 556, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(557, 557, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(558, 558, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(559, 559, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(560, 560, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(561, 561, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(562, 562, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(563, 563, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(564, 564, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(565, 565, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(566, 566, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(567, 567, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(568, 568, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(569, 569, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(570, 570, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(571, 571, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(572, 572, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(573, 573, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(574, 574, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(575, 575, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(576, 576, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(577, 577, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(578, 578, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(579, 579, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(580, 580, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(581, 581, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(582, 582, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(583, 583, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(584, 584, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(585, 585, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(586, 586, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(587, 587, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(588, 588, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(589, 589, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(590, 590, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(591, 591, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(592, 592, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(593, 593, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(594, 594, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(595, 595, 0, 1, 0, 9, 9, 0, 0, 2, ''),
-(596, 596, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(597, 597, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(598, 598, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(599, 599, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(600, 600, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(601, 601, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(602, 602, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(603, 603, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(604, 604, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(605, 605, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(606, 606, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(607, 607, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(608, 608, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(609, 609, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(610, 610, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(611, 611, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(612, 612, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(613, 613, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(614, 614, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(615, 615, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(616, 616, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(617, 617, 0, 1, 0, 7, 7, 0, 0, 2, ''),
-(618, 618, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(619, 619, 0, 1, 0, 6, 6, 0, 0, 2, ''),
-(620, 620, 0, 1, 0, 8, 8, 0, 0, 2, ''),
-(621, 621, 0, 1, 0, 4, 4, 0, 0, 2, ''),
-(622, 622, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(623, 623, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(624, 624, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(625, 625, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(626, 626, 0, 1, 0, 5, 5, 0, 0, 2, ''),
-(627, 627, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(628, 628, 0, 1, 0, 1, 1, 0, 0, 2, ''),
-(629, 629, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(630, 630, 0, 1, 0, 2, 2, 0, 0, 2, ''),
-(631, 631, 0, 1, 0, 10, 10, 0, 0, 2, ''),
-(632, 632, 0, 1, 0, 3, 3, 0, 0, 2, ''),
-(635, 633, 0, 1, 0, 110, 110, 0, 0, 1, ''),
-(636, 634, 0, 1, 0, 0, 0, 0, 0, 2, '');
+(158, 158, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(159, 159, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(160, 160, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(161, 161, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(162, 162, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(163, 163, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(164, 164, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(165, 165, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(166, 166, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(167, 167, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(168, 168, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(169, 169, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(170, 170, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(171, 171, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(172, 172, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(173, 173, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(174, 174, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(175, 175, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(176, 176, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(177, 177, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(178, 178, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(179, 179, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(180, 180, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(181, 181, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(182, 182, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(183, 183, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(184, 184, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(185, 185, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(186, 186, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(187, 187, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(188, 188, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(189, 189, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(190, 190, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(191, 191, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(192, 192, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(193, 193, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(194, 194, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(195, 195, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(196, 196, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(197, 197, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(198, 198, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(199, 199, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(200, 200, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(201, 201, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(202, 202, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(203, 203, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(204, 204, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(205, 205, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(206, 206, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(207, 207, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(208, 208, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(209, 209, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(210, 210, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(211, 211, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(212, 212, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(213, 213, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(214, 214, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(215, 215, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(216, 216, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(217, 217, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(218, 218, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(219, 219, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(220, 220, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(221, 221, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(222, 222, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(223, 223, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(224, 224, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(225, 225, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(226, 226, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(227, 227, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(228, 228, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(229, 229, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(230, 230, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(231, 231, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(232, 232, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(233, 233, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(234, 234, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(235, 235, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(236, 236, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(237, 237, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(238, 238, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(239, 239, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(240, 240, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(241, 241, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(242, 242, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(243, 243, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(244, 244, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(245, 245, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(246, 246, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(247, 247, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(248, 248, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(249, 249, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(250, 250, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(251, 251, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(252, 252, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(253, 253, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(254, 254, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(255, 255, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(256, 256, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(257, 257, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(258, 258, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(259, 259, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(260, 260, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(261, 261, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(262, 262, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(263, 263, 0, 1, 0, 100, 100, 0, 0, 0, ''),
+(264, 264, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(265, 265, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(266, 266, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(267, 267, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(268, 268, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(269, 269, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(270, 270, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(271, 271, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(272, 272, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(273, 273, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(274, 274, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(275, 275, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(276, 276, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(277, 277, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(278, 278, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(279, 279, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(280, 280, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(281, 281, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(282, 282, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(283, 283, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(284, 284, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(285, 285, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(286, 286, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(287, 287, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(288, 288, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(289, 289, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(290, 290, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(291, 291, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(292, 292, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(293, 293, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(294, 294, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(295, 295, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(296, 296, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(297, 297, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(298, 298, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(299, 299, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(300, 300, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(301, 301, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(302, 302, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(303, 303, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(304, 304, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(305, 305, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(306, 306, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(307, 307, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(308, 308, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(309, 309, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(310, 310, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(311, 311, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(312, 312, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(313, 313, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(314, 314, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(315, 315, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(316, 316, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(317, 317, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(318, 318, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(319, 319, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(320, 320, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(321, 321, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(322, 322, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(323, 323, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(324, 324, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(325, 325, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(326, 326, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(327, 327, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(328, 328, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(329, 329, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(330, 330, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(331, 331, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(332, 332, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(333, 333, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(334, 334, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(335, 335, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(336, 336, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(337, 337, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(338, 338, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(339, 339, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(340, 340, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(341, 341, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(342, 342, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(343, 343, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(344, 344, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(345, 345, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(346, 346, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(347, 347, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(348, 348, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(349, 349, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(350, 350, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(351, 351, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(352, 352, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(353, 353, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(354, 354, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(355, 355, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(356, 356, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(357, 357, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(358, 358, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(359, 359, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(360, 360, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(361, 361, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(362, 362, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(363, 363, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(364, 364, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(365, 365, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(366, 366, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(367, 367, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(368, 368, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(369, 369, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(370, 370, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(371, 371, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(372, 372, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(373, 373, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(374, 374, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(375, 375, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(376, 376, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(377, 377, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(378, 378, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(379, 379, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(380, 380, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(381, 381, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(382, 382, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(383, 383, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(384, 384, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(385, 385, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(386, 386, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(387, 387, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(388, 388, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(389, 389, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(390, 390, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(391, 391, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(392, 392, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(393, 393, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(394, 394, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(395, 395, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(396, 396, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(397, 397, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(398, 398, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(399, 399, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(400, 400, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(401, 401, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(402, 402, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(403, 403, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(404, 404, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(405, 405, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(406, 406, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(407, 407, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(408, 408, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(409, 409, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(410, 410, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(411, 411, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(412, 412, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(413, 413, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(414, 414, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(415, 415, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(416, 416, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(417, 417, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(418, 418, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(419, 419, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(420, 420, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(421, 421, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(422, 422, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(423, 423, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(424, 424, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(425, 425, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(426, 426, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(427, 427, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(428, 428, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(429, 429, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(430, 430, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(431, 431, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(432, 432, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(433, 433, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(434, 434, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(435, 435, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(436, 436, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(437, 437, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(438, 438, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(439, 439, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(440, 440, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(441, 441, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(442, 442, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(443, 443, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(444, 444, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(445, 445, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(446, 446, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(447, 447, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(448, 448, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(449, 449, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(450, 450, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(451, 451, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(452, 452, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(453, 453, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(454, 454, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(455, 455, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(456, 456, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(457, 457, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(458, 458, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(459, 459, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(460, 460, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(461, 461, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(462, 462, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(463, 463, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(464, 464, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(465, 465, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(466, 466, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(467, 467, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(468, 468, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(469, 469, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(470, 470, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(471, 471, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(472, 472, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(473, 473, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(474, 474, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(475, 475, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(476, 476, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(477, 477, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(478, 478, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(479, 479, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(480, 480, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(481, 481, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(482, 482, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(483, 483, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(484, 484, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(485, 485, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(486, 486, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(487, 487, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(488, 488, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(489, 489, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(490, 490, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(491, 491, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(492, 492, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(493, 493, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(494, 494, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(495, 495, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(496, 496, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(497, 497, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(498, 498, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(499, 499, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(500, 500, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(501, 501, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(502, 502, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(503, 503, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(504, 504, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(505, 505, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(506, 506, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(507, 507, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(508, 508, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(509, 509, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(510, 510, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(511, 511, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(512, 512, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(513, 513, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(514, 514, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(515, 515, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(516, 516, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(517, 517, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(518, 518, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(519, 519, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(520, 520, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(521, 521, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(522, 522, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(523, 523, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(524, 524, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(525, 525, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(526, 526, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(527, 527, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(528, 528, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(529, 529, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(530, 530, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(531, 531, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(532, 532, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(533, 533, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(534, 534, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(535, 535, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(536, 536, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(537, 537, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(538, 538, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(539, 539, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(540, 540, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(541, 541, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(542, 542, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(543, 543, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(544, 544, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(545, 545, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(546, 546, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(547, 547, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(548, 548, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(549, 549, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(550, 550, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(551, 551, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(552, 552, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(553, 553, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(554, 554, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(555, 555, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(556, 556, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(557, 557, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(558, 558, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(559, 559, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(560, 560, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(561, 561, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(562, 562, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(563, 563, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(564, 564, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(565, 565, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(566, 566, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(567, 567, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(568, 568, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(569, 569, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(570, 570, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(571, 571, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(572, 572, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(573, 573, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(574, 574, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(575, 575, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(576, 576, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(577, 577, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(578, 578, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(579, 579, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(580, 580, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(581, 581, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(582, 582, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(583, 583, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(584, 584, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(585, 585, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(586, 586, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(587, 587, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(588, 588, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(589, 589, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(590, 590, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(591, 591, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(592, 592, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(593, 593, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(594, 594, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(595, 595, 0, 1, 0, 9, 9, 0, 0, 0, ''),
+(596, 596, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(597, 597, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(598, 598, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(599, 599, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(600, 600, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(601, 601, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(602, 602, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(603, 603, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(604, 604, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(605, 605, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(606, 606, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(607, 607, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(608, 608, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(609, 609, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(610, 610, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(611, 611, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(612, 612, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(613, 613, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(614, 614, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(615, 615, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(616, 616, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(617, 617, 0, 1, 0, 7, 7, 0, 0, 0, ''),
+(618, 618, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(619, 619, 0, 1, 0, 6, 6, 0, 0, 0, ''),
+(620, 620, 0, 1, 0, 8, 8, 0, 0, 0, ''),
+(621, 621, 0, 1, 0, 4, 4, 0, 0, 0, ''),
+(622, 622, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(623, 623, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(624, 624, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(625, 625, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(626, 626, 0, 1, 0, 5, 5, 0, 0, 0, ''),
+(627, 627, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(628, 628, 0, 1, 0, 1, 1, 0, 0, 0, ''),
+(629, 629, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(630, 630, 0, 1, 0, 2, 2, 0, 0, 0, ''),
+(631, 631, 0, 1, 0, 10, 10, 0, 0, 0, ''),
+(632, 632, 0, 1, 0, 3, 3, 0, 0, 0, ''),
+(635, 633, 0, 1, 0, 110, 110, 0, 0, 0, ''),
+(636, 634, 0, 1, 0, 0, 0, 0, 0, 0, '');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_stock_mvt`
+-- Struktura tabeli dla tabeli `ps_stock_mvt`
 --
 
 CREATE TABLE `ps_stock_mvt` (
@@ -71172,7 +71235,7 @@ CREATE TABLE `ps_stock_mvt` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_stock_mvt`
+-- Zrzut danych tabeli `ps_stock_mvt`
 --
 
 INSERT INTO `ps_stock_mvt` (`id_stock_mvt`, `id_stock`, `id_order`, `id_supply_order`, `id_stock_mvt_reason`, `id_employee`, `employee_lastname`, `employee_firstname`, `physical_quantity`, `date_add`, `sign`, `price_te`, `last_wa`, `current_wa`, `referer`) VALUES
@@ -71216,7 +71279,7 @@ INSERT INTO `ps_stock_mvt` (`id_stock_mvt`, `id_stock`, `id_order`, `id_supply_o
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_stock_mvt_reason`
+-- Struktura tabeli dla tabeli `ps_stock_mvt_reason`
 --
 
 CREATE TABLE `ps_stock_mvt_reason` (
@@ -71228,7 +71291,7 @@ CREATE TABLE `ps_stock_mvt_reason` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_stock_mvt_reason`
+-- Zrzut danych tabeli `ps_stock_mvt_reason`
 --
 
 INSERT INTO `ps_stock_mvt_reason` (`id_stock_mvt_reason`, `sign`, `date_add`, `date_upd`, `deleted`) VALUES
@@ -71248,7 +71311,7 @@ INSERT INTO `ps_stock_mvt_reason` (`id_stock_mvt_reason`, `sign`, `date_add`, `d
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_stock_mvt_reason_lang`
+-- Struktura tabeli dla tabeli `ps_stock_mvt_reason_lang`
 --
 
 CREATE TABLE `ps_stock_mvt_reason_lang` (
@@ -71258,7 +71321,7 @@ CREATE TABLE `ps_stock_mvt_reason_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_stock_mvt_reason_lang`
+-- Zrzut danych tabeli `ps_stock_mvt_reason_lang`
 --
 
 INSERT INTO `ps_stock_mvt_reason_lang` (`id_stock_mvt_reason`, `id_lang`, `name`) VALUES
@@ -71278,7 +71341,7 @@ INSERT INTO `ps_stock_mvt_reason_lang` (`id_stock_mvt_reason`, `id_lang`, `name`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_store`
+-- Struktura tabeli dla tabeli `ps_store`
 --
 
 CREATE TABLE `ps_store` (
@@ -71298,7 +71361,7 @@ CREATE TABLE `ps_store` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_store`
+-- Zrzut danych tabeli `ps_store`
 --
 
 INSERT INTO `ps_store` (`id_store`, `id_country`, `id_state`, `city`, `postcode`, `latitude`, `longitude`, `phone`, `fax`, `email`, `active`, `date_add`, `date_upd`) VALUES
@@ -71311,7 +71374,7 @@ INSERT INTO `ps_store` (`id_store`, `id_country`, `id_state`, `city`, `postcode`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_store_lang`
+-- Struktura tabeli dla tabeli `ps_store_lang`
 --
 
 CREATE TABLE `ps_store_lang` (
@@ -71325,7 +71388,7 @@ CREATE TABLE `ps_store_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_store_lang`
+-- Zrzut danych tabeli `ps_store_lang`
 --
 
 INSERT INTO `ps_store_lang` (`id_store`, `id_lang`, `name`, `address1`, `address2`, `hours`, `note`) VALUES
@@ -71338,7 +71401,7 @@ INSERT INTO `ps_store_lang` (`id_store`, `id_lang`, `name`, `address1`, `address
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_store_shop`
+-- Struktura tabeli dla tabeli `ps_store_shop`
 --
 
 CREATE TABLE `ps_store_shop` (
@@ -71347,7 +71410,7 @@ CREATE TABLE `ps_store_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_store_shop`
+-- Zrzut danych tabeli `ps_store_shop`
 --
 
 INSERT INTO `ps_store_shop` (`id_store`, `id_shop`) VALUES
@@ -71360,7 +71423,7 @@ INSERT INTO `ps_store_shop` (`id_store`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_supplier`
+-- Struktura tabeli dla tabeli `ps_supplier`
 --
 
 CREATE TABLE `ps_supplier` (
@@ -71372,7 +71435,7 @@ CREATE TABLE `ps_supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_supplier`
+-- Zrzut danych tabeli `ps_supplier`
 --
 
 INSERT INTO `ps_supplier` (`id_supplier`, `name`, `date_add`, `date_upd`, `active`) VALUES
@@ -71382,7 +71445,7 @@ INSERT INTO `ps_supplier` (`id_supplier`, `name`, `date_add`, `date_upd`, `activ
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_supplier_lang`
+-- Struktura tabeli dla tabeli `ps_supplier_lang`
 --
 
 CREATE TABLE `ps_supplier_lang` (
@@ -71395,7 +71458,7 @@ CREATE TABLE `ps_supplier_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_supplier_lang`
+-- Zrzut danych tabeli `ps_supplier_lang`
 --
 
 INSERT INTO `ps_supplier_lang` (`id_supplier`, `id_lang`, `description`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
@@ -71405,7 +71468,7 @@ INSERT INTO `ps_supplier_lang` (`id_supplier`, `id_lang`, `description`, `meta_t
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_supplier_shop`
+-- Struktura tabeli dla tabeli `ps_supplier_shop`
 --
 
 CREATE TABLE `ps_supplier_shop` (
@@ -71414,7 +71477,7 @@ CREATE TABLE `ps_supplier_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_supplier_shop`
+-- Zrzut danych tabeli `ps_supplier_shop`
 --
 
 INSERT INTO `ps_supplier_shop` (`id_supplier`, `id_shop`) VALUES
@@ -71424,7 +71487,7 @@ INSERT INTO `ps_supplier_shop` (`id_supplier`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_supply_order`
+-- Struktura tabeli dla tabeli `ps_supply_order`
 --
 
 CREATE TABLE `ps_supply_order` (
@@ -71452,7 +71515,7 @@ CREATE TABLE `ps_supply_order` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_supply_order_detail`
+-- Struktura tabeli dla tabeli `ps_supply_order_detail`
 --
 
 CREATE TABLE `ps_supply_order_detail` (
@@ -71486,7 +71549,7 @@ CREATE TABLE `ps_supply_order_detail` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_supply_order_history`
+-- Struktura tabeli dla tabeli `ps_supply_order_history`
 --
 
 CREATE TABLE `ps_supply_order_history` (
@@ -71502,7 +71565,7 @@ CREATE TABLE `ps_supply_order_history` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_supply_order_receipt_history`
+-- Struktura tabeli dla tabeli `ps_supply_order_receipt_history`
 --
 
 CREATE TABLE `ps_supply_order_receipt_history` (
@@ -71519,7 +71582,7 @@ CREATE TABLE `ps_supply_order_receipt_history` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_supply_order_state`
+-- Struktura tabeli dla tabeli `ps_supply_order_state`
 --
 
 CREATE TABLE `ps_supply_order_state` (
@@ -71533,7 +71596,7 @@ CREATE TABLE `ps_supply_order_state` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_supply_order_state`
+-- Zrzut danych tabeli `ps_supply_order_state`
 --
 
 INSERT INTO `ps_supply_order_state` (`id_supply_order_state`, `delivery_note`, `editable`, `receipt_state`, `pending_receipt`, `enclosed`, `color`) VALUES
@@ -71547,7 +71610,7 @@ INSERT INTO `ps_supply_order_state` (`id_supply_order_state`, `delivery_note`, `
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_supply_order_state_lang`
+-- Struktura tabeli dla tabeli `ps_supply_order_state_lang`
 --
 
 CREATE TABLE `ps_supply_order_state_lang` (
@@ -71557,7 +71620,7 @@ CREATE TABLE `ps_supply_order_state_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_supply_order_state_lang`
+-- Zrzut danych tabeli `ps_supply_order_state_lang`
 --
 
 INSERT INTO `ps_supply_order_state_lang` (`id_supply_order_state`, `id_lang`, `name`) VALUES
@@ -71571,7 +71634,7 @@ INSERT INTO `ps_supply_order_state_lang` (`id_supply_order_state`, `id_lang`, `n
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tab`
+-- Struktura tabeli dla tabeli `ps_tab`
 --
 
 CREATE TABLE `ps_tab` (
@@ -71590,7 +71653,7 @@ CREATE TABLE `ps_tab` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_tab`
+-- Zrzut danych tabeli `ps_tab`
 --
 
 INSERT INTO `ps_tab` (`id_tab`, `id_parent`, `position`, `module`, `class_name`, `route_name`, `active`, `enabled`, `hide_host_mode`, `icon`, `wording`, `wording_domain`) VALUES
@@ -71754,7 +71817,7 @@ INSERT INTO `ps_tab` (`id_tab`, `id_parent`, `position`, `module`, `class_name`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tab_lang`
+-- Struktura tabeli dla tabeli `ps_tab_lang`
 --
 
 CREATE TABLE `ps_tab_lang` (
@@ -71764,7 +71827,7 @@ CREATE TABLE `ps_tab_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `ps_tab_lang`
+-- Zrzut danych tabeli `ps_tab_lang`
 --
 
 INSERT INTO `ps_tab_lang` (`id_tab`, `id_lang`, `name`) VALUES
@@ -71924,7 +71987,7 @@ INSERT INTO `ps_tab_lang` (`id_tab`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tab_module_preference`
+-- Struktura tabeli dla tabeli `ps_tab_module_preference`
 --
 
 CREATE TABLE `ps_tab_module_preference` (
@@ -71937,7 +72000,7 @@ CREATE TABLE `ps_tab_module_preference` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tag`
+-- Struktura tabeli dla tabeli `ps_tag`
 --
 
 CREATE TABLE `ps_tag` (
@@ -71949,7 +72012,7 @@ CREATE TABLE `ps_tag` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tag_count`
+-- Struktura tabeli dla tabeli `ps_tag_count`
 --
 
 CREATE TABLE `ps_tag_count` (
@@ -71963,7 +72026,7 @@ CREATE TABLE `ps_tag_count` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tax`
+-- Struktura tabeli dla tabeli `ps_tax`
 --
 
 CREATE TABLE `ps_tax` (
@@ -71974,7 +72037,7 @@ CREATE TABLE `ps_tax` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_tax`
+-- Zrzut danych tabeli `ps_tax`
 --
 
 INSERT INTO `ps_tax` (`id_tax`, `rate`, `active`, `deleted`) VALUES
@@ -72013,7 +72076,7 @@ INSERT INTO `ps_tax` (`id_tax`, `rate`, `active`, `deleted`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tax_lang`
+-- Struktura tabeli dla tabeli `ps_tax_lang`
 --
 
 CREATE TABLE `ps_tax_lang` (
@@ -72023,7 +72086,7 @@ CREATE TABLE `ps_tax_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_tax_lang`
+-- Zrzut danych tabeli `ps_tax_lang`
 --
 
 INSERT INTO `ps_tax_lang` (`id_tax`, `id_lang`, `name`) VALUES
@@ -72062,7 +72125,7 @@ INSERT INTO `ps_tax_lang` (`id_tax`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tax_rule`
+-- Struktura tabeli dla tabeli `ps_tax_rule`
 --
 
 CREATE TABLE `ps_tax_rule` (
@@ -72078,7 +72141,7 @@ CREATE TABLE `ps_tax_rule` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_tax_rule`
+-- Zrzut danych tabeli `ps_tax_rule`
 --
 
 INSERT INTO `ps_tax_rule` (`id_tax_rule`, `id_tax_rules_group`, `id_country`, `id_state`, `zipcode_from`, `zipcode_to`, `id_tax`, `behavior`, `description`) VALUES
@@ -72224,7 +72287,7 @@ INSERT INTO `ps_tax_rule` (`id_tax_rule`, `id_tax_rules_group`, `id_country`, `i
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tax_rules_group`
+-- Struktura tabeli dla tabeli `ps_tax_rules_group`
 --
 
 CREATE TABLE `ps_tax_rules_group` (
@@ -72237,7 +72300,7 @@ CREATE TABLE `ps_tax_rules_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_tax_rules_group`
+-- Zrzut danych tabeli `ps_tax_rules_group`
 --
 
 INSERT INTO `ps_tax_rules_group` (`id_tax_rules_group`, `name`, `active`, `deleted`, `date_add`, `date_upd`) VALUES
@@ -72250,7 +72313,7 @@ INSERT INTO `ps_tax_rules_group` (`id_tax_rules_group`, `name`, `active`, `delet
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_tax_rules_group_shop`
+-- Struktura tabeli dla tabeli `ps_tax_rules_group_shop`
 --
 
 CREATE TABLE `ps_tax_rules_group_shop` (
@@ -72259,7 +72322,7 @@ CREATE TABLE `ps_tax_rules_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_tax_rules_group_shop`
+-- Zrzut danych tabeli `ps_tax_rules_group_shop`
 --
 
 INSERT INTO `ps_tax_rules_group_shop` (`id_tax_rules_group`, `id_shop`) VALUES
@@ -72272,7 +72335,7 @@ INSERT INTO `ps_tax_rules_group_shop` (`id_tax_rules_group`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_timezone`
+-- Struktura tabeli dla tabeli `ps_timezone`
 --
 
 CREATE TABLE `ps_timezone` (
@@ -72281,7 +72344,7 @@ CREATE TABLE `ps_timezone` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_timezone`
+-- Zrzut danych tabeli `ps_timezone`
 --
 
 INSERT INTO `ps_timezone` (`id_timezone`, `name`) VALUES
@@ -72849,7 +72912,7 @@ INSERT INTO `ps_timezone` (`id_timezone`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_translation`
+-- Struktura tabeli dla tabeli `ps_translation`
 --
 
 CREATE TABLE `ps_translation` (
@@ -72864,7 +72927,7 @@ CREATE TABLE `ps_translation` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_warehouse`
+-- Struktura tabeli dla tabeli `ps_warehouse`
 --
 
 CREATE TABLE `ps_warehouse` (
@@ -72881,7 +72944,7 @@ CREATE TABLE `ps_warehouse` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_warehouse_carrier`
+-- Struktura tabeli dla tabeli `ps_warehouse_carrier`
 --
 
 CREATE TABLE `ps_warehouse_carrier` (
@@ -72892,7 +72955,7 @@ CREATE TABLE `ps_warehouse_carrier` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_warehouse_product_location`
+-- Struktura tabeli dla tabeli `ps_warehouse_product_location`
 --
 
 CREATE TABLE `ps_warehouse_product_location` (
@@ -72906,7 +72969,7 @@ CREATE TABLE `ps_warehouse_product_location` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_warehouse_shop`
+-- Struktura tabeli dla tabeli `ps_warehouse_shop`
 --
 
 CREATE TABLE `ps_warehouse_shop` (
@@ -72917,7 +72980,7 @@ CREATE TABLE `ps_warehouse_shop` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_webservice_account`
+-- Struktura tabeli dla tabeli `ps_webservice_account`
 --
 
 CREATE TABLE `ps_webservice_account` (
@@ -72931,7 +72994,7 @@ CREATE TABLE `ps_webservice_account` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_webservice_account`
+-- Zrzut danych tabeli `ps_webservice_account`
 --
 
 INSERT INTO `ps_webservice_account` (`id_webservice_account`, `key`, `description`, `class_name`, `is_module`, `module_name`, `active`) VALUES
@@ -72940,7 +73003,7 @@ INSERT INTO `ps_webservice_account` (`id_webservice_account`, `key`, `descriptio
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_webservice_account_shop`
+-- Struktura tabeli dla tabeli `ps_webservice_account_shop`
 --
 
 CREATE TABLE `ps_webservice_account_shop` (
@@ -72949,7 +73012,7 @@ CREATE TABLE `ps_webservice_account_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_webservice_account_shop`
+-- Zrzut danych tabeli `ps_webservice_account_shop`
 --
 
 INSERT INTO `ps_webservice_account_shop` (`id_webservice_account`, `id_shop`) VALUES
@@ -72958,7 +73021,7 @@ INSERT INTO `ps_webservice_account_shop` (`id_webservice_account`, `id_shop`) VA
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_webservice_permission`
+-- Struktura tabeli dla tabeli `ps_webservice_permission`
 --
 
 CREATE TABLE `ps_webservice_permission` (
@@ -72969,7 +73032,7 @@ CREATE TABLE `ps_webservice_permission` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_webservice_permission`
+-- Zrzut danych tabeli `ps_webservice_permission`
 --
 
 INSERT INTO `ps_webservice_permission` (`id_webservice_permission`, `resource`, `method`, `id_webservice_account`) VALUES
@@ -73002,7 +73065,7 @@ INSERT INTO `ps_webservice_permission` (`id_webservice_permission`, `resource`, 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_web_browser`
+-- Struktura tabeli dla tabeli `ps_web_browser`
 --
 
 CREATE TABLE `ps_web_browser` (
@@ -73011,7 +73074,7 @@ CREATE TABLE `ps_web_browser` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_web_browser`
+-- Zrzut danych tabeli `ps_web_browser`
 --
 
 INSERT INTO `ps_web_browser` (`id_web_browser`, `name`) VALUES
@@ -73030,7 +73093,7 @@ INSERT INTO `ps_web_browser` (`id_web_browser`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_wishlist`
+-- Struktura tabeli dla tabeli `ps_wishlist`
 --
 
 CREATE TABLE `ps_wishlist` (
@@ -73047,16 +73110,18 @@ CREATE TABLE `ps_wishlist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_wishlist`
+-- Zrzut danych tabeli `ps_wishlist`
 --
 
 INSERT INTO `ps_wishlist` (`id_wishlist`, `id_customer`, `id_shop`, `id_shop_group`, `token`, `name`, `counter`, `date_add`, `date_upd`, `default`) VALUES
-(1, 3, 1, 1, '3512102D738F5701', 'Moja lista życzeń', NULL, '2025-12-15 05:33:00', '2025-12-15 05:33:00', 1);
+(1, 3, 1, 1, '3512102D738F5701', 'Moja lista życzeń', NULL, '2025-12-15 05:33:00', '2025-12-15 05:33:00', 1),
+(2, 5, 1, 1, '97D83F8045A40BA5', 'Moja lista życzeń', NULL, '2025-12-15 20:35:01', '2025-12-15 20:35:01', 1),
+(3, 6, 1, 1, '7B2D1DA6D426A412', 'Moja lista życzeń', NULL, '2025-12-15 20:36:36', '2025-12-15 20:36:36', 1);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_wishlist_product`
+-- Struktura tabeli dla tabeli `ps_wishlist_product`
 --
 
 CREATE TABLE `ps_wishlist_product` (
@@ -73071,7 +73136,7 @@ CREATE TABLE `ps_wishlist_product` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_wishlist_product_cart`
+-- Struktura tabeli dla tabeli `ps_wishlist_product_cart`
 --
 
 CREATE TABLE `ps_wishlist_product_cart` (
@@ -73084,7 +73149,7 @@ CREATE TABLE `ps_wishlist_product_cart` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_zone`
+-- Struktura tabeli dla tabeli `ps_zone`
 --
 
 CREATE TABLE `ps_zone` (
@@ -73094,7 +73159,7 @@ CREATE TABLE `ps_zone` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_zone`
+-- Zrzut danych tabeli `ps_zone`
 --
 
 INSERT INTO `ps_zone` (`id_zone`, `name`, `active`) VALUES
@@ -73110,7 +73175,7 @@ INSERT INTO `ps_zone` (`id_zone`, `name`, `active`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `ps_zone_shop`
+-- Struktura tabeli dla tabeli `ps_zone_shop`
 --
 
 CREATE TABLE `ps_zone_shop` (
@@ -73119,7 +73184,7 @@ CREATE TABLE `ps_zone_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Дамп данных таблицы `ps_zone_shop`
+-- Zrzut danych tabeli `ps_zone_shop`
 --
 
 INSERT INTO `ps_zone_shop` (`id_zone`, `id_shop`) VALUES
@@ -73133,23 +73198,23 @@ INSERT INTO `ps_zone_shop` (`id_zone`, `id_shop`) VALUES
 (8, 1);
 
 --
--- Индексы сохранённых таблиц
+-- Indeksy dla zrzutów tabel
 --
 
 --
--- Индексы таблицы `ps_access`
+-- Indeksy dla tabeli `ps_access`
 --
 ALTER TABLE `ps_access`
   ADD PRIMARY KEY (`id_profile`,`id_authorization_role`);
 
 --
--- Индексы таблицы `ps_accessory`
+-- Indeksy dla tabeli `ps_accessory`
 --
 ALTER TABLE `ps_accessory`
   ADD KEY `accessory_product` (`id_product_1`,`id_product_2`);
 
 --
--- Индексы таблицы `ps_address`
+-- Indeksy dla tabeli `ps_address`
 --
 ALTER TABLE `ps_address`
   ADD PRIMARY KEY (`id_address`),
@@ -73161,52 +73226,52 @@ ALTER TABLE `ps_address`
   ADD KEY `id_warehouse` (`id_warehouse`);
 
 --
--- Индексы таблицы `ps_address_format`
+-- Indeksy dla tabeli `ps_address_format`
 --
 ALTER TABLE `ps_address_format`
   ADD PRIMARY KEY (`id_country`);
 
 --
--- Индексы таблицы `ps_admin_filter`
+-- Indeksy dla tabeli `ps_admin_filter`
 --
 ALTER TABLE `ps_admin_filter`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `admin_filter_search_id_idx` (`employee`,`shop`,`controller`,`action`,`filter_id`);
 
 --
--- Индексы таблицы `ps_alias`
+-- Indeksy dla tabeli `ps_alias`
 --
 ALTER TABLE `ps_alias`
   ADD PRIMARY KEY (`id_alias`),
   ADD UNIQUE KEY `alias` (`alias`);
 
 --
--- Индексы таблицы `ps_attachment`
+-- Indeksy dla tabeli `ps_attachment`
 --
 ALTER TABLE `ps_attachment`
   ADD PRIMARY KEY (`id_attachment`);
 
 --
--- Индексы таблицы `ps_attachment_lang`
+-- Indeksy dla tabeli `ps_attachment_lang`
 --
 ALTER TABLE `ps_attachment_lang`
   ADD PRIMARY KEY (`id_attachment`,`id_lang`);
 
 --
--- Индексы таблицы `ps_attribute`
+-- Indeksy dla tabeli `ps_attribute`
 --
 ALTER TABLE `ps_attribute`
   ADD PRIMARY KEY (`id_attribute`),
   ADD KEY `attribute_group` (`id_attribute_group`);
 
 --
--- Индексы таблицы `ps_attribute_group`
+-- Indeksy dla tabeli `ps_attribute_group`
 --
 ALTER TABLE `ps_attribute_group`
   ADD PRIMARY KEY (`id_attribute_group`);
 
 --
--- Индексы таблицы `ps_attribute_group_lang`
+-- Indeksy dla tabeli `ps_attribute_group_lang`
 --
 ALTER TABLE `ps_attribute_group_lang`
   ADD PRIMARY KEY (`id_attribute_group`,`id_lang`),
@@ -73214,7 +73279,7 @@ ALTER TABLE `ps_attribute_group_lang`
   ADD KEY `IDX_4653726CBA299860` (`id_lang`);
 
 --
--- Индексы таблицы `ps_attribute_group_shop`
+-- Indeksy dla tabeli `ps_attribute_group_shop`
 --
 ALTER TABLE `ps_attribute_group_shop`
   ADD PRIMARY KEY (`id_attribute_group`,`id_shop`),
@@ -73222,14 +73287,14 @@ ALTER TABLE `ps_attribute_group_shop`
   ADD KEY `IDX_DB30BAAC274A50A0` (`id_shop`);
 
 --
--- Индексы таблицы `ps_attribute_impact`
+-- Indeksy dla tabeli `ps_attribute_impact`
 --
 ALTER TABLE `ps_attribute_impact`
   ADD PRIMARY KEY (`id_attribute_impact`),
   ADD UNIQUE KEY `id_product` (`id_product`,`id_attribute`);
 
 --
--- Индексы таблицы `ps_attribute_lang`
+-- Indeksy dla tabeli `ps_attribute_lang`
 --
 ALTER TABLE `ps_attribute_lang`
   ADD PRIMARY KEY (`id_attribute`,`id_lang`),
@@ -73237,7 +73302,7 @@ ALTER TABLE `ps_attribute_lang`
   ADD KEY `IDX_3ABE46A7BA299860` (`id_lang`);
 
 --
--- Индексы таблицы `ps_attribute_shop`
+-- Indeksy dla tabeli `ps_attribute_shop`
 --
 ALTER TABLE `ps_attribute_shop`
   ADD PRIMARY KEY (`id_attribute`,`id_shop`),
@@ -73245,20 +73310,20 @@ ALTER TABLE `ps_attribute_shop`
   ADD KEY `IDX_A7DD8E67274A50A0` (`id_shop`);
 
 --
--- Индексы таблицы `ps_authorization_role`
+-- Indeksy dla tabeli `ps_authorization_role`
 --
 ALTER TABLE `ps_authorization_role`
   ADD PRIMARY KEY (`id_authorization_role`),
   ADD UNIQUE KEY `slug` (`slug`);
 
 --
--- Индексы таблицы `ps_blockwishlist_statistics`
+-- Indeksy dla tabeli `ps_blockwishlist_statistics`
 --
 ALTER TABLE `ps_blockwishlist_statistics`
   ADD PRIMARY KEY (`id_statistics`);
 
 --
--- Индексы таблицы `ps_carrier`
+-- Indeksy dla tabeli `ps_carrier`
 --
 ALTER TABLE `ps_carrier`
   ADD PRIMARY KEY (`id_carrier`),
@@ -73267,38 +73332,38 @@ ALTER TABLE `ps_carrier`
   ADD KEY `reference` (`id_reference`,`deleted`,`active`);
 
 --
--- Индексы таблицы `ps_carrier_group`
+-- Indeksy dla tabeli `ps_carrier_group`
 --
 ALTER TABLE `ps_carrier_group`
   ADD PRIMARY KEY (`id_carrier`,`id_group`);
 
 --
--- Индексы таблицы `ps_carrier_lang`
+-- Indeksy dla tabeli `ps_carrier_lang`
 --
 ALTER TABLE `ps_carrier_lang`
   ADD PRIMARY KEY (`id_lang`,`id_shop`,`id_carrier`);
 
 --
--- Индексы таблицы `ps_carrier_shop`
+-- Indeksy dla tabeli `ps_carrier_shop`
 --
 ALTER TABLE `ps_carrier_shop`
   ADD PRIMARY KEY (`id_carrier`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_carrier_tax_rules_group_shop`
+-- Indeksy dla tabeli `ps_carrier_tax_rules_group_shop`
 --
 ALTER TABLE `ps_carrier_tax_rules_group_shop`
   ADD PRIMARY KEY (`id_carrier`,`id_tax_rules_group`,`id_shop`);
 
 --
--- Индексы таблицы `ps_carrier_zone`
+-- Indeksy dla tabeli `ps_carrier_zone`
 --
 ALTER TABLE `ps_carrier_zone`
   ADD PRIMARY KEY (`id_carrier`,`id_zone`);
 
 --
--- Индексы таблицы `ps_cart`
+-- Indeksy dla tabeli `ps_cart`
 --
 ALTER TABLE `ps_cart`
   ADD PRIMARY KEY (`id_cart`),
@@ -73314,14 +73379,14 @@ ALTER TABLE `ps_cart`
   ADD KEY `id_shop` (`id_shop`,`date_add`);
 
 --
--- Индексы таблицы `ps_cart_cart_rule`
+-- Indeksy dla tabeli `ps_cart_cart_rule`
 --
 ALTER TABLE `ps_cart_cart_rule`
   ADD PRIMARY KEY (`id_cart`,`id_cart_rule`),
   ADD KEY `id_cart_rule` (`id_cart_rule`);
 
 --
--- Индексы таблицы `ps_cart_product`
+-- Indeksy dla tabeli `ps_cart_product`
 --
 ALTER TABLE `ps_cart_product`
   ADD PRIMARY KEY (`id_cart`,`id_product`,`id_product_attribute`,`id_customization`,`id_address_delivery`),
@@ -73329,7 +73394,7 @@ ALTER TABLE `ps_cart_product`
   ADD KEY `id_cart_order` (`id_cart`,`date_add`,`id_product`,`id_product_attribute`);
 
 --
--- Индексы таблицы `ps_cart_rule`
+-- Indeksy dla tabeli `ps_cart_rule`
 --
 ALTER TABLE `ps_cart_rule`
   ADD PRIMARY KEY (`id_cart_rule`),
@@ -73341,13 +73406,13 @@ ALTER TABLE `ps_cart_rule`
   ADD KEY `date_to` (`date_to`);
 
 --
--- Индексы таблицы `ps_cart_rule_carrier`
+-- Indeksy dla tabeli `ps_cart_rule_carrier`
 --
 ALTER TABLE `ps_cart_rule_carrier`
   ADD PRIMARY KEY (`id_cart_rule`,`id_carrier`);
 
 --
--- Индексы таблицы `ps_cart_rule_combination`
+-- Indeksy dla tabeli `ps_cart_rule_combination`
 --
 ALTER TABLE `ps_cart_rule_combination`
   ADD PRIMARY KEY (`id_cart_rule_1`,`id_cart_rule_2`),
@@ -73355,49 +73420,49 @@ ALTER TABLE `ps_cart_rule_combination`
   ADD KEY `id_cart_rule_2` (`id_cart_rule_2`);
 
 --
--- Индексы таблицы `ps_cart_rule_country`
+-- Indeksy dla tabeli `ps_cart_rule_country`
 --
 ALTER TABLE `ps_cart_rule_country`
   ADD PRIMARY KEY (`id_cart_rule`,`id_country`);
 
 --
--- Индексы таблицы `ps_cart_rule_group`
+-- Indeksy dla tabeli `ps_cart_rule_group`
 --
 ALTER TABLE `ps_cart_rule_group`
   ADD PRIMARY KEY (`id_cart_rule`,`id_group`);
 
 --
--- Индексы таблицы `ps_cart_rule_lang`
+-- Indeksy dla tabeli `ps_cart_rule_lang`
 --
 ALTER TABLE `ps_cart_rule_lang`
   ADD PRIMARY KEY (`id_cart_rule`,`id_lang`);
 
 --
--- Индексы таблицы `ps_cart_rule_product_rule`
+-- Indeksy dla tabeli `ps_cart_rule_product_rule`
 --
 ALTER TABLE `ps_cart_rule_product_rule`
   ADD PRIMARY KEY (`id_product_rule`);
 
 --
--- Индексы таблицы `ps_cart_rule_product_rule_group`
+-- Indeksy dla tabeli `ps_cart_rule_product_rule_group`
 --
 ALTER TABLE `ps_cart_rule_product_rule_group`
   ADD PRIMARY KEY (`id_product_rule_group`);
 
 --
--- Индексы таблицы `ps_cart_rule_product_rule_value`
+-- Indeksy dla tabeli `ps_cart_rule_product_rule_value`
 --
 ALTER TABLE `ps_cart_rule_product_rule_value`
   ADD PRIMARY KEY (`id_product_rule`,`id_item`);
 
 --
--- Индексы таблицы `ps_cart_rule_shop`
+-- Indeksy dla tabeli `ps_cart_rule_shop`
 --
 ALTER TABLE `ps_cart_rule_shop`
   ADD PRIMARY KEY (`id_cart_rule`,`id_shop`);
 
 --
--- Индексы таблицы `ps_category`
+-- Indeksy dla tabeli `ps_category`
 --
 ALTER TABLE `ps_category`
   ADD PRIMARY KEY (`id_category`),
@@ -73409,7 +73474,7 @@ ALTER TABLE `ps_category`
   ADD KEY `activenright` (`active`,`nright`);
 
 --
--- Индексы таблицы `ps_category_group`
+-- Indeksy dla tabeli `ps_category_group`
 --
 ALTER TABLE `ps_category_group`
   ADD PRIMARY KEY (`id_category`,`id_group`),
@@ -73417,14 +73482,14 @@ ALTER TABLE `ps_category_group`
   ADD KEY `id_group` (`id_group`);
 
 --
--- Индексы таблицы `ps_category_lang`
+-- Indeksy dla tabeli `ps_category_lang`
 --
 ALTER TABLE `ps_category_lang`
   ADD PRIMARY KEY (`id_category`,`id_shop`,`id_lang`),
   ADD KEY `category_name` (`name`);
 
 --
--- Индексы таблицы `ps_category_product`
+-- Indeksy dla tabeli `ps_category_product`
 --
 ALTER TABLE `ps_category_product`
   ADD PRIMARY KEY (`id_category`,`id_product`),
@@ -73432,66 +73497,66 @@ ALTER TABLE `ps_category_product`
   ADD KEY `id_category` (`id_category`,`position`);
 
 --
--- Индексы таблицы `ps_category_shop`
+-- Indeksy dla tabeli `ps_category_shop`
 --
 ALTER TABLE `ps_category_shop`
   ADD PRIMARY KEY (`id_category`,`id_shop`);
 
 --
--- Индексы таблицы `ps_cms`
+-- Indeksy dla tabeli `ps_cms`
 --
 ALTER TABLE `ps_cms`
   ADD PRIMARY KEY (`id_cms`);
 
 --
--- Индексы таблицы `ps_cms_category`
+-- Indeksy dla tabeli `ps_cms_category`
 --
 ALTER TABLE `ps_cms_category`
   ADD PRIMARY KEY (`id_cms_category`),
   ADD KEY `category_parent` (`id_parent`);
 
 --
--- Индексы таблицы `ps_cms_category_lang`
+-- Indeksy dla tabeli `ps_cms_category_lang`
 --
 ALTER TABLE `ps_cms_category_lang`
   ADD PRIMARY KEY (`id_cms_category`,`id_shop`,`id_lang`),
   ADD KEY `category_name` (`name`);
 
 --
--- Индексы таблицы `ps_cms_category_shop`
+-- Indeksy dla tabeli `ps_cms_category_shop`
 --
 ALTER TABLE `ps_cms_category_shop`
   ADD PRIMARY KEY (`id_cms_category`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_cms_lang`
+-- Indeksy dla tabeli `ps_cms_lang`
 --
 ALTER TABLE `ps_cms_lang`
   ADD PRIMARY KEY (`id_cms`,`id_shop`,`id_lang`);
 
 --
--- Индексы таблицы `ps_cms_role`
+-- Indeksy dla tabeli `ps_cms_role`
 --
 ALTER TABLE `ps_cms_role`
   ADD PRIMARY KEY (`id_cms_role`,`id_cms`),
   ADD UNIQUE KEY `name` (`name`);
 
 --
--- Индексы таблицы `ps_cms_role_lang`
+-- Indeksy dla tabeli `ps_cms_role_lang`
 --
 ALTER TABLE `ps_cms_role_lang`
   ADD PRIMARY KEY (`id_cms_role`,`id_lang`,`id_shop`);
 
 --
--- Индексы таблицы `ps_cms_shop`
+-- Indeksy dla tabeli `ps_cms_shop`
 --
 ALTER TABLE `ps_cms_shop`
   ADD PRIMARY KEY (`id_cms`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_configuration`
+-- Indeksy dla tabeli `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
   ADD PRIMARY KEY (`id_configuration`),
@@ -73500,7 +73565,7 @@ ALTER TABLE `ps_configuration`
   ADD KEY `id_shop_group` (`id_shop_group`);
 
 --
--- Индексы таблицы `ps_configuration_kpi`
+-- Indeksy dla tabeli `ps_configuration_kpi`
 --
 ALTER TABLE `ps_configuration_kpi`
   ADD PRIMARY KEY (`id_configuration_kpi`),
@@ -73509,19 +73574,19 @@ ALTER TABLE `ps_configuration_kpi`
   ADD KEY `id_shop_group` (`id_shop_group`);
 
 --
--- Индексы таблицы `ps_configuration_kpi_lang`
+-- Indeksy dla tabeli `ps_configuration_kpi_lang`
 --
 ALTER TABLE `ps_configuration_kpi_lang`
   ADD PRIMARY KEY (`id_configuration_kpi`,`id_lang`);
 
 --
--- Индексы таблицы `ps_configuration_lang`
+-- Indeksy dla tabeli `ps_configuration_lang`
 --
 ALTER TABLE `ps_configuration_lang`
   ADD PRIMARY KEY (`id_configuration`,`id_lang`);
 
 --
--- Индексы таблицы `ps_connections`
+-- Indeksy dla tabeli `ps_connections`
 --
 ALTER TABLE `ps_connections`
   ADD PRIMARY KEY (`id_connections`),
@@ -73530,13 +73595,13 @@ ALTER TABLE `ps_connections`
   ADD KEY `id_page` (`id_page`);
 
 --
--- Индексы таблицы `ps_connections_page`
+-- Indeksy dla tabeli `ps_connections_page`
 --
 ALTER TABLE `ps_connections_page`
   ADD PRIMARY KEY (`id_connections`,`id_page`,`time_start`);
 
 --
--- Индексы таблицы `ps_connections_source`
+-- Indeksy dla tabeli `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
   ADD PRIMARY KEY (`id_connections_source`),
@@ -73546,26 +73611,26 @@ ALTER TABLE `ps_connections_source`
   ADD KEY `request_uri` (`request_uri`);
 
 --
--- Индексы таблицы `ps_contact`
+-- Indeksy dla tabeli `ps_contact`
 --
 ALTER TABLE `ps_contact`
   ADD PRIMARY KEY (`id_contact`);
 
 --
--- Индексы таблицы `ps_contact_lang`
+-- Indeksy dla tabeli `ps_contact_lang`
 --
 ALTER TABLE `ps_contact_lang`
   ADD PRIMARY KEY (`id_contact`,`id_lang`);
 
 --
--- Индексы таблицы `ps_contact_shop`
+-- Indeksy dla tabeli `ps_contact_shop`
 --
 ALTER TABLE `ps_contact_shop`
   ADD PRIMARY KEY (`id_contact`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_country`
+-- Indeksy dla tabeli `ps_country`
 --
 ALTER TABLE `ps_country`
   ADD PRIMARY KEY (`id_country`),
@@ -73573,40 +73638,40 @@ ALTER TABLE `ps_country`
   ADD KEY `country_` (`id_zone`);
 
 --
--- Индексы таблицы `ps_country_lang`
+-- Indeksy dla tabeli `ps_country_lang`
 --
 ALTER TABLE `ps_country_lang`
   ADD PRIMARY KEY (`id_country`,`id_lang`);
 
 --
--- Индексы таблицы `ps_country_shop`
+-- Indeksy dla tabeli `ps_country_shop`
 --
 ALTER TABLE `ps_country_shop`
   ADD PRIMARY KEY (`id_country`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_currency`
+-- Indeksy dla tabeli `ps_currency`
 --
 ALTER TABLE `ps_currency`
   ADD PRIMARY KEY (`id_currency`),
   ADD KEY `currency_iso_code` (`iso_code`);
 
 --
--- Индексы таблицы `ps_currency_lang`
+-- Indeksy dla tabeli `ps_currency_lang`
 --
 ALTER TABLE `ps_currency_lang`
   ADD PRIMARY KEY (`id_currency`,`id_lang`);
 
 --
--- Индексы таблицы `ps_currency_shop`
+-- Indeksy dla tabeli `ps_currency_shop`
 --
 ALTER TABLE `ps_currency_shop`
   ADD PRIMARY KEY (`id_currency`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_customer`
+-- Indeksy dla tabeli `ps_customer`
 --
 ALTER TABLE `ps_customer`
   ADD PRIMARY KEY (`id_customer`),
@@ -73618,7 +73683,7 @@ ALTER TABLE `ps_customer`
   ADD KEY `id_shop` (`id_shop`,`date_add`);
 
 --
--- Индексы таблицы `ps_customer_group`
+-- Indeksy dla tabeli `ps_customer_group`
 --
 ALTER TABLE `ps_customer_group`
   ADD PRIMARY KEY (`id_customer`,`id_group`),
@@ -73626,7 +73691,7 @@ ALTER TABLE `ps_customer_group`
   ADD KEY `id_customer` (`id_customer`);
 
 --
--- Индексы таблицы `ps_customer_message`
+-- Indeksy dla tabeli `ps_customer_message`
 --
 ALTER TABLE `ps_customer_message`
   ADD PRIMARY KEY (`id_customer_message`),
@@ -73634,19 +73699,19 @@ ALTER TABLE `ps_customer_message`
   ADD KEY `id_employee` (`id_employee`);
 
 --
--- Индексы таблицы `ps_customer_message_sync_imap`
+-- Indeksy dla tabeli `ps_customer_message_sync_imap`
 --
 ALTER TABLE `ps_customer_message_sync_imap`
   ADD KEY `md5_header_index` (`md5_header`(4));
 
 --
--- Индексы таблицы `ps_customer_session`
+-- Indeksy dla tabeli `ps_customer_session`
 --
 ALTER TABLE `ps_customer_session`
   ADD PRIMARY KEY (`id_customer_session`);
 
 --
--- Индексы таблицы `ps_customer_thread`
+-- Indeksy dla tabeli `ps_customer_thread`
 --
 ALTER TABLE `ps_customer_thread`
   ADD PRIMARY KEY (`id_customer_thread`),
@@ -73658,7 +73723,7 @@ ALTER TABLE `ps_customer_thread`
   ADD KEY `id_product` (`id_product`);
 
 --
--- Индексы таблицы `ps_customization`
+-- Indeksy dla tabeli `ps_customization`
 --
 ALTER TABLE `ps_customization`
   ADD PRIMARY KEY (`id_customization`,`id_cart`,`id_product`,`id_address_delivery`),
@@ -73666,32 +73731,32 @@ ALTER TABLE `ps_customization`
   ADD KEY `id_cart_product` (`id_cart`,`id_product`,`id_product_attribute`);
 
 --
--- Индексы таблицы `ps_customization_field`
+-- Indeksy dla tabeli `ps_customization_field`
 --
 ALTER TABLE `ps_customization_field`
   ADD PRIMARY KEY (`id_customization_field`),
   ADD KEY `id_product` (`id_product`);
 
 --
--- Индексы таблицы `ps_customization_field_lang`
+-- Indeksy dla tabeli `ps_customization_field_lang`
 --
 ALTER TABLE `ps_customization_field_lang`
   ADD PRIMARY KEY (`id_customization_field`,`id_lang`,`id_shop`);
 
 --
--- Индексы таблицы `ps_customized_data`
+-- Indeksy dla tabeli `ps_customized_data`
 --
 ALTER TABLE `ps_customized_data`
   ADD PRIMARY KEY (`id_customization`,`type`,`index`);
 
 --
--- Индексы таблицы `ps_date_range`
+-- Indeksy dla tabeli `ps_date_range`
 --
 ALTER TABLE `ps_date_range`
   ADD PRIMARY KEY (`id_date_range`);
 
 --
--- Индексы таблицы `ps_delivery`
+-- Indeksy dla tabeli `ps_delivery`
 --
 ALTER TABLE `ps_delivery`
   ADD PRIMARY KEY (`id_delivery`),
@@ -73701,13 +73766,13 @@ ALTER TABLE `ps_delivery`
   ADD KEY `id_range_weight` (`id_range_weight`);
 
 --
--- Индексы таблицы `ps_emailsubscription`
+-- Indeksy dla tabeli `ps_emailsubscription`
 --
 ALTER TABLE `ps_emailsubscription`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `ps_employee`
+-- Indeksy dla tabeli `ps_employee`
 --
 ALTER TABLE `ps_employee`
   ADD PRIMARY KEY (`id_employee`),
@@ -73716,53 +73781,53 @@ ALTER TABLE `ps_employee`
   ADD KEY `id_profile` (`id_profile`);
 
 --
--- Индексы таблицы `ps_employee_account`
+-- Indeksy dla tabeli `ps_employee_account`
 --
 ALTER TABLE `ps_employee_account`
   ADD PRIMARY KEY (`id_employee_account`);
 
 --
--- Индексы таблицы `ps_employee_session`
+-- Indeksy dla tabeli `ps_employee_session`
 --
 ALTER TABLE `ps_employee_session`
   ADD PRIMARY KEY (`id_employee_session`);
 
 --
--- Индексы таблицы `ps_employee_shop`
+-- Indeksy dla tabeli `ps_employee_shop`
 --
 ALTER TABLE `ps_employee_shop`
   ADD PRIMARY KEY (`id_employee`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_fb_category_match`
+-- Indeksy dla tabeli `ps_fb_category_match`
 --
 ALTER TABLE `ps_fb_category_match`
   ADD PRIMARY KEY (`id_category`,`id_shop`),
   ADD KEY `id_category` (`id_category`,`google_category_id`);
 
 --
--- Индексы таблицы `ps_feature`
+-- Indeksy dla tabeli `ps_feature`
 --
 ALTER TABLE `ps_feature`
   ADD PRIMARY KEY (`id_feature`);
 
 --
--- Индексы таблицы `ps_feature_flag`
+-- Indeksy dla tabeli `ps_feature_flag`
 --
 ALTER TABLE `ps_feature_flag`
   ADD PRIMARY KEY (`id_feature_flag`),
   ADD UNIQUE KEY `UNIQ_91700F175E237E06` (`name`);
 
 --
--- Индексы таблицы `ps_feature_lang`
+-- Indeksy dla tabeli `ps_feature_lang`
 --
 ALTER TABLE `ps_feature_lang`
   ADD PRIMARY KEY (`id_feature`,`id_lang`),
   ADD KEY `id_lang` (`id_lang`,`name`);
 
 --
--- Индексы таблицы `ps_feature_product`
+-- Indeksy dla tabeli `ps_feature_product`
 --
 ALTER TABLE `ps_feature_product`
   ADD PRIMARY KEY (`id_feature`,`id_product`,`id_feature_value`),
@@ -73770,66 +73835,66 @@ ALTER TABLE `ps_feature_product`
   ADD KEY `id_product` (`id_product`);
 
 --
--- Индексы таблицы `ps_feature_shop`
+-- Indeksy dla tabeli `ps_feature_shop`
 --
 ALTER TABLE `ps_feature_shop`
   ADD PRIMARY KEY (`id_feature`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_feature_value`
+-- Indeksy dla tabeli `ps_feature_value`
 --
 ALTER TABLE `ps_feature_value`
   ADD PRIMARY KEY (`id_feature_value`),
   ADD KEY `feature` (`id_feature`);
 
 --
--- Индексы таблицы `ps_feature_value_lang`
+-- Indeksy dla tabeli `ps_feature_value_lang`
 --
 ALTER TABLE `ps_feature_value_lang`
   ADD PRIMARY KEY (`id_feature_value`,`id_lang`);
 
 --
--- Индексы таблицы `ps_gender`
+-- Indeksy dla tabeli `ps_gender`
 --
 ALTER TABLE `ps_gender`
   ADD PRIMARY KEY (`id_gender`);
 
 --
--- Индексы таблицы `ps_gender_lang`
+-- Indeksy dla tabeli `ps_gender_lang`
 --
 ALTER TABLE `ps_gender_lang`
   ADD PRIMARY KEY (`id_gender`,`id_lang`),
   ADD KEY `id_gender` (`id_gender`);
 
 --
--- Индексы таблицы `ps_group`
+-- Indeksy dla tabeli `ps_group`
 --
 ALTER TABLE `ps_group`
   ADD PRIMARY KEY (`id_group`);
 
 --
--- Индексы таблицы `ps_group_lang`
+-- Indeksy dla tabeli `ps_group_lang`
 --
 ALTER TABLE `ps_group_lang`
   ADD PRIMARY KEY (`id_group`,`id_lang`);
 
 --
--- Индексы таблицы `ps_group_reduction`
+-- Indeksy dla tabeli `ps_group_reduction`
 --
 ALTER TABLE `ps_group_reduction`
   ADD PRIMARY KEY (`id_group_reduction`),
   ADD UNIQUE KEY `id_group` (`id_group`,`id_category`);
 
 --
--- Индексы таблицы `ps_group_shop`
+-- Indeksy dla tabeli `ps_group_shop`
 --
 ALTER TABLE `ps_group_shop`
   ADD PRIMARY KEY (`id_group`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_guest`
+-- Indeksy dla tabeli `ps_guest`
 --
 ALTER TABLE `ps_guest`
   ADD PRIMARY KEY (`id_guest`),
@@ -73838,39 +73903,39 @@ ALTER TABLE `ps_guest`
   ADD KEY `id_web_browser` (`id_web_browser`);
 
 --
--- Индексы таблицы `ps_homeslider`
+-- Indeksy dla tabeli `ps_homeslider`
 --
 ALTER TABLE `ps_homeslider`
   ADD PRIMARY KEY (`id_homeslider_slides`,`id_shop`);
 
 --
--- Индексы таблицы `ps_homeslider_slides`
+-- Indeksy dla tabeli `ps_homeslider_slides`
 --
 ALTER TABLE `ps_homeslider_slides`
   ADD PRIMARY KEY (`id_homeslider_slides`);
 
 --
--- Индексы таблицы `ps_homeslider_slides_lang`
+-- Indeksy dla tabeli `ps_homeslider_slides_lang`
 --
 ALTER TABLE `ps_homeslider_slides_lang`
   ADD PRIMARY KEY (`id_homeslider_slides`,`id_lang`);
 
 --
--- Индексы таблицы `ps_hook`
+-- Indeksy dla tabeli `ps_hook`
 --
 ALTER TABLE `ps_hook`
   ADD PRIMARY KEY (`id_hook`),
   ADD UNIQUE KEY `hook_name` (`name`);
 
 --
--- Индексы таблицы `ps_hook_alias`
+-- Indeksy dla tabeli `ps_hook_alias`
 --
 ALTER TABLE `ps_hook_alias`
   ADD PRIMARY KEY (`id_hook_alias`),
   ADD UNIQUE KEY `alias` (`alias`);
 
 --
--- Индексы таблицы `ps_hook_module`
+-- Indeksy dla tabeli `ps_hook_module`
 --
 ALTER TABLE `ps_hook_module`
   ADD PRIMARY KEY (`id_module`,`id_hook`,`id_shop`),
@@ -73879,7 +73944,7 @@ ALTER TABLE `ps_hook_module`
   ADD KEY `position` (`id_shop`,`position`);
 
 --
--- Индексы таблицы `ps_hook_module_exceptions`
+-- Indeksy dla tabeli `ps_hook_module_exceptions`
 --
 ALTER TABLE `ps_hook_module_exceptions`
   ADD PRIMARY KEY (`id_hook_module_exceptions`),
@@ -73887,7 +73952,7 @@ ALTER TABLE `ps_hook_module_exceptions`
   ADD KEY `id_hook` (`id_hook`);
 
 --
--- Индексы таблицы `ps_image`
+-- Indeksy dla tabeli `ps_image`
 --
 ALTER TABLE `ps_image`
   ADD PRIMARY KEY (`id_image`),
@@ -73896,14 +73961,14 @@ ALTER TABLE `ps_image`
   ADD KEY `image_product` (`id_product`);
 
 --
--- Индексы таблицы `ps_image_lang`
+-- Indeksy dla tabeli `ps_image_lang`
 --
 ALTER TABLE `ps_image_lang`
   ADD PRIMARY KEY (`id_image`,`id_lang`),
   ADD KEY `id_image` (`id_image`);
 
 --
--- Индексы таблицы `ps_image_shop`
+-- Indeksy dla tabeli `ps_image_shop`
 --
 ALTER TABLE `ps_image_shop`
   ADD PRIMARY KEY (`id_image`,`id_shop`),
@@ -73911,44 +73976,44 @@ ALTER TABLE `ps_image_shop`
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_image_type`
+-- Indeksy dla tabeli `ps_image_type`
 --
 ALTER TABLE `ps_image_type`
   ADD PRIMARY KEY (`id_image_type`),
   ADD KEY `image_type_name` (`name`);
 
 --
--- Индексы таблицы `ps_import_match`
+-- Indeksy dla tabeli `ps_import_match`
 --
 ALTER TABLE `ps_import_match`
   ADD PRIMARY KEY (`id_import_match`);
 
 --
--- Индексы таблицы `ps_info`
+-- Indeksy dla tabeli `ps_info`
 --
 ALTER TABLE `ps_info`
   ADD PRIMARY KEY (`id_info`);
 
 --
--- Индексы таблицы `ps_info_lang`
+-- Indeksy dla tabeli `ps_info_lang`
 --
 ALTER TABLE `ps_info_lang`
   ADD PRIMARY KEY (`id_info`,`id_lang`,`id_shop`);
 
 --
--- Индексы таблицы `ps_info_shop`
+-- Indeksy dla tabeli `ps_info_shop`
 --
 ALTER TABLE `ps_info_shop`
   ADD PRIMARY KEY (`id_info`,`id_shop`);
 
 --
--- Индексы таблицы `ps_lang`
+-- Indeksy dla tabeli `ps_lang`
 --
 ALTER TABLE `ps_lang`
   ADD PRIMARY KEY (`id_lang`);
 
 --
--- Индексы таблицы `ps_lang_shop`
+-- Indeksy dla tabeli `ps_lang_shop`
 --
 ALTER TABLE `ps_lang_shop`
   ADD PRIMARY KEY (`id_lang`,`id_shop`),
@@ -73956,7 +74021,7 @@ ALTER TABLE `ps_lang_shop`
   ADD KEY `IDX_2F43BFC7274A50A0` (`id_shop`);
 
 --
--- Индексы таблицы `ps_layered_category`
+-- Indeksy dla tabeli `ps_layered_category`
 --
 ALTER TABLE `ps_layered_category`
   ADD PRIMARY KEY (`id_layered_category`),
@@ -73964,62 +74029,62 @@ ALTER TABLE `ps_layered_category`
   ADD KEY `id_category` (`id_category`,`type`);
 
 --
--- Индексы таблицы `ps_layered_filter`
+-- Indeksy dla tabeli `ps_layered_filter`
 --
 ALTER TABLE `ps_layered_filter`
   ADD PRIMARY KEY (`id_layered_filter`);
 
 --
--- Индексы таблицы `ps_layered_filter_block`
+-- Indeksy dla tabeli `ps_layered_filter_block`
 --
 ALTER TABLE `ps_layered_filter_block`
   ADD PRIMARY KEY (`hash`);
 
 --
--- Индексы таблицы `ps_layered_filter_shop`
+-- Indeksy dla tabeli `ps_layered_filter_shop`
 --
 ALTER TABLE `ps_layered_filter_shop`
   ADD PRIMARY KEY (`id_layered_filter`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_layered_indexable_attribute_group`
+-- Indeksy dla tabeli `ps_layered_indexable_attribute_group`
 --
 ALTER TABLE `ps_layered_indexable_attribute_group`
   ADD PRIMARY KEY (`id_attribute_group`);
 
 --
--- Индексы таблицы `ps_layered_indexable_attribute_group_lang_value`
+-- Indeksy dla tabeli `ps_layered_indexable_attribute_group_lang_value`
 --
 ALTER TABLE `ps_layered_indexable_attribute_group_lang_value`
   ADD PRIMARY KEY (`id_attribute_group`,`id_lang`);
 
 --
--- Индексы таблицы `ps_layered_indexable_attribute_lang_value`
+-- Indeksy dla tabeli `ps_layered_indexable_attribute_lang_value`
 --
 ALTER TABLE `ps_layered_indexable_attribute_lang_value`
   ADD PRIMARY KEY (`id_attribute`,`id_lang`);
 
 --
--- Индексы таблицы `ps_layered_indexable_feature`
+-- Indeksy dla tabeli `ps_layered_indexable_feature`
 --
 ALTER TABLE `ps_layered_indexable_feature`
   ADD PRIMARY KEY (`id_feature`);
 
 --
--- Индексы таблицы `ps_layered_indexable_feature_lang_value`
+-- Indeksy dla tabeli `ps_layered_indexable_feature_lang_value`
 --
 ALTER TABLE `ps_layered_indexable_feature_lang_value`
   ADD PRIMARY KEY (`id_feature`,`id_lang`);
 
 --
--- Индексы таблицы `ps_layered_indexable_feature_value_lang_value`
+-- Indeksy dla tabeli `ps_layered_indexable_feature_value_lang_value`
 --
 ALTER TABLE `ps_layered_indexable_feature_value_lang_value`
   ADD PRIMARY KEY (`id_feature_value`,`id_lang`);
 
 --
--- Индексы таблицы `ps_layered_price_index`
+-- Indeksy dla tabeli `ps_layered_price_index`
 --
 ALTER TABLE `ps_layered_price_index`
   ADD PRIMARY KEY (`id_product`,`id_currency`,`id_shop`,`id_country`),
@@ -74028,83 +74093,83 @@ ALTER TABLE `ps_layered_price_index`
   ADD KEY `price_max` (`price_max`);
 
 --
--- Индексы таблицы `ps_layered_product_attribute`
+-- Indeksy dla tabeli `ps_layered_product_attribute`
 --
 ALTER TABLE `ps_layered_product_attribute`
   ADD PRIMARY KEY (`id_attribute`,`id_product`,`id_shop`),
   ADD UNIQUE KEY `id_attribute_group` (`id_attribute_group`,`id_attribute`,`id_product`,`id_shop`);
 
 --
--- Индексы таблицы `ps_linksmenutop`
+-- Indeksy dla tabeli `ps_linksmenutop`
 --
 ALTER TABLE `ps_linksmenutop`
   ADD PRIMARY KEY (`id_linksmenutop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_linksmenutop_lang`
+-- Indeksy dla tabeli `ps_linksmenutop_lang`
 --
 ALTER TABLE `ps_linksmenutop_lang`
   ADD KEY `id_linksmenutop` (`id_linksmenutop`,`id_lang`,`id_shop`);
 
 --
--- Индексы таблицы `ps_link_block`
+-- Indeksy dla tabeli `ps_link_block`
 --
 ALTER TABLE `ps_link_block`
   ADD PRIMARY KEY (`id_link_block`);
 
 --
--- Индексы таблицы `ps_link_block_lang`
+-- Indeksy dla tabeli `ps_link_block_lang`
 --
 ALTER TABLE `ps_link_block_lang`
   ADD PRIMARY KEY (`id_link_block`,`id_lang`);
 
 --
--- Индексы таблицы `ps_link_block_shop`
+-- Indeksy dla tabeli `ps_link_block_shop`
 --
 ALTER TABLE `ps_link_block_shop`
   ADD PRIMARY KEY (`id_link_block`,`id_shop`);
 
 --
--- Индексы таблицы `ps_log`
+-- Indeksy dla tabeli `ps_log`
 --
 ALTER TABLE `ps_log`
   ADD PRIMARY KEY (`id_log`);
 
 --
--- Индексы таблицы `ps_mail`
+-- Indeksy dla tabeli `ps_mail`
 --
 ALTER TABLE `ps_mail`
   ADD PRIMARY KEY (`id_mail`),
   ADD KEY `recipient` (`recipient`(10));
 
 --
--- Индексы таблицы `ps_manufacturer`
+-- Indeksy dla tabeli `ps_manufacturer`
 --
 ALTER TABLE `ps_manufacturer`
   ADD PRIMARY KEY (`id_manufacturer`);
 
 --
--- Индексы таблицы `ps_manufacturer_lang`
+-- Indeksy dla tabeli `ps_manufacturer_lang`
 --
 ALTER TABLE `ps_manufacturer_lang`
   ADD PRIMARY KEY (`id_manufacturer`,`id_lang`);
 
 --
--- Индексы таблицы `ps_manufacturer_shop`
+-- Indeksy dla tabeli `ps_manufacturer_shop`
 --
 ALTER TABLE `ps_manufacturer_shop`
   ADD PRIMARY KEY (`id_manufacturer`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_memcached_servers`
+-- Indeksy dla tabeli `ps_memcached_servers`
 --
 ALTER TABLE `ps_memcached_servers`
   ADD PRIMARY KEY (`id_memcached_server`);
 
 --
--- Индексы таблицы `ps_message`
+-- Indeksy dla tabeli `ps_message`
 --
 ALTER TABLE `ps_message`
   ADD PRIMARY KEY (`id_message`),
@@ -74114,20 +74179,20 @@ ALTER TABLE `ps_message`
   ADD KEY `id_employee` (`id_employee`);
 
 --
--- Индексы таблицы `ps_message_readed`
+-- Indeksy dla tabeli `ps_message_readed`
 --
 ALTER TABLE `ps_message_readed`
   ADD PRIMARY KEY (`id_message`,`id_employee`);
 
 --
--- Индексы таблицы `ps_meta`
+-- Indeksy dla tabeli `ps_meta`
 --
 ALTER TABLE `ps_meta`
   ADD PRIMARY KEY (`id_meta`),
   ADD UNIQUE KEY `page` (`page`);
 
 --
--- Индексы таблицы `ps_meta_lang`
+-- Indeksy dla tabeli `ps_meta_lang`
 --
 ALTER TABLE `ps_meta_lang`
   ADD PRIMARY KEY (`id_meta`,`id_shop`,`id_lang`),
@@ -74135,7 +74200,7 @@ ALTER TABLE `ps_meta_lang`
   ADD KEY `id_lang` (`id_lang`);
 
 --
--- Индексы таблицы `ps_module`
+-- Indeksy dla tabeli `ps_module`
 --
 ALTER TABLE `ps_module`
   ADD PRIMARY KEY (`id_module`),
@@ -74143,64 +74208,64 @@ ALTER TABLE `ps_module`
   ADD KEY `name` (`name`);
 
 --
--- Индексы таблицы `ps_module_access`
+-- Indeksy dla tabeli `ps_module_access`
 --
 ALTER TABLE `ps_module_access`
   ADD PRIMARY KEY (`id_profile`,`id_authorization_role`);
 
 --
--- Индексы таблицы `ps_module_carrier`
+-- Indeksy dla tabeli `ps_module_carrier`
 --
 ALTER TABLE `ps_module_carrier`
   ADD PRIMARY KEY (`id_module`,`id_shop`,`id_reference`);
 
 --
--- Индексы таблицы `ps_module_country`
+-- Indeksy dla tabeli `ps_module_country`
 --
 ALTER TABLE `ps_module_country`
   ADD PRIMARY KEY (`id_module`,`id_shop`,`id_country`);
 
 --
--- Индексы таблицы `ps_module_currency`
+-- Indeksy dla tabeli `ps_module_currency`
 --
 ALTER TABLE `ps_module_currency`
   ADD PRIMARY KEY (`id_module`,`id_shop`,`id_currency`),
   ADD KEY `id_module` (`id_module`);
 
 --
--- Индексы таблицы `ps_module_group`
+-- Indeksy dla tabeli `ps_module_group`
 --
 ALTER TABLE `ps_module_group`
   ADD PRIMARY KEY (`id_module`,`id_shop`,`id_group`);
 
 --
--- Индексы таблицы `ps_module_history`
+-- Indeksy dla tabeli `ps_module_history`
 --
 ALTER TABLE `ps_module_history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `ps_module_preference`
+-- Indeksy dla tabeli `ps_module_preference`
 --
 ALTER TABLE `ps_module_preference`
   ADD PRIMARY KEY (`id_module_preference`),
   ADD UNIQUE KEY `employee_module` (`id_employee`,`module`);
 
 --
--- Индексы таблицы `ps_module_shop`
+-- Indeksy dla tabeli `ps_module_shop`
 --
 ALTER TABLE `ps_module_shop`
   ADD PRIMARY KEY (`id_module`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_operating_system`
+-- Indeksy dla tabeli `ps_operating_system`
 --
 ALTER TABLE `ps_operating_system`
   ADD PRIMARY KEY (`id_operating_system`);
 
 --
--- Индексы таблицы `ps_orders`
+-- Indeksy dla tabeli `ps_orders`
 --
 ALTER TABLE `ps_orders`
   ADD PRIMARY KEY (`id_order`),
@@ -74219,7 +74284,7 @@ ALTER TABLE `ps_orders`
   ADD KEY `date_add` (`date_add`);
 
 --
--- Индексы таблицы `ps_order_carrier`
+-- Indeksy dla tabeli `ps_order_carrier`
 --
 ALTER TABLE `ps_order_carrier`
   ADD PRIMARY KEY (`id_order_carrier`),
@@ -74228,7 +74293,7 @@ ALTER TABLE `ps_order_carrier`
   ADD KEY `id_order_invoice` (`id_order_invoice`);
 
 --
--- Индексы таблицы `ps_order_cart_rule`
+-- Indeksy dla tabeli `ps_order_cart_rule`
 --
 ALTER TABLE `ps_order_cart_rule`
   ADD PRIMARY KEY (`id_order_cart_rule`),
@@ -74236,7 +74301,7 @@ ALTER TABLE `ps_order_cart_rule`
   ADD KEY `id_cart_rule` (`id_cart_rule`);
 
 --
--- Индексы таблицы `ps_order_detail`
+-- Indeksy dla tabeli `ps_order_detail`
 --
 ALTER TABLE `ps_order_detail`
   ADD PRIMARY KEY (`id_order_detail`),
@@ -74247,14 +74312,14 @@ ALTER TABLE `ps_order_detail`
   ADD KEY `id_order_id_order_detail` (`id_order`,`id_order_detail`);
 
 --
--- Индексы таблицы `ps_order_detail_tax`
+-- Indeksy dla tabeli `ps_order_detail_tax`
 --
 ALTER TABLE `ps_order_detail_tax`
   ADD KEY `id_order_detail` (`id_order_detail`),
   ADD KEY `id_tax` (`id_tax`);
 
 --
--- Индексы таблицы `ps_order_history`
+-- Indeksy dla tabeli `ps_order_history`
 --
 ALTER TABLE `ps_order_history`
   ADD PRIMARY KEY (`id_order_history`),
@@ -74263,14 +74328,14 @@ ALTER TABLE `ps_order_history`
   ADD KEY `id_order_state` (`id_order_state`);
 
 --
--- Индексы таблицы `ps_order_invoice`
+-- Indeksy dla tabeli `ps_order_invoice`
 --
 ALTER TABLE `ps_order_invoice`
   ADD PRIMARY KEY (`id_order_invoice`),
   ADD KEY `id_order` (`id_order`);
 
 --
--- Индексы таблицы `ps_order_invoice_payment`
+-- Indeksy dla tabeli `ps_order_invoice_payment`
 --
 ALTER TABLE `ps_order_invoice_payment`
   ADD PRIMARY KEY (`id_order_invoice`,`id_order_payment`),
@@ -74278,32 +74343,32 @@ ALTER TABLE `ps_order_invoice_payment`
   ADD KEY `id_order` (`id_order`);
 
 --
--- Индексы таблицы `ps_order_invoice_tax`
+-- Indeksy dla tabeli `ps_order_invoice_tax`
 --
 ALTER TABLE `ps_order_invoice_tax`
   ADD KEY `id_tax` (`id_tax`);
 
 --
--- Индексы таблицы `ps_order_message`
+-- Indeksy dla tabeli `ps_order_message`
 --
 ALTER TABLE `ps_order_message`
   ADD PRIMARY KEY (`id_order_message`);
 
 --
--- Индексы таблицы `ps_order_message_lang`
+-- Indeksy dla tabeli `ps_order_message_lang`
 --
 ALTER TABLE `ps_order_message_lang`
   ADD PRIMARY KEY (`id_order_message`,`id_lang`);
 
 --
--- Индексы таблицы `ps_order_payment`
+-- Indeksy dla tabeli `ps_order_payment`
 --
 ALTER TABLE `ps_order_payment`
   ADD PRIMARY KEY (`id_order_payment`),
   ADD KEY `order_reference` (`order_reference`);
 
 --
--- Индексы таблицы `ps_order_return`
+-- Indeksy dla tabeli `ps_order_return`
 --
 ALTER TABLE `ps_order_return`
   ADD PRIMARY KEY (`id_order_return`),
@@ -74311,25 +74376,25 @@ ALTER TABLE `ps_order_return`
   ADD KEY `id_order` (`id_order`);
 
 --
--- Индексы таблицы `ps_order_return_detail`
+-- Indeksy dla tabeli `ps_order_return_detail`
 --
 ALTER TABLE `ps_order_return_detail`
   ADD PRIMARY KEY (`id_order_return`,`id_order_detail`,`id_customization`);
 
 --
--- Индексы таблицы `ps_order_return_state`
+-- Indeksy dla tabeli `ps_order_return_state`
 --
 ALTER TABLE `ps_order_return_state`
   ADD PRIMARY KEY (`id_order_return_state`);
 
 --
--- Индексы таблицы `ps_order_return_state_lang`
+-- Indeksy dla tabeli `ps_order_return_state_lang`
 --
 ALTER TABLE `ps_order_return_state_lang`
   ADD PRIMARY KEY (`id_order_return_state`,`id_lang`);
 
 --
--- Индексы таблицы `ps_order_slip`
+-- Indeksy dla tabeli `ps_order_slip`
 --
 ALTER TABLE `ps_order_slip`
   ADD PRIMARY KEY (`id_order_slip`),
@@ -74337,33 +74402,33 @@ ALTER TABLE `ps_order_slip`
   ADD KEY `id_order` (`id_order`);
 
 --
--- Индексы таблицы `ps_order_slip_detail`
+-- Indeksy dla tabeli `ps_order_slip_detail`
 --
 ALTER TABLE `ps_order_slip_detail`
   ADD PRIMARY KEY (`id_order_slip`,`id_order_detail`);
 
 --
--- Индексы таблицы `ps_order_state`
+-- Indeksy dla tabeli `ps_order_state`
 --
 ALTER TABLE `ps_order_state`
   ADD PRIMARY KEY (`id_order_state`),
   ADD KEY `module_name` (`module_name`);
 
 --
--- Индексы таблицы `ps_order_state_lang`
+-- Indeksy dla tabeli `ps_order_state_lang`
 --
 ALTER TABLE `ps_order_state_lang`
   ADD PRIMARY KEY (`id_order_state`,`id_lang`);
 
 --
--- Индексы таблицы `ps_pack`
+-- Indeksy dla tabeli `ps_pack`
 --
 ALTER TABLE `ps_pack`
   ADD PRIMARY KEY (`id_product_pack`,`id_product_item`,`id_product_attribute_item`),
   ADD KEY `product_item` (`id_product_item`,`id_product_attribute_item`);
 
 --
--- Индексы таблицы `ps_page`
+-- Indeksy dla tabeli `ps_page`
 --
 ALTER TABLE `ps_page`
   ADD PRIMARY KEY (`id_page`),
@@ -74371,27 +74436,27 @@ ALTER TABLE `ps_page`
   ADD KEY `id_object` (`id_object`);
 
 --
--- Индексы таблицы `ps_pagenotfound`
+-- Indeksy dla tabeli `ps_pagenotfound`
 --
 ALTER TABLE `ps_pagenotfound`
   ADD PRIMARY KEY (`id_pagenotfound`),
   ADD KEY `date_add` (`date_add`);
 
 --
--- Индексы таблицы `ps_page_type`
+-- Indeksy dla tabeli `ps_page_type`
 --
 ALTER TABLE `ps_page_type`
   ADD PRIMARY KEY (`id_page_type`),
   ADD KEY `name` (`name`);
 
 --
--- Индексы таблицы `ps_page_viewed`
+-- Indeksy dla tabeli `ps_page_viewed`
 --
 ALTER TABLE `ps_page_viewed`
   ADD PRIMARY KEY (`id_page`,`id_date_range`,`id_shop`);
 
 --
--- Индексы таблицы `ps_product`
+-- Indeksy dla tabeli `ps_product`
 --
 ALTER TABLE `ps_product`
   ADD PRIMARY KEY (`id_product`),
@@ -74405,13 +74470,13 @@ ALTER TABLE `ps_product`
   ADD KEY `state` (`state`,`date_upd`);
 
 --
--- Индексы таблицы `ps_product_attachment`
+-- Indeksy dla tabeli `ps_product_attachment`
 --
 ALTER TABLE `ps_product_attachment`
   ADD PRIMARY KEY (`id_product`,`id_attachment`);
 
 --
--- Индексы таблицы `ps_product_attribute`
+-- Indeksy dla tabeli `ps_product_attribute`
 --
 ALTER TABLE `ps_product_attribute`
   ADD PRIMARY KEY (`id_product_attribute`),
@@ -74422,34 +74487,34 @@ ALTER TABLE `ps_product_attribute`
   ADD KEY `id_product_id_product_attribute` (`id_product_attribute`,`id_product`);
 
 --
--- Индексы таблицы `ps_product_attribute_combination`
+-- Indeksy dla tabeli `ps_product_attribute_combination`
 --
 ALTER TABLE `ps_product_attribute_combination`
   ADD PRIMARY KEY (`id_attribute`,`id_product_attribute`),
   ADD KEY `id_product_attribute` (`id_product_attribute`);
 
 --
--- Индексы таблицы `ps_product_attribute_image`
+-- Indeksy dla tabeli `ps_product_attribute_image`
 --
 ALTER TABLE `ps_product_attribute_image`
   ADD PRIMARY KEY (`id_product_attribute`,`id_image`),
   ADD KEY `id_image` (`id_image`);
 
 --
--- Индексы таблицы `ps_product_attribute_shop`
+-- Indeksy dla tabeli `ps_product_attribute_shop`
 --
 ALTER TABLE `ps_product_attribute_shop`
   ADD PRIMARY KEY (`id_product_attribute`,`id_shop`),
   ADD UNIQUE KEY `id_product` (`id_product`,`id_shop`,`default_on`);
 
 --
--- Индексы таблицы `ps_product_carrier`
+-- Indeksy dla tabeli `ps_product_carrier`
 --
 ALTER TABLE `ps_product_carrier`
   ADD PRIMARY KEY (`id_product`,`id_carrier_reference`,`id_shop`);
 
 --
--- Индексы таблицы `ps_product_comment`
+-- Indeksy dla tabeli `ps_product_comment`
 --
 ALTER TABLE `ps_product_comment`
   ADD PRIMARY KEY (`id_product_comment`),
@@ -74458,70 +74523,70 @@ ALTER TABLE `ps_product_comment`
   ADD KEY `id_guest` (`id_guest`);
 
 --
--- Индексы таблицы `ps_product_comment_criterion`
+-- Indeksy dla tabeli `ps_product_comment_criterion`
 --
 ALTER TABLE `ps_product_comment_criterion`
   ADD PRIMARY KEY (`id_product_comment_criterion`);
 
 --
--- Индексы таблицы `ps_product_comment_criterion_category`
+-- Indeksy dla tabeli `ps_product_comment_criterion_category`
 --
 ALTER TABLE `ps_product_comment_criterion_category`
   ADD PRIMARY KEY (`id_product_comment_criterion`,`id_category`),
   ADD KEY `id_category` (`id_category`);
 
 --
--- Индексы таблицы `ps_product_comment_criterion_lang`
+-- Indeksy dla tabeli `ps_product_comment_criterion_lang`
 --
 ALTER TABLE `ps_product_comment_criterion_lang`
   ADD PRIMARY KEY (`id_product_comment_criterion`,`id_lang`);
 
 --
--- Индексы таблицы `ps_product_comment_criterion_product`
+-- Indeksy dla tabeli `ps_product_comment_criterion_product`
 --
 ALTER TABLE `ps_product_comment_criterion_product`
   ADD PRIMARY KEY (`id_product`,`id_product_comment_criterion`),
   ADD KEY `id_product_comment_criterion` (`id_product_comment_criterion`);
 
 --
--- Индексы таблицы `ps_product_comment_grade`
+-- Indeksy dla tabeli `ps_product_comment_grade`
 --
 ALTER TABLE `ps_product_comment_grade`
   ADD PRIMARY KEY (`id_product_comment`,`id_product_comment_criterion`),
   ADD KEY `id_product_comment_criterion` (`id_product_comment_criterion`);
 
 --
--- Индексы таблицы `ps_product_comment_report`
+-- Indeksy dla tabeli `ps_product_comment_report`
 --
 ALTER TABLE `ps_product_comment_report`
   ADD PRIMARY KEY (`id_product_comment`,`id_customer`);
 
 --
--- Индексы таблицы `ps_product_comment_usefulness`
+-- Indeksy dla tabeli `ps_product_comment_usefulness`
 --
 ALTER TABLE `ps_product_comment_usefulness`
   ADD PRIMARY KEY (`id_product_comment`,`id_customer`);
 
 --
--- Индексы таблицы `ps_product_country_tax`
+-- Indeksy dla tabeli `ps_product_country_tax`
 --
 ALTER TABLE `ps_product_country_tax`
   ADD PRIMARY KEY (`id_product`,`id_country`);
 
 --
--- Индексы таблицы `ps_product_download`
+-- Indeksy dla tabeli `ps_product_download`
 --
 ALTER TABLE `ps_product_download`
   ADD PRIMARY KEY (`id_product_download`);
 
 --
--- Индексы таблицы `ps_product_group_reduction_cache`
+-- Indeksy dla tabeli `ps_product_group_reduction_cache`
 --
 ALTER TABLE `ps_product_group_reduction_cache`
   ADD PRIMARY KEY (`id_product`,`id_group`);
 
 --
--- Индексы таблицы `ps_product_lang`
+-- Indeksy dla tabeli `ps_product_lang`
 --
 ALTER TABLE `ps_product_lang`
   ADD PRIMARY KEY (`id_product`,`id_shop`,`id_lang`),
@@ -74529,14 +74594,14 @@ ALTER TABLE `ps_product_lang`
   ADD KEY `name` (`name`);
 
 --
--- Индексы таблицы `ps_product_sale`
+-- Indeksy dla tabeli `ps_product_sale`
 --
 ALTER TABLE `ps_product_sale`
   ADD PRIMARY KEY (`id_product`),
   ADD KEY `quantity` (`quantity`);
 
 --
--- Индексы таблицы `ps_product_shop`
+-- Indeksy dla tabeli `ps_product_shop`
 --
 ALTER TABLE `ps_product_shop`
   ADD PRIMARY KEY (`id_product`,`id_shop`),
@@ -74545,7 +74610,7 @@ ALTER TABLE `ps_product_shop`
   ADD KEY `indexed` (`indexed`,`active`,`id_product`);
 
 --
--- Индексы таблицы `ps_product_supplier`
+-- Indeksy dla tabeli `ps_product_supplier`
 --
 ALTER TABLE `ps_product_supplier`
   ADD PRIMARY KEY (`id_product_supplier`),
@@ -74553,7 +74618,7 @@ ALTER TABLE `ps_product_supplier`
   ADD KEY `id_supplier` (`id_supplier`,`id_product`);
 
 --
--- Индексы таблицы `ps_product_tag`
+-- Indeksy dla tabeli `ps_product_tag`
 --
 ALTER TABLE `ps_product_tag`
   ADD PRIMARY KEY (`id_product`,`id_tag`),
@@ -74561,81 +74626,81 @@ ALTER TABLE `ps_product_tag`
   ADD KEY `id_lang` (`id_lang`,`id_tag`);
 
 --
--- Индексы таблицы `ps_profile`
+-- Indeksy dla tabeli `ps_profile`
 --
 ALTER TABLE `ps_profile`
   ADD PRIMARY KEY (`id_profile`);
 
 --
--- Индексы таблицы `ps_profile_lang`
+-- Indeksy dla tabeli `ps_profile_lang`
 --
 ALTER TABLE `ps_profile_lang`
   ADD PRIMARY KEY (`id_profile`,`id_lang`);
 
 --
--- Индексы таблицы `ps_pscheckout_authorization`
+-- Indeksy dla tabeli `ps_pscheckout_authorization`
 --
 ALTER TABLE `ps_pscheckout_authorization`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `ps_pscheckout_capture`
+-- Indeksy dla tabeli `ps_pscheckout_capture`
 --
 ALTER TABLE `ps_pscheckout_capture`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `ps_pscheckout_cart`
+-- Indeksy dla tabeli `ps_pscheckout_cart`
 --
 ALTER TABLE `ps_pscheckout_cart`
   ADD PRIMARY KEY (`id_pscheckout_cart`);
 
 --
--- Индексы таблицы `ps_pscheckout_customer`
+-- Indeksy dla tabeli `ps_pscheckout_customer`
 --
 ALTER TABLE `ps_pscheckout_customer`
   ADD PRIMARY KEY (`id_customer`,`paypal_customer_id`);
 
 --
--- Индексы таблицы `ps_pscheckout_funding_source`
+-- Indeksy dla tabeli `ps_pscheckout_funding_source`
 --
 ALTER TABLE `ps_pscheckout_funding_source`
   ADD PRIMARY KEY (`name`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_pscheckout_order`
+-- Indeksy dla tabeli `ps_pscheckout_order`
 --
 ALTER TABLE `ps_pscheckout_order`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `ps_pscheckout_order_matrice`
+-- Indeksy dla tabeli `ps_pscheckout_order_matrice`
 --
 ALTER TABLE `ps_pscheckout_order_matrice`
   ADD PRIMARY KEY (`id_order_matrice`);
 
 --
--- Индексы таблицы `ps_pscheckout_payment_token`
+-- Indeksy dla tabeli `ps_pscheckout_payment_token`
 --
 ALTER TABLE `ps_pscheckout_payment_token`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `token_id_merchant_id_paypal_customer_id` (`token_id`,`merchant_id`,`paypal_customer_id`);
 
 --
--- Индексы таблицы `ps_pscheckout_purchase_unit`
+-- Indeksy dla tabeli `ps_pscheckout_purchase_unit`
 --
 ALTER TABLE `ps_pscheckout_purchase_unit`
   ADD PRIMARY KEY (`reference_id`,`id_order`);
 
 --
--- Индексы таблицы `ps_pscheckout_refund`
+-- Indeksy dla tabeli `ps_pscheckout_refund`
 --
 ALTER TABLE `ps_pscheckout_refund`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `ps_pscheckout_tracking`
+-- Indeksy dla tabeli `ps_pscheckout_tracking`
 --
 ALTER TABLE `ps_pscheckout_tracking`
   ADD PRIMARY KEY (`id`),
@@ -74644,19 +74709,19 @@ ALTER TABLE `ps_pscheckout_tracking`
   ADD KEY `paypal_order_id` (`paypal_order_id`);
 
 --
--- Индексы таблицы `ps_psgdpr_consent`
+-- Indeksy dla tabeli `ps_psgdpr_consent`
 --
 ALTER TABLE `ps_psgdpr_consent`
   ADD PRIMARY KEY (`id_gdpr_consent`,`id_module`);
 
 --
--- Индексы таблицы `ps_psgdpr_consent_lang`
+-- Indeksy dla tabeli `ps_psgdpr_consent_lang`
 --
 ALTER TABLE `ps_psgdpr_consent_lang`
   ADD PRIMARY KEY (`id_gdpr_consent`,`id_lang`,`id_shop`);
 
 --
--- Индексы таблицы `ps_psgdpr_log`
+-- Indeksy dla tabeli `ps_psgdpr_log`
 --
 ALTER TABLE `ps_psgdpr_log`
   ADD PRIMARY KEY (`id_gdpr_log`),
@@ -74664,129 +74729,129 @@ ALTER TABLE `ps_psgdpr_log`
   ADD KEY `idx_id_customer` (`id_customer`,`id_guest`,`client_name`,`id_module`,`date_add`,`date_upd`);
 
 --
--- Индексы таблицы `ps_psreassurance`
+-- Indeksy dla tabeli `ps_psreassurance`
 --
 ALTER TABLE `ps_psreassurance`
   ADD PRIMARY KEY (`id_psreassurance`);
 
 --
--- Индексы таблицы `ps_psreassurance_lang`
+-- Indeksy dla tabeli `ps_psreassurance_lang`
 --
 ALTER TABLE `ps_psreassurance_lang`
   ADD PRIMARY KEY (`id_psreassurance`,`id_lang`);
 
 --
--- Индексы таблицы `ps_quick_access`
+-- Indeksy dla tabeli `ps_quick_access`
 --
 ALTER TABLE `ps_quick_access`
   ADD PRIMARY KEY (`id_quick_access`);
 
 --
--- Индексы таблицы `ps_quick_access_lang`
+-- Indeksy dla tabeli `ps_quick_access_lang`
 --
 ALTER TABLE `ps_quick_access_lang`
   ADD PRIMARY KEY (`id_quick_access`,`id_lang`);
 
 --
--- Индексы таблицы `ps_range_price`
+-- Indeksy dla tabeli `ps_range_price`
 --
 ALTER TABLE `ps_range_price`
   ADD PRIMARY KEY (`id_range_price`),
   ADD UNIQUE KEY `id_carrier` (`id_carrier`,`delimiter1`,`delimiter2`);
 
 --
--- Индексы таблицы `ps_range_weight`
+-- Indeksy dla tabeli `ps_range_weight`
 --
 ALTER TABLE `ps_range_weight`
   ADD PRIMARY KEY (`id_range_weight`),
   ADD UNIQUE KEY `id_carrier` (`id_carrier`,`delimiter1`,`delimiter2`);
 
 --
--- Индексы таблицы `ps_referrer`
+-- Indeksy dla tabeli `ps_referrer`
 --
 ALTER TABLE `ps_referrer`
   ADD PRIMARY KEY (`id_referrer`);
 
 --
--- Индексы таблицы `ps_referrer_cache`
+-- Indeksy dla tabeli `ps_referrer_cache`
 --
 ALTER TABLE `ps_referrer_cache`
   ADD PRIMARY KEY (`id_connections_source`,`id_referrer`);
 
 --
--- Индексы таблицы `ps_referrer_shop`
+-- Indeksy dla tabeli `ps_referrer_shop`
 --
 ALTER TABLE `ps_referrer_shop`
   ADD PRIMARY KEY (`id_referrer`,`id_shop`);
 
 --
--- Индексы таблицы `ps_request_sql`
+-- Indeksy dla tabeli `ps_request_sql`
 --
 ALTER TABLE `ps_request_sql`
   ADD PRIMARY KEY (`id_request_sql`);
 
 --
--- Индексы таблицы `ps_required_field`
+-- Indeksy dla tabeli `ps_required_field`
 --
 ALTER TABLE `ps_required_field`
   ADD PRIMARY KEY (`id_required_field`),
   ADD KEY `object_name` (`object_name`);
 
 --
--- Индексы таблицы `ps_risk`
+-- Indeksy dla tabeli `ps_risk`
 --
 ALTER TABLE `ps_risk`
   ADD PRIMARY KEY (`id_risk`);
 
 --
--- Индексы таблицы `ps_risk_lang`
+-- Indeksy dla tabeli `ps_risk_lang`
 --
 ALTER TABLE `ps_risk_lang`
   ADD PRIMARY KEY (`id_risk`,`id_lang`),
   ADD KEY `id_risk` (`id_risk`);
 
 --
--- Индексы таблицы `ps_search_engine`
+-- Indeksy dla tabeli `ps_search_engine`
 --
 ALTER TABLE `ps_search_engine`
   ADD PRIMARY KEY (`id_search_engine`);
 
 --
--- Индексы таблицы `ps_search_index`
+-- Indeksy dla tabeli `ps_search_index`
 --
 ALTER TABLE `ps_search_index`
   ADD PRIMARY KEY (`id_word`,`id_product`),
   ADD KEY `id_product` (`id_product`,`weight`);
 
 --
--- Индексы таблицы `ps_search_word`
+-- Indeksy dla tabeli `ps_search_word`
 --
 ALTER TABLE `ps_search_word`
   ADD PRIMARY KEY (`id_word`),
   ADD UNIQUE KEY `id_lang` (`id_lang`,`id_shop`,`word`);
 
 --
--- Индексы таблицы `ps_shop`
+-- Indeksy dla tabeli `ps_shop`
 --
 ALTER TABLE `ps_shop`
   ADD PRIMARY KEY (`id_shop`),
   ADD KEY `IDX_CBDFBB9EF5C9E40` (`id_shop_group`);
 
 --
--- Индексы таблицы `ps_shop_group`
+-- Indeksy dla tabeli `ps_shop_group`
 --
 ALTER TABLE `ps_shop_group`
   ADD PRIMARY KEY (`id_shop_group`);
 
 --
--- Индексы таблицы `ps_shop_url`
+-- Indeksy dla tabeli `ps_shop_url`
 --
 ALTER TABLE `ps_shop_url`
   ADD PRIMARY KEY (`id_shop_url`),
   ADD KEY `IDX_279F19DA274A50A0` (`id_shop`);
 
 --
--- Индексы таблицы `ps_smarty_cache`
+-- Indeksy dla tabeli `ps_smarty_cache`
 --
 ALTER TABLE `ps_smarty_cache`
   ADD PRIMARY KEY (`id_smarty_cache`),
@@ -74795,19 +74860,19 @@ ALTER TABLE `ps_smarty_cache`
   ADD KEY `modified` (`modified`);
 
 --
--- Индексы таблицы `ps_smarty_last_flush`
+-- Indeksy dla tabeli `ps_smarty_last_flush`
 --
 ALTER TABLE `ps_smarty_last_flush`
   ADD PRIMARY KEY (`type`);
 
 --
--- Индексы таблицы `ps_smarty_lazy_cache`
+-- Indeksy dla tabeli `ps_smarty_lazy_cache`
 --
 ALTER TABLE `ps_smarty_lazy_cache`
   ADD PRIMARY KEY (`template_hash`,`cache_id`,`compile_id`);
 
 --
--- Индексы таблицы `ps_specific_price`
+-- Indeksy dla tabeli `ps_specific_price`
 --
 ALTER TABLE `ps_specific_price`
   ADD PRIMARY KEY (`id_specific_price`),
@@ -74823,34 +74888,34 @@ ALTER TABLE `ps_specific_price`
   ADD KEY `to` (`to`);
 
 --
--- Индексы таблицы `ps_specific_price_priority`
+-- Indeksy dla tabeli `ps_specific_price_priority`
 --
 ALTER TABLE `ps_specific_price_priority`
   ADD PRIMARY KEY (`id_specific_price_priority`,`id_product`),
   ADD UNIQUE KEY `id_product` (`id_product`);
 
 --
--- Индексы таблицы `ps_specific_price_rule`
+-- Indeksy dla tabeli `ps_specific_price_rule`
 --
 ALTER TABLE `ps_specific_price_rule`
   ADD PRIMARY KEY (`id_specific_price_rule`),
   ADD KEY `id_product` (`id_shop`,`id_currency`,`id_country`,`id_group`,`from_quantity`,`from`,`to`);
 
 --
--- Индексы таблицы `ps_specific_price_rule_condition`
+-- Indeksy dla tabeli `ps_specific_price_rule_condition`
 --
 ALTER TABLE `ps_specific_price_rule_condition`
   ADD PRIMARY KEY (`id_specific_price_rule_condition`),
   ADD KEY `id_specific_price_rule_condition_group` (`id_specific_price_rule_condition_group`);
 
 --
--- Индексы таблицы `ps_specific_price_rule_condition_group`
+-- Indeksy dla tabeli `ps_specific_price_rule_condition_group`
 --
 ALTER TABLE `ps_specific_price_rule_condition_group`
   ADD PRIMARY KEY (`id_specific_price_rule_condition_group`,`id_specific_price_rule`);
 
 --
--- Индексы таблицы `ps_state`
+-- Indeksy dla tabeli `ps_state`
 --
 ALTER TABLE `ps_state`
   ADD PRIMARY KEY (`id_state`),
@@ -74859,13 +74924,13 @@ ALTER TABLE `ps_state`
   ADD KEY `id_zone` (`id_zone`);
 
 --
--- Индексы таблицы `ps_statssearch`
+-- Indeksy dla tabeli `ps_statssearch`
 --
 ALTER TABLE `ps_statssearch`
   ADD PRIMARY KEY (`id_statssearch`);
 
 --
--- Индексы таблицы `ps_stock`
+-- Indeksy dla tabeli `ps_stock`
 --
 ALTER TABLE `ps_stock`
   ADD PRIMARY KEY (`id_stock`),
@@ -74874,7 +74939,7 @@ ALTER TABLE `ps_stock`
   ADD KEY `id_product_attribute` (`id_product_attribute`);
 
 --
--- Индексы таблицы `ps_stock_available`
+-- Indeksy dla tabeli `ps_stock_available`
 --
 ALTER TABLE `ps_stock_available`
   ADD PRIMARY KEY (`id_stock_available`),
@@ -74885,7 +74950,7 @@ ALTER TABLE `ps_stock_available`
   ADD KEY `id_product_attribute` (`id_product_attribute`);
 
 --
--- Индексы таблицы `ps_stock_mvt`
+-- Indeksy dla tabeli `ps_stock_mvt`
 --
 ALTER TABLE `ps_stock_mvt`
   ADD PRIMARY KEY (`id_stock_mvt`),
@@ -74893,57 +74958,57 @@ ALTER TABLE `ps_stock_mvt`
   ADD KEY `id_stock_mvt_reason` (`id_stock_mvt_reason`);
 
 --
--- Индексы таблицы `ps_stock_mvt_reason`
+-- Indeksy dla tabeli `ps_stock_mvt_reason`
 --
 ALTER TABLE `ps_stock_mvt_reason`
   ADD PRIMARY KEY (`id_stock_mvt_reason`);
 
 --
--- Индексы таблицы `ps_stock_mvt_reason_lang`
+-- Indeksy dla tabeli `ps_stock_mvt_reason_lang`
 --
 ALTER TABLE `ps_stock_mvt_reason_lang`
   ADD PRIMARY KEY (`id_stock_mvt_reason`,`id_lang`);
 
 --
--- Индексы таблицы `ps_store`
+-- Indeksy dla tabeli `ps_store`
 --
 ALTER TABLE `ps_store`
   ADD PRIMARY KEY (`id_store`);
 
 --
--- Индексы таблицы `ps_store_lang`
+-- Indeksy dla tabeli `ps_store_lang`
 --
 ALTER TABLE `ps_store_lang`
   ADD PRIMARY KEY (`id_store`,`id_lang`);
 
 --
--- Индексы таблицы `ps_store_shop`
+-- Indeksy dla tabeli `ps_store_shop`
 --
 ALTER TABLE `ps_store_shop`
   ADD PRIMARY KEY (`id_store`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_supplier`
+-- Indeksy dla tabeli `ps_supplier`
 --
 ALTER TABLE `ps_supplier`
   ADD PRIMARY KEY (`id_supplier`);
 
 --
--- Индексы таблицы `ps_supplier_lang`
+-- Indeksy dla tabeli `ps_supplier_lang`
 --
 ALTER TABLE `ps_supplier_lang`
   ADD PRIMARY KEY (`id_supplier`,`id_lang`);
 
 --
--- Индексы таблицы `ps_supplier_shop`
+-- Indeksy dla tabeli `ps_supplier_shop`
 --
 ALTER TABLE `ps_supplier_shop`
   ADD PRIMARY KEY (`id_supplier`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_supply_order`
+-- Indeksy dla tabeli `ps_supply_order`
 --
 ALTER TABLE `ps_supply_order`
   ADD PRIMARY KEY (`id_supply_order`),
@@ -74952,7 +75017,7 @@ ALTER TABLE `ps_supply_order`
   ADD KEY `reference` (`reference`);
 
 --
--- Индексы таблицы `ps_supply_order_detail`
+-- Indeksy dla tabeli `ps_supply_order_detail`
 --
 ALTER TABLE `ps_supply_order_detail`
   ADD PRIMARY KEY (`id_supply_order_detail`),
@@ -74961,7 +75026,7 @@ ALTER TABLE `ps_supply_order_detail`
   ADD KEY `id_product_product_attribute` (`id_product`,`id_product_attribute`);
 
 --
--- Индексы таблицы `ps_supply_order_history`
+-- Indeksy dla tabeli `ps_supply_order_history`
 --
 ALTER TABLE `ps_supply_order_history`
   ADD PRIMARY KEY (`id_supply_order_history`),
@@ -74970,7 +75035,7 @@ ALTER TABLE `ps_supply_order_history`
   ADD KEY `id_state` (`id_state`);
 
 --
--- Индексы таблицы `ps_supply_order_receipt_history`
+-- Indeksy dla tabeli `ps_supply_order_receipt_history`
 --
 ALTER TABLE `ps_supply_order_receipt_history`
   ADD PRIMARY KEY (`id_supply_order_receipt_history`),
@@ -74978,25 +75043,25 @@ ALTER TABLE `ps_supply_order_receipt_history`
   ADD KEY `id_supply_order_state` (`id_supply_order_state`);
 
 --
--- Индексы таблицы `ps_supply_order_state`
+-- Indeksy dla tabeli `ps_supply_order_state`
 --
 ALTER TABLE `ps_supply_order_state`
   ADD PRIMARY KEY (`id_supply_order_state`);
 
 --
--- Индексы таблицы `ps_supply_order_state_lang`
+-- Indeksy dla tabeli `ps_supply_order_state_lang`
 --
 ALTER TABLE `ps_supply_order_state_lang`
   ADD PRIMARY KEY (`id_supply_order_state`,`id_lang`);
 
 --
--- Индексы таблицы `ps_tab`
+-- Indeksy dla tabeli `ps_tab`
 --
 ALTER TABLE `ps_tab`
   ADD PRIMARY KEY (`id_tab`);
 
 --
--- Индексы таблицы `ps_tab_lang`
+-- Indeksy dla tabeli `ps_tab_lang`
 --
 ALTER TABLE `ps_tab_lang`
   ADD PRIMARY KEY (`id_tab`,`id_lang`),
@@ -75004,14 +75069,14 @@ ALTER TABLE `ps_tab_lang`
   ADD KEY `IDX_CFD9262DBA299860` (`id_lang`);
 
 --
--- Индексы таблицы `ps_tab_module_preference`
+-- Indeksy dla tabeli `ps_tab_module_preference`
 --
 ALTER TABLE `ps_tab_module_preference`
   ADD PRIMARY KEY (`id_tab_module_preference`),
   ADD UNIQUE KEY `employee_module` (`id_employee`,`id_tab`,`module`);
 
 --
--- Индексы таблицы `ps_tag`
+-- Indeksy dla tabeli `ps_tag`
 --
 ALTER TABLE `ps_tag`
   ADD PRIMARY KEY (`id_tag`),
@@ -75019,26 +75084,26 @@ ALTER TABLE `ps_tag`
   ADD KEY `id_lang` (`id_lang`);
 
 --
--- Индексы таблицы `ps_tag_count`
+-- Indeksy dla tabeli `ps_tag_count`
 --
 ALTER TABLE `ps_tag_count`
   ADD PRIMARY KEY (`id_group`,`id_tag`),
   ADD KEY `id_group` (`id_group`,`id_lang`,`id_shop`,`counter`);
 
 --
--- Индексы таблицы `ps_tax`
+-- Indeksy dla tabeli `ps_tax`
 --
 ALTER TABLE `ps_tax`
   ADD PRIMARY KEY (`id_tax`);
 
 --
--- Индексы таблицы `ps_tax_lang`
+-- Indeksy dla tabeli `ps_tax_lang`
 --
 ALTER TABLE `ps_tax_lang`
   ADD PRIMARY KEY (`id_tax`,`id_lang`);
 
 --
--- Индексы таблицы `ps_tax_rule`
+-- Indeksy dla tabeli `ps_tax_rule`
 --
 ALTER TABLE `ps_tax_rule`
   ADD PRIMARY KEY (`id_tax_rule`),
@@ -75047,26 +75112,26 @@ ALTER TABLE `ps_tax_rule`
   ADD KEY `category_getproducts` (`id_tax_rules_group`,`id_country`,`id_state`,`zipcode_from`);
 
 --
--- Индексы таблицы `ps_tax_rules_group`
+-- Indeksy dla tabeli `ps_tax_rules_group`
 --
 ALTER TABLE `ps_tax_rules_group`
   ADD PRIMARY KEY (`id_tax_rules_group`);
 
 --
--- Индексы таблицы `ps_tax_rules_group_shop`
+-- Indeksy dla tabeli `ps_tax_rules_group_shop`
 --
 ALTER TABLE `ps_tax_rules_group_shop`
   ADD PRIMARY KEY (`id_tax_rules_group`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_timezone`
+-- Indeksy dla tabeli `ps_timezone`
 --
 ALTER TABLE `ps_timezone`
   ADD PRIMARY KEY (`id_timezone`);
 
 --
--- Индексы таблицы `ps_translation`
+-- Indeksy dla tabeli `ps_translation`
 --
 ALTER TABLE `ps_translation`
   ADD PRIMARY KEY (`id_translation`),
@@ -75074,13 +75139,13 @@ ALTER TABLE `ps_translation`
   ADD KEY `key` (`domain`);
 
 --
--- Индексы таблицы `ps_warehouse`
+-- Indeksy dla tabeli `ps_warehouse`
 --
 ALTER TABLE `ps_warehouse`
   ADD PRIMARY KEY (`id_warehouse`);
 
 --
--- Индексы таблицы `ps_warehouse_carrier`
+-- Indeksy dla tabeli `ps_warehouse_carrier`
 --
 ALTER TABLE `ps_warehouse_carrier`
   ADD PRIMARY KEY (`id_warehouse`,`id_carrier`),
@@ -75088,14 +75153,14 @@ ALTER TABLE `ps_warehouse_carrier`
   ADD KEY `id_carrier` (`id_carrier`);
 
 --
--- Индексы таблицы `ps_warehouse_product_location`
+-- Indeksy dla tabeli `ps_warehouse_product_location`
 --
 ALTER TABLE `ps_warehouse_product_location`
   ADD PRIMARY KEY (`id_warehouse_product_location`),
   ADD UNIQUE KEY `id_product` (`id_product`,`id_product_attribute`,`id_warehouse`);
 
 --
--- Индексы таблицы `ps_warehouse_shop`
+-- Indeksy dla tabeli `ps_warehouse_shop`
 --
 ALTER TABLE `ps_warehouse_shop`
   ADD PRIMARY KEY (`id_warehouse`,`id_shop`),
@@ -75103,21 +75168,21 @@ ALTER TABLE `ps_warehouse_shop`
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_webservice_account`
+-- Indeksy dla tabeli `ps_webservice_account`
 --
 ALTER TABLE `ps_webservice_account`
   ADD PRIMARY KEY (`id_webservice_account`),
   ADD KEY `key` (`key`);
 
 --
--- Индексы таблицы `ps_webservice_account_shop`
+-- Indeksy dla tabeli `ps_webservice_account_shop`
 --
 ALTER TABLE `ps_webservice_account_shop`
   ADD PRIMARY KEY (`id_webservice_account`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- Индексы таблицы `ps_webservice_permission`
+-- Indeksy dla tabeli `ps_webservice_permission`
 --
 ALTER TABLE `ps_webservice_permission`
   ADD PRIMARY KEY (`id_webservice_permission`),
@@ -75127,924 +75192,924 @@ ALTER TABLE `ps_webservice_permission`
   ADD KEY `id_webservice_account` (`id_webservice_account`);
 
 --
--- Индексы таблицы `ps_web_browser`
+-- Indeksy dla tabeli `ps_web_browser`
 --
 ALTER TABLE `ps_web_browser`
   ADD PRIMARY KEY (`id_web_browser`);
 
 --
--- Индексы таблицы `ps_wishlist`
+-- Indeksy dla tabeli `ps_wishlist`
 --
 ALTER TABLE `ps_wishlist`
   ADD PRIMARY KEY (`id_wishlist`);
 
 --
--- Индексы таблицы `ps_wishlist_product`
+-- Indeksy dla tabeli `ps_wishlist_product`
 --
 ALTER TABLE `ps_wishlist_product`
   ADD PRIMARY KEY (`id_wishlist_product`);
 
 --
--- Индексы таблицы `ps_zone`
+-- Indeksy dla tabeli `ps_zone`
 --
 ALTER TABLE `ps_zone`
   ADD PRIMARY KEY (`id_zone`);
 
 --
--- Индексы таблицы `ps_zone_shop`
+-- Indeksy dla tabeli `ps_zone_shop`
 --
 ALTER TABLE `ps_zone_shop`
   ADD PRIMARY KEY (`id_zone`,`id_shop`),
   ADD KEY `id_shop` (`id_shop`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT dla zrzuconych tabel
 --
 
 --
--- AUTO_INCREMENT для таблицы `ps_address`
+-- AUTO_INCREMENT dla tabeli `ps_address`
 --
 ALTER TABLE `ps_address`
   MODIFY `id_address` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT для таблицы `ps_admin_filter`
+-- AUTO_INCREMENT dla tabeli `ps_admin_filter`
 --
 ALTER TABLE `ps_admin_filter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT для таблицы `ps_alias`
+-- AUTO_INCREMENT dla tabeli `ps_alias`
 --
 ALTER TABLE `ps_alias`
   MODIFY `id_alias` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_attachment`
+-- AUTO_INCREMENT dla tabeli `ps_attachment`
 --
 ALTER TABLE `ps_attachment`
   MODIFY `id_attachment` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_attachment_lang`
+-- AUTO_INCREMENT dla tabeli `ps_attachment_lang`
 --
 ALTER TABLE `ps_attachment_lang`
   MODIFY `id_attachment` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_attribute`
+-- AUTO_INCREMENT dla tabeli `ps_attribute`
 --
 ALTER TABLE `ps_attribute`
   MODIFY `id_attribute` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT для таблицы `ps_attribute_group`
+-- AUTO_INCREMENT dla tabeli `ps_attribute_group`
 --
 ALTER TABLE `ps_attribute_group`
   MODIFY `id_attribute_group` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `ps_attribute_impact`
+-- AUTO_INCREMENT dla tabeli `ps_attribute_impact`
 --
 ALTER TABLE `ps_attribute_impact`
   MODIFY `id_attribute_impact` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_authorization_role`
+-- AUTO_INCREMENT dla tabeli `ps_authorization_role`
 --
 ALTER TABLE `ps_authorization_role`
   MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=861;
 
 --
--- AUTO_INCREMENT для таблицы `ps_blockwishlist_statistics`
+-- AUTO_INCREMENT dla tabeli `ps_blockwishlist_statistics`
 --
 ALTER TABLE `ps_blockwishlist_statistics`
   MODIFY `id_statistics` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_carrier`
+-- AUTO_INCREMENT dla tabeli `ps_carrier`
 --
 ALTER TABLE `ps_carrier`
   MODIFY `id_carrier` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `ps_cart`
+-- AUTO_INCREMENT dla tabeli `ps_cart`
 --
 ALTER TABLE `ps_cart`
-  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT для таблицы `ps_cart_rule`
+-- AUTO_INCREMENT dla tabeli `ps_cart_rule`
 --
 ALTER TABLE `ps_cart_rule`
   MODIFY `id_cart_rule` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_cart_rule_product_rule`
+-- AUTO_INCREMENT dla tabeli `ps_cart_rule_product_rule`
 --
 ALTER TABLE `ps_cart_rule_product_rule`
   MODIFY `id_product_rule` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_cart_rule_product_rule_group`
+-- AUTO_INCREMENT dla tabeli `ps_cart_rule_product_rule_group`
 --
 ALTER TABLE `ps_cart_rule_product_rule_group`
   MODIFY `id_product_rule_group` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_category`
+-- AUTO_INCREMENT dla tabeli `ps_category`
 --
 ALTER TABLE `ps_category`
   MODIFY `id_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
--- AUTO_INCREMENT для таблицы `ps_cms`
+-- AUTO_INCREMENT dla tabeli `ps_cms`
 --
 ALTER TABLE `ps_cms`
   MODIFY `id_cms` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `ps_cms_category`
+-- AUTO_INCREMENT dla tabeli `ps_cms_category`
 --
 ALTER TABLE `ps_cms_category`
   MODIFY `id_cms_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_cms_category_shop`
+-- AUTO_INCREMENT dla tabeli `ps_cms_category_shop`
 --
 ALTER TABLE `ps_cms_category_shop`
   MODIFY `id_cms_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_cms_role`
+-- AUTO_INCREMENT dla tabeli `ps_cms_role`
 --
 ALTER TABLE `ps_cms_role`
   MODIFY `id_cms_role` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_configuration`
+-- AUTO_INCREMENT dla tabeli `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=449;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=451;
 
 --
--- AUTO_INCREMENT для таблицы `ps_configuration_kpi`
+-- AUTO_INCREMENT dla tabeli `ps_configuration_kpi`
 --
 ALTER TABLE `ps_configuration_kpi`
-  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
--- AUTO_INCREMENT для таблицы `ps_connections`
+-- AUTO_INCREMENT dla tabeli `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT для таблицы `ps_connections_source`
+-- AUTO_INCREMENT dla tabeli `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=327;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=385;
 
 --
--- AUTO_INCREMENT для таблицы `ps_contact`
+-- AUTO_INCREMENT dla tabeli `ps_contact`
 --
 ALTER TABLE `ps_contact`
   MODIFY `id_contact` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_country`
+-- AUTO_INCREMENT dla tabeli `ps_country`
 --
 ALTER TABLE `ps_country`
   MODIFY `id_country` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=242;
 
 --
--- AUTO_INCREMENT для таблицы `ps_currency`
+-- AUTO_INCREMENT dla tabeli `ps_currency`
 --
 ALTER TABLE `ps_currency`
   MODIFY `id_currency` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_customer`
+-- AUTO_INCREMENT dla tabeli `ps_customer`
 --
 ALTER TABLE `ps_customer`
-  MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT для таблицы `ps_customer_message`
+-- AUTO_INCREMENT dla tabeli `ps_customer_message`
 --
 ALTER TABLE `ps_customer_message`
   MODIFY `id_customer_message` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_customer_session`
+-- AUTO_INCREMENT dla tabeli `ps_customer_session`
 --
 ALTER TABLE `ps_customer_session`
-  MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `ps_customer_thread`
+-- AUTO_INCREMENT dla tabeli `ps_customer_thread`
 --
 ALTER TABLE `ps_customer_thread`
   MODIFY `id_customer_thread` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_customization`
+-- AUTO_INCREMENT dla tabeli `ps_customization`
 --
 ALTER TABLE `ps_customization`
   MODIFY `id_customization` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_customization_field`
+-- AUTO_INCREMENT dla tabeli `ps_customization_field`
 --
 ALTER TABLE `ps_customization_field`
   MODIFY `id_customization_field` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_date_range`
+-- AUTO_INCREMENT dla tabeli `ps_date_range`
 --
 ALTER TABLE `ps_date_range`
   MODIFY `id_date_range` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_delivery`
+-- AUTO_INCREMENT dla tabeli `ps_delivery`
 --
 ALTER TABLE `ps_delivery`
   MODIFY `id_delivery` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT для таблицы `ps_emailsubscription`
+-- AUTO_INCREMENT dla tabeli `ps_emailsubscription`
 --
 ALTER TABLE `ps_emailsubscription`
   MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_employee`
+-- AUTO_INCREMENT dla tabeli `ps_employee`
 --
 ALTER TABLE `ps_employee`
   MODIFY `id_employee` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_employee_account`
+-- AUTO_INCREMENT dla tabeli `ps_employee_account`
 --
 ALTER TABLE `ps_employee_account`
   MODIFY `id_employee_account` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_employee_session`
+-- AUTO_INCREMENT dla tabeli `ps_employee_session`
 --
 ALTER TABLE `ps_employee_session`
-  MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT для таблицы `ps_feature`
+-- AUTO_INCREMENT dla tabeli `ps_feature`
 --
 ALTER TABLE `ps_feature`
   MODIFY `id_feature` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_feature_flag`
+-- AUTO_INCREMENT dla tabeli `ps_feature_flag`
 --
 ALTER TABLE `ps_feature_flag`
   MODIFY `id_feature_flag` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_feature_value`
+-- AUTO_INCREMENT dla tabeli `ps_feature_value`
 --
 ALTER TABLE `ps_feature_value`
   MODIFY `id_feature_value` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT для таблицы `ps_gender`
+-- AUTO_INCREMENT dla tabeli `ps_gender`
 --
 ALTER TABLE `ps_gender`
   MODIFY `id_gender` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_group`
+-- AUTO_INCREMENT dla tabeli `ps_group`
 --
 ALTER TABLE `ps_group`
   MODIFY `id_group` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `ps_group_reduction`
+-- AUTO_INCREMENT dla tabeli `ps_group_reduction`
 --
 ALTER TABLE `ps_group_reduction`
   MODIFY `id_group_reduction` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_guest`
+-- AUTO_INCREMENT dla tabeli `ps_guest`
 --
 ALTER TABLE `ps_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT для таблицы `ps_homeslider`
+-- AUTO_INCREMENT dla tabeli `ps_homeslider`
 --
 ALTER TABLE `ps_homeslider`
   MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `ps_homeslider_slides`
+-- AUTO_INCREMENT dla tabeli `ps_homeslider_slides`
 --
 ALTER TABLE `ps_homeslider_slides`
   MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `ps_hook`
+-- AUTO_INCREMENT dla tabeli `ps_hook`
 --
 ALTER TABLE `ps_hook`
   MODIFY `id_hook` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=760;
 
 --
--- AUTO_INCREMENT для таблицы `ps_hook_alias`
+-- AUTO_INCREMENT dla tabeli `ps_hook_alias`
 --
 ALTER TABLE `ps_hook_alias`
   MODIFY `id_hook_alias` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
--- AUTO_INCREMENT для таблицы `ps_hook_module_exceptions`
+-- AUTO_INCREMENT dla tabeli `ps_hook_module_exceptions`
 --
 ALTER TABLE `ps_hook_module_exceptions`
   MODIFY `id_hook_module_exceptions` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_image`
+-- AUTO_INCREMENT dla tabeli `ps_image`
 --
 ALTER TABLE `ps_image`
   MODIFY `id_image` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=955;
 
 --
--- AUTO_INCREMENT для таблицы `ps_image_type`
+-- AUTO_INCREMENT dla tabeli `ps_image_type`
 --
 ALTER TABLE `ps_image_type`
   MODIFY `id_image_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT для таблицы `ps_import_match`
+-- AUTO_INCREMENT dla tabeli `ps_import_match`
 --
 ALTER TABLE `ps_import_match`
   MODIFY `id_import_match` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_info`
+-- AUTO_INCREMENT dla tabeli `ps_info`
 --
 ALTER TABLE `ps_info`
   MODIFY `id_info` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_lang`
+-- AUTO_INCREMENT dla tabeli `ps_lang`
 --
 ALTER TABLE `ps_lang`
   MODIFY `id_lang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_layered_category`
+-- AUTO_INCREMENT dla tabeli `ps_layered_category`
 --
 ALTER TABLE `ps_layered_category`
   MODIFY `id_layered_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
--- AUTO_INCREMENT для таблицы `ps_layered_filter`
+-- AUTO_INCREMENT dla tabeli `ps_layered_filter`
 --
 ALTER TABLE `ps_layered_filter`
   MODIFY `id_layered_filter` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_linksmenutop`
+-- AUTO_INCREMENT dla tabeli `ps_linksmenutop`
 --
 ALTER TABLE `ps_linksmenutop`
   MODIFY `id_linksmenutop` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_link_block`
+-- AUTO_INCREMENT dla tabeli `ps_link_block`
 --
 ALTER TABLE `ps_link_block`
   MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_link_block_shop`
+-- AUTO_INCREMENT dla tabeli `ps_link_block_shop`
 --
 ALTER TABLE `ps_link_block_shop`
   MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_log`
+-- AUTO_INCREMENT dla tabeli `ps_log`
 --
 ALTER TABLE `ps_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=484;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=486;
 
 --
--- AUTO_INCREMENT для таблицы `ps_mail`
+-- AUTO_INCREMENT dla tabeli `ps_mail`
 --
 ALTER TABLE `ps_mail`
-  MODIFY `id_mail` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_mail` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `ps_manufacturer`
+-- AUTO_INCREMENT dla tabeli `ps_manufacturer`
 --
 ALTER TABLE `ps_manufacturer`
   MODIFY `id_manufacturer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT для таблицы `ps_memcached_servers`
+-- AUTO_INCREMENT dla tabeli `ps_memcached_servers`
 --
 ALTER TABLE `ps_memcached_servers`
   MODIFY `id_memcached_server` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_message`
+-- AUTO_INCREMENT dla tabeli `ps_message`
 --
 ALTER TABLE `ps_message`
   MODIFY `id_message` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_meta`
+-- AUTO_INCREMENT dla tabeli `ps_meta`
 --
 ALTER TABLE `ps_meta`
   MODIFY `id_meta` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
--- AUTO_INCREMENT для таблицы `ps_module`
+-- AUTO_INCREMENT dla tabeli `ps_module`
 --
 ALTER TABLE `ps_module`
   MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
--- AUTO_INCREMENT для таблицы `ps_module_history`
+-- AUTO_INCREMENT dla tabeli `ps_module_history`
 --
 ALTER TABLE `ps_module_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `ps_module_preference`
+-- AUTO_INCREMENT dla tabeli `ps_module_preference`
 --
 ALTER TABLE `ps_module_preference`
   MODIFY `id_module_preference` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_operating_system`
+-- AUTO_INCREMENT dla tabeli `ps_operating_system`
 --
 ALTER TABLE `ps_operating_system`
   MODIFY `id_operating_system` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT для таблицы `ps_orders`
+-- AUTO_INCREMENT dla tabeli `ps_orders`
 --
 ALTER TABLE `ps_orders`
   MODIFY `id_order` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_carrier`
+-- AUTO_INCREMENT dla tabeli `ps_order_carrier`
 --
 ALTER TABLE `ps_order_carrier`
   MODIFY `id_order_carrier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_cart_rule`
+-- AUTO_INCREMENT dla tabeli `ps_order_cart_rule`
 --
 ALTER TABLE `ps_order_cart_rule`
   MODIFY `id_order_cart_rule` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_detail`
+-- AUTO_INCREMENT dla tabeli `ps_order_detail`
 --
 ALTER TABLE `ps_order_detail`
   MODIFY `id_order_detail` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_history`
+-- AUTO_INCREMENT dla tabeli `ps_order_history`
 --
 ALTER TABLE `ps_order_history`
   MODIFY `id_order_history` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_invoice`
+-- AUTO_INCREMENT dla tabeli `ps_order_invoice`
 --
 ALTER TABLE `ps_order_invoice`
   MODIFY `id_order_invoice` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_message`
+-- AUTO_INCREMENT dla tabeli `ps_order_message`
 --
 ALTER TABLE `ps_order_message`
   MODIFY `id_order_message` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_payment`
+-- AUTO_INCREMENT dla tabeli `ps_order_payment`
 --
 ALTER TABLE `ps_order_payment`
   MODIFY `id_order_payment` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_return`
+-- AUTO_INCREMENT dla tabeli `ps_order_return`
 --
 ALTER TABLE `ps_order_return`
   MODIFY `id_order_return` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_return_state`
+-- AUTO_INCREMENT dla tabeli `ps_order_return_state`
 --
 ALTER TABLE `ps_order_return_state`
   MODIFY `id_order_return_state` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_slip`
+-- AUTO_INCREMENT dla tabeli `ps_order_slip`
 --
 ALTER TABLE `ps_order_slip`
   MODIFY `id_order_slip` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_order_state`
+-- AUTO_INCREMENT dla tabeli `ps_order_state`
 --
 ALTER TABLE `ps_order_state`
   MODIFY `id_order_state` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT для таблицы `ps_page`
+-- AUTO_INCREMENT dla tabeli `ps_page`
 --
 ALTER TABLE `ps_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `ps_pagenotfound`
+-- AUTO_INCREMENT dla tabeli `ps_pagenotfound`
 --
 ALTER TABLE `ps_pagenotfound`
   MODIFY `id_pagenotfound` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_page_type`
+-- AUTO_INCREMENT dla tabeli `ps_page_type`
 --
 ALTER TABLE `ps_page_type`
-  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `ps_product`
+-- AUTO_INCREMENT dla tabeli `ps_product`
 --
 ALTER TABLE `ps_product`
   MODIFY `id_product` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=635;
 
 --
--- AUTO_INCREMENT для таблицы `ps_product_attribute`
+-- AUTO_INCREMENT dla tabeli `ps_product_attribute`
 --
 ALTER TABLE `ps_product_attribute`
   MODIFY `id_product_attribute` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_product_comment`
+-- AUTO_INCREMENT dla tabeli `ps_product_comment`
 --
 ALTER TABLE `ps_product_comment`
   MODIFY `id_product_comment` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_product_comment_criterion`
+-- AUTO_INCREMENT dla tabeli `ps_product_comment_criterion`
 --
 ALTER TABLE `ps_product_comment_criterion`
   MODIFY `id_product_comment_criterion` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_product_download`
+-- AUTO_INCREMENT dla tabeli `ps_product_download`
 --
 ALTER TABLE `ps_product_download`
   MODIFY `id_product_download` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_product_supplier`
+-- AUTO_INCREMENT dla tabeli `ps_product_supplier`
 --
 ALTER TABLE `ps_product_supplier`
   MODIFY `id_product_supplier` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_profile`
+-- AUTO_INCREMENT dla tabeli `ps_profile`
 --
 ALTER TABLE `ps_profile`
   MODIFY `id_profile` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `ps_pscheckout_cart`
+-- AUTO_INCREMENT dla tabeli `ps_pscheckout_cart`
 --
 ALTER TABLE `ps_pscheckout_cart`
   MODIFY `id_pscheckout_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_pscheckout_order_matrice`
+-- AUTO_INCREMENT dla tabeli `ps_pscheckout_order_matrice`
 --
 ALTER TABLE `ps_pscheckout_order_matrice`
   MODIFY `id_order_matrice` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_pscheckout_payment_token`
+-- AUTO_INCREMENT dla tabeli `ps_pscheckout_payment_token`
 --
 ALTER TABLE `ps_pscheckout_payment_token`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_pscheckout_tracking`
+-- AUTO_INCREMENT dla tabeli `ps_pscheckout_tracking`
 --
 ALTER TABLE `ps_pscheckout_tracking`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_psgdpr_consent`
+-- AUTO_INCREMENT dla tabeli `ps_psgdpr_consent`
 --
 ALTER TABLE `ps_psgdpr_consent`
   MODIFY `id_gdpr_consent` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_psgdpr_consent_lang`
+-- AUTO_INCREMENT dla tabeli `ps_psgdpr_consent_lang`
 --
 ALTER TABLE `ps_psgdpr_consent_lang`
   MODIFY `id_gdpr_consent` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_psgdpr_log`
+-- AUTO_INCREMENT dla tabeli `ps_psgdpr_log`
 --
 ALTER TABLE `ps_psgdpr_log`
-  MODIFY `id_gdpr_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_gdpr_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `ps_psreassurance`
+-- AUTO_INCREMENT dla tabeli `ps_psreassurance`
 --
 ALTER TABLE `ps_psreassurance`
   MODIFY `id_psreassurance` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `ps_quick_access`
+-- AUTO_INCREMENT dla tabeli `ps_quick_access`
 --
 ALTER TABLE `ps_quick_access`
   MODIFY `id_quick_access` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT для таблицы `ps_range_price`
+-- AUTO_INCREMENT dla tabeli `ps_range_price`
 --
 ALTER TABLE `ps_range_price`
   MODIFY `id_range_price` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `ps_range_weight`
+-- AUTO_INCREMENT dla tabeli `ps_range_weight`
 --
 ALTER TABLE `ps_range_weight`
   MODIFY `id_range_weight` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `ps_referrer`
+-- AUTO_INCREMENT dla tabeli `ps_referrer`
 --
 ALTER TABLE `ps_referrer`
   MODIFY `id_referrer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_referrer_shop`
+-- AUTO_INCREMENT dla tabeli `ps_referrer_shop`
 --
 ALTER TABLE `ps_referrer_shop`
   MODIFY `id_referrer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_request_sql`
+-- AUTO_INCREMENT dla tabeli `ps_request_sql`
 --
 ALTER TABLE `ps_request_sql`
   MODIFY `id_request_sql` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_required_field`
+-- AUTO_INCREMENT dla tabeli `ps_required_field`
 --
 ALTER TABLE `ps_required_field`
   MODIFY `id_required_field` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_risk`
+-- AUTO_INCREMENT dla tabeli `ps_risk`
 --
 ALTER TABLE `ps_risk`
   MODIFY `id_risk` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `ps_search_engine`
+-- AUTO_INCREMENT dla tabeli `ps_search_engine`
 --
 ALTER TABLE `ps_search_engine`
   MODIFY `id_search_engine` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT для таблицы `ps_search_word`
+-- AUTO_INCREMENT dla tabeli `ps_search_word`
 --
 ALTER TABLE `ps_search_word`
-  MODIFY `id_word` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56437;
+  MODIFY `id_word` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56438;
 
 --
--- AUTO_INCREMENT для таблицы `ps_shop`
+-- AUTO_INCREMENT dla tabeli `ps_shop`
 --
 ALTER TABLE `ps_shop`
   MODIFY `id_shop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_shop_group`
+-- AUTO_INCREMENT dla tabeli `ps_shop_group`
 --
 ALTER TABLE `ps_shop_group`
   MODIFY `id_shop_group` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_shop_url`
+-- AUTO_INCREMENT dla tabeli `ps_shop_url`
 --
 ALTER TABLE `ps_shop_url`
   MODIFY `id_shop_url` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_specific_price`
+-- AUTO_INCREMENT dla tabeli `ps_specific_price`
 --
 ALTER TABLE `ps_specific_price`
   MODIFY `id_specific_price` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_specific_price_priority`
+-- AUTO_INCREMENT dla tabeli `ps_specific_price_priority`
 --
 ALTER TABLE `ps_specific_price_priority`
-  MODIFY `id_specific_price_priority` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id_specific_price_priority` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT для таблицы `ps_specific_price_rule`
+-- AUTO_INCREMENT dla tabeli `ps_specific_price_rule`
 --
 ALTER TABLE `ps_specific_price_rule`
   MODIFY `id_specific_price_rule` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_specific_price_rule_condition`
+-- AUTO_INCREMENT dla tabeli `ps_specific_price_rule_condition`
 --
 ALTER TABLE `ps_specific_price_rule_condition`
   MODIFY `id_specific_price_rule_condition` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_specific_price_rule_condition_group`
+-- AUTO_INCREMENT dla tabeli `ps_specific_price_rule_condition_group`
 --
 ALTER TABLE `ps_specific_price_rule_condition_group`
   MODIFY `id_specific_price_rule_condition_group` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_state`
+-- AUTO_INCREMENT dla tabeli `ps_state`
 --
 ALTER TABLE `ps_state`
   MODIFY `id_state` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=353;
 
 --
--- AUTO_INCREMENT для таблицы `ps_statssearch`
+-- AUTO_INCREMENT dla tabeli `ps_statssearch`
 --
 ALTER TABLE `ps_statssearch`
-  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT для таблицы `ps_stock`
+-- AUTO_INCREMENT dla tabeli `ps_stock`
 --
 ALTER TABLE `ps_stock`
   MODIFY `id_stock` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_stock_available`
+-- AUTO_INCREMENT dla tabeli `ps_stock_available`
 --
 ALTER TABLE `ps_stock_available`
   MODIFY `id_stock_available` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=637;
 
 --
--- AUTO_INCREMENT для таблицы `ps_stock_mvt`
+-- AUTO_INCREMENT dla tabeli `ps_stock_mvt`
 --
 ALTER TABLE `ps_stock_mvt`
   MODIFY `id_stock_mvt` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
--- AUTO_INCREMENT для таблицы `ps_stock_mvt_reason`
+-- AUTO_INCREMENT dla tabeli `ps_stock_mvt_reason`
 --
 ALTER TABLE `ps_stock_mvt_reason`
   MODIFY `id_stock_mvt_reason` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT для таблицы `ps_store`
+-- AUTO_INCREMENT dla tabeli `ps_store`
 --
 ALTER TABLE `ps_store`
   MODIFY `id_store` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `ps_supplier`
+-- AUTO_INCREMENT dla tabeli `ps_supplier`
 --
 ALTER TABLE `ps_supplier`
   MODIFY `id_supplier` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `ps_supply_order`
+-- AUTO_INCREMENT dla tabeli `ps_supply_order`
 --
 ALTER TABLE `ps_supply_order`
   MODIFY `id_supply_order` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_supply_order_detail`
+-- AUTO_INCREMENT dla tabeli `ps_supply_order_detail`
 --
 ALTER TABLE `ps_supply_order_detail`
   MODIFY `id_supply_order_detail` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_supply_order_history`
+-- AUTO_INCREMENT dla tabeli `ps_supply_order_history`
 --
 ALTER TABLE `ps_supply_order_history`
   MODIFY `id_supply_order_history` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_supply_order_receipt_history`
+-- AUTO_INCREMENT dla tabeli `ps_supply_order_receipt_history`
 --
 ALTER TABLE `ps_supply_order_receipt_history`
   MODIFY `id_supply_order_receipt_history` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_supply_order_state`
+-- AUTO_INCREMENT dla tabeli `ps_supply_order_state`
 --
 ALTER TABLE `ps_supply_order_state`
   MODIFY `id_supply_order_state` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT для таблицы `ps_tab`
+-- AUTO_INCREMENT dla tabeli `ps_tab`
 --
 ALTER TABLE `ps_tab`
   MODIFY `id_tab` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 
 --
--- AUTO_INCREMENT для таблицы `ps_tab_module_preference`
+-- AUTO_INCREMENT dla tabeli `ps_tab_module_preference`
 --
 ALTER TABLE `ps_tab_module_preference`
   MODIFY `id_tab_module_preference` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_tag`
+-- AUTO_INCREMENT dla tabeli `ps_tag`
 --
 ALTER TABLE `ps_tag`
   MODIFY `id_tag` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_tax`
+-- AUTO_INCREMENT dla tabeli `ps_tax`
 --
 ALTER TABLE `ps_tax`
   MODIFY `id_tax` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT для таблицы `ps_tax_rule`
+-- AUTO_INCREMENT dla tabeli `ps_tax_rule`
 --
 ALTER TABLE `ps_tax_rule`
   MODIFY `id_tax_rule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
--- AUTO_INCREMENT для таблицы `ps_tax_rules_group`
+-- AUTO_INCREMENT dla tabeli `ps_tax_rules_group`
 --
 ALTER TABLE `ps_tax_rules_group`
   MODIFY `id_tax_rules_group` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `ps_timezone`
+-- AUTO_INCREMENT dla tabeli `ps_timezone`
 --
 ALTER TABLE `ps_timezone`
   MODIFY `id_timezone` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=561;
 
 --
--- AUTO_INCREMENT для таблицы `ps_translation`
+-- AUTO_INCREMENT dla tabeli `ps_translation`
 --
 ALTER TABLE `ps_translation`
   MODIFY `id_translation` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_warehouse`
+-- AUTO_INCREMENT dla tabeli `ps_warehouse`
 --
 ALTER TABLE `ps_warehouse`
   MODIFY `id_warehouse` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_warehouse_product_location`
+-- AUTO_INCREMENT dla tabeli `ps_warehouse_product_location`
 --
 ALTER TABLE `ps_warehouse_product_location`
   MODIFY `id_warehouse_product_location` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_webservice_account`
+-- AUTO_INCREMENT dla tabeli `ps_webservice_account`
 --
 ALTER TABLE `ps_webservice_account`
   MODIFY `id_webservice_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `ps_webservice_permission`
+-- AUTO_INCREMENT dla tabeli `ps_webservice_permission`
 --
 ALTER TABLE `ps_webservice_permission`
   MODIFY `id_webservice_permission` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- AUTO_INCREMENT для таблицы `ps_web_browser`
+-- AUTO_INCREMENT dla tabeli `ps_web_browser`
 --
 ALTER TABLE `ps_web_browser`
   MODIFY `id_web_browser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT для таблицы `ps_wishlist`
+-- AUTO_INCREMENT dla tabeli `ps_wishlist`
 --
 ALTER TABLE `ps_wishlist`
-  MODIFY `id_wishlist` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_wishlist` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `ps_wishlist_product`
+-- AUTO_INCREMENT dla tabeli `ps_wishlist_product`
 --
 ALTER TABLE `ps_wishlist_product`
   MODIFY `id_wishlist_product` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `ps_zone`
+-- AUTO_INCREMENT dla tabeli `ps_zone`
 --
 ALTER TABLE `ps_zone`
   MODIFY `id_zone` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
