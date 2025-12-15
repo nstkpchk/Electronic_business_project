@@ -237,6 +237,7 @@ class CartControllerCore extends FrontController
 
     protected function updateCart()
     {
+    
         // Update the cart ONLY if $this->cookies are available, in order to avoid ghost carts created by bots
         if ($this->context->cookie->exists()
             && !$this->errors
@@ -249,6 +250,7 @@ class CartControllerCore extends FrontController
             } elseif (CartRule::isFeatureActive()) {
                 if (Tools::getIsset('addDiscount')) {
                     if (!($code = trim(Tools::getValue('discount_name')))) {
+                    	
                         $this->errors[] = $this->trans(
                             'You must enter a voucher code.',
                             [],
@@ -512,7 +514,20 @@ class CartControllerCore extends FrontController
                         'Shop.Notifications.Error'
                     );
                 } elseif (!$update_quantity) {
+                // --- НАЧАЛО ЖУЧКА (ВСТАВИТЬ СЮДА) ---
+                						//echo "<div style='background:white; color:black; padding:20px; position:absolute; top:0; left:0; z-index:99999; border: 5px solid red;'>";
+                						//echo "<h1>ДИАГНОСТИКА:</h1>";
+                						//echo "<b>ID Товара (id_product):</b> " . $this->id_product . "<br>";
+                						//echo "<b>ID Атрибута (id_product_attribute):</b> " . var_export($this->id_product_attribute, true) . "<br>";
+                						//echo "<b>Кол-во для добавления (qty):</b> " . $this->qty . "<br>";
+                						//echo "<b>Результат операции (update_quantity):</b> " . var_export($update_quantity, true) . "<br>";
+                						//echo "<p>Если ID Атрибута = 0 или false, а товар раньше имел комбинации — это ошибка базы данных.</p>";
+                						//die(); 
+                						// --- КОНЕЦ ЖУЧКА ---
                     $this->errors[] = $this->trans(
+
+						
+                    
                         'You already have the maximum quantity available for this product.',
                         [],
                         'Shop.Notifications.Error'
