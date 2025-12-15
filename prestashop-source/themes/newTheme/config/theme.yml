@@ -1,0 +1,6 @@
+parent: classic
+name: newTheme
+display_name: 'Sklep Koszykarski Theme'
+version: 1.0.0
+assets:
+  use_parent_assets: true

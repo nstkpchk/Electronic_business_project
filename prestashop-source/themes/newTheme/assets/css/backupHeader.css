@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+/* --- Сетка слайдера (Основной контейнер) --- */
+.my-slide-grid {
+    display: flex;
+    align-items: center;       /* Центрируем всё по вертикали */
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;         /* Ограничиваем ширину, чтобы не растягивалось на 4k мониторах */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif; /* Шрифт как в теме */
+}
+
+/* --- Колонка 1: Картинка --- */
+.grid-col-img {
+    flex: 0 0 30%;             /* 30% ширины */
+    display: flex;
+    justify-content: center;
+}
+
+.grid-col-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- Колонка 2: Описание --- */
+.grid-col-desc {
+    flex: 1;                   /* Занимает всё оставшееся место */
+    padding: 0 40px;           /* Отступы от картинки и цены */
+}
+
+.my-title {
+    font-size: 24px;
+    font-weight: 800;          /* Жирный заголовок */
+    margin-bottom: 15px;
+    color: #000;
+    line-height: 1.2;
+}
+
+.my-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- Колонка 3: Цена и Действие --- */
+.grid-col-price {
+    flex: 0 0 220px;           /* Фиксированная ширина колонки цены */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   /* Выравнивание по левому краю внутри колонки */
+    justify-content: center;
+}
+
+/* Оранжевый овал скидки */
+.my-discount-badge {
+    background-color: #FC861D;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 20px;       /* Делает овал */
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Блок цены */
+.my-price-box {
+    margin-bottom: 20px;
+}
+
+.my-price-now {
+    font-size: 32px;
+    font-weight: 800;
+    color: #000;
+    display: block;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.price-row {
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.my-price-old {
+    text-decoration: line-through;
+}
+
+/* Кнопка */
+.my-btn {
+    background-color: #FC861D; /* Ваш новый оранжевый цвет */
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 25px;
+    border-radius: 0;          /* Острые углы (как на макете) или поставьте 4px для скругления */
+    text-decoration: none !important;
+    display: inline-block;
+    text-align: center;
+    width: 100%;               /* Кнопка на всю ширину колонки */
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.my-btn:hover {
+    background-color: #e57615; /* Чуть темнее при наведении */
+}
+
+
+/* --- АДАПТИВНОСТЬ (МОБИЛЬНЫЕ) --- */
+@media (max-width: 991px) {
+    .my-slide-grid {
+        flex-direction: column; /* Элементы друг под друга */
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .grid-col-img, .grid-col-desc, .grid-col-price {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+        align-items: center; /* Центрируем всё на мобильном */
+    }
+
+    .grid-col-price {
+        align-items: center; /* Цена и кнопка по центру */
+    }
+    
+    .my-btn {
+        width: auto;         /* Кнопка не во всю ширину на телефоне */
+        min-width: 200px;
+    }
+}
+
+/* =================================================================
+   1. СБРОС ОТСТУПОВ (ЧТОБЫ ШАПКА ПРИЛИПЛА К ВЕРХУ)
+   ================================================================= */
+.header-nav {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+header#header, nav.header-nav {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.header-banner {
+    display: none; /* Скрываем баннеры, если они создают отступ */
+}
+
+/* =================================================================
+   2. СЕТКА И ЛИНИИ (СТРОИМ "КРЕСТ")
+   ================================================================= */
+
+/* --- ВЕРХНИЙ ЭТАЖ (ЧЕРНЫЙ) --- */
+.header-row-top {
+    color: #ffffff;
+    
+    /* Оранжевая полоска сверху */
+    position: relative;
+    
+    /* Горизонтальная линия посередине (Темно-серая) */
+    border-bottom: 1px solid #e1e1e1; 
+
+    /* Настройки для стыковки линий */
+    display: flex;
+    align-items: stretch; /* Растягивает колонки, чтобы вертикальная линия была на всю высоту */
+    flex-wrap: wrap;
+    margin-bottom: 0;     /* Убираем зазор между этажами */
+}
+
+/* --- НОВАЯ ЗАКРУГЛЕННАЯ ОРАНЖЕВАЯ ПОЛОСКА --- */
+.header-row-top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7px; /* Толщина полоски */
+    background-color: #FC861D; /* Оранжевый цвет */
+    
+    /* ЗАКРУГЛЕНИЕ ВЕРХНИХ УГЛОВ ПОЛОСКИ */
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px;
+    
+    z-index: 1; /* Убеждаемся, что она лежит поверх фона */
+}
+
+/* --- НИЖНИЙ ЭТАЖ (БЕЛЫЙ) --- */
+.header-row-bottom {
+    background-color: #ffffff;
+    
+    /* Горизонтальная линия в самом низу (Светло-серая) */
+    border-bottom: 1px solid #e1e1e1;
+
+    /* Настройки для стыковки линий */
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 0;        /* Убираем зазор сверху */
+}
+
+/* --- ВЕРТИКАЛЬНЫЕ ЛИНИИ (РАЗДЕЛИТЕЛИ СЛЕВА) --- */
+.left-top-quadrant {
+    border-right: 1px solid #e1e1e1; /* Темная линия на черном фоне */
+}
+
+.left-bottom-quadrant {
+    border-right: 1px solid #e1e1e1; /* Светлая линия на белом фоне */
+}
+
+/* ОТСТУПЫ ВНУТРИ ЯЧЕЕК (чтобы текст не прилипал к линиям) */
+.left-top-quadrant, 
+.left-bottom-quadrant,
+.right-top-quadrant,
+.right-bottom-quadrant {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* =================================================================
+   3. ЭЛЕМЕНТЫ ВЕРХНЕГО ЭТАЖА
+   ================================================================= */
+/* =================================================================
+   3. ЭЛЕМЕНТЫ ВЕРХНЕГО ЭТАЖА
+   ================================================================= */
+
+
+
+/* Логотип */
+/* === ИСПРАВЛЕНИЕ ЦЕНТРИРОВАНИЯ ЛОГОТИПА И ПОИСКА === */
+
+/* 1. Обращаемся к ряду, в котором лежат Лого и Поиск */
+.left-top-quadrant .row {
+    display: flex !important;       /* Включаем Flexbox принудительно */
+    align-items: center !important; /* Главная команда: выровнять всё по вертикальному центру */
+    flex-wrap: nowrap !important;   /* Запрещаем переносы строк */
+}
+
+/* 2. Сбрасываем лишнее у колонки логотипа */
+#_desktop_logo {
+    display: block !important;      /* Возвращаем обычное поведение */
+    margin: 0 !important;           /* Убираем отступы */
+    padding: 0 15px !important;     /* Стандартные отступы Bootstrap слева/справа */
+    flex: 0 0 auto !important;      /* Запрещаем колонке растягиваться или сжиматься */
+    width: auto !important;         /* Ширина по содержимому (или поставь 33%, если лого большое) */
+}
+
+/* 3. Настройка картинки */
+#_desktop_logo a img.logo {
+    display: block;
+    max-height: 50px;               /* Твоя высота */
+    width: auto;
+    margin: 0;                      /* Убираем отступы у картинки */
+}
+
+/* 4. Настройка колонки поиска (чтобы она занимала всё оставшееся место) */
+.left-top-quadrant .row > div:nth-child(2) {
+    flex-grow: 1 !important;        /* Растянись на всё свободное место */
+    width: auto !important;
+}
+
+/* Поиск */
+.header-top .search-widget form input[type=text] {
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 2px;
+    height: 40px;
+    min-width: 100%; /* Растягиваем на всю доступную ширину */
+}
+.header-top .search-widget form button[type=submit] {
+    color: #333;
+}
+
+/* === ПРИНУДИТЕЛЬНАЯ СТИЛИЗАЦИЯ ПОИСКА === */
+
+/* 1. Сбрасываем ограничения ширины у виджета и формы */
+#header .search-widget,
+#header .search-widget form {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    display: block !important;
+    float: none !important;
+    position: relative !important; /* Для позиционирования лупы */
+}
+
+/* 2. Стилизуем ПОЛЕ ВВОДА (Input) */
+#header .search-widget form input[type="text"] {
+    /* РАЗМЕРЫ */
+    width: 100% !important;       /* Растягиваем на всю ширину */
+    height: 40px !important;      /* Высота */
+    padding-left: 15px !important;
+    padding-right: 45px !important; /* Место справа для лупы */
+    
+    /* ЦВЕТА */
+    background: #ffffff !important;      /* Белый фон */
+    border: 1px solid #cccccc !important; /* Серая рамка (чуть темнее e1e1e1) */
+    color: #333333 !important;
+    
+    /* СБРОС СТАНДАРТОВ */
+    box-shadow: none !important;
+    border-radius: 2px !important;
+}
+
+/* 3. Стилизуем КНОПКУ (Лупа) */
+#header .search-widget form button[type="submit"] {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;          /* Прижимаем вправо */
+    bottom: 0 !important;
+    width: 40px !important;       /* Ширина кнопки */
+    height: 40px !important;
+    
+    background: transparent !important; /* Прозрачный фон */
+    border: none !important;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+/* 4. Цвет иконки лупы */
+#header .search-widget form button[type="submit"] i,
+#header .search-widget form button[type="submit"] .material-icons {
+    color: #555555 !important;    /* Темно-серый цвет лупы */
+}
+/* =================================================================
+   4. ЭЛЕМЕНТЫ НИЖНЕГО ЭТАЖА
+   ================================================================= */
+
+/* Меню */
+.header-row-bottom .top-menu {
+    margin: 0;
+    display: flex;
+    align-items: center; /* Центрируем пункты по вертикали */
+    height: 100%;
+}
+.header-row-bottom .top-menu .category {
+    padding-right: 15px;
+}
+.header-row-bottom .top-menu > li > a {
+    color: #000000 !important; /* Черный цвет */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px; /* Размер шрифта категорий */
+}
+/* Скрываем выпадающее меню, пока не наведешь (стандартное поведение) */
+.header-row-bottom .popover {
+    display: none; 
+}
+
+/* Корзина (Правый нижний угол) */
+.right-bottom-quadrant {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* УБИРАЕМ ЗЕЛЕНУЮ ЗОНУ (PADDING) */
+#header .header-top {
+    padding-top: 0 !important;    /* Убирает 20px сверху */
+    padding-bottom: 0 !important; /* Убирает 20px снизу */
+    margin-top: 0 !important;
+}
+
+/* На всякий случай убедимся, что контейнер внутри тоже не толкается */
+#header .header-top > .container {
+    padding-top: 0 !important;
+}
+
+@media (min-width: 1200px) {
+    
+    /* Расширяем контейнер именно в шапке */
+    #header .header-top .container {
+        max-width: 1320px !important; /* Было 1140px, стало шире */
+        width: 100%;
+    }
+
+    /* Если захочешь, чтобы ВЕСЬ сайт стал шире (и товары, и футер),
+       используй этот код ВМЕСТО верхнего:
+    .container {
+        max-width: 1320px !important;
+    }
+    */
+}
+
+.left-top-quadrant, 
+.right-top-quadrant {
+    padding-top: 23px !important;    /* Отступ от самого верха */
+    padding-bottom: 16px !important; /* Отступ до разделительной полоски */
+    
+    padding-left: 0px;              /* Отступы по бокам не трогаем */
+    padding-right: 0px;
+}
+
+
+/* === НОВЫЙ ДИЗАЙН ПОИСКА === */
+
+/* === ФИНАЛЬНЫЙ ДИЗАЙН ПОИСКА === */
+
+/* =================================================================
+   РЕМОНТ ПОИСКА (БЕЗ ЗАМЕНЫ HTML ФАЙЛОВ)
+   ================================================================= */
+
+/* =================================================================
+   ФИНАЛЬНЫЙ РЕМОНТ: ЛУПА СПРАВА + ФИКС ВЫСОТЫ
+   ================================================================= */
+/* =================================================================
+   3. ЭЛЕМЕНТЫ ВЕРХНЕГО ЭТАЖА
+   ================================================================= */
+
+
+/* Логотип */
+/* === ИСПРАВЛЕНИЕ ЦЕНТРИРОВАНИЯ ЛОГОТИПА И ПОИСКА === */
+
+/* 1. Обращаемся к ряду, в котором лежат Лого и Поиск */
+.left-top-quadrant .row {
+    display: flex !important;       /* Включаем Flexbox принудительно */
+    align-items: center !important; /* Главная команда: выровнять всё по вертикальному центру */
+    flex-wrap: nowrap !important;   /* Запрещаем переносы строк */
+}
+
+/* 2. Сбрасываем лишнее у колонки логотипа */
+#_desktop_logo {
+    display: block !important;      /* Возвращаем обычное поведение */
+    margin: 0 !important;           /* Убираем отступы */
+    padding: 0 15px !important;     /* Стандартные отступы Bootstrap слева/справа */
+    flex: 0 0 auto !important;      /* Запрещаем колонке растягиваться или сжиматься */
+    width: auto !important;         /* Ширина по содержимому (или поставь 33%, если лого большое) */
+}
+
+/* 3. Настройка картинки */
+#_desktop_logo a img.logo {
+    display: block;
+    max-height: 50px;               /* Твоя высота */
+    width: auto;
+    margin: 0;                      /* Убираем отступы у картинки */
+}
+
+/* 4. Настройка колонки поиска (чтобы она занимала всё оставшееся место) */
+.left-top-quadrant .row > div:nth-child(2) {
+    flex-grow: 1 !important;        /* Растянись на всё свободное место */
+    width: auto !important;
+}
+
+/* Поиск */
+ 
+/* =================================================================
+   ФИНАЛЬНЫЙ ФИКС: ЛУПА + ФОН + ИКОНКА
+   ================================================================= */
+
+/* 1. КОНТЕЙНЕР ФОРМЫ */
+
+
+/* 3. КНОПКА (ОБОЛОЧКА ЛУПЫ) */
+body #header .search-widget form button[type="submit"] {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 40px !important;
+    height: 40px !important;
+    
+    /* Flexbox для центрирования иконки внутри квадрата */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+}
+
+/* 4. САМА ИКОНКА (ГЛАВНЫЙ ФИКС ЦЕНТРИРОВАНИЯ) */
+/* Часто иконка имеет свой margin или line-height, который все портит */
+body #header .search-widget form button[type="submit"] i,
+body #header .search-widget form button[type="submit"] .material-icons {
+    font-size: 20px !important; /* Размер иконки */
+    line-height: 1 !important;  /* Убираем лишнюю высоту строки у шрифта */
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;       /* Убираем отступы */
+    padding: 0 !important;
+    position: static !important;
+    transform: none !important; /* Сбрасываем смещения, если были */
+    color: #555555 !important;
+}   
+
+
+
+/* =================================================================
+   ОТСТУП ПОИСКА ОТ ПРАВОЙ СТЕНКИ
+   ================================================================= */
+
+/* =================================================================
+   ФИНАЛЬНЫЙ ОТСТУП СПРАВА (СЖАТИЕ КОЛОНКИ)
+   ================================================================= */
+
+/* 1. Находим колонку, где лежит поиск (второй элемент в ряду) */
+.left-top-quadrant .row > div:nth-child(2) {
+    /* Добавляем внутренний отступ самой колонке. 
+       Поиск упрется в этот невидимый барьер справа. */
+    padding-right: 50px !important; 
+    
+    /* Убеждаемся, что колонка занимает все доступное место, чтобы отступ сработал */
+    flex-grow: 1 !important; 
+    width: auto !important;
+}
+
+/* 2. Заставляем сам поиск занимать 100% от ЭТОГО УЖЕ СЖАТОГО места */
+#header .search-widget {
+    width: 100% !important; /* Теперь 100% это "Ширина минус 50px" */
+    margin-right: 0 !important; /* Убираем margin, он больше не нужен */
+    float: none !important;
+}
+
+/* 3. Форма тоже на всю ширину */
+#header .search-widget form {
+    width: 100% !important;
+}
+/* === ТОЧНАЯ НАСТРОЙКА ПРОПОРЦИЙ (В ОБХОД СЕТКИ) === */
+@media (min-width: 992px) { /* Применяем только для ПК */
+    
+    /* ЛЕВАЯ ЧАСТЬ (Лого + Поиск + Меню) */
+    .left-top-quadrant,
+    .left-bottom-quadrant {
+body #header .search-widget {
+    margin-left: 30px !important; /* Регулируйте это число (больше/меньше) */
+}        flex: 0 0 81% !important;  /* Ширина 79% */
+        max-width: 81% !important;
+    }
+
+    /* ПРАВАЯ ЧАСТЬ (Вход + Корзина) */
+    .right-top-quadrant,
+    .right-bottom-quadrant {
+        flex: 0 0 19% !important;  /* Оставшиеся 21% */
+        max-width: 19% !important;
+    }
+}
+
+/* === ШРИФТ В ПОИСКЕ === */
+#header .search-widget form input[type="text"] {
+    /* 1. Название шрифта (обязательно в кавычках, если из нескольких слов) */
+    font-family: 'Montserrat', sans-serif !important; 
+    
+    /* 2. Размер текста */
+    font-size: 16px !important;    /* Ставь то, что увидел у донора */
+    
+    /* 3. Жирность (400 - обычный, 600 - полужирный, 700 - жирный) */
+    font-weight: 400 !important;   
+    
+    /* 4. Цвет текста (тоже можно подсмотреть там же, параметр color) */
+    color: #333333 !important;     
+    
+    /* 5. Делаем текст прописным или обычным? */
+    /* text-transform: uppercase !important; <--- Раскомментируй, если у донора ВСЕ БУКВЫ БОЛЬШИЕ */
+}
+
+/* Также меняем шрифт у плейсхолдера (текста-подсказки "Szukaj...") */
+#header .search-widget form input[type="text"]::placeholder {
+    font-family: 'Montserrat', sans-serif !important;
+    opacity: 0.8; /* Прозрачность подсказки */
+}
+
+/* =================================================================
+   БЛОК ВХОДА И РЕГИСТРАЦИИ (НОВЫЙ ДИЗАЙН)
+   ================================================================= */
+
+/* 1. Контейнер: Выстраиваем ссылки в колонку (друг под другом) */
+.user-info-container {
+    display: flex;
+    flex-direction: column; /* Вертикальный стек */
+    align-items: flex-start;  /* Прижимаем влево (или flex-end для вправо) */
+    justify-content: center;
+    height: 100%;
+}
+
+/* 2. Общий стиль ссылок */
+.user-info-container .auth-link {
+    display: flex;
+    align-items: center;    /* Центрируем иконку и текст по высоте */
+    text-decoration: none;
+    margin-bottom: 2px;     /* Расстояние между строчками */
+    
+    /* ШРИФТ MONTSERRAT */
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 11px !important;    /* Подгони размер (11px, 12px) */
+    font-weight: 500 !important;   /* Жирность */
+         /* Если нужны большие буквы */
+    color: #333333 !important;     /* Цвет текста */
+    line-height: 1.2;
+}
+
+/* 3. Добавляем ИКОНКИ перед текстом */
+.user-info-container .auth-link::before {
+    content: "";
+    display: block;
+    width: 16px;            /* Ширина иконки */
+    height: 16px;           /* Высота иконки */
+    margin-right: 8px;      /* Отступ от иконки до текста */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* --- ИКОНКА ДЛЯ "ЗАРЕГИСТРИРОВАТЬСЯ" --- */
+.user-info-container .register-link::before {
+    /* Вставь сюда ссылку на иконку регистрации с донора */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/747/747376.png'); 
+    /* Я поставил временную иконку. Замени URL внутри кавычек! */
+}
+
+/* --- ИКОНКА ДЛЯ "ЗАЛОГИНИТЬСЯ" --- */
+.user-info-container .login-link::before {
+    /* Вставь сюда ссылку на иконку входа (ключик или человечек) */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3596/3596092.png');
+    /* Замени URL внутри кавычек! */
+}
+
+/* Ховер эффект (при наведении) */
+.user-info-container .auth-link:hover {
+    color: #FC861D !important; /* Оранжевый при наведении */
+    opacity: 0.8;
+}
+
+/* =================================================================
+   ФОН САЙТА
+   ================================================================= */
+body, 
+#wrapper, 
+main, 
+#main, 
+#content {
+    background-color: #ffffff !important;
+    background-image: none !important; /* Убирает текстуру/узор, если есть */
+}
+
+/*================
+
+==================*/
+
