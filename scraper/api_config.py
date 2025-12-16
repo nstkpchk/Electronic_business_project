@@ -1,0 +1,4 @@
+PRESTASHOP_URL = "http://localhost:8001"
+API_KEY = ""
+LANGUAGE_ID = '1'
+HOME_CATEGORY_ID = '2'
