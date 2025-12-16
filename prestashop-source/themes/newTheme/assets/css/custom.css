@@ -1,4 +1,430 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* =================================================================
+   СТРАНИЦА ТОВАРА
+   ================================================================= */
+
+/* ============================================================
+   ГЛОБАЛЬНАЯ СМЕНА ЦВЕТА (ПЕРЕКРАШИВАЕМ ВСЁ В ОРАНЖЕВЫЙ)
+   ============================================================ */
+
+/* 1. Все ссылки на сайте */
+a {
+    color: #FC861D;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #e57615; /* Чуть темнее при наведении */
+}
+
+/* 2. Текст с классом "primary" (обычно цены или заголовки) */
+.text-primary {
+    color: #FC861D !important;
+}
+
+/* 3. Стандартные кнопки (если где-то остались синие) */
+.btn-primary {
+    background-color: #FC861D !important;
+    border-color: #FC861D !important;
+}
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active {
+    background-color: #e57615 !important;
+    border-color: #e57615 !important;
+}
+
+/* 4. Кнопки "Outline" (белые с цветной рамкой) */
+.btn-outline-primary {
+    color: #FC861D !important;
+    border-color: #FC861D !important;
+}
+.btn-outline-primary:hover {
+    background-color: #FC861D !important;
+    color: #fff !important;
+}
+
+/* 5. Пагинация (страницы 1, 2, 3...) */
+.page-item.active .page-link {
+    background-color: #FC861D !important;
+    border-color: #FC861D !important;
+    color: #000 !important;
+}
+.page-link {
+    color: #FC861D !important;
+}
+
+/* 6. Активные элементы в списках и меню */
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #FC861D !important;
+}
+
+/* 7. Чекбоксы и радио-кнопки (стандартные престовские) */
+.custom-radio input[type="radio"]:checked + span {
+    background-color: #FC861D !important;
+    border-color: #FC861D !important;
+    box-shadow: none !important;
+}
+.custom-checkbox input[type="checkbox"]:checked + span .checkbox-checked {
+    color: #FC861D !important;
+}
+
+/* =================================================================
+   СТРАНИЦА ТОВАРА (ФИНАЛЬНАЯ СБОРКА)
+   ================================================================= */
+
+/* --- 1. КНОПКА "ДОБАВИТЬ В КОРЗИНУ" --- */
+.product-add-to-cart .add-to-cart {
+    background-color: #FC861D !important;
+    border-color: #FC861D !important;
+    color: #000 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+/* Цвет при наведении */
+.product-add-to-cart .add-to-cart:hover {
+    background-color: #e57615 !important;
+    border-color: #e57615 !important;
+    color: #fff !important;
+}
+
+/* Цвет иконки корзины */
+.product-add-to-cart .add-to-cart .material-icons {
+    color: inherit !important;
+}
+
+
+/* --- 2. СЕТКА: ШИРИНА ФОТО (65%) И ОПИСАНИЯ (35%) --- */
+@media (min-width: 992px) {
+    /* Левая колонка (Фото) */
+    .product-container .row > .col-md-6:first-child {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 65%;
+        flex: 0 0 65% !important;     /* !important перебивает тему */
+        max-width: 65% !important;
+    }
+
+    /* Правая колонка (Инфо) */
+    .product-container .row > .col-md-6:last-child {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+        flex: 0 0 35% !important;
+        max-width: 35% !important;
+    }
+}
+
+
+/* --- 3. ФОТО ТОВАРА: ЗУМ И РАЗМЕРЫ --- */
+/* Контейнер: обрезает лишнее при увеличении */
+.product-cover {
+    overflow: hidden; 
+    cursor: zoom-in;
+}
+
+/* Сама картинка */
+.product-cover img {
+    width: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain;
+    transition: transform 0.5s ease; /* Плавность зума */
+}
+
+/* Эффект увеличения при наведении */
+.product-cover:hover img {
+    transform: scale(1.5); 
+}
+
+
+/* --- 4. МИНИАТЮРЫ (Маленькие фото снизу) --- */
+.product-images .thumb-container img.selected, 
+.product-images .thumb-container img.active {
+    border: 2px solid #FC861D !important; /* Оранжевая рамка */
+    box-shadow: none !important;
+}
+
+
+/* --- 5. ВКЛАДКИ (Opis / Szczegóły) --- */
+.product-tabs.tabs .nav-tabs .nav-link {
+    color: #FC861D !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+}
+
+/* Активная вкладка (подчеркивание) */
+.product-tabs.tabs .nav-tabs .nav-link.active {
+    color: #FC861D !important;
+    border-bottom: 3px solid #FC861D !important;
+}
+
+/* Ховер эффекты для вкладок */
+.product-tabs.tabs .nav-tabs .nav-link:hover {
+    color: #FC861D !important;
+    border-color: transparent;
+}
+.product-tabs.tabs .nav-tabs .nav-link.active:hover {
+    border-bottom-color: #FC861D !important;
+}
+
+/* =================================================================
+   ВЫПАДАЮЩЕЕ МЕНЮ
+   ================================================================= */
+/* --- ВЫПАДАЮЩЕЕ МЕНЮ (С НУЛЯ) --- */
+
+/* 1. Настройка родительского контейнера меню */
+#header .header-top {
+    position: relative;
+    z-index: 1001; /* Поверх слайдера */
+    overflow: visible !important; /* Разрешаем выпадать наружу */
+}
+
+/* 2. Стили для ссылок верхнего уровня */
+.top-menu > li {
+    display: inline-block;
+    position: relative; /* Чтобы выпадашка позиционировалась относительно кнопки */
+    margin-right: 20px;
+    padding: 10px 0;
+}
+
+.top-menu > li > a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.top-menu > li:hover > a {
+    color: #FC861D; /* Оранжевый при наведении */
+}
+
+
+
+/* 4. МАГИЯ: Показываем блок при наведении на родителя */
+.top-menu > li:hover .popover.sub-menu {
+    display: block; /* Показываем! */
+}
+
+/* --- ОБНОВЛЕННЫЙ КОД ДЛЯ МЕНЮ --- */
+
+/* 1. Исправление позиционирования (Выравнивание) */
+.popover.sub-menu {
+    display: none;
+    position: absolute;
+    /* TOP: 100% приклеивает меню ровно к низу родительской кнопки */
+    top: 100%; 
+    /* LEFT: 0 прижимает левый край выпадашки к левому краю слова */
+    left: 0; 
+    
+    /* Минимальная ширина, чтобы список не был слишком узким */
+    min-width: 220px; 
+    
+    background: #fff;
+    padding: 15px 20px; /* Чуть больше воздуха внутри */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1002;
+    border-top: 3px solid #FC861D; /* Оранжевая полоска сверху */
+    
+    /* Если меню уезжает вправо, можно попробовать добавить margin-left: 0; */
+    margin: 0;
+    border-radius: 0 0 5px 5px; /* Скругление только снизу */
+}
+
+/* 2. Исправление цвета при наведении на ПОДКАТЕГОРИЮ */
+.popover.sub-menu ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333; /* Цвет обычного текста */
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: block; /* Чтобы нажималось по всей ширине строки */
+}
+
+.popover.sub-menu ul li a:hover {
+    /* ТВОЙ ОРАНЖЕВЫЙ ЦВЕТ */
+    color: #FC861D !important; 
+    
+    /* Убираем стандартный синий фон или подчеркивание, если они есть */
+    background: transparent !important; 
+    text-decoration: none !important;
+    
+    /* Маленький сдвиг вправо для красоты (можно убрать, если не нравится) */
+    transform: translateX(5px); 
+}
+
+
+/* =================================================================
+   ФУТЕР
+   ================================================================= */
+#custom-text {
+    padding: 40px 0;
+    text-align: left; /* <-- Было center, ставим left */
+}
+
+/* Оставляем остальные стили без изменений */
+#custom-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#custom-text strong, #custom-text b {
+    font-weight: 700;
+}
+
+/* --- СТИЛИ ДЛЯ ПРАВОЙ КОЛОНКИ ФУТЕРА --- */
+
+.footer-custom-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; /* Чуть крупнее для названия */
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.footer-custom-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Огромный оранжевый телефон */
+.footer-big-phone {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #FC861D !important; /* Оранжевый цвет */
+    text-decoration: none;
+    line-height: 1.2;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-email-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* --- СТИЛИ ДЛЯ НИЖНЕЙ ЧАСТИ (ЛИНИЯ И СОЦСЕТИ) --- */
+
+/* Оранжевая линия */
+.footer-orange-line {
+    width: 100%;
+    height: 4px;
+    background-color: #FC861D;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-bottom-content {
+    display: flex;
+    align-items: center; /* Центрируем вертикально */
+    padding-bottom: 40px;
+}
+
+/* Текст слева внизу */
+.footer-bottom-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- СОЦСЕТИ (ИСПРАВЛЕННЫЕ v2) --- */
+
+.footer-socials {
+    display: flex;
+    flex-direction: row; /* Принудительно в строку */
+    justify-content: flex-end; /* Прижать вправо */
+    align-items: center; /* Центрировать по высоте */
+    gap: 10px; /* Расстояние между квадратами */
+    width: 100%; /* Занять всю ширину колонки */
+}
+
+/* Квадратики */
+.my-social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #FC861D;
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: background 0.3s;
+    background-image: none !important; 
+    border: none !important;
+}
+
+.my-social-icon:hover {
+    background-color: #FC861D; 
+}
+
+/* Настройки для шрифта FontAwesome */
+.my-social-icon i {
+    font-size: 20px; /* Размер значка */
+    font-family: "Font Awesome 6 Brands", "FontAwesome" !important; /* Принудительно шрифт иконок */
+    font-style: normal;
+}
+
+/* =================================================================
+   ХЕДЕР КАТЕГОРИЙ
+   ================================================================= */
+
+.block-category-custom {
+    margin-bottom: 20px; /* Небольшой отступ до товаров, регулируй по вкусу */
+   
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+/* 3. Главный заголовок (Piłki do koszykówki) */
+.custom-category-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: #000000; /* Цвет черный, поменяй если нужно */
+    margin-bottom: 30px; /* Отступ до "Opcje przeglądania" */
+    line-height: 1.1;
+    text-transform: none !important;
+}
+
+/* 4. Контейнер для подзаголовка и линии (Flexbox выровняет их) */
+.custom-subtitle-row {
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+    width: 100%;
+}
+
+/* 5. Текст "Opcje przeglądania" */
+.custom-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #000000;
+    margin-right: 20px; /* Отступ от текста до линии */
+    white-space: nowrap; /* Чтобы текст не переносился */
+}
+
+/* 6. Линия сбоку */
+.custom-line {
+    flex-grow: 1; /* Линия займет всё оставшееся место справа */
+    height: 3px; /* Толщина линии, можешь поставить 1px или 2px */
+    background-color: #F3F3F3; /* Твой цвет */
+    margin-top: 5px; /* Небольшая коррекция, если визуально не по центру букв */
+}
 
 /* =================================================================
    КАРТОЧКИ ТОВАРОВ (ШИРОКИЕ + БЕЗ РАМОК)
@@ -220,10 +646,23 @@
                        СЛАЙДЕР
 ============================================================== */
 
-#carousel, 
-#carousel .carousel-inner, 
+
+/* Сам блок слайдера оставляем видимым (чтобы не резать тени, если они есть) */
+#carousel {
+    overflow: visible !important; 
+}
+
+/* А вот "окно", в котором ездят слайды, делаем скрытым.
+   Это "обрежет" слайд, который стоит справа и ждет очереди,
+   и ползунок внизу исчезнет. */
+#carousel .carousel-inner {
+    overflow: hidden !important;
+    width: 100%;
+}
+
+/* Сами карточки тоже скрываем по краям для надежности */
 #carousel .carousel-item {
-    overflow: visible !important;
+    overflow: hidden !important;
 }
 
 .my-slide-grid {
@@ -951,61 +1390,48 @@ body #header .search-widget {
    БЛОК ВХОДА И РЕГИСТРАЦИИ (НОВЫЙ ДИЗАЙН)
    ================================================================= */
 
-/* 1. Контейнер: Выстраиваем ссылки в колонку (друг под другом) */
-.user-info-container {
+/* --- БЛОК АВТОРИЗАЦИИ (БЕЗ ИКОНОК, СПРАВА) --- */
+
+/* 1. Контейнер */
+.user-auth-links {
     display: flex;
-    flex-direction: column; /* Вертикальный стек */
-    align-items: flex-start;  /* Прижимаем влево (или flex-end для вправо) */
+    flex-direction: column; /* Столбик */
+    
+    /* ИЗМЕНЕНИЕ: Прижимаем всё содержимое вправо */
+    align-items: flex-end; 
+    padding-right: 20px;
     justify-content: center;
     height: 100%;
 }
 
-/* 2. Общий стиль ссылок */
-.user-info-container .auth-link {
-    display: flex;
-    align-items: center;    /* Центрируем иконку и текст по высоте */
+/* 2. Сами ссылки */
+.user-auth-links .auth-link {
+    display: block; 
     text-decoration: none;
-    margin-bottom: 2px;     /* Расстояние между строчками */
+    margin-bottom: 5px; /* Чуть больше отступ между строками */
+    text-align: right; /* Текст выравниваем вправо */
     
-    /* ШРИФТ MONTSERRAT */
+    /* ШРИФТЫ */
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 11px !important;    /* Подгони размер (11px, 12px) */
-    font-weight: 500 !important;   /* Жирность */
-         /* Если нужны большие буквы */
-    color: #333333 !important;     /* Цвет текста */
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
     line-height: 1.2;
+    text-transform: none; 
+    transition: color 0.2s ease;
 }
 
-/* 3. Добавляем ИКОНКИ перед текстом */
-.user-info-container .auth-link::before {
-    content: "";
-    display: block;
-    width: 16px;            /* Ширина иконки */
-    height: 16px;           /* Высота иконки */
-    margin-right: 8px;      /* Отступ от иконки до текста */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+/* 3. Ховер (Оранжевый) */
+.user-auth-links .auth-link:hover,
+.user-auth-links .auth-link:hover span {
+    color: #FC861D !important;
 }
 
-/* --- ИКОНКА ДЛЯ "ЗАРЕГИСТРИРОВАТЬСЯ" --- */
-.user-info-container .register-link::before {
-    /* Вставь сюда ссылку на иконку регистрации с донора */
-    background-image: url('https://cdn-icons-png.flaticon.com/512/747/747376.png'); 
-    /* Я поставил временную иконку. Замени URL внутри кавычек! */
-}
-
-/* --- ИКОНКА ДЛЯ "ЗАЛОГИНИТЬСЯ" --- */
-.user-info-container .login-link::before {
-    /* Вставь сюда ссылку на иконку входа (ключик или человечек) */
-    background-image: url('https://cdn-icons-png.flaticon.com/512/3596/3596092.png');
-    /* Замени URL внутри кавычек! */
-}
-
-/* Ховер эффект (при наведении) */
-.user-info-container .auth-link:hover {
-    color: #FC861D !important; /* Оранжевый при наведении */
-    opacity: 0.8;
+/* 4. ГАРАНТИРОВАННО УБИРАЕМ ИКОНКИ */
+/* Если вдруг где-то остались старые стили, этот код их скроет */
+.user-auth-links .auth-link::before {
+    display: none !important;
+    content: none !important;
 }
 
 /* =================================================================
@@ -1385,4 +1811,16 @@ main,
 .highlighted-informations,
 .product-miniature .quick-view {
     display: none !important;
+}
+
+/* === ГЛОБАЛЬНАЯ БЛОКИРОВКА ГОРИЗОНТАЛЬНОЙ ПРОКРУТКИ === */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    position: relative;
+}
+
+/* На всякий случай блокируем и основной контейнер */
+#wrapper, #main {
+    overflow-x: hidden !important;
 }
