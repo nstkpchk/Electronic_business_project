@@ -1,11 +1,11 @@
 <?php return array (
   'parameters' => 
   array (
-    'database_host' => 'mariadb',
+    'database_host' => 'admin-mysql_db',
     'database_port' => '',
-    'database_name' => 'prestashop',
-    'database_user' => 'admin',
-    'database_password' => 'admin',
+    'database_name' => 'BE_196638',
+    'database_user' => 'root',
+    'database_password' => 'student',
     'database_prefix' => 'ps_',
     'database_engine' => 'InnoDB',
     'mailer_transport' => 'smtp',
