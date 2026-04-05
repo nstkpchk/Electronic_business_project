@@ -1,40 +1,54 @@
-# Projekt - Sklep Internetowy
+# ecommerce-store-project
 
-## Informacje o projekcie
+## About the Project
+An online store based on the PrestaShop platform, developed for the "Electronic Business" (Biznes elektroniczny) course. The project is implemented in two stages: local setup with data scraping, and automated cluster deployment.
 
-Projekt sklepu internetowego opartego na platformie PrestaShop 1.7.8.x, realizowany w ramach przedmiotu Biznes elektroniczny.
+## Tech Stack
+- **PrestaShop** 1.7.8.x
+- **MariaDB** 12.1.2
+- **PHP** 8.3 / **Apache** 2.4
+- **Docker & Docker Compose**
+- **GitHub Actions** (CI/CD Pipeline)
+- **Python & Selenium** (Scraping & Automated Testing)
 
-## Wykorzystane oprogramowanie
-- PrestaShop **1.7.8.x**
-- PHP **8.3.26**
-- MariaDB **12.1.2**
-- Apache **2.4.65**
-- phpMyAdmin **5.2.3**
-- Docker (środowisko uruchomieniowe aplikacji)
+---
 
-## Sposób uruchomienia
-1. Upewnij się, że masz zainstalowanego Dockera i Docker Compose.
-2. Sklonuj repozytorium:
+## Stage 1: Local Development
+This stage covers the base store setup, scraped data integration, and local testing. 
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/nstkpchk/Electronic_business_project.git
-   cd Electronic_business_project/
+   git clone https://github.com/nstkpchk/ecommerce-store-project.git
+   cd ecommerce-store-project/
    ```
-3.Uruchom kontenery Dockera:
+2. Run the local environment (includes local MariaDB and phpMyAdmin):
    ```bash
-   docker compose up -d
-  ```
-4.Poczekaj, aż kontenery się uruchomią.
-Można też zobaczyć logi kontenera prestashop
+   docker compose -f config/docker-compose.local.yml up -d
+   ```
+3. Check the logs to ensure the container is ready:
    ```bash
    docker compose logs -f prestashop
-  ```
-5.Otwórz przeglądarkę i wpisz adres:
-   ```bash
-   https://localhost:8002
-  ```
+   ```
+4. Access the store in your browser: **`https://localhost:8002`**
 
+---
 
-## Zespół
-* Anastasia Kupchik
-* Klim Kaliasniou
-* Raman Kupreichyk
+## Stage 2: Cluster Deployment & Automation
+This stage introduces production-ready features tailored for the student cluster.
+
+* **CI/CD Pipeline:** Any push to the `main` branch triggers a GitHub Actions workflow that automatically builds the Docker image and pushes it to Docker Hub.
+* **Auto-Initialization:** The image contains a custom `init_db.sh` script that automatically waits for the cluster database, imports the SQL dump, and enforces performance caching settings.
+* **Google Analytics:** Integrated tracking for custom events (e.g., promotional banner clicks and cart actions).
+
+**To deploy on the cluster:**
+Use the primary `docker-compose.yml` file located in the `config/` directory (which includes resource limits and connects to the cluster's external database):
+```bash
+docker compose up -d
+```
+
+---
+
+## Team
+* **Anastasia Kupchik**
+* **Klim Kaliasniou**
+* **Raman Kupreichyk**
